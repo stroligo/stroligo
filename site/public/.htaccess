@@ -6,9 +6,10 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
-    # Adicione uma regra para lidar com arquivos CSS
-    RewriteRule ^(.+\.css)$ ./$1 [L]
+<!--     # Adicione uma regra para lidar com arquivos CSS
+    RewriteRule ^(.+\.css)$ ./$1 [L] -->
 
     # Encaminhe todas as solicitações para o index.html
     RewriteRule ^ index.html [L]
+
 </IfModule>
