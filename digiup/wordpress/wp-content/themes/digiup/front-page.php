@@ -29,12 +29,12 @@
 
                     <p class="subtitle">Trusted by millions across the globe:</p>
                     <ul class="flex gap-2 md:gap-5">
-                        <li><img src="assets/img/partners/amazon.svg"></li>
-                        <li><img src="assets/img/partners/apple.svg"></li>
-                        <li><img src="assets/img/partners/google.svg"></li>
-                        <li><img src="assets/img/partners/notion.svg"></li>
-                        <li><img src="assets/img/partners/spotify.svg"></li>
-                        <li><img src="assets/img/partners/slack.svg"></li>
+                        <li><img src="./assets/img/partners/amazon.svg"></li>
+                        <li><img src="./assets/img/partners/apple.svg"></li>
+                        <li><img src="./assets/img/partners/google.svg"></li>
+                        <li><img src="./assets/img/partners/notion.svg"></li>
+                        <li><img src="./assets/img/partners/spotify.svg"></li>
+                        <li><img src="./assets/img/partners/slack.svg"></li>
 
                     </ul>
                 </div>
