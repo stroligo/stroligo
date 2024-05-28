@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Não reescreva URLs para arquivos existentes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+<!--     # Adicione uma regra para lidar com arquivos CSS
+    RewriteRule ^(.+\.css)$ ./$1 [L] -->
+
+    # Encaminhe todas as solicitações para o index.html
+    RewriteRule ^ index.html [L]
+
+</IfModule>
