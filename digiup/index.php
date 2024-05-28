@@ -4,7 +4,7 @@
 $arquivo = 'wordpress-6.5.3.zip';
 
 // Destino dos arquivos descompactados
-$destino = '/wordpress';
+$destino = './wordpress';
 
 // Instanciar a Classe Zip
 $zip = new ZipArchive();
