@@ -2,8 +2,7 @@
 <?php $current_page = 'home'; get_header(); ?>
 
 <main>
-    <!-- Importação modal colocar dentro do PHP-->
-    <!-- get_template_part('blocks/modal'); -->
+
     <!-- Hero -->
     <section id="hero">
         <!-- Intro -->
@@ -18,7 +17,7 @@
                             Empowering Your Health at Every Step</a>. Experience personalized medical care from the comfort of your home. Connect with <a href="#">certified doctors</a>, or manage prescriptions, and schedule appointments with ease. Ready to take control of your health? <a href="#">Get Started</a> or Book an Appointment today.
                     </p>
                     <div>
-                        <a href="#appointment">                 
+                        <a href="#appointment">
                             <button class="btn-hero mb-4 md:mb-10">
                                 Book an appointment <span>
                                     <?php svg('arrow-hero"',12,18,"");?>
@@ -29,19 +28,19 @@
 
                     <p class="subtitle">Trusted by millions across the globe:</p>
                     <ul class="flex gap-2 md:gap-5">
-                        <li><img src="./assets/img/partners/amazon.svg"></li>
-                        <li><img src="./assets/img/partners/apple.svg"></li>
-                        <li><img src="./assets/img/partners/google.svg"></li>
-                        <li><img src="./assets/img/partners/notion.svg"></li>
-                        <li><img src="./assets/img/partners/spotify.svg"></li>
-                        <li><img src="./assets/img/partners/slack.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/amazon.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/apple.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/google.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/notion.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/spotify.svg"></li>
+                        <li><img src="<?php tu(); ?>/assets/img/partners/slack.svg"></li>
 
                     </ul>
                 </div>
             </div>
             <div class="md:w-6/12 flex-1 hero-doctor">
                 <figure>
-                    <img src="./assets/img/hero/img_doctor.png" class=" ">
+                    <img src="<?php tu(); ?>/assets/img/hero/img_doctor.png" class=" ">
                 </figure>
             </div>
         </div>
@@ -51,34 +50,40 @@
                 <div class="interna">
                     <h4 class=" text-digiup-blue-100 mb-6 md:mb-10">Easily book an appointment in 3 simple steps.</h4>
 
-                    <form class="form-simple">
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+                    <form class="form-simple" id="bookingForm">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <label for="email-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-email"',32,32,"");?>
-                                    </span> Email Address</span>
-                                <input id="email-input" type="email" class="form-input mt-1 block w-full" placeholder="Enter Your Email Address" aria-label="Input (email)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-email', 32, 32, ""); ?>
+                                    </span> Email Address
+                                </span>
+                                <input id="email-input" name="email" type="email" class="form-input mt-1 block w-full" placeholder="Enter Your Email Address" aria-label="Input (email)" required />
                             </label>
 
                             <label for="tel-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-phone"',32,32,"");?>
-                                    </span> Contact Number</span>
-                                <input id="tel-input" type="tel" multiple class="form-input mt-1 block w-full" placeholder="Enter Your Contact Number" aria-label="Input (tel)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-phone', 32, 32, ""); ?>
+                                    </span> Contact Number
+                                </span>
+                                <input id="tel-input" name="phone" type="tel" class="form-input mt-1 block w-full" placeholder="Enter Your Contact Number" aria-label="Input (tel)" required />
                             </label>
 
                             <label for="date-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-calendar"',32,32,"");?>
-                                    </span> Date of Appointment</span>
-                                <input id="date-input" type="date" class="form-input mt-1 block w-full" aria-label="Input (date)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-calendar', 32, 32, ""); ?>
+                                    </span> Date of Appointment
+                                </span>
+                                <input id="date-input" name="appointment_date" type="date" class="form-input mt-1 block w-full" aria-label="Input (date)" required />
                             </label>
 
                             <div class="flex items-end justify-end">
-                                <button class="btn">
+                                <button type="submit" class="btn">
                                     Book Now
                                     <span class="icon">
-                                        <?php svg('icon-tick"',20,20,"");?>
+                                        <?php svg('icon-tick', 20, 20, ""); ?>
                                     </span>
                                 </button>
                             </div>
@@ -87,10 +92,11 @@
                 </div>
             </div>
 
+
             <!-- Graphics Circles -->
             <div class="graphic">
                 <figure>
-                    <img src="./assets/img/graphics/dots-hero.png">
+                    <img src="<?php tu(); ?>/assets/img/graphics/dots-hero.png">
                 </figure>
             </div>
         </div>
@@ -114,7 +120,7 @@
                         <div class="w-full md:w-7/12 card">
                             <div class="interna">
                                 <figure class="mb-2">
-                                    <img src="./assets/img/services/online_consultations.png">
+                                    <img src="<?php tu(); ?>/assets/img/services/online_consultations.png">
                                 </figure>
                                 <h5>Online Consultations</h5>
                                 <p class=" text-sm font-semibold text-digiup-gray-400">
@@ -125,7 +131,7 @@
                         <div class="w-full md:w-5/12 card">
                             <div class="interna">
                                 <figure class="mb-2">
-                                    <img src="./assets/img/services/booking_appointments.png">
+                                    <img src="<?php tu(); ?>/assets/img/services/booking_appointments.png">
                                 </figure>
                                 <h5>Booking Appointments</h5>
                                 <p class=" text-sm font-semibold text-digiup-gray-400">
@@ -138,7 +144,7 @@
                         <div class="w-full md:w-1/3 card">
                             <div class="interna">
                                 <figure class="mb-2">
-                                    <img src="./assets/img/services/prescriptions.png">
+                                    <img src="<?php tu(); ?>/assets/img/services/prescriptions.png">
                                 </figure>
                                 <h5>Prescriptions</h5>
                                 <p class=" text-sm font-semibold text-digiup-gray-400">
@@ -149,7 +155,7 @@
                         <div class="w-full md:w-1/3 card">
                             <div class="interna">
                                 <figure class="mb-2">
-                                    <img src="./assets/img/services/medical_notes.png">
+                                    <img src="<?php tu(); ?>/assets/img/services/medical_notes.png">
                                 </figure>
                                 <h5>Medical Notes</h5>
                                 <p class=" text-sm font-semibold text-digiup-gray-400">
@@ -160,7 +166,7 @@
                         <div class="w-full md:w-1/3 card">
                             <div class="interna">
                                 <figure class="mb-2">
-                                    <img src="./assets/img/services/medicine_refills.png">
+                                    <img src="<?php tu(); ?>/assets/img/services/medicine_refills.png">
                                 </figure>
                                 <h5>Medicine Refills</h5>
                                 <p class=" text-sm font-semibold text-digiup-gray-400">
@@ -173,12 +179,12 @@
                     <!-- Graphics Waves -->
                     <div class="graphic1">
                         <figure>
-                            <img src="./assets/img/graphics/wave1.png">
+                            <img src="<?php tu(); ?>/assets/img/graphics/wave1.png">
                         </figure>
                     </div>
                     <div class="graphic2">
                         <figure>
-                            <img src="./assets/img/graphics/wave2.png">
+                            <img src="<?php tu(); ?>/assets/img/graphics/wave2.png">
                         </figure>
                     </div>
                 </div>
@@ -199,7 +205,7 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-14">
                             <div>
                                 <figure class="w-full md:w-[448px]">
-                                    <img src="./assets/img/story/figure1.png">
+                                    <img src="<?php tu(); ?>/assets/img/story/figure1.png">
                                 </figure>
                             </div>
                             <div>
@@ -263,7 +269,7 @@
 
                         <div>
                             <figure>
-                                <img src="./assets/img/platform/doctor_full.png" class=" ">
+                                <img src="<?php tu(); ?>/assets/img/platform/doctor_full.png" class=" ">
                             </figure>
                         </div>
                     </div>
@@ -293,7 +299,7 @@
                     <div class="w-full md:w-6/12 card">
                         <div class="interna ">
                             <figure>
-                                <img src="./assets/img/testimonials/linda.png">
+                                <img src="<?php tu(); ?>/assets/img/testimonials/linda.png">
                             </figure>
                             <div>
                                 <p class=" font-medium m-0 text-digiup-gray-400">“After my knee surgery, the convenience of online consultations made my recovery smoother than I could have imagined.”</p>
@@ -304,7 +310,7 @@
                     <div class="w-full md:w-6/12 card">
                         <div class="interna ">
                             <figure>
-                                <img src="./assets/img/testimonials/henry.png">
+                                <img src="<?php tu(); ?>/assets/img/testimonials/henry.png">
                             </figure>
                             <div>
                                 <p class=" font-medium m-0 text-digiup-gray-400">“Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life.”</p>
@@ -341,7 +347,7 @@
                     <div class="w-full md:w-6/12 card">
                         <div class="interna ">
                             <figure>
-                                <img src="./assets/img/testimonials/joshua.png">
+                                <img src="<?php tu(); ?>/assets/img/testimonials/joshua.png">
                             </figure>
                             <div>
                                 <p class=" font-medium m-0 text-digiup-gray-400">“The prescription refill system is a game-changer for managing my diabetes. It’s really efficient and completely hassle-free.”</p>
@@ -352,7 +358,7 @@
                     <div class="w-full md:w-6/12 card">
                         <div class="interna ">
                             <figure>
-                                <img src="./assets/img/testimonials/samantha.png">
+                                <img src="<?php tu(); ?>/assets/img/testimonials/samantha.png">
                             </figure>
                             <div>
                                 <p class=" font-medium m-0 text-digiup-gray-400">“Finding a doctor who really understands all of my health needs has never been easier. This platform has changed my life.”</p>
@@ -367,12 +373,12 @@
                 <!-- Graphics Waves -->
                 <div class="graphic1">
                     <figure>
-                        <img src="./assets/img/graphics/global.png">
+                        <img src="<?php tu(); ?>/assets/img/graphics/global.png">
                     </figure>
                 </div>
                 <div class="graphic2">
                     <figure>
-                        <img src="./assets/img/graphics/global.png">
+                        <img src="<?php tu(); ?>/assets/img/graphics/global.png">
                     </figure>
                 </div>
             </div>
@@ -380,7 +386,6 @@
 
         </div>
     </section>
-
     <!--  Masters -->
     <section id="masters">
         <div class="container mx-auto px-6 py-2 md:py-10 relative flex flex-col justify-center">
@@ -403,7 +408,7 @@
                                 <div class="text-2xl font-extrabold">Dr. Sarah Johnson (Cardiologist)</div>
                                 <p class=" font-semibold">Heart health is Dr. Wong’s passion, and her approach to cardiology integrates cutting-edge technology with compassionate care. She’s a respected voice in the prevention of heart disease and a trusted partner to her patients on their journey to wellness.</p>
                                 <div>
-                                    <a href="#appointment">                 
+                                    <a href="#appointment">
                                         <button class="btn">
                                             <span class="gradient-text"> Book appointment</span>
                                             <span class="icon">
@@ -416,7 +421,7 @@
                         </div>
                         <div class="doctor-big ">
                             <figure>
-                                <img src="./assets/img/masters/doctorA.png">
+                                <img src="<?php tu(); ?>/assets/img/masters/doctorA.png">
                             </figure>
                         </div>
                     </div>
@@ -427,7 +432,7 @@
                                 <div class="text-2xl font-extrabold">Dr. Mark Lee (Dermatologist )</div>
                                 <p class=" font-semibold">Dr. Lee is a visionary in dermatology, advancing treatments for skin health with a gentle, holistic approach. His dedication to clinical excellence and patient education has made him a leader in dermatological care. He’s known for his precision and commitment to patient-centered care.</p>
                                 <div>
-                                    <a href="#appointment">                 
+                                    <a href="#appointment">
                                         <button class="btn">
                                             <span class="gradient-text"> Book appointment</span>
                                             <span class="icon">
@@ -440,19 +445,19 @@
                         </div>
                         <div class="doctor-big ">
                             <figure>
-                                <img src="./assets/img/masters/doctorB.png">
+                                <img src="<?php tu(); ?>/assets/img/masters/doctorB.png">
                             </figure>
                         </div>
                     </div>
                     <!-- Graphics Waves -->
                     <div class="graphic1">
                         <figure>
-                            <img src="./assets/img/graphics/dots-master.png">
+                            <img src="<?php tu(); ?>/assets/img/graphics/dots-master.png">
                         </figure>
                     </div>
                     <div class="graphic2">
                         <figure>
-                            <img src="./assets/img/graphics/dots-master.png">
+                            <img src="<?php tu(); ?>/assets/img/graphics/dots-master.png">
                         </figure>
                     </div>
 
@@ -463,7 +468,6 @@
 
         </div>
     </section>
-
     <!--  Help Desk -->
     <section id="helpdesk">
         <div class="container mx-auto px-6 py-2 md:py-10 relative flex flex-col justify-center">
@@ -505,6 +509,14 @@
 
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white p-8 rounded shadow-lg relative">
+            <span onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 cursor-pointer">&times;</span>
+            <p id="modalMessage" class="text-lg"></p>
+        </div>
+    </div>
 
 
 </main>

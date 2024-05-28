@@ -114,6 +114,9 @@
       @apply mt-4 block rounded-xl border-digiup-gray-100 bg-white p-[18px] font-semibold placeholder:text-digiup-gray-100 focus:border-digiup-light-blue-100 focus:ring focus:ring-digiup-light-blue-200 focus:ring-opacity-50;
     }
   }
+  .oculto {
+    @apply hidden;
+  }
 }
 
 @layer components {
@@ -393,64 +396,4 @@
 }
 
 @layer utilities {
-  /* Modal */
-  .input-lightbox {
-    display: none;
-    &:not(:checked) ~ .lightbox {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-  }
-  .lightbox {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 900;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-80px);
-    transition: all 0.4s ease-in-out;
-    .content {
-      position: relative;
-      height: auto;
-      max-height: 90vh;
-      width: 85vw;
-      margin-bottom: 0;
-      padding: 2rem;
-      max-width: 1000px;
-      overflow: auto;
-      @media (max-width: 991px) {
-        max-height: 80vh;
-      }
-    }
-    .lightclose {
-      position: absolute;
-      cursor: pointer;
-
-      display: block;
-      height: 22px;
-      width: 22px;
-
-      right: 10px;
-      top: 10px;
-
-      &::before {
-        display: block;
-        content: '';
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100vw;
-        height: calc(100vh + 80px);
-      }
-    }
-  }
 }

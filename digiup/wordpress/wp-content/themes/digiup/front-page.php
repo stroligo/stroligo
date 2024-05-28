@@ -2,8 +2,6 @@
 <?php $current_page = 'home'; get_header(); ?>
 
 <main>
-    <!-- Importação modal colocar dentro do PHP-->
-    <!-- get_template_part('blocks/modal'); -->
     <!-- Hero -->
     <section id="hero">
         <!-- Intro -->
@@ -18,7 +16,7 @@
                             Empowering Your Health at Every Step</a>. Experience personalized medical care from the comfort of your home. Connect with <a href="#">certified doctors</a>, or manage prescriptions, and schedule appointments with ease. Ready to take control of your health? <a href="#">Get Started</a> or Book an Appointment today.
                     </p>
                     <div>
-                        <a href="#appointment">                 
+                        <a href="#appointment">
                             <button class="btn-hero mb-4 md:mb-10">
                                 Book an appointment <span>
                                     <?php svg('arrow-hero"',12,18,"");?>
@@ -51,34 +49,40 @@
                 <div class="interna">
                     <h4 class=" text-digiup-blue-100 mb-6 md:mb-10">Easily book an appointment in 3 simple steps.</h4>
 
-                    <form class="form-simple">
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+                    <form class="form-simple" id="bookingForm">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <label for="email-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-email"',32,32,"");?>
-                                    </span> Email Address</span>
-                                <input id="email-input" type="email" class="form-input mt-1 block w-full" placeholder="Enter Your Email Address" aria-label="Input (email)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-email', 32, 32, ""); ?>
+                                    </span> Email Address
+                                </span>
+                                <input id="email-input" name="email" type="email" class="form-input mt-1 block w-full" placeholder="Enter Your Email Address" aria-label="Input (email)" required />
                             </label>
 
                             <label for="tel-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-phone"',32,32,"");?>
-                                    </span> Contact Number</span>
-                                <input id="tel-input" type="tel" multiple class="form-input mt-1 block w-full" placeholder="Enter Your Contact Number" aria-label="Input (tel)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-phone', 32, 32, ""); ?>
+                                    </span> Contact Number
+                                </span>
+                                <input id="tel-input" name="phone" type="tel" class="form-input mt-1 block w-full" placeholder="Enter Your Contact Number" aria-label="Input (tel)" required />
                             </label>
 
                             <label for="date-input" class="block">
-                                <span class="text-label"><span class="icon">
-                                        <?php svg('icon-calendar"',32,32,"");?>
-                                    </span> Date of Appointment</span>
-                                <input id="date-input" type="date" class="form-input mt-1 block w-full" aria-label="Input (date)" />
+                                <span class="text-label">
+                                    <span class="icon">
+                                        <?php svg('icon-calendar', 32, 32, ""); ?>
+                                    </span> Date of Appointment
+                                </span>
+                                <input id="date-input" name="appointment_date" type="date" class="form-input mt-1 block w-full" aria-label="Input (date)" required />
                             </label>
 
                             <div class="flex items-end justify-end">
-                                <button class="btn">
+                                <button type="submit" class="btn">
                                     Book Now
                                     <span class="icon">
-                                        <?php svg('icon-tick"',20,20,"");?>
+                                        <?php svg('icon-tick', 20, 20, ""); ?>
                                     </span>
                                 </button>
                             </div>
@@ -86,6 +90,7 @@
                     </form>
                 </div>
             </div>
+
 
             <!-- Graphics Circles -->
             <div class="graphic">
@@ -380,7 +385,6 @@
 
         </div>
     </section>
-
     <!--  Masters -->
     <section id="masters">
         <div class="container mx-auto px-6 py-2 md:py-10 relative flex flex-col justify-center">
@@ -403,7 +407,7 @@
                                 <div class="text-2xl font-extrabold">Dr. Sarah Johnson (Cardiologist)</div>
                                 <p class=" font-semibold">Heart health is Dr. Wong’s passion, and her approach to cardiology integrates cutting-edge technology with compassionate care. She’s a respected voice in the prevention of heart disease and a trusted partner to her patients on their journey to wellness.</p>
                                 <div>
-                                    <a href="#appointment">                 
+                                    <a href="#appointment">
                                         <button class="btn">
                                             <span class="gradient-text"> Book appointment</span>
                                             <span class="icon">
@@ -427,7 +431,7 @@
                                 <div class="text-2xl font-extrabold">Dr. Mark Lee (Dermatologist )</div>
                                 <p class=" font-semibold">Dr. Lee is a visionary in dermatology, advancing treatments for skin health with a gentle, holistic approach. His dedication to clinical excellence and patient education has made him a leader in dermatological care. He’s known for his precision and commitment to patient-centered care.</p>
                                 <div>
-                                    <a href="#appointment">                 
+                                    <a href="#appointment">
                                         <button class="btn">
                                             <span class="gradient-text"> Book appointment</span>
                                             <span class="icon">
@@ -463,7 +467,6 @@
 
         </div>
     </section>
-
     <!--  Help Desk -->
     <section id="helpdesk">
         <div class="container mx-auto px-6 py-2 md:py-10 relative flex flex-col justify-center">
@@ -505,6 +508,14 @@
 
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white p-8 rounded shadow-lg relative">
+            <span onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 cursor-pointer">&times;</span>
+            <p id="modalMessage" class="text-lg"></p>
+        </div>
+    </div>
 
 
 </main>
