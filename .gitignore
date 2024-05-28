@@ -1,40 +1,49 @@
-/site/node_modules
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-# dependencies
+# Node.js
 /site/node_modules
 /site/.pnp
 /site/.pnp.js
 /site/.yarn/install-state.gz
-# testing
+
+# Testing
 /site/coverage
-# next.js
+
+# Next.js
 /site/.next/
 /site/out/
-# production
+
+# Production
 /site/build
-# misc
+
+# Misc
 .DS_Store
 *.pem
-# debug
+
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-# local env files
+
+# Local env files
 .env*.local
-# vercel
+
+# Vercel
 .vercel
-# typescript
+
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-#Ignore project /digiup
+# Digiup WordPress (ignore everything except the digiup theme)
+/digiup/wordpress/*
+!/digiup/wordpress/wp-content/
+/digiup/wordpress/wp-content/*
+!/digiup/wordpress/wp-content/themes/
+/digiup/wordpress/wp-content/themes/*
+!/digiup/wordpress/wp-content/themes/digiup/
+!/digiup/wordpress/wp-content/themes/digiup/**
+
+# Digiup additional ignores
 /digiup/.vscode/
 /digiup/.DS_Store
 /digiup/package-lock.json
 /digiup/node_modules/
-
-#/digiup/wordpress/*
-#/digiup/!wordpress/wp-content
-#/digiup/wordpress/wp-content/*
-/digiup/!wordpress/wp-content/themes*
-/digiup/wordpress/wp-content/themes/the-theme-REF

@@ -2,6 +2,7 @@
 <?php $current_page = 'home'; get_header(); ?>
 
 <main>
+
     <!-- Hero -->
     <section id="hero">
         <!-- Intro -->
