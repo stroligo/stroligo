@@ -33,14 +33,16 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Digiup WordPress (ignore everything except the digiup theme)
+# Ignorar configurações específicas e arquivos de sistema
 /digiup/.vscode/
 /digiup/.DS_Store
 /digiup/package-lock.json
 /digiup/node_modules/
 
+# Ignorar tudo dentro de wordpress, exceto o tema digiup
 /digiup/wordpress/*
-/digiup/!wordpress/wp-content
+!/digiup/wordpress/wp-content
 /digiup/wordpress/wp-content/*
-/digiup/!wordpress/wp-content/themes*
-!/digiup/wordpress/wp-content/themes/digiup
+!/digiup/wordpress/wp-content/themes
+/digiup/wordpress/wp-content/themes/*
+!/digiup/wordpress/wp-content/themes/digiup/
