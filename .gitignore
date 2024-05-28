@@ -36,5 +36,5 @@ next-env.d.ts
 #/digiup/wordpress/*
 #/digiup/!wordpress/wp-content
 #/digiup/wordpress/wp-content/*
-#/digiup/!wordpress/wp-content/themes*
+/digiup/!wordpress/wp-content/themes*
 /digiup/wordpress/wp-content/themes/the-theme-REF
