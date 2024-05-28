@@ -34,16 +34,12 @@ yarn-error.log*
 next-env.d.ts
 
 # Digiup WordPress (ignore everything except the digiup theme)
-/digiup/wordpress/*
-!/digiup/wordpress/wp-content/
-/digiup/wordpress/wp-content/*
-!/digiup/wordpress/wp-content/themes/
-/digiup/wordpress/wp-content/themes/*
-!/digiup/wordpress/wp-content/themes/digiup/
-!/digiup/wordpress/wp-content/themes/digiup/**
-
-# Digiup additional ignores
 /digiup/.vscode/
 /digiup/.DS_Store
 /digiup/package-lock.json
 /digiup/node_modules/
+
+/digiup/wordpress/*
+/digiup/!wordpress/wp-content
+/digiup/wordpress/wp-content/*
+/digiup/!wordpress/wp-content/themes*
