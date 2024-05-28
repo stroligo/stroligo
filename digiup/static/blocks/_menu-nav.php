@@ -8,10 +8,10 @@
             </a>
             <!-- Navegation  -->
             <ul>
-                <li class="menu-item"><a href="<?php echo home_url(); ?>#top">Home</a></li>
-                <li class="menu-item"><a href="<?php echo home_url(); ?>#services">Services</a></li>
-                <li class="menu-item"><a href="<?php echo home_url(); ?>#story">About us</a></li>
-                <li class="menu-item"><a href="<?php echo home_url(); ?>#helpdesk">Contact us</a></li>
+                <li class="menu-item"><a href="#top">Home</a></li>
+                <li class="menu-item"><a href="#services">Services</a></li>
+                <li class="menu-item"><a href="#story">About us</a></li>
+                <li class="menu-item"><a href="#helpdesk">Contact us</a></li>
             </ul>
             <!-- Button  -->
             <div class="hidden md:flex items-center">
@@ -36,10 +36,10 @@
                 </div>
                 <div class="menuMobile overflow-hidden ">
                     <ul>
-                        <li class="menu-item"><a href="<?php echo home_url(); ?>#top">Home</a></li>
-                        <li class="menu-item"><a href="<?php echo home_url(); ?>#services">Services</a></li>
-                        <li class="menu-item"><a href="<?php echo home_url(); ?>#story">About us</a></li>
-                        <li class="menu-item"><a href="<?php echo home_url(); ?>#helpdesk">Contact us</a></li>
+                        <li class="menu-item"><a href="#top">Home</a></li>
+                        <li class="menu-item"><a href="#services">Services</a></li>
+                        <li class="menu-item"><a href="#story">About us</a></li>
+                        <li class="menu-item"><a href="#helpdesk">Contact us</a></li>
                     </ul>
                     <div class="w-full flex justify-center">
                         <a href="#appointment">                        
