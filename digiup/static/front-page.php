@@ -1,4 +1,4 @@
-<!-- Pega o Header -->
+<!-- WP Header -->
 <?php $current_page = 'home'; get_header(); ?>
 
 <main>
@@ -48,7 +48,6 @@
             <div class="card">
                 <div class="interna">
                     <h4 class=" text-digiup-blue-100 mb-6 md:mb-10">Easily book an appointment in 3 simple steps.</h4>
-
                     <form class="form-simple" id="bookingForm">
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                             <label for="email-input" class="block">
