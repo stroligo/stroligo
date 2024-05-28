@@ -519,5 +519,5 @@
 
 </main>
 
-<!-- Pega o Footer -->
+<!-- WP Footer -->
 <?php get_footer(); ?>
