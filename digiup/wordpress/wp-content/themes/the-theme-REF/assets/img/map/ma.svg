@@ -1,0 +1,50 @@
+<svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#195;&#141;cones">
+<g id="Ilustra&#195;&#167;&#195;&#163;o UF">
+<g id="Estado=MA">
+<g id="UF">
+<path id="ma" fill-rule="evenodd" clip-rule="evenodd" d="M116.086 55.9471V40.5178L130.337 26.2694V21.861H118.291L113.409 17.059H101.521L90.8921 27.6863V18.9483L95.4585 14.3825L82.0741 1H69.7919V10.4465L59.0843 21.2312V40.754L54.2817 47.6814H46.6447L32.0005 62.3235H49.3215V87.1205L59.6354 97.3542H63.887V104.911H58.9269L59.0843 115.303L72.705 129V110.186L78.6886 104.282V89.9545H85.617L95.1436 80.3506H111.599L117.425 74.5252V68.385H111.205V60.8278L116.086 55.9471Z" fill="url(#paint0_linear_828_5446)" stroke="white" stroke-width="1.21084"/>
+</g>
+<g id="Bandeira do Estado/Maranh&#195;&#163;o - MA" clip-path="url(#clip0_828_5446)">
+<g id="Group">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 85H56V45H0V85Z" fill="white"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M0 49H56V45H0V49Z" fill="#ED2224"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M0 67H56V63H0V67Z" fill="#ED2224"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M0 85H56V81H0V85Z" fill="#ED2224"/>
+<path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M0 58H56V54H0V58Z" fill="#010101"/>
+<path id="Vector_6" fill-rule="evenodd" clip-rule="evenodd" d="M0 76H56V72H0V76Z" fill="#010101"/>
+<path id="Vector_7" fill-rule="evenodd" clip-rule="evenodd" d="M0 65H20V45H0V65Z" fill="#2D2D87"/>
+<path id="Vector_8" fill-rule="evenodd" clip-rule="evenodd" d="M9.33307 47.3335L7.17017 53.9909L10.4992 55.0723L9.33307 47.3335Z" fill="white"/>
+<path id="Vector_9" fill-rule="evenodd" clip-rule="evenodd" d="M9.33316 47.3335L11.4968 53.9909L8.16772 55.0723L9.33316 47.3335Z" fill="white"/>
+<path id="Vector_10" fill-rule="evenodd" clip-rule="evenodd" d="M15.9907 52.1704H8.99121V55.6702L15.9907 52.1704Z" fill="white"/>
+<path id="Vector_11" fill-rule="evenodd" clip-rule="evenodd" d="M15.9902 52.1704L10.3276 56.2849L8.27002 53.4536L15.9902 52.1704Z" fill="white"/>
+<path id="Vector_12" fill-rule="evenodd" clip-rule="evenodd" d="M2.67554 52.1704L8.33887 56.2849L10.3958 53.4536L2.67554 52.1704Z" fill="white"/>
+<path id="Vector_13" fill-rule="evenodd" clip-rule="evenodd" d="M2.67554 52.1704H9.67571V55.6702L2.67554 52.1704Z" fill="white"/>
+<path id="Vector_14" fill-rule="evenodd" clip-rule="evenodd" d="M13.4475 59.9962L11.2846 53.3389L7.9563 54.4203L13.4475 59.9962Z" fill="white"/>
+<path id="Vector_15" fill-rule="evenodd" clip-rule="evenodd" d="M13.4478 59.9966L7.78516 55.8821L9.84205 53.0508L13.4478 59.9966Z" fill="white"/>
+<path id="Vector_16" fill-rule="evenodd" clip-rule="evenodd" d="M5.21851 59.9966L10.8818 55.8821L8.82426 53.0508L5.21851 59.9966Z" fill="white"/>
+<path id="Vector_17" fill-rule="evenodd" clip-rule="evenodd" d="M5.21851 59.9962L7.3821 53.3389L10.7104 54.4203L5.21851 59.9962Z" fill="white"/>
+</g>
+<g id="Contorno">
+<g id="Vector_18">
+<mask id="path-20-inside-1_828_5446" fill="white">
+<path d="M0.000488281 45H56.0005V84.9957H0.000488281V45Z"/>
+</mask>
+<path d="M0.000488281 45H56.0005V84.9957H0.000488281V45Z" stroke="#8B99A7" stroke-width="0.2" stroke-miterlimit="2.6131" mask="url(#path-20-inside-1_828_5446)"/>
+</g>
+</g>
+</g>
+</g>
+<rect x="-202.5" y="-156.5" width="1181" height="727" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_828_5446" x1="32.0005" y1="129" x2="155.677" y2="33.9848" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9285F9"/>
+<stop offset="1" stop-color="#3B4AFF"/>
+</linearGradient>
+<clipPath id="clip0_828_5446">
+<rect width="56.0005" height="40" fill="white" transform="translate(0 45)"/>
+</clipPath>
+</defs>
+</svg>

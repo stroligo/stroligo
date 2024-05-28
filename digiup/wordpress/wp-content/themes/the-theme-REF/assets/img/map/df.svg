@@ -1,0 +1,39 @@
+<svg width="161" height="128" viewBox="0 0 161 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#195;&#141;cones">
+<g id="Ilustra&#195;&#167;&#195;&#163;o UF">
+<g id="Estado=DF">
+<g id="UF">
+<path id="df" fill-rule="evenodd" clip-rule="evenodd" d="M32 102.771H160V25.229H32V102.771Z" fill="url(#paint0_linear_828_5446)" stroke="white" stroke-width="1.21084"/>
+</g>
+<g id="Bandeira do Estado/Distrito Federal - DF" clip-path="url(#clip0_828_5446)">
+<g id="Group">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 84H56V44H0V84Z" fill="white"/>
+<g id="Group 713">
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M18 74H38V54H18V74Z" fill="#079247"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M26.5761 62.5773V58.5384L27.5765 57.5387V55.6925H26.5761L27.999 54.2695L29.4226 55.6925H28.4222V57.5387L29.4226 58.5384V62.5773H33.4607L34.4604 63.577H36.3065V62.5773L37.7301 64.0003L36.3065 65.4232V64.4235H34.4604L33.4607 65.4232H29.4226V69.4622L28.4222 70.4619V72.3081H29.4226L27.999 73.731L26.5761 72.3081H27.5765V70.4619L26.5761 69.4622V65.4232H22.538L21.5376 64.4235H19.6914V65.4232L18.2686 64.0003L19.6914 62.5773V63.577H21.5376L22.538 62.5773H26.5761Z" fill="#F6C315"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M25.1538 64.0002L27.9996 61.1543L30.8461 64.0002L27.9996 66.8461L25.1538 64.0002Z" fill="#079247"/>
+</g>
+</g>
+<g id="Contorno">
+<g id="Vector_5">
+<mask id="path-7-inside-1_828_5446" fill="white">
+<path d="M0.000488281 44H56.0005V83.9957H0.000488281V44Z"/>
+</mask>
+<path d="M0.000488281 44H56.0005V83.9957H0.000488281V44Z" stroke="#8B99A7" stroke-width="0.2" stroke-miterlimit="2.6131" mask="url(#path-7-inside-1_828_5446)"/>
+</g>
+</g>
+</g>
+</g>
+<rect x="-596.5" y="-583.5" width="1181" height="727" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_828_5446" x1="32" y1="102.771" x2="100.727" y2="-10.6783" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9285F9"/>
+<stop offset="1" stop-color="#3B4AFF"/>
+</linearGradient>
+<clipPath id="clip0_828_5446">
+<rect width="56" height="40" fill="white" transform="translate(0 44)"/>
+</clipPath>
+</defs>
+</svg>

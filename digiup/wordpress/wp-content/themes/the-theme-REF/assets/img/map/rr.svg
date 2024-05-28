@@ -1,0 +1,38 @@
+<svg width="155" height="130" viewBox="0 0 155 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#195;&#141;cones">
+<g id="Ilustra&#195;&#167;&#195;&#163;o UF">
+<g id="Estado=RR">
+<g id="UF">
+<path id="rr" fill-rule="evenodd" clip-rule="evenodd" d="M109.207 1V14.1371H94.905V24.9491H75.0221V34.366H64.3248L47.8138 17.8574H32.0005V30.1807H40.0234V58.5477H54.4415V68.0808H64.3248L94.2074 97.9591V129H115.834L126.299 118.421V102.609L154.089 103.54V89.5886L133.973 69.4759V39.7139L144.903 28.7857L131.066 14.951V1H109.207Z" fill="url(#paint0_linear_828_5446)" stroke="white" stroke-width="1.21084"/>
+</g>
+<g id="Bandeira do Estado/Roraima - RR" clip-path="url(#clip0_828_5446)">
+<g id="Group">
+<path id="Vector" d="M56.0005 85.002H0.000488281V45.002H55.9933L56.0005 85.002Z" fill="white"/>
+<path id="Vector_2" d="M56.0005 57.002V85.002H15.0005L56.0005 57.002Z" fill="#0E8341"/>
+<path id="Vector_3" d="M0.000488281 75.502V45.002H45.0005L0.000488281 75.502Z" fill="#489DD6"/>
+<path id="Vector_4" d="M56.0005 77.002H0.000488281V79.002H56.0005V77.002Z" fill="#DA1F26"/>
+<path id="Vector_5" d="M27.998 53.002L31.0885 62.1482H41.0005L32.973 67.8591L36.0607 77.002L27.998 71.3456L19.9403 77.002L23.0287 67.8591L15.0005 62.1482H24.9237L27.998 53.002Z" fill="#F6C215"/>
+</g>
+<g id="Contorno">
+<g id="Vector_6">
+<mask id="path-8-inside-1_828_5446" fill="white">
+<path d="M0.000488281 45H56.0005V85H0.000488281V45Z"/>
+</mask>
+<path d="M0.000488281 45H56.0005V85H0.000488281V45Z" stroke="#8B99A7" stroke-width="0.2" stroke-miterlimit="2.6131" mask="url(#path-8-inside-1_828_5446)"/>
+</g>
+</g>
+</g>
+</g>
+<rect x="-832.5" y="-156.5" width="1181" height="727" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_828_5446" x1="32.0005" y1="129" x2="159.858" y2="7.04805" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9285F9"/>
+<stop offset="1" stop-color="#3B4AFF"/>
+</linearGradient>
+<clipPath id="clip0_828_5446">
+<rect width="56.0005" height="40" fill="white" transform="translate(0 45)"/>
+</clipPath>
+</defs>
+</svg>

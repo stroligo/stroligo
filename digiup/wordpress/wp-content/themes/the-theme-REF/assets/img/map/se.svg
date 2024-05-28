@@ -1,0 +1,51 @@
+<svg width="142" height="130" viewBox="0 0 142 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#195;&#141;cones">
+<g id="Ilustra&#195;&#167;&#195;&#163;o UF">
+<g id="Estado=SE">
+<g id="UF">
+<path id="se" fill-rule="evenodd" clip-rule="evenodd" d="M122.345 56.455L66.8824 1H44.2088V39.7139H57.8128V65.1743H32V77.0327L41.4183 86.7984V129H50.8363H61.9987H83.6259L140.484 71.8011V56.455H122.345Z" fill="url(#paint0_linear_828_5446)" stroke="white" stroke-width="1.21084"/>
+</g>
+<g id="Bandeira do Estado/Sergipe - SE" clip-path="url(#clip0_828_5446)">
+<g id="Group">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 55.0057H56V45.0078H0V55.0057Z" fill="#079247"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M0 75.0026H56V65.0039H0V75.0026Z" fill="#079247"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M0 65.0033H56V55.0054H0V65.0033Z" fill="#F6C315"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M0 85.0003H56V75.0024H0V85.0003Z" fill="#F6C315"/>
+<g id="Group_2">
+<path id="Vector_5" fill-rule="evenodd" clip-rule="evenodd" d="M0 64.9958H20V45H0V64.9958Z" fill="#2C286C"/>
+<path id="Vector_6" fill-rule="evenodd" clip-rule="evenodd" d="M12.687 58.6953L9.99989 56.7437L7.31274 58.6953L8.33949 55.5377L5.65234 53.5854H8.97385L9.99989 50.4277L11.0266 53.5854H14.3482L11.661 55.5377L12.687 58.6953Z" fill="white"/>
+<path id="Vector_7" fill-rule="evenodd" clip-rule="evenodd" d="M4.77126 63.4173L3.42804 62.4411L2.08482 63.4173L2.59784 61.8381L1.25391 60.8619H2.91501L3.42804 59.2827L3.94106 60.8619H5.60217L4.25824 61.8381L4.77126 63.4173Z" fill="white"/>
+<path id="Vector_8" fill-rule="evenodd" clip-rule="evenodd" d="M17.9148 50.2769L16.5709 49.3007L15.2277 50.2769L15.7407 48.6977L14.3975 47.7222H16.0579L16.5709 46.1431L17.0846 47.7222H18.745L17.4018 48.6977L17.9148 50.2769Z" fill="white"/>
+<path id="Vector_9" fill-rule="evenodd" clip-rule="evenodd" d="M4.77126 50.2769L3.42804 49.3007L2.08482 50.2769L2.59784 48.6977L1.25391 47.7222H2.91501L3.42804 46.1431L3.94106 47.7222H5.60217L4.25824 48.6977L4.77126 50.2769Z" fill="white"/>
+<path id="Vector_10" fill-rule="evenodd" clip-rule="evenodd" d="M17.9148 63.4173L16.5709 62.4411L15.2277 63.4173L15.7407 61.8381L14.3975 60.8619H16.0579L16.5709 59.2827L17.0846 60.8619H18.745L17.4018 61.8381L17.9148 63.4173Z" fill="white"/>
+</g>
+<g id="Vector_11">
+<mask id="path-13-inside-1_828_5446" fill="white">
+<path d="M0 45.0078H56V84.9958H0V45.0078Z"/>
+</mask>
+<path d="M0 45.0078H56V84.9958H0V45.0078Z" stroke="#E0E6EB" stroke-width="0.2" stroke-miterlimit="2.6131" mask="url(#path-13-inside-1_828_5446)"/>
+</g>
+</g>
+<g id="Contorno">
+<g id="Vector_12">
+<mask id="path-14-inside-2_828_5446" fill="white">
+<path d="M-0.000488281 45H55.9995V84.9957H-0.000488281V45Z"/>
+</mask>
+<path d="M-0.000488281 45H55.9995V84.9957H-0.000488281V45Z" stroke="#8B99A7" stroke-width="0.2" stroke-miterlimit="2.6131" mask="url(#path-14-inside-2_828_5446)"/>
+</g>
+</g>
+</g>
+</g>
+<rect x="-437.5" y="-582.5" width="1181" height="727" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_828_5446" x1="32" y1="129" x2="158.268" y2="21.9836" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9285F9"/>
+<stop offset="1" stop-color="#3B4AFF"/>
+</linearGradient>
+<clipPath id="clip0_828_5446">
+<rect width="56" height="40" fill="white" transform="translate(0 45)"/>
+</clipPath>
+</defs>
+</svg>

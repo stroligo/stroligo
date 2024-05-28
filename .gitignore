@@ -33,8 +33,8 @@ next-env.d.ts
 /digiup/package-lock.json
 /digiup/node_modules/
 
-/digiup/wordpress/*
-/digiup/!wordpress/wp-content
-/digiup/wordpress/wp-content/*
-/digiup/!wordpress/wp-content/themes*
-/digiup/wordpress/wp-content/themes/the-theme-REF
+#/digiup/wordpress/*
+#/digiup/!wordpress/wp-content
+#/digiup/wordpress/wp-content/*
+#/digiup/!wordpress/wp-content/themes*
+#/digiup/wordpress/wp-content/themes/the-theme-REF
