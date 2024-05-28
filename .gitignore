@@ -43,3 +43,4 @@ next-env.d.ts
 /digiup/!wordpress/wp-content
 /digiup/wordpress/wp-content/*
 /digiup/!wordpress/wp-content/themes*
+!/digiup/wordpress/wp-content/themes/digiup
