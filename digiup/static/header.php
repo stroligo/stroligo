@@ -24,9 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Carregando o CSS -->
-    <link rel="stylesheet" href="<?php tu(); ?>/build/css/style.css">
+    <link rel="stylesheet" href="./build/css/style.css">
     <!-- Carregando Classes de JS -->
-    <script src="<?php tu(); ?>/build/js/scripts.js"></script>
+    <script src="./build/js/scripts.js"></script>
 
 </head>
 
