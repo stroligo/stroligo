@@ -1,8 +1,3 @@
-/* Coisas a fazer */
-/* Modal para quando clicar no story abrir um formulario ?? */
-/* Form enviar um email para o admin e para quem enviou */
-/* Fazer paralaxx */
-
 /* CSS Dev by Gabriel Stroligo - stroligo.dev */
 //Import Font from Google
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
@@ -11,12 +6,10 @@
   /* General Configs */
   html {
     @apply scroll-smooth font-manrope  text-base antialiased;
-
     body {
       @apply cursor-default bg-gradient-to-r from-digiup-gray-50 from-5% via-white via-30% to-white  text-digiup-gray-500;
       /* Adjust Deg */
       background-image: linear-gradient(162deg, var(--tw-gradient-stops));
-
       .container {
         /* Max width container */
         @apply max-w-6xl;

@@ -1809,15 +1809,6 @@ footer .social svg:hover{
     width: 300px;
   }
 }
-.visible{
-  visibility: visible;
-}
-.collapse{
-  visibility: collapse;
-}
-.static{
-  position: static;
-}
 .fixed{
   position: fixed;
 }
@@ -1880,17 +1871,11 @@ footer .social svg:hover{
 .block{
   display: block;
 }
-.inline{
-  display: inline;
-}
 .flex{
   display: flex;
 }
 .inline-flex{
   display: inline-flex;
-}
-.table{
-  display: table;
 }
 .grid{
   display: grid;
@@ -1969,11 +1954,6 @@ footer .social svg:hover{
 }
 .overflow-hidden{
   overflow: hidden;
-}
-.truncate{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .rounded{
   border-radius: 0.25rem;
@@ -2080,12 +2060,6 @@ footer .social svg:hover{
 .font-semibold{
   font-weight: 600;
 }
-.lowercase{
-  text-transform: lowercase;
-}
-.italic{
-  font-style: italic;
-}
 .text-digiup-blue-100{
   --tw-text-opacity: 1;
   color: rgb(0 105 171 / var(--tw-text-opacity));
@@ -2114,21 +2088,11 @@ footer .social svg:hover{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-.underline{
-  text-decoration-line: underline;
-}
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-/* Coisas a fazer */
-/* Modal para quando clicar no story abrir um formulario ?? */
-/* Form enviar um email para o admin e para quem enviou */
-/* Fazer paralaxx */
 /* CSS Dev by Gabriel Stroligo - stroligo.dev */
 @media (min-width: 768px){
   .md\:my-11{
