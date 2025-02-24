@@ -1,19 +1,20 @@
 ### Hello! 👋 My name is Stroligo... **Gabriel Stroligo**
 
-I have 15 years' experience in web development, working in various areas, including technology, creation and marketing. I am currently an employee of the Court of Justice of the State of Tocantins, as well as having co-founded Web Success in Ireland and 42 Bar e Board Games in Tocantins.
+I specialise in web development with over 15 years of experience, building high-impact digital solutions. My expertise spans JavaScript, Vue.js, React, Next.js, Nuxt.js, Tailwind, CSS, PHP, Laravel, SQL, and WordPress, enabling me to develop agile, responsive, and visually engaging interfaces. I'm committed to continuous learning and staying up to date with industry best practices and trends.
 
-My specialization is in the field of Front-End, where I have extensive expertise and knowledge. I specialize in Javascript, and my education includes an undergraduate degree in Arts and a master's degree in Computer Modeling, both from the Federal University of Tocantins.
+I'm passionate about working on projects that drive positive social impact, applying clean, efficient, and scalable code to deliver real value to users.
 
-Hyperactive by nature, I focus my energy on projects that involve creativity and innovation, always seeking to overcome challenges. My motivation is to continually improve my skills and apply them to creating exceptional web experiences.
+My academic background includes Web Development courses from Ironhack and Full-Stack Development from FLAG.PT in Portugal, as well as a Bachelor’s Degree in Arts and a Master’s Degree in Computational Modelling from the Federal University of Tocantins.
 
 Please feel free to check out my Portfolio.
 
 If you need any clarification, have any interesting projects or just want to get in touch, feel free to contact me at *gabrielstroligo@gmail.com*
 
-### Frontend skills
+### Frontend & Backend skills
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Vue](https://img.shields.io/badge/Vue-green?style=for-the-badge&logo=vue.js&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-green?style=for-the-badge&logo=vue.js&logoColor=white) ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-black?style=for-the-badge&logo=nuxt.js&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-%2300758F.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![MongoDB](https://img.shields.io/badge/mongodb-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+
 
 ### Status
 
