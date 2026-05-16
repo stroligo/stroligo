@@ -1,4 +1,9 @@
 # Node.js
+node_modules
+.nuxt
+.output
+dist
+
 /site/node_modules
 /site/.pnp
 /site/.pnp.js
