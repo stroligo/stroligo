@@ -27,7 +27,7 @@ export default {
     about: 'Sobre',
     work: 'Atuação',
     projects: 'Projetos',
-    contact: 'Redes',
+    contact: 'Contato',
     resume: 'Currículo',
     linkedin: 'LinkedIn',
     uikit: 'UI Kit',
@@ -337,7 +337,7 @@ export default {
     subtitle:
       'O LinkedIn concentra a trajetória completa, recomendações e todos os projetos. No GitHub e Behance você encontra código e referências visuais.',
     socialTitle: 'Redes profissionais',
-    hobbiesTitle: 'Hobbies',
+    hobbiesTitle: 'Curiosidades',
     formTitle: 'Mensagem rápida',
     formNameLabel: 'Seu nome',
     formNamePlaceholder: 'Como posso te chamar?',

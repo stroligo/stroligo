@@ -8,9 +8,9 @@ const linkedIn = computed(() =>
 
 const nav = computed(() => [
   { href: '#sobre', label: copy.value.nav.about },
-  { href: '#atuacao', label: copy.value.nav.work },
   { href: '#projetos', label: copy.value.nav.projects },
-  { href: '#redes', label: copy.value.nav.contact },
+  { href: '#atuacao', label: copy.value.nav.work },
+  { href: '#contato', label: copy.value.nav.contact },
 ])
 </script>
 
@@ -40,7 +40,7 @@ const nav = computed(() => [
 
       <div class="flex shrink-0 items-center gap-2 sm:gap-3">
         <ThemeToggle />
-        <LocaleSwitcher class="hidden sm:flex" />
+        <LocaleSwitcher />
         <StroButton
           :href="profile.resumeUrl"
           variant="ghost"

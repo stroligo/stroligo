@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ProjectCategory } from '~/types/portfolio'
-import { hobbiesForLocale } from '~/data/hobbies'
-import { site } from '~/data/site'
+import type { ProjectCategory } from '~/types/portfolio';
+import { hobbiesForLocale } from '~/data/hobbies';
+import { site } from '~/data/site';
 
-const { t, locale } = useI18n()
-const copy = usePortfolioCopy()
+const { t, locale } = useI18n();
+const copy = usePortfolioCopy();
 const {
   profile,
   labels,
@@ -16,32 +16,32 @@ const {
   linkedInProjectsUrl,
   heroExperienceLabel,
   projectCountLabel,
-} = usePortfolio()
+} = usePortfolio();
 
 const hobbies = computed(() =>
   hobbiesForLocale(locale.value === 'en' ? 'en' : 'pt'),
-)
+);
 
-const activeCategory = ref<ProjectCategory>('todos')
+const activeCategory = ref<ProjectCategory>('todos');
 
 const filteredProjects = computed(() => {
   const list =
     activeCategory.value === 'todos'
       ? projects.value
-      : projects.value.filter((p) => p.category === activeCategory.value)
-  return list
-})
+      : projects.value.filter((p) => p.category === activeCategory.value);
+  return list;
+});
 
 const filteredCountLabel = computed(() =>
   projectCountLabel(filteredProjects.value.length),
-)
+);
 
 const terminalLines = computed(() => [
   `const dev = "${profile.value.name}"`,
   'const stack = ["React", "Nuxt", "TypeScript"]',
   `const focus = "${locale.value === 'pt' ? 'impacto + craft' : 'impact + craft'}"`,
   'export default dev',
-])
+]);
 
 useSeoMeta({
   title: () => labels.value.seoTitle,
@@ -52,17 +52,18 @@ useSeoMeta({
   ogImage: () => `${profile.value.siteUrl}${site.profilePhotoUrl}`,
   ogType: 'profile',
   twitterCard: 'summary_large_image',
-})
+});
 
 useHead({
   htmlAttrs: { lang: () => htmlLang.value },
   link: [
     {
       rel: 'canonical',
-      href: () => `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
+      href: () =>
+        `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
     },
   ],
-})
+});
 </script>
 
 <template>
@@ -93,17 +94,9 @@ useHead({
           />
         </div>
 
-        <div class="relative stro-container py-16 sm:py-24 lg:py-28">
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
-            <StroBadge variant="cyan">stroligo.dev</StroBadge>
-            <LocaleSwitcher class="sm:hidden" />
-          </div>
-
+        <div class="relative stro-container py-16">
           <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
             <div class="min-w-0">
-              <p class="stro-kicker mb-4">
-                {{ copy.brandTagline }}
-              </p>
               <h1
                 class="stro-heading text-[clamp(2.25rem,5vw,var(--stro-text-hero))] leading-[var(--stro-leading-tight)]"
               >
@@ -119,11 +112,9 @@ useHead({
 
               <div
                 id="sobre"
-                class="mt-10 scroll-mt-24"
+                class="mt-10 scroll-mt-[calc(var(--stro-header-height)+1rem)]"
               >
-                <p class="stro-kicker mb-4">
-                  // about
-                </p>
+                <p class="stro-kicker mb-4">// about</p>
 
                 <div class="space-y-4 text-base sm:text-lg">
                   <p
@@ -157,18 +148,15 @@ useHead({
                   <ProfilePhoto size="hero" />
                 </div>
                 <div class="hero-terminal-overlap">
-                  <StroTerminal
-                    title="portfolio.ts"
-                    :lines="terminalLines"
-                  />
+                  <StroTerminal title="portfolio.ts" :lines="terminalLines" />
                 </div>
               </div>
               <p
                 class="mt-6 text-center text-sm text-stro-muted sm:mt-7 lg:text-left"
               >
-                  <span class="stro-font-mono text-stro-cyan">{{
-                    profile.name
-                  }}</span>
+                <span class="stro-font-mono text-stro-cyan">{{
+                  profile.name
+                }}</span>
                 <span class="mt-0.5 block">{{ profile.tagline }}</span>
               </p>
             </aside>
@@ -186,7 +174,9 @@ useHead({
       >
         <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
           <p class="text-sm text-stro-muted">
-            <span class="stro-font-mono text-stro-cyan">{{ filteredProjects.length }}</span>
+            <span class="stro-font-mono text-stro-cyan">{{
+              filteredProjects.length
+            }}</span>
             {{ filteredCountLabel }}
           </p>
           <div class="flex flex-wrap gap-2">
@@ -245,7 +235,7 @@ useHead({
 
       <!-- Redes -->
       <StroSection
-        id="redes"
+        id="contato"
         kicker="// contact"
         :title="copy.contact.title"
         :subtitle="copy.contact.subtitle"
@@ -254,34 +244,32 @@ useHead({
       >
         <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
-            <h3 class="stro-kicker mb-6 !text-stro-purple">
-              {{ copy.contact.socialTitle }}
-            </h3>
-            <div
-              class="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4"
-              :aria-label="copy.a11y.socialNav"
-            >
-              <SocialLinkCard
-                v-for="link in socialLinks"
-                :key="link.id"
-                :link="link"
-              />
-            </div>
             <ContactQuickForm :to-email="profile.email" />
           </div>
 
-          <div>
-            <h3 class="stro-kicker mb-6 !text-stro-cyan">
-              {{ copy.contact.hobbiesTitle }}
-            </h3>
-            <ul class="space-y-4">
-              <li
-                v-for="hobby in hobbies"
-                :key="hobby.id"
+          <div class="flex flex-col gap-10">
+            <div>
+              <h3 class="stro-kicker mb-6 !text-stro-cyan">
+                {{ copy.contact.hobbiesTitle }}
+              </h3>
+              <CuriositiesList :items="hobbies" />
+            </div>
+
+            <div>
+              <h3 class="stro-kicker mb-6 !text-stro-purple">
+                {{ copy.contact.socialTitle }}
+              </h3>
+              <div
+                class="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4"
+                :aria-label="copy.a11y.socialNav"
               >
-                <HobbyCard :hobby="hobby" />
-              </li>
-            </ul>
+                <SocialLinkCard
+                  v-for="link in socialLinks"
+                  :key="link.id"
+                  :link="link"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </StroSection>

@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import type { SocialLink, SocialLinkId } from '~/types/portfolio'
+import type { SocialLink } from '~/types/portfolio'
 import { getSocialIcon } from '~/data/socialIcons'
 
 const props = defineProps<{
   link: SocialLink
 }>()
-
-const { isDark } = useStroTheme()
 
 const ariaLabel = computed(() => {
   const base = props.link.label
@@ -15,23 +13,6 @@ const ariaLabel = computed(() => {
 })
 
 const icon = computed(() => getSocialIcon(props.link.id))
-
-const iconColor = computed(() => {
-  if (props.link.id === 'github') {
-    return isDark.value ? '#E5E7EB' : icon.value.color
-  }
-  return icon.value.color
-})
-
-const boxClass = computed(() => {
-  if (props.link.primary) {
-    return 'border-stro-purple/40 bg-stro-purple/10 shadow-[var(--stro-shadow-glow-brand)] hover:border-stro-cyan/50 hover:bg-stro-purple/20'
-  }
-  if (props.link.id === 'whatsapp') {
-    return 'border-[#25D366]/35 bg-[#25D366]/10 hover:border-[#25D366]/55 hover:bg-[#25D366]/20'
-  }
-  return 'border-stro-border bg-stro-surface/80 hover:border-stro-purple/35 hover:bg-stro-purple/5'
-})
 </script>
 
 <template>
@@ -44,8 +25,7 @@ const boxClass = computed(() => {
     class="group inline-flex shrink-0"
   >
     <span
-      class="stro-social-icon flex h-14 w-14 items-center justify-center rounded-[var(--stro-radius-lg)] border transition sm:h-16 sm:w-16"
-      :class="boxClass"
+      class="stro-social-icon flex h-14 w-14 items-center justify-center rounded-[var(--stro-radius-lg)] border border-stro-border bg-stro-surface/80 text-stro-muted transition hover:border-stro-purple/35 hover:bg-stro-purple/5 hover:text-stro-foreground sm:h-16 sm:w-16"
     >
       <svg
         class="h-6 w-6 shrink-0 sm:h-7 sm:w-7"
@@ -53,7 +33,6 @@ const boxClass = computed(() => {
         fill="currentColor"
         role="img"
         :aria-label="icon.title"
-        :style="{ color: iconColor }"
       >
         <path :d="icon.path" />
       </svg>
@@ -67,14 +46,6 @@ const boxClass = computed(() => {
   transition:
     border-color var(--stro-duration-normal) var(--stro-ease),
     background-color var(--stro-duration-normal) var(--stro-ease),
-    box-shadow var(--stro-duration-normal) var(--stro-ease);
-}
-
-.stro-social-icon svg {
-  transition: color var(--stro-duration-normal) var(--stro-ease);
-}
-
-.group:hover .stro-social-icon svg {
-  filter: brightness(1.08);
+    color var(--stro-duration-normal) var(--stro-ease);
 }
 </style>

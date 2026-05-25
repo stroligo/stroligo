@@ -47,7 +47,6 @@ function submit() {
   <StroCard
     variant="glass"
     padding="lg"
-    class="mt-8"
   >
     <h4 class="stro-kicker mb-5 !text-stro-purple">
       {{ t('contact.formTitle') }}

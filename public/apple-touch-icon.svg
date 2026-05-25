@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="stroligo.dev">
+  <defs>
+    <linearGradient id="g" x1="24" y1="12" x2="156" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="48%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="40" fill="url(#g)"/>
+  <path
+    fill="#F8FAFC"
+    d="M91.1 47.8c25.6 0 42.5 13.2 44.4 33.8H118c-1.7-12.1-11-19.4-26.4-19.4-15.5 0-25.6 8.2-25.6 20 0 9.3 5.9 15.2 20.5 18.9l16.9 4.8c18.9 5.6 27.3 13.2 27.3 26.7 0 18.3-16.1 30.6-42.8 30.6-25.3 0-41.9-12.7-45-34.1h20.3c2.5 14.3 13 23 28.5 23 15.2 0 25.1-7.6 25.1-19.1 0-8.7-5.9-13.8-20-17.5l-18-5.1c-20.3-5.9-29-15.1-29-29 0-19.4 16.6-32.3 43.6-32.3z"
+  />
+</svg>

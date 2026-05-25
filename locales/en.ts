@@ -337,7 +337,7 @@ export default {
     subtitle:
       'LinkedIn has my full career, recommendations, and all projects. GitHub and Behance showcase code and visual work.',
     socialTitle: 'Professional links',
-    hobbiesTitle: 'Hobbies',
+    hobbiesTitle: 'Curiosities',
     formTitle: 'Quick message',
     formNameLabel: 'Your name',
     formNamePlaceholder: 'How should I address you?',

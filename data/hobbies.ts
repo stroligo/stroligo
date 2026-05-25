@@ -1,85 +1,49 @@
 import type { ContentLocale } from '~/lib/portfolio/locale'
-import type { HobbyIconId } from '~/data/hobbyIcons'
+import type { CuriosityIconId } from '~/data/curiosityIcons'
 
-export type Hobby = {
-  id: string
-  iconId: HobbyIconId
-  title: string
-  bullets: string[]
-  href?: string
-  linkLabel?: string
+export type HobbyCuriosity = {
+  id: CuriosityIconId
+  text: string
 }
 
-const hobbiesPt: Hobby[] = [
+const hobbiesPt: HobbyCuriosity[] = [
   {
-    id: 'travel-europe',
-    iconId: 'instagram',
-    title: 'Viagens na Europa',
-    bullets: [
-      'Explorar cidades e culturas pelo continente',
-      'Lista de países visitados no Instagram @gabrielstroligo',
-      'Diário de viagem no projeto @elestaoviajando',
-    ],
-    href: 'https://www.instagram.com/gabrielstroligo',
-    linkLabel: '@gabrielstroligo',
+    id: 'lotr',
+    text: 'Viciado em Senhor dos Anéis',
   },
   {
-    id: 'nerd-fantasy',
-    iconId: 'boardgamegeek',
-    title: 'Nerd & universos de fantasia',
-    bullets: [
-      'Senhor dos Anéis e mundos de fantasia épica',
-      'Ficção científica, séries e franquias geek',
-      'Livros e universos que inspiram criatividade fora do código',
-    ],
+    id: 'countries',
+    text: 'Mais de 40 países visitados',
   },
   {
-    id: 'board-games',
-    iconId: 'boardgamegeek',
-    title: 'Jogos de tabuleiro',
-    bullets: [
-      'Estratégia, narrativa e mecânicas bem desenhadas',
-      'Noites de jogo com amigos',
-      'Curadoria e experiência no 42 Bar e Board Games',
-    ],
+    id: 'nomad',
+    text: 'Vida nómade pela Europa',
+  },
+  {
+    id: 'hiking',
+    text: 'Caminhadas e trilhas sempre que dá',
   },
 ]
 
-const hobbiesEn: Hobby[] = [
+const hobbiesEn: HobbyCuriosity[] = [
   {
-    id: 'travel-europe',
-    iconId: 'instagram',
-    title: 'Travel across Europe',
-    bullets: [
-      'Exploring cities and cultures across the continent',
-      'List of countries visited on Instagram @gabrielstroligo',
-      'Travel diary on the @elestaoviajando project',
-    ],
-    href: 'https://www.instagram.com/gabrielstroligo',
-    linkLabel: '@gabrielstroligo',
+    id: 'lotr',
+    text: 'Lord of the Rings addict',
   },
   {
-    id: 'nerd-fantasy',
-    iconId: 'boardgamegeek',
-    title: 'Nerd & fantasy worlds',
-    bullets: [
-      'The Lord of the Rings and epic fantasy worlds',
-      'Sci-fi, series, and geek franchises',
-      'Books and universes that fuel creativity beyond code',
-    ],
+    id: 'countries',
+    text: '40+ countries visited and counting',
   },
   {
-    id: 'board-games',
-    iconId: 'boardgamegeek',
-    title: 'Board games',
-    bullets: [
-      'Strategy, storytelling, and solid game design',
-      'Game nights with friends',
-      'Curation and hands-on experience at 42 Bar & Board Games',
-    ],
+    id: 'nomad',
+    text: 'Nomadic life across Europe',
+  },
+  {
+    id: 'hiking',
+    text: 'Hiking and trails whenever the landscape calls',
   },
 ]
 
-export function hobbiesForLocale(locale: ContentLocale): Hobby[] {
+export function hobbiesForLocale(locale: ContentLocale): HobbyCuriosity[] {
   return locale === 'en' ? hobbiesEn : hobbiesPt
 }
