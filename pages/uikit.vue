@@ -27,9 +27,10 @@ useSeoMeta({
   robots: 'noindex, follow',
 })
 
-useHead({
-  htmlAttrs: { lang: () => htmlLang.value },
-})
+useHead(() => ({
+  htmlAttrs: { lang: htmlLang.value },
+  link: [{ rel: 'canonical', href: 'https://stroligo.dev/uikit' }],
+}))
 </script>
 
 <template>

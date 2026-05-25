@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import type { ProjectCategory } from '~/types/portfolio';
 import { hobbiesForLocale } from '~/data/hobbies';
-import { site } from '~/data/site';
 
 const { t, locale } = useI18n();
 const copy = usePortfolioCopy();
 const {
   profile,
-  labels,
   projects,
   projectCategories,
   experiences,
   socialLinks,
-  htmlLang,
   linkedInProjectsUrl,
   heroExperienceLabel,
   projectCountLabel,
@@ -43,27 +40,7 @@ const terminalLines = computed(() => [
   'export default dev',
 ]);
 
-useSeoMeta({
-  title: () => labels.value.seoTitle,
-  description: () => labels.value.seoDescription,
-  ogTitle: () => labels.value.seoTitle,
-  ogDescription: () => labels.value.ogDescription,
-  ogUrl: () => `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
-  ogImage: () => `${profile.value.siteUrl}${site.profilePhotoUrl}`,
-  ogType: 'profile',
-  twitterCard: 'summary_large_image',
-});
-
-useHead({
-  htmlAttrs: { lang: () => htmlLang.value },
-  link: [
-    {
-      rel: 'canonical',
-      href: () =>
-        `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
-    },
-  ],
-});
+useStroSeo()
 </script>
 
 <template>

@@ -5,9 +5,9 @@ export default {
   seo: {
     title: 'Gabriel Stroligo — Front-end & projetos de impacto',
     description:
-      'Portfólio de Gabriel Stroligo: front-end specialist, projetos de impacto social, dados abertos e portais institucionais.',
+      'Portfólio de Gabriel Stroligo: desenvolvimento front-end, projetos de impacto social, dados abertos e portais institucionais. React, Nuxt e TypeScript.',
     ogDescription:
-      'Projetos de impacto social, visualização de dados e desenvolvimento front-end. Conecte-se no LinkedIn.',
+      'Projetos de impacto social, visualização de dados e desenvolvimento front-end. Currículo, GitHub, Behance e LinkedIn.',
   },
   theme: {
     enableDark: 'Ativar modo escuro',

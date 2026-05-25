@@ -47,10 +47,12 @@ export default defineNuxtConfig({
       meta: [
         { name: 'author', content: 'Gabriel Stroligo' },
         { name: 'theme-color', content: '#0B1020' },
+        { name: 'format-detection', content: 'telephone=no' },
       ],
     },
   },
   i18n: {
+    baseUrl: 'https://stroligo.dev',
     restructureDir: false,
     locales: [
       { code: 'pt', language: 'pt-BR', file: 'pt.ts', name: 'Português' },
@@ -83,7 +85,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/uikit'],
+      routes: ['/', '/en'],
+      ignore: ['/_studio', '/_studio/**', '/uikit'],
     },
   },
 })

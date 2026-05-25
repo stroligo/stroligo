@@ -5,9 +5,9 @@ export default {
   seo: {
     title: 'Gabriel Stroligo — Front-end & impact-driven projects',
     description:
-      'Portfolio of Gabriel Stroligo: front-end specialist, social impact projects, open data, and institutional portals.',
+      'Portfolio of Gabriel Stroligo: front-end development, social impact projects, open data, and institutional portals. React, Nuxt, and TypeScript.',
     ogDescription:
-      'Social impact projects, data visualization, and front-end development. Connect on LinkedIn.',
+      'Social impact projects, data visualization, and front-end development. Resume, GitHub, Behance, and LinkedIn.',
   },
   theme: {
     enableDark: 'Enable dark mode',
