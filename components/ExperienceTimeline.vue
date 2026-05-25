@@ -84,6 +84,7 @@ function glowForIndex(index: number) {
             :key="job.id"
           >
             <details
+              :open="job.current"
               class="experience-collapse group rounded-[var(--stro-radius-xl)] border border-stro-border bg-stro-surface shadow-[var(--stro-shadow-soft)] transition hover:border-stro-purple/30 open:border-stro-purple/35 open:shadow-[var(--stro-shadow-glow-brand)]"
             >
               <summary

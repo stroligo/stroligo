@@ -1,3 +1,16 @@
+# Deploy: GitHub (main) → Hostinger (public_html)
+#
+# No hPanel: Websites → teu site → Remote access
+#   - Ativa SFTP (toggle)
+#   - Anota: IP/hostname, utilizador FTP, porta SFTP (65002)
+#
+# GitHub → Settings → Secrets and variables → Actions → Secrets:
+#   HOST  → IP do painel (ex. 186.202.157.79) ou ftp.teudominio.com
+#   USER  → utilizador FTP (ex. u123456789)
+#   PASS  → senha FTP (= senha SFTP no Hostinger)
+#
+# Variável opcional (Variables): DEPLOY_PORT → só se a tua conta usar outra porta
+
 on:
   push:
     branches:
@@ -15,7 +28,7 @@ env:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy to Hostinger
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -39,14 +52,29 @@ jobs:
           echo "Deploy size:" && du -sh .output/public
           echo "File count:" && find .output/public -type f | wc -l
 
-      - name: Sync files to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Test Hostinger ports (diagnostic)
+        continue-on-error: true
+        env:
+          HOST: ${{ secrets.HOST }}
+        run: |
+          set +e
+          echo "Host: $HOST"
+          for port in 65002 21; do
+            if timeout 8 bash -c "echo >/dev/tcp/${HOST}/${port}" 2>/dev/null; then
+              echo "  port $port: reachable from GitHub"
+            else
+              echo "  port $port: not reachable"
+            fi
+          done
+
+      - name: Sync to Hostinger (SFTP)
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          local-dir: .output/public/
-          server-dir: public_html/
-          timeout: 1200000
-          log-level: standard
-          state-name: .ftp-deploy-sync-state.json
+          port: ${{ vars.DEPLOY_PORT || '65002' }}
+          local_path: '.output/public/*'
+          remote_path: './public_html/'
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=60 -o ServerAliveInterval=30 -o StrictHostKeyChecking=no'
