@@ -6,7 +6,11 @@ export default defineNuxtConfig({
   experimental: {
     appManifest: false,
   },
-  modules: ['@nuxt/content', '@nuxtjs/i18n', 'nuxt-studio'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/i18n',
+    ...(process.env.NUXT_STUDIO === '0' ? [] : ['nuxt-studio']),
+  ],
   content: {
     experimental: {
       sqliteConnector: 'native',
@@ -17,15 +21,19 @@ export default defineNuxtConfig({
     host: 'localhost',
   },
   css: ['~/assets/css/main.css'],
-  studio: {
-    route: '/_studio',
-    repository: {
-      provider: 'github',
-      owner: 'stroligo',
-      repo: 'stroligo',
-      branch: 'main',
-    },
-  },
+  ...(process.env.NUXT_STUDIO === '0'
+    ? {}
+    : {
+        studio: {
+          route: '/_studio',
+          repository: {
+            provider: 'github',
+            owner: 'stroligo',
+            repo: 'stroligo',
+            branch: 'main',
+          },
+        },
+      }),
   app: {
     head: {
       htmlAttrs: {

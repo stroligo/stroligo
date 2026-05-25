@@ -2,11 +2,22 @@ on:
   push:
     branches:
       - main
+
 name: Deploy website on push
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NUXT_STUDIO: '0'
+
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -21,11 +32,21 @@ jobs:
       - name: Generate static site
         run: npm run generate
 
+      - name: Prepare deploy bundle
+        run: |
+          rm -rf .output/public/_studio-app .output/public/_studio
+          test -f .output/public/index.html
+          echo "Deploy size:" && du -sh .output/public
+          echo "File count:" && find .output/public -type f | wc -l
+
       - name: Sync files to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
           local-dir: .output/public/
           server-dir: public_html/
+          timeout: 1200000
+          log-level: standard
+          state-name: .ftp-deploy-sync-state.json
