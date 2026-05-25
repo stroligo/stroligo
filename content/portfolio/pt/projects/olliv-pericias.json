@@ -1,0 +1,12 @@
+{
+  "id": "olliv-pericias",
+  "title": "Olliv Perícias",
+  "organization": "Olliv Perícias",
+  "description": "Landing page institucional para perícia médico-legal — apresentação de serviços, credibilidade e canais de contacto com foco em responsividade, UX visual e performance (Nuxt, Tailwind).",
+  "tags": [
+    "Nuxt",
+    "Tailwind CSS",
+    "Landing Page",
+    "Institucional"
+  ]
+}

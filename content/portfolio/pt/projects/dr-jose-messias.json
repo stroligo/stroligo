@@ -1,0 +1,12 @@
+{
+  "id": "dr-jose-messias",
+  "title": "Dr. José Messias",
+  "organization": "Dr. José Messias",
+  "description": "Site médico moderno e responsivo para cirurgia bariátrica e tratamento da obesidade em Brasília — design limpo, navegação intuitiva, acessibilidade e performance alinhados à identidade profissional e ao cuidado com o paciente.",
+  "tags": [
+    "Nuxt",
+    "Tailwind CSS",
+    "Saúde",
+    "Landing Page"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tagline": "Software Engineer · Front-end Specialist",
+  "location": "Portugal",
+  "experienceYears": "18+",
+  "resumeLabel": "Currículo (PDF)",
+  "about": [
+    "Software Engineer e especialista em front-end com mais de 18 anos de experiência em soluções digitais para setores público e privado. Desenvolvo interfaces modernas, responsivas e acessíveis com React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS e Material UI — do layout ao deploy, em ambientes ágeis e equipes multiculturais.",
+    "Transformo UI/UX em arquiteturas escaláveis em portais governamentais de alto tráfego, plataformas de impacto social, visualização de dados e transparência (open data, civic tech). Já contribuí para projetos com OMS, MMA, institutos de pesquisa, ONGs e veículos de jornalismo investigativo no Brasil e na Europa, com foco em performance, acessibilidade e código sustentável."
+  ],
+  "stack": [
+    "React",
+    "Next.js",
+    "Vue",
+    "Nuxt",
+    "TypeScript",
+    "Tailwind CSS",
+    "Material UI",
+    "Vite",
+    "Node.js",
+    "PHP",
+    "Joomla"
+  ]
+}

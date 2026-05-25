@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "id": "vex-tech",
+      "company": "Vex Tech",
+      "role": "Software Engineer · Especialista front-end",
+      "period": "jul/2025 — presente",
+      "yearStart": 2025,
+      "yearEnd": null,
+      "location": "Portugal",
+      "highlight": "Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Stack: React, TypeScript, Material UI e Context API. Equipes ágeis multiculturais.",
+      "details": "Desenvolvimento e evolução de interfaces para o EUIPO, com foco em consistência visual, escalabilidade e entrega em ciclos ágeis. Trabalho remoto a partir de Portugal, documentação técnica em inglês e colaboração com equipas distribuídas na Europa.",
+      "url": "https://www.linkedin.com/company/vextech-it",
+      "current": true
+    },
+    {
+      "id": "cafe-art",
+      "company": "Café.art.br",
+      "role": "Software Engineer · Especialista front-end",
+      "period": "fev/2022 — presente",
+      "yearStart": 2022,
+      "yearEnd": null,
+      "location": "Rio de Janeiro, BR · remoto",
+      "highlight": "Estúdio de design de informação e visualização de dados (ODS 2030). Ciclo completo de front-end: React, Vue, Nuxt, Tailwind, TypeScript, Next.js, Vite e PHP.",
+      "details": "Participação em projetos de transparência, saúde pública e meio ambiente — do protótipo ao deploy, com integração a APIs e CMS quando necessário. Inclui Panorama da Oncologia Pediátrica (Desiderata), Inova HC, Cidadania Digital (SaferNet), WePlan Forests e outras plataformas de impacto social.",
+      "url": "https://www.linkedin.com/company/cafe-art-br",
+      "current": true
+    },
+    {
+      "id": "tjto",
+      "company": "TJTO — Tribunal de Justiça do Tocantins",
+      "role": "Software Engineer · Front-end",
+      "period": "mai/2010 — presente",
+      "yearStart": 2010,
+      "yearEnd": null,
+      "location": "Palmas, TO",
+      "highlight": "Desde 2011: todos os sites institucionais. Joomla como CMS, templates customizados. Portal tjto.jus.br (~8.900 visitas/dia). Hotsites, performance e acessibilidade. Stack: Joomla, HTML, CSS, JS, TypeScript, React, Node, PHP, Tailwind, MySQL e Git.",
+      "details": "Responsável pelo front-end do ecossistema digital do tribunal: portal principal, hotsites temáticos, gestão de usuários e integrações. Evolução contínua da stack e foco em alto tráfego, acessibilidade e manutenção de longo prazo no setor público.",
+      "url": "https://www.linkedin.com/company/tjto",
+      "current": true
+    },
+    {
+      "id": "web-success",
+      "company": "Web Success Ltd",
+      "role": "Co-founder",
+      "period": "set/2020 — fev/2022",
+      "yearStart": 2020,
+      "yearEnd": 2022,
+      "location": "Dublin, Irlanda",
+      "highlight": "Consultoria, sites e sistemas customizados. Gestão técnica, recrutamento e entrega de projetos.",
+      "details": "Cofundação da Web Success na Irlanda: desenvolvimento de sites e aplicações sob medida, coordenação técnica, apoio comercial e formação de equipa para clientes europeus em regime remoto.",
+      "current": false
+    },
+    {
+      "id": "42-bar",
+      "company": "42 Bar e Board Games",
+      "role": "Co-founder · Creative lead",
+      "period": "nov/2017 — mar/2020",
+      "yearStart": 2017,
+      "yearEnd": 2020,
+      "location": "Palmas, TO",
+      "highlight": "Gestão do bar, marca, marketing, eventos e identidade visual nas redes sociais.",
+      "details": "Empreendimento local em Palmas: operação do espaço, curadoria de jogos de tabuleiro, campanhas de marketing e produção de conteúdo visual para redes sociais.",
+      "current": false
+    },
+    {
+      "id": "prte",
+      "company": "PRTE — Tecnologia e Soluções",
+      "role": "Frontend Developer",
+      "period": "jun/2014 — jun/2016",
+      "yearStart": 2014,
+      "yearEnd": 2016,
+      "location": "Palmas, TO",
+      "highlight": "Front-end, interfaces responsivas, HTML5, CSS e JavaScript.",
+      "details": "Desenvolvimento de interfaces para clientes locais, protótipos e integração com backends PHP. Período de consolidação em UI antes do retorno em tempo integral ao TJTO; atuação também ligada à prte.com.br (EAD).",
+      "current": false
+    },
+    {
+      "id": "microlins",
+      "company": "Microlins",
+      "role": "Instrutor de informática",
+      "period": "jul/2007 — jan/2010",
+      "yearStart": 2007,
+      "yearEnd": 2010,
+      "location": "Palmas, TO",
+      "highlight": "Cursos de Office, design, HTML/CSS e Flash/ActionScript; site microlinspalmas.com.br, newsletter e campanhas.",
+      "details": "Ministração de turmas presenciais e manutenção da presença digital da unidade, incluindo materiais promocionais e site institucional.",
+      "current": false
+    },
+    {
+      "id": "cartorio-moromizato",
+      "company": "Cartório Moromizato",
+      "role": "Suporte de TI",
+      "period": "fev/2009 — dez/2009",
+      "yearStart": 2009,
+      "yearEnd": 2009,
+      "location": "Palmas, TO",
+      "highlight": "Suporte, rede local e site cartoriomoromizato.com.br.",
+      "details": "Suporte técnico presencial e manutenção da infraestrutura e site institucional do cartório, em paralelo à atuação na Microlins.",
+      "current": false
+    },
+    {
+      "id": "qi-informatica",
+      "company": "Q.I. Informática",
+      "role": "Instrutor de informática",
+      "period": "jan/2007 — jun/2008",
+      "yearStart": 2007,
+      "yearEnd": 2008,
+      "location": "Palmas, TO",
+      "highlight": "AutoCAD, design gráfico, web e Flash em turmas presenciais.",
+      "details": "Cursos técnicos com foco em ferramentas de desenho, web e animação Flash nos primeiros anos de atuação formal em informática em Palmas.",
+      "current": false
+    },
+    {
+      "id": "to-online",
+      "company": "To Online — Marketing de Resultados",
+      "role": "Frontend Developer",
+      "period": "jan/2007 — dez/2007",
+      "yearStart": 2007,
+      "yearEnd": 2007,
+      "location": "Palmas, TO",
+      "highlight": "Mais de 30 projetos web entregues em um ano.",
+      "details": "Produção acelerada de sites e landing pages para campanhas de marketing digital, consolidando ritmo de entrega e domínio de HTML, CSS e JavaScript.",
+      "current": false
+    },
+    {
+      "id": "tema-informatica",
+      "company": "TEMA Informática",
+      "role": "Instrutor · Assistente pedagógico",
+      "period": "jul/2005 — dez/2006",
+      "yearStart": 2005,
+      "yearEnd": 2006,
+      "location": "Niterói, RJ",
+      "highlight": "Padronização pedagógica em seis filiais e cursos de informática.",
+      "details": "Coordenação de materiais entre unidades e aulas introdutórias de informática — primeiro emprego na área, em rede de escolas no Rio de Janeiro.",
+      "current": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "dr-jose-messias",
+  "title": "Dr. José Messias",
+  "organization": "Dr. José Messias",
+  "description": "Modern, responsive medical website for bariatric surgery and obesity treatment in Brasília — clean design, intuitive navigation, accessibility, and performance aligned with a professional, patient-centered identity.",
+  "tags": [
+    "Nuxt",
+    "Tailwind CSS",
+    "Healthcare",
+    "Landing Page"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "amazon-underworld",
+  "title": "Amazon Underworld",
+  "organization": "InfoAmazonia",
+  "description": "Mapa interativo sobre redes de crime organizado na Amazônia — mineração ilegal, tráfico e desmatamento, com Mapbox e QGIS.",
+  "tags": [
+    "Mapas",
+    "Meio ambiente"
+  ]
+}

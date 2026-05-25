@@ -4,19 +4,36 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "predev": "npm run sync:assets && npm run sync:content",
     "dev": "nuxt dev",
+    "dev:stop": "node scripts/dev-stop.mjs",
+    "prepare:nuxt": "nuxt prepare",
+    "sync:assets": "npm run sync:resume && npm run sync:photo",
+    "sync:resume": "mkdir -p public/profile && cp -f profile/may-26.pdf public/profile/may-26.pdf",
+    "sync:photo": "mkdir -p public/profile && cp -f PROJETO/foto.png public/profile/photo.png",
+    "sync:projects": "tsx scripts/sync-project-images.ts",
+    "sync:screenshots": "tsx scripts/capture-project-screenshots.ts",
+    "sync:content": "tsx scripts/sync-content-from-locales.ts",
+    "pregenerate": "npm run sync:assets && npm run sync:content",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/content": "^3.14.0",
+    "@nuxtjs/i18n": "^10.4.0",
     "nuxt": "^3.16.2",
+    "nuxt-studio": "^1.7.0",
+    "simple-icons": "^16.21.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.4",
+    "playwright": "^1.52.0",
+    "sharp": "^0.34.1",
     "tailwindcss": "^4.1.4",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   }
 }

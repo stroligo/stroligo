@@ -1,0 +1,11 @@
+{
+  "id": "siga-doacao",
+  "title": "Track your donation",
+  "organization": "MOL Central de Impacto",
+  "description": "Platform making donations more transparent, connecting donors to organizations and tracking impact.",
+  "tags": [
+    "Nuxt",
+    "Tailwind",
+    "Social impact"
+  ]
+}

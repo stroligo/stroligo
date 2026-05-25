@@ -1,0 +1,11 @@
+{
+  "id": "eles-tao-viajando",
+  "title": "Eles tão viajando",
+  "organization": "Projeto final FLAG",
+  "description": "Aplicação full stack para compartilhar viagens — mapas, galeria, blog e painel admin. React, Node, MongoDB.",
+  "tags": [
+    "React",
+    "Node",
+    "MongoDB"
+  ]
+}

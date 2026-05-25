@@ -1,0 +1,11 @@
+{
+  "id": "saude-ambiental",
+  "title": "Environmental Health",
+  "organization": "Ministry of Environment (Brazil)",
+  "description": "Portal on the intersection of environmental quality and public health in Brazil — air, chemicals, and environmental determinants.",
+  "tags": [
+    "Nuxt",
+    "Tailwind",
+    "Government"
+  ]
+}

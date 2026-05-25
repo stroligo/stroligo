@@ -1,0 +1,12 @@
+{
+  "id": "layane-moura",
+  "title": "Layane Moura",
+  "organization": "Layane Moura — Illustrator & Map Maker",
+  "description": "Portfólio bilíngue (PT/EN) para ilustradora e designer de mapas — galeria visual, projetos em modal lightbox, formulário de contacto por e-mail e conteúdo editável em Nuxt. SEO, sitemap e dados estruturados.",
+  "tags": [
+    "Nuxt",
+    "Vue",
+    "Portfólio",
+    "i18n"
+  ]
+}

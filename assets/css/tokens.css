@@ -1,0 +1,193 @@
+/**
+ * stroligo.dev — Design tokens v1
+ * Tema: data-theme="dark" (padrão) | data-theme="light"
+ */
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* —— Superfícies —— */
+  --stro-bg: #0b1020;
+  --stro-bg-input: #0f172a;
+  --stro-surface: #111827;
+  --stro-surface-elevated: #151b26;
+  --stro-border: #1f2937;
+  --stro-border-subtle: #1e293b;
+
+  /* —— Texto —— */
+  --stro-text-primary: #f3f4f6;
+  --stro-text-secondary: #94a3b8;
+  --stro-foreground: var(--stro-text-primary);
+  --stro-muted: var(--stro-text-secondary);
+
+  /* —— Accent —— */
+  --stro-purple: #8b5cf6;
+  --stro-blue: #3b82f6;
+  --stro-cyan: #06b6d4;
+  --stro-emerald: #10b981;
+
+  --stro-bracket-left: #6b5cff;
+  --stro-bracket-right: #22d3ee;
+
+  --stro-linkedin: #0a66c2;
+  --stro-success: var(--stro-emerald);
+  --stro-danger: #f87171;
+  --stro-warning: #fbbf24;
+
+  --stro-gradient-brand: linear-gradient(
+    90deg,
+    var(--stro-purple) 0%,
+    var(--stro-blue) 50%,
+    var(--stro-cyan) 100%
+  );
+  --stro-gradient-brand-soft: linear-gradient(
+    135deg,
+    rgb(139 92 246 / 0.15) 0%,
+    rgb(59 130 246 / 0.08) 50%,
+    rgb(6 182 212 / 0.12) 100%
+  );
+  --stro-gradient-button: linear-gradient(
+    90deg,
+    var(--stro-purple) 0%,
+    var(--stro-blue) 100%
+  );
+  --stro-gradient-mesh:
+    radial-gradient(ellipse 70% 55% at 15% -5%, rgb(139 92 246 / 0.2), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 85% 5%, rgb(6 182 212 / 0.12), transparent 50%),
+    radial-gradient(ellipse 45% 35% at 50% 100%, rgb(16 185 129 / 0.06), transparent 45%);
+
+  --stro-shadow-soft:
+    0 0 0 1px rgb(255 255 255 / 0.04),
+    0 8px 32px rgb(0 0 0 / 0.35);
+  --stro-shadow-neon: 0 0 24px rgb(59 130 246 / 0.35);
+  --stro-shadow-glow-brand:
+    0 0 40px rgb(139 92 246 / 0.22),
+    0 0 24px rgb(59 130 246 / 0.18);
+
+  --stro-glass-bg: rgb(255 255 255 / 0.03);
+  --stro-glass-border: rgb(255 255 255 / 0.08);
+  --stro-glass-blur: 10px;
+
+  --stro-grid-line: rgb(31 41 55 / 0.25);
+  --stro-photo-shade: rgb(11 16 32 / 0.55);
+  --stro-photo-tint-purple: rgb(139 92 246 / 0.2);
+  --stro-photo-tint-blue: rgb(59 130 246 / 0.06);
+  --stro-terminal-shadow: rgb(11 16 32 / 0.55);
+  --stro-theme-color: #0b1020;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --stro-bg: #f4f6fb;
+  --stro-bg-input: #ffffff;
+  --stro-surface: #ffffff;
+  --stro-surface-elevated: #f1f5f9;
+  --stro-border: #e2e8f0;
+  --stro-border-subtle: #cbd5e1;
+
+  --stro-text-primary: #0f172a;
+  --stro-text-secondary: #64748b;
+  --stro-foreground: var(--stro-text-primary);
+  --stro-muted: var(--stro-text-secondary);
+
+  --stro-purple: #7c3aed;
+  --stro-blue: #2563eb;
+  --stro-cyan: #0891b2;
+  --stro-emerald: #059669;
+
+  --stro-bracket-left: #6d28d9;
+  --stro-bracket-right: #0e7490;
+
+  --stro-gradient-brand-soft: linear-gradient(
+    135deg,
+    rgb(124 58 237 / 0.1) 0%,
+    rgb(37 99 235 / 0.06) 50%,
+    rgb(8 145 178 / 0.1) 100%
+  );
+  --stro-gradient-mesh:
+    radial-gradient(ellipse 70% 55% at 15% -5%, rgb(124 58 237 / 0.12), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 85% 5%, rgb(8 145 178 / 0.1), transparent 50%),
+    radial-gradient(ellipse 45% 35% at 50% 100%, rgb(5 150 105 / 0.06), transparent 45%);
+
+  --stro-shadow-soft:
+    0 0 0 1px rgb(15 23 42 / 0.06),
+    0 8px 28px rgb(15 23 42 / 0.08);
+  --stro-shadow-neon: 0 0 20px rgb(37 99 235 / 0.2);
+  --stro-shadow-glow-brand:
+    0 0 32px rgb(124 58 237 / 0.12),
+    0 0 20px rgb(37 99 235 / 0.1);
+
+  --stro-glass-bg: rgb(255 255 255 / 0.78);
+  --stro-glass-border: rgb(15 23 42 / 0.08);
+  --stro-glass-blur: 12px;
+
+  --stro-grid-line: rgb(148 163 184 / 0.35);
+  --stro-photo-shade: rgb(15 23 42 / 0.2);
+  --stro-photo-tint-purple: rgb(124 58 237 / 0.12);
+  --stro-photo-tint-blue: rgb(37 99 235 / 0.08);
+  --stro-terminal-shadow: rgb(15 23 42 / 0.15);
+  --stro-theme-color: #f4f6fb;
+}
+
+:root {
+  /* —— Tipografia —— */
+  --stro-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --stro-font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --stro-text-caption: 0.75rem;
+  --stro-text-small: 0.875rem;
+  --stro-text-body: 1rem;
+  --stro-text-body-lg: 1.125rem;
+  --stro-text-h3: 1.75rem;
+  --stro-text-h2: 2.25rem;
+  --stro-text-h1: 3rem;
+  --stro-text-hero: 4.5rem;
+
+  --stro-font-normal: 400;
+  --stro-font-medium: 500;
+  --stro-font-semibold: 600;
+  --stro-font-bold: 700;
+
+  --stro-leading-tight: 1.15;
+  --stro-leading-normal: 1.55;
+  --stro-leading-relaxed: 1.7;
+
+  --stro-tracking-tight: -0.02em;
+  --stro-tracking-wide: 0.08em;
+  --stro-tracking-wider: 0.14em;
+
+  --stro-space-xs: 0.25rem;
+  --stro-space-sm: 0.5rem;
+  --stro-space-md: 1rem;
+  --stro-space-lg: 1.5rem;
+  --stro-space-xl: 2rem;
+  --stro-space-2xl: 3rem;
+  --stro-space-3xl: 4rem;
+
+  --stro-radius-sm: 6px;
+  --stro-radius-md: 10px;
+  --stro-radius-lg: 16px;
+  --stro-radius-xl: 24px;
+  --stro-radius-full: 999px;
+
+  --stro-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --stro-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --stro-duration-fast: 150ms;
+  --stro-duration-normal: 250ms;
+  --stro-duration-slow: 400ms;
+
+  --stro-container-max: 72rem;
+  --stro-header-height: 4.5rem;
+
+  --bg: var(--stro-bg);
+  --surface: var(--stro-surface);
+  --border: var(--stro-border);
+  --text-primary: var(--stro-text-primary);
+  --text-secondary: var(--stro-text-secondary);
+  --purple: var(--stro-purple);
+  --blue: var(--stro-blue);
+  --cyan: var(--stro-cyan);
+  --green: var(--stro-emerald);
+}

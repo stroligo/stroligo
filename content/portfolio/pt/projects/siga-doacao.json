@@ -1,0 +1,11 @@
+{
+  "id": "siga-doacao",
+  "title": "Siga sua doação",
+  "organization": "MOL Central de Impacto",
+  "description": "Plataforma que torna doações mais transparentes, conectando doadores a organizações e rastreando impacto.",
+  "tags": [
+    "Nuxt",
+    "Tailwind",
+    "Impacto social"
+  ]
+}

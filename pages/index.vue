@@ -1,33 +1,292 @@
 <script setup lang="ts">
-const linkedInUrl = 'https://www.linkedin.com/in/gabrielstroligo/'
+import type { ProjectCategory } from '~/types/portfolio'
+import { hobbiesForLocale } from '~/data/hobbies'
+import { site } from '~/data/site'
 
-useHead({
-  title: 'Redirecionando…',
-  link: [{ rel: 'canonical', href: linkedInUrl }],
+const { t, locale } = useI18n()
+const copy = usePortfolioCopy()
+const {
+  profile,
+  labels,
+  projects,
+  projectCategories,
+  experiences,
+  socialLinks,
+  htmlLang,
+  linkedInProjectsUrl,
+  heroExperienceLabel,
+  projectCountLabel,
+} = usePortfolio()
+
+const hobbies = computed(() =>
+  hobbiesForLocale(locale.value === 'en' ? 'en' : 'pt'),
+)
+
+const activeCategory = ref<ProjectCategory>('todos')
+
+const filteredProjects = computed(() => {
+  const list =
+    activeCategory.value === 'todos'
+      ? projects.value
+      : projects.value.filter((p) => p.category === activeCategory.value)
+  return list
 })
+
+const filteredCountLabel = computed(() =>
+  projectCountLabel(filteredProjects.value.length),
+)
+
+const terminalLines = computed(() => [
+  `const dev = "${profile.value.name}"`,
+  'const stack = ["React", "Nuxt", "TypeScript"]',
+  `const focus = "${locale.value === 'pt' ? 'impacto + craft' : 'impact + craft'}"`,
+  'export default dev',
+])
 
 useSeoMeta({
-  robots: 'noindex, follow',
+  title: () => labels.value.seoTitle,
+  description: () => labels.value.seoDescription,
+  ogTitle: () => labels.value.seoTitle,
+  ogDescription: () => labels.value.ogDescription,
+  ogUrl: () => `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
+  ogImage: () => `${profile.value.siteUrl}${site.profilePhotoUrl}`,
+  ogType: 'profile',
+  twitterCard: 'summary_large_image',
 })
 
-await navigateTo(linkedInUrl, { external: true, replace: true })
+useHead({
+  htmlAttrs: { lang: () => htmlLang.value },
+  link: [
+    {
+      rel: 'canonical',
+      href: () => `${profile.value.siteUrl}${locale.value === 'en' ? '/en' : ''}`,
+    },
+  ],
+})
 </script>
 
 <template>
-  <div
-    class="flex min-h-screen items-center justify-center bg-gray-800 p-8 text-center text-gray-200"
-  >
-    <div class="space-y-4">
-      <p class="text-lg">Redirecionando para o LinkedIn…</p>
-      <p>
-        <a
-          :href="linkedInUrl"
-          class="text-blue-400 underline decoration-blue-400/40 underline-offset-4 hover:text-blue-300"
+  <div class="relative z-10">
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[var(--stro-radius-md)] bg-stro-blue px-4 py-2 text-white"
+    >
+      {{ copy.a11y.skipToContent }}
+    </a>
+
+    <SiteHeader />
+
+    <main id="conteudo">
+      <!-- Hero -->
+      <section class="relative border-b border-stro-border">
+        <div
+          class="pointer-events-none absolute inset-0 overflow-hidden"
+          aria-hidden="true"
         >
-          Clique aqui
-        </a>
-        se não for redirecionado.
-      </p>
-    </div>
+          <div
+            class="absolute -right-20 top-0 h-[28rem] w-[28rem] rounded-full opacity-60 blur-3xl"
+            style="background: rgb(139 92 246 / 0.12)"
+          />
+          <div
+            class="absolute -left-16 bottom-0 h-80 w-80 rounded-full opacity-50 blur-3xl"
+            style="background: rgb(6 182 212 / 0.1)"
+          />
+        </div>
+
+        <div class="relative stro-container py-16 sm:py-24 lg:py-28">
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <StroBadge variant="cyan">stroligo.dev</StroBadge>
+            <LocaleSwitcher class="sm:hidden" />
+          </div>
+
+          <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+            <div class="min-w-0">
+              <p class="stro-kicker mb-4">
+                {{ copy.brandTagline }}
+              </p>
+              <h1
+                class="stro-heading text-[clamp(2.25rem,5vw,var(--stro-text-hero))] leading-[var(--stro-leading-tight)]"
+              >
+                <span class="stro-gradient-text">{{ profile.name }}</span>
+              </h1>
+              <p class="mt-5 max-w-xl text-lg text-stro-muted sm:text-xl">
+                {{ profile.tagline }}
+              </p>
+              <p class="mt-3 text-sm text-stro-muted">
+                {{ profile.location }} ·
+                {{ heroExperienceLabel }}
+              </p>
+
+              <div
+                id="sobre"
+                class="mt-10 scroll-mt-24"
+              >
+                <p class="stro-kicker mb-4">
+                  // about
+                </p>
+
+                <div class="space-y-4 text-base sm:text-lg">
+                  <p
+                    v-for="(paragraph, index) in profile.about"
+                    :key="index"
+                    class="stro-body max-w-xl"
+                  >
+                    {{ paragraph }}
+                  </p>
+                </div>
+
+                <div class="mt-8">
+                  <h3 class="stro-kicker mb-4 !text-stro-purple sm:mb-5">
+                    {{ copy.about.stackTitle }}
+                  </h3>
+                  <ul class="flex flex-wrap gap-2.5 sm:gap-3">
+                    <li v-for="tech in profile.stack" :key="tech">
+                      <TechStackBadge :label="tech" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <aside
+              class="hero-aside lg:sticky lg:z-10 lg:ml-auto lg:w-full lg:max-w-[38rem] lg:self-start"
+              aria-label="Retrato e terminal"
+            >
+              <div class="hero-aside__scene">
+                <div class="hero-photo-wrap">
+                  <ProfilePhoto size="hero" />
+                </div>
+                <div class="hero-terminal-overlap">
+                  <StroTerminal
+                    title="portfolio.ts"
+                    :lines="terminalLines"
+                  />
+                </div>
+              </div>
+              <p
+                class="mt-6 text-center text-sm text-stro-muted sm:mt-7 lg:text-left"
+              >
+                  <span class="stro-font-mono text-stro-cyan">{{
+                    profile.name
+                  }}</span>
+                <span class="mt-0.5 block">{{ profile.tagline }}</span>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <StroSection
+        id="projetos"
+        kicker="// projects"
+        :title="copy.projects.title"
+        :subtitle="copy.projects.subtitle"
+        class="scroll-mt-20"
+      >
+        <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+          <p class="text-sm text-stro-muted">
+            <span class="stro-font-mono text-stro-cyan">{{ filteredProjects.length }}</span>
+            {{ filteredCountLabel }}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <StroButton
+              :href="linkedInProjectsUrl"
+              variant="secondary"
+              size="sm"
+              external
+            >
+              {{ copy.projects.linkedinAll }}
+            </StroButton>
+          </div>
+        </div>
+
+        <div
+          class="mb-8 flex flex-wrap gap-2"
+          role="tablist"
+          :aria-label="copy.a11y.filterProjects"
+        >
+          <StroChip
+            v-for="category in projectCategories"
+            :key="category.id"
+            :active="activeCategory === category.id"
+            @click="activeCategory = category.id"
+          >
+            {{ category.label }}
+          </StroChip>
+        </div>
+
+        <Transition name="projects-fade" mode="out-in">
+          <div
+            :key="activeCategory"
+            class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
+            role="tabpanel"
+          >
+            <ProjectCard
+              v-for="project in filteredProjects"
+              :key="project.id"
+              :project="project"
+            />
+          </div>
+        </Transition>
+      </StroSection>
+
+      <!-- Atuação -->
+      <StroSection
+        id="atuacao"
+        kicker="// work"
+        :title="copy.work.title"
+        :subtitle="copy.work.subtitle"
+        bordered
+        tinted
+      >
+        <ExperienceTimeline :experiences="experiences" />
+      </StroSection>
+
+      <!-- Redes -->
+      <StroSection
+        id="redes"
+        kicker="// contact"
+        :title="copy.contact.title"
+        :subtitle="copy.contact.subtitle"
+        bordered
+        tinted
+      >
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+          <div>
+            <h3 class="stro-kicker mb-6 !text-stro-purple">
+              {{ copy.contact.socialTitle }}
+            </h3>
+            <div
+              class="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4"
+              :aria-label="copy.a11y.socialNav"
+            >
+              <SocialLinkCard
+                v-for="link in socialLinks"
+                :key="link.id"
+                :link="link"
+              />
+            </div>
+            <ContactQuickForm :to-email="profile.email" />
+          </div>
+
+          <div>
+            <h3 class="stro-kicker mb-6 !text-stro-cyan">
+              {{ copy.contact.hobbiesTitle }}
+            </h3>
+            <ul class="space-y-4">
+              <li
+                v-for="hobby in hobbies"
+                :key="hobby.id"
+              >
+                <HobbyCard :hobby="hobby" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </StroSection>
+    </main>
+
+    <SiteFooter />
   </div>
 </template>
