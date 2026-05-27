@@ -37,6 +37,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
+        lang: 'en',
         'data-theme': 'dark',
       },
       charset: 'utf-8',
@@ -49,7 +50,7 @@ export default defineNuxtConfig({
       script: [
         {
           tagPosition: 'head',
-          innerHTML: `(function(){try{var t=localStorage.getItem('stroligo_theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();`,
+          innerHTML: `(function(){try{var k='stroligo_theme',m='stroligo_theme_dark_default_v3';if(!localStorage.getItem(m)){localStorage.removeItem(k);localStorage.removeItem('stroligo_theme_light_default');localStorage.setItem(m,'1');}var t=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
         },
       ],
       meta: [
@@ -63,20 +64,14 @@ export default defineNuxtConfig({
     baseUrl: 'https://stroligo.dev',
     restructureDir: false,
     locales: [
-      { code: 'pt', language: 'pt-BR', file: 'pt.ts', name: 'Português' },
       { code: 'en', language: 'en-US', file: 'en.ts', name: 'English' },
+      { code: 'pt', language: 'pt-BR', file: 'pt.ts', name: 'Português' },
     ],
-    defaultLocale: 'pt',
+    defaultLocale: 'en',
     lazy: true,
     langDir: 'locales',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'stroligo_locale',
-      redirectOn: 'root',
-      alwaysRedirect: false,
-      fallbackLocale: 'pt',
-    },
+    detectBrowserLanguage: false,
   },
   vite: {
     plugins: [tailwindcss()],
@@ -93,7 +88,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/en'],
+      routes: ['/', '/pt'],
       ignore: ['/_studio', '/_studio/**', '/uikit'],
     },
   },

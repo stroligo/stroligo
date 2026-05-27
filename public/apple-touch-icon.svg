@@ -7,8 +7,15 @@
     </linearGradient>
   </defs>
   <rect width="180" height="180" rx="40" fill="url(#g)"/>
+  <circle cx="90" cy="90" r="52" fill="none" stroke="#F8FAFC" stroke-opacity="0.28" stroke-width="6"/>
+  <ellipse cx="90" cy="90" rx="52" ry="20.5" fill="none" stroke="#F8FAFC" stroke-opacity="0.22" stroke-width="5"/>
+  <path d="M90 38v104" fill="none" stroke="#F8FAFC" stroke-opacity="0.22" stroke-width="5"/>
   <path
-    fill="#F8FAFC"
-    d="M91.1 47.8c25.6 0 42.5 13.2 44.4 33.8H118c-1.7-12.1-11-19.4-26.4-19.4-15.5 0-25.6 8.2-25.6 20 0 9.3 5.9 15.2 20.5 18.9l16.9 4.8c18.9 5.6 27.3 13.2 27.3 26.7 0 18.3-16.1 30.6-42.8 30.6-25.3 0-41.9-12.7-45-34.1h20.3c2.5 14.3 13 23 28.5 23 15.2 0 25.1-7.6 25.1-19.1 0-8.7-5.9-13.8-20-17.5l-18-5.1c-20.3-5.9-29-15.1-29-29 0-19.4 16.6-32.3 43.6-32.3z"
+    d="M110 47 70 133"
+    fill="none"
+    stroke="#F8FAFC"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"
   />
 </svg>

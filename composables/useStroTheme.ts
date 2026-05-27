@@ -1,6 +1,28 @@
 export type StroTheme = 'dark' | 'light'
 
 const STORAGE_KEY = 'stroligo_theme'
+const DARK_DEFAULT_MIGRATION = 'stroligo_theme_dark_default_v3'
+
+function resolveThemeFromStorage(): StroTheme {
+  if (!import.meta.client) return 'dark'
+
+  try {
+    if (!localStorage.getItem(DARK_DEFAULT_MIGRATION)) {
+      localStorage.removeItem(STORAGE_KEY)
+      localStorage.removeItem('stroligo_theme_light_default')
+      localStorage.setItem(DARK_DEFAULT_MIGRATION, '1')
+      return 'dark'
+    }
+
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (raw === 'light') return 'light'
+    if (raw === 'dark') return 'dark'
+  } catch {
+    /* ignore */
+  }
+
+  return 'dark'
+}
 
 export function useStroTheme() {
   const theme = useState<StroTheme>('stro-theme', () => 'dark')
@@ -17,16 +39,7 @@ export function useStroTheme() {
 
   function initTheme() {
     if (!import.meta.client) return
-
-    let stored: StroTheme | null = null
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      if (raw === 'light' || raw === 'dark') stored = raw
-    } catch {
-      stored = null
-    }
-
-    applyTheme(stored ?? 'dark')
+    applyTheme(resolveThemeFromStorage())
   }
 
   function setDarkMode(enabled: boolean) {

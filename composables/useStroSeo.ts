@@ -7,7 +7,9 @@ export function useStroSeo() {
   const { profile, labels, htmlLang, socialLinks } = usePortfolio()
 
   const pageUrl = computed(() =>
-    locale.value === 'en' ? `${site.siteUrl}/en` : `${site.siteUrl}/`,
+    locale.value === 'pt'
+      ? `${site.siteUrl}/pt`
+      : `${site.siteUrl}/`,
   )
 
   const ogImageUrl = computed(
@@ -29,8 +31,8 @@ export function useStroSeo() {
   )
 
   const hreflangLinks = computed(() => [
-    { rel: 'alternate', hreflang: 'pt-BR', href: `${site.siteUrl}/` },
-    { rel: 'alternate', hreflang: 'en', href: `${site.siteUrl}/en` },
+    { rel: 'alternate', hreflang: 'en', href: `${site.siteUrl}/` },
+    { rel: 'alternate', hreflang: 'pt-BR', href: `${site.siteUrl}/pt` },
     { rel: 'alternate', hreflang: 'x-default', href: `${site.siteUrl}/` },
   ])
 

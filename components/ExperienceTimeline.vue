@@ -32,9 +32,11 @@ function glowForIndex(index: number) {
       aria-hidden="true"
     />
 
-    <div
+    <ScrollReveal
       v-for="(group, groupIndex) in groups"
       :key="group.isCurrent ? 'current' : group.year"
+      variant="fade-up"
+      :delay="Math.min(groupIndex * 90, 360)"
       class="experience-timeline__row relative lg:grid lg:grid-cols-[4.5rem_minmax(0,1fr)] lg:gap-x-10"
       :class="groupIndex < groups.length - 1 ? 'mb-10 lg:mb-12' : ''"
       role="listitem"
@@ -179,7 +181,7 @@ function glowForIndex(index: number) {
           </li>
         </ul>
       </section>
-    </div>
+    </ScrollReveal>
   </div>
 </template>
 

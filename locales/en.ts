@@ -373,7 +373,7 @@ export default {
   social: {
     cv: {
       label: 'Resume',
-      description: 'PDF — May 2026',
+      description: 'ATS-optimized PDF — May 2026',
     },
     linkedin: {
       label: 'LinkedIn',

@@ -185,6 +185,50 @@
     }
   }
 
+  @keyframes stro-profile-glow-pulse {
+    0%,
+    100% {
+      box-shadow: var(--stro-shadow-glow-brand);
+    }
+
+    50% {
+      box-shadow: var(--stro-shadow-glow-brand-strong);
+    }
+  }
+
+  @keyframes stro-profile-ring-flow {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes stro-profile-overlay-drift {
+    0%,
+    100% {
+      background-position: 0% 25%, 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 75%, 0% 0%;
+    }
+  }
+
+  .stro-profile-photo {
+    box-shadow: var(--stro-shadow-glow-brand);
+    animation: stro-profile-glow-pulse 5.5s ease-in-out infinite;
+  }
+
+  .stro-profile-photo__ring {
+    background: var(--stro-gradient-brand);
+    background-size: 200% 100%;
+    animation: stro-profile-ring-flow 7s ease-in-out infinite;
+  }
+
   .stro-profile-photo__media {
     position: relative;
     isolation: isolate;
@@ -218,13 +262,23 @@
         color-mix(in srgb, var(--stro-photo-shade) 65%, transparent) 78%,
         var(--stro-photo-shade) 100%
       );
+    background-size: 220% 220%, 100% 100%;
     mix-blend-mode: soft-light;
+    animation: stro-profile-overlay-drift 8s ease-in-out infinite;
     transition: opacity var(--stro-duration-normal) var(--stro-ease);
   }
 
   [data-theme='light'] .stro-profile-photo__overlay {
     mix-blend-mode: normal;
     opacity: 0.85;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stro-profile-photo,
+    .stro-profile-photo__ring,
+    .stro-profile-photo__overlay {
+      animation: none;
+    }
   }
 
   .stro-font-mono {
@@ -342,6 +396,52 @@
     padding-block: var(--stro-space-md);
     line-height: var(--stro-leading-normal);
     resize: vertical;
+  }
+
+  /* —— Scroll reveal —— */
+  .stro-reveal {
+    opacity: 0;
+    transition:
+      opacity var(--stro-reveal-duration, 700ms) var(--stro-ease-out),
+      transform var(--stro-reveal-duration, 700ms) var(--stro-ease-out);
+    transition-delay: var(--stro-reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .stro-reveal--fade-up {
+    transform: translate3d(0, 1.75rem, 0);
+  }
+
+  .stro-reveal--fade-down {
+    transform: translate3d(0, -1.25rem, 0);
+  }
+
+  .stro-reveal--fade-left {
+    transform: translate3d(1.5rem, 0, 0);
+  }
+
+  .stro-reveal--fade-right {
+    transform: translate3d(-1.5rem, 0, 0);
+  }
+
+  .stro-reveal--scale-up {
+    transform: translate3d(0, 1rem, 0) scale(0.97);
+  }
+
+  .stro-reveal--fade-in {
+    transform: none;
+  }
+
+  .stro-reveal--visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .stro-reveal--static {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
   }
 }
 

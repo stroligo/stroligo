@@ -3,7 +3,10 @@ export const site = {
   siteUrl: 'https://stroligo.dev',
   email: 'gabrielstroligo@gmail.com',
   profilePhotoUrl: '/profile/photo.png',
-  resumeUrl: '/profile/may-26.pdf',
+  resumeUrls: {
+    en: '/profile/gabriel-stroligo-cv-en.pdf',
+    pt: '/profile/gabriel-stroligo-cv-pt.pdf',
+  } as const,
   linkedInProjectsUrl:
     'https://www.linkedin.com/in/gabrielstroligo/details/projects/',
   whatsapp: '+34 647 520 879',
@@ -17,12 +20,16 @@ const whatsappIntro = {
   en: 'Hi Gabriel, I saw your portfolio at stroligo.dev and would like to get in touch.',
 } as const
 
-export function whatsappContactUrl(locale: 'pt' | 'en' = 'pt') {
+export function whatsappContactUrl(locale: 'pt' | 'en' = 'en') {
   return `${whatsappUrl}?text=${encodeURIComponent(whatsappIntro[locale])}`
 }
 
+export function resumeUrlForLocale(locale: 'en' | 'pt') {
+  return site.resumeUrls[locale]
+}
+
 export const socialHrefs = {
-  cv: site.resumeUrl,
+  cv: site.resumeUrls.en,
   linkedin: 'https://www.linkedin.com/in/gabrielstroligo/',
   github: 'https://github.com/stroligo',
   behance: 'https://www.behance.net/gabrielstroligo',

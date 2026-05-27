@@ -2,6 +2,7 @@ import { projectsMetaById } from '~/data/projects.meta'
 import { enrichAndSortProjects } from '~/lib/portfolio/enrichProjects'
 import { experiencesForLocale } from '~/data/experiences'
 import {
+  resumeUrlForLocale,
   site,
   socialHrefs,
   socialLinkIds,
@@ -77,7 +78,7 @@ export function buildPortfolioFromLocales(
     experienceYears: resolveI18nString(m.profile.experienceYears),
     resumeLabel: resolveI18nString(m.profile.resumeLabel),
     siteUrl: site.siteUrl,
-    resumeUrl: site.resumeUrl,
+    resumeUrl: resumeUrlForLocale(locale),
     email: site.email,
     about: m.about.paragraphs.map((p) => resolveI18nString(p)),
     stack: m.profile.stack.map((s) => resolveI18nString(s)),
@@ -128,9 +129,11 @@ export function buildPortfolioFromLocales(
             ? site.whatsapp
             : resolveI18nString(social.label),
       href:
-        linkId === 'whatsapp'
-          ? whatsappContactUrl(locale)
-          : socialHrefs[linkId],
+        linkId === 'cv'
+          ? resumeUrlForLocale(locale)
+          : linkId === 'whatsapp'
+            ? whatsappContactUrl(locale)
+            : socialHrefs[linkId],
       description: resolveI18nString(social.description),
       primary: linkId === 'linkedin',
       external: linkId !== 'cv' && linkId !== 'email',

@@ -7,8 +7,17 @@
     </linearGradient>
   </defs>
   <rect width="32" height="32" rx="8" fill="url(#g)"/>
+  <!-- globo (wireframe) -->
+  <circle cx="16" cy="16" r="9.25" fill="none" stroke="#F8FAFC" stroke-opacity="0.28" stroke-width="1.1"/>
+  <ellipse cx="16" cy="16" rx="9.25" ry="3.6" fill="none" stroke="#F8FAFC" stroke-opacity="0.22" stroke-width="0.9"/>
+  <path d="M16 6.75v18.5" fill="none" stroke="#F8FAFC" stroke-opacity="0.22" stroke-width="0.9"/>
+  <!-- / -->
   <path
-    fill="#F8FAFC"
-    d="M16.2 8.5c4.55 0 7.55 2.35 7.9 6h-3.55c-.3-2.15-1.95-3.45-4.7-3.45-2.75 0-4.55 1.45-4.55 3.55 0 1.65 1.05 2.7 3.65 3.35l3 .85c3.35 1 4.85 2.35 4.85 4.75 0 3.25-2.85 5.45-7.6 5.45-4.5 0-7.45-2.25-8-6.05h3.6c.45 2.55 2.3 4.05 5.05 4.05 2.7 0 4.45-1.35 4.45-3.4 0-1.55-1.05-2.45-3.55-3.1l-3.2-.9c-3.6-1.05-5.15-2.65-5.15-5.15 0-3.45 2.95-5.75 7.75-5.75z"
+    d="M19.5 8.5 12.5 23.5"
+    fill="none"
+    stroke="#F8FAFC"
+    stroke-width="3.25"
+    stroke-linecap="round"
+    stroke-linejoin="round"
   />
 </svg>

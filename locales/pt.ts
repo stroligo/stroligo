@@ -373,7 +373,7 @@ export default {
   social: {
     cv: {
       label: 'Currículo',
-      description: 'PDF — maio de 2026',
+      description: 'PDF otimizado para ATS — maio 2026',
     },
     linkedin: {
       label: 'LinkedIn',

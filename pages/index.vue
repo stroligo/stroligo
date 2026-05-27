@@ -74,69 +74,76 @@ useStroSeo()
         <div class="relative stro-container py-16">
           <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
             <div class="min-w-0">
-              <h1
-                class="stro-heading text-[clamp(2.25rem,5vw,var(--stro-text-hero))] leading-[var(--stro-leading-tight)]"
-              >
-                <span class="stro-gradient-text">{{ profile.name }}</span>
-              </h1>
-              <p class="mt-5 max-w-xl text-lg text-stro-muted sm:text-xl">
-                {{ profile.tagline }}
-              </p>
-              <p class="mt-3 text-sm text-stro-muted">
-                {{ profile.location }} ·
-                {{ heroExperienceLabel }}
-              </p>
+              <ScrollReveal variant="fade-up">
+                <HeroTypewriterName :text="profile.name" />
+              </ScrollReveal>
+              <ScrollReveal variant="fade-up" :delay="80">
+                <p class="mt-5 max-w-xl text-lg text-stro-muted sm:text-xl">
+                  {{ profile.tagline }}
+                </p>
+                <p class="mt-3 text-sm text-stro-muted">
+                  {{ profile.location }} ·
+                  {{ heroExperienceLabel }}
+                </p>
+              </ScrollReveal>
 
               <div
                 id="sobre"
                 class="mt-10 scroll-mt-[calc(var(--stro-header-height)+1rem)]"
               >
-                <p class="stro-kicker mb-4">// about</p>
+                <ScrollReveal variant="fade-up" :delay="120">
+                  <p class="stro-kicker mb-4">// about</p>
 
-                <div class="space-y-4 text-base sm:text-lg">
-                  <p
-                    v-for="(paragraph, index) in profile.about"
-                    :key="index"
-                    class="stro-body max-w-xl"
-                  >
-                    {{ paragraph }}
-                  </p>
-                </div>
+                  <div class="space-y-4 text-base sm:text-lg">
+                    <p
+                      v-for="(paragraph, index) in profile.about"
+                      :key="index"
+                      class="stro-body max-w-xl"
+                    >
+                      {{ paragraph }}
+                    </p>
+                  </div>
+                </ScrollReveal>
 
-                <div class="mt-8">
-                  <h3 class="stro-kicker mb-4 !text-stro-purple sm:mb-5">
-                    {{ copy.about.stackTitle }}
-                  </h3>
-                  <ul class="flex flex-wrap gap-2.5 sm:gap-3">
-                    <li v-for="tech in profile.stack" :key="tech">
-                      <TechStackBadge :label="tech" />
-                    </li>
-                  </ul>
-                </div>
+                <ScrollReveal variant="fade-up" :delay="200">
+                  <div class="mt-8">
+                    <h3 class="stro-kicker mb-4 !text-stro-purple sm:mb-5">
+                      {{ copy.about.stackTitle }}
+                    </h3>
+                    <ul class="flex flex-wrap gap-2.5 sm:gap-3">
+                      <li v-for="tech in profile.stack" :key="tech">
+                        <TechStackBadge :label="tech" />
+                      </li>
+                    </ul>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
 
-            <aside
+            <ScrollReveal
+              variant="fade-left"
+              :delay="160"
               class="hero-aside lg:sticky lg:z-10 lg:ml-auto lg:w-full lg:max-w-[38rem] lg:self-start"
-              aria-label="Retrato e terminal"
             >
-              <div class="hero-aside__scene">
-                <div class="hero-photo-wrap">
-                  <ProfilePhoto size="hero" />
+              <aside aria-label="Retrato e terminal">
+                <div class="hero-aside__scene">
+                  <div class="hero-photo-wrap">
+                    <ProfilePhoto size="hero" />
+                  </div>
+                  <div class="hero-terminal-overlap">
+                    <StroTerminal title="portfolio.ts" :lines="terminalLines" />
+                  </div>
                 </div>
-                <div class="hero-terminal-overlap">
-                  <StroTerminal title="portfolio.ts" :lines="terminalLines" />
-                </div>
-              </div>
-              <p
-                class="mt-6 text-center text-sm text-stro-muted sm:mt-7 lg:text-left"
-              >
-                <span class="stro-font-mono text-stro-cyan">{{
-                  profile.name
-                }}</span>
-                <span class="mt-0.5 block">{{ profile.tagline }}</span>
-              </p>
-            </aside>
+                <p
+                  class="mt-6 text-center text-sm text-stro-muted sm:mt-7 lg:text-left"
+                >
+                  <span class="stro-font-mono text-stro-cyan">{{
+                    profile.name
+                  }}</span>
+                  <span class="mt-0.5 block">{{ profile.tagline }}</span>
+                </p>
+              </aside>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -149,39 +156,41 @@ useStroSeo()
         :subtitle="copy.projects.subtitle"
         class="scroll-mt-20"
       >
-        <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
-          <p class="text-sm text-stro-muted">
-            <span class="stro-font-mono text-stro-cyan">{{
-              filteredProjects.length
-            }}</span>
-            {{ filteredCountLabel }}
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <StroButton
-              :href="linkedInProjectsUrl"
-              variant="secondary"
-              size="sm"
-              external
-            >
-              {{ copy.projects.linkedinAll }}
-            </StroButton>
+        <ScrollReveal variant="fade-up" :delay="80">
+          <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+            <p class="text-sm text-stro-muted">
+              <span class="stro-font-mono text-stro-cyan">{{
+                filteredProjects.length
+              }}</span>
+              {{ filteredCountLabel }}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <StroButton
+                :href="linkedInProjectsUrl"
+                variant="secondary"
+                size="sm"
+                external
+              >
+                {{ copy.projects.linkedinAll }}
+              </StroButton>
+            </div>
           </div>
-        </div>
 
-        <div
-          class="mb-8 flex flex-wrap gap-2"
-          role="tablist"
-          :aria-label="copy.a11y.filterProjects"
-        >
-          <StroChip
-            v-for="category in projectCategories"
-            :key="category.id"
-            :active="activeCategory === category.id"
-            @click="activeCategory = category.id"
+          <div
+            class="mb-8 flex flex-wrap gap-2"
+            role="tablist"
+            :aria-label="copy.a11y.filterProjects"
           >
-            {{ category.label }}
-          </StroChip>
-        </div>
+            <StroChip
+              v-for="category in projectCategories"
+              :key="category.id"
+              :active="activeCategory === category.id"
+              @click="activeCategory = category.id"
+            >
+              {{ category.label }}
+            </StroChip>
+          </div>
+        </ScrollReveal>
 
         <Transition name="projects-fade" mode="out-in">
           <div
@@ -189,11 +198,15 @@ useStroSeo()
             class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
             role="tabpanel"
           >
-            <ProjectCard
-              v-for="project in filteredProjects"
+            <ScrollReveal
+              v-for="(project, index) in filteredProjects"
               :key="project.id"
-              :project="project"
-            />
+              variant="fade-up"
+              :delay="Math.min(index * 70, 420)"
+              class="h-full"
+            >
+              <ProjectCard :project="project" />
+            </ScrollReveal>
           </div>
         </Transition>
       </StroSection>
@@ -220,33 +233,37 @@ useStroSeo()
         tinted
       >
         <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
-          <div>
+          <ScrollReveal variant="fade-right" :delay="80">
             <ContactQuickForm :to-email="profile.email" />
-          </div>
+          </ScrollReveal>
 
           <div class="flex flex-col gap-10">
-            <div>
-              <h3 class="stro-kicker mb-6 !text-stro-cyan">
-                {{ copy.contact.hobbiesTitle }}
-              </h3>
-              <CuriositiesList :items="hobbies" />
-            </div>
-
-            <div>
-              <h3 class="stro-kicker mb-6 !text-stro-purple">
-                {{ copy.contact.socialTitle }}
-              </h3>
-              <div
-                class="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4"
-                :aria-label="copy.a11y.socialNav"
-              >
-                <SocialLinkCard
-                  v-for="link in socialLinks"
-                  :key="link.id"
-                  :link="link"
-                />
+            <ScrollReveal variant="fade-left" :delay="140">
+              <div>
+                <h3 class="stro-kicker mb-6 !text-stro-cyan">
+                  {{ copy.contact.hobbiesTitle }}
+                </h3>
+                <CuriositiesList :items="hobbies" />
               </div>
-            </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="fade-left" :delay="220">
+              <div>
+                <h3 class="stro-kicker mb-6 !text-stro-purple">
+                  {{ copy.contact.socialTitle }}
+                </h3>
+                <div
+                  class="flex flex-wrap items-center justify-center gap-3 sm:justify-start sm:gap-4"
+                  :aria-label="copy.a11y.socialNav"
+                >
+                  <SocialLinkCard
+                    v-for="link in socialLinks"
+                    :key="link.id"
+                    :link="link"
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </StroSection>

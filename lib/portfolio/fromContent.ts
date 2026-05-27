@@ -2,6 +2,7 @@ import { projectsMetaById } from '~/data/projects.meta'
 import { enrichAndSortProjects } from '~/lib/portfolio/enrichProjects'
 import { experiencesForLocale } from '~/data/experiences'
 import {
+  resumeUrlForLocale,
   site,
   socialHrefs,
   socialLinkIds,
@@ -118,7 +119,7 @@ export async function buildPortfolioFromContent(
     experienceYears: profileDoc.experienceYears,
     resumeLabel: profileDoc.resumeLabel,
     siteUrl: site.siteUrl,
-    resumeUrl: site.resumeUrl,
+    resumeUrl: resumeUrlForLocale(locale),
     email: site.email,
     about: profileDoc.about,
     stack: profileDoc.stack,
@@ -189,9 +190,11 @@ export async function buildPortfolioFromContent(
             ? site.whatsapp
             : entry?.label ?? linkId,
       href:
-        linkId === 'whatsapp'
-          ? whatsappContactUrl(locale)
-          : socialHrefs[linkId],
+        linkId === 'cv'
+          ? resumeUrlForLocale(locale)
+          : linkId === 'whatsapp'
+            ? whatsappContactUrl(locale)
+            : socialHrefs[linkId],
       description: entry?.description,
       primary: linkId === 'linkedin',
       external: linkId !== 'cv' && linkId !== 'email',

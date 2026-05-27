@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import type { SocialLink } from '~/types/portfolio'
+import { resumePdfFilename } from '~/data/resume'
 import { getSocialIcon } from '~/data/socialIcons'
 
 const props = defineProps<{
   link: SocialLink
 }>()
+
+const { locale } = useI18n()
+
+const cvDownloadName = computed(() =>
+  resumePdfFilename(locale.value === 'pt' ? 'pt' : 'en'),
+)
 
 const ariaLabel = computed(() => {
   const base = props.link.label
@@ -18,6 +25,7 @@ const icon = computed(() => getSocialIcon(props.link.id))
 <template>
   <a
     :href="link.href"
+    :download="link.id === 'cv' ? cvDownloadName : undefined"
     :target="link.external ? '_blank' : undefined"
     :rel="link.external ? 'noopener noreferrer' : undefined"
     :aria-label="ariaLabel"

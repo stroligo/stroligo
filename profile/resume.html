@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Gabriel Stroligo — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: A4; margin: 0; }
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body {
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      font-size: 8.75pt;
+      line-height: 1.45;
+      color: #0f172a;
+      background: #fff;
+    }
+    .page {
+      display: flex;
+      width: 210mm;
+      min-height: 297mm;
+    }
+    .sidebar {
+      width: 68mm;
+      flex-shrink: 0;
+      background: linear-gradient(180deg, #0b1020 0%, #111827 100%);
+      color: #e2e8f0;
+      padding: 11mm 8mm 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 7mm;
+    }
+    .main {
+      flex: 1;
+      padding: 11mm 10mm 10mm 9mm;
+      min-width: 0;
+    }
+    .photo {
+      width: 26mm;
+      height: 26mm;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 2px solid rgb(139 92 246 / 0.55);
+      display: block;
+    }
+    .name {
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #f8fafc;
+      margin-top: 4mm;
+      line-height: 1.15;
+    }
+    .tagline {
+      font-size: 8pt;
+      color: #94a3b8;
+      margin-top: 2mm;
+      line-height: 1.35;
+    }
+    .sidebar-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 6.5pt;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #06b6d4;
+      margin-bottom: 2.5mm;
+    }
+    .contact a, .contact span {
+      display: block;
+      font-size: 7.5pt;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-bottom: 1.5mm;
+      word-break: break-word;
+    }
+    .contact a { color: #a5b4fc; }
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+    .chip {
+      font-size: 6.5pt;
+      padding: 1mm 2mm;
+      border-radius: 3px;
+      background: rgb(139 92 246 / 0.2);
+      border: 1px solid rgb(139 92 246 / 0.35);
+      color: #e2e8f0;
+    }
+    .sidebar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+    .sidebar-list li {
+      font-size: 7.25pt;
+      color: #cbd5e1;
+      line-height: 1.35;
+    }
+    .sidebar-list strong {
+      display: block;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .edu-item + .edu-item { margin-top: 2.5mm; }
+    .edu-school { font-weight: 600; color: #f1f5f9; font-size: 7.25pt; }
+    .edu-degree { color: #94a3b8; font-size: 6.75pt; }
+    .edu-period { font-family: 'IBM Plex Mono', monospace; font-size: 6.5pt; color: #64748b; }
+
+    .section-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7pt;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8b5cf6;
+      margin-bottom: 3mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section-title::before { content: '// '; color: #06b6d4; }
+    .summary p + p { margin-top: 2.5mm; }
+    .summary p { color: #334155; font-size: 8.5pt; line-height: 1.5; }
+
+    .job {
+      margin-bottom: 4.5mm;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid #f1f5f9;
+      break-inside: avoid;
+    }
+    .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .job--current .job__company { color: #5b21b6; }
+    .job__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3mm;
+      margin-bottom: 1.5mm;
+    }
+    .job__company {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+    .job__role {
+      font-size: 8pt;
+      font-weight: 500;
+      color: #3b82f6;
+      margin-top: 0.5mm;
+    }
+    .job__meta {
+      text-align: right;
+      flex-shrink: 0;
+      max-width: 38mm;
+    }
+    .job__period, .job__location {
+      display: block;
+      font-size: 7pt;
+      color: #64748b;
+      line-height: 1.35;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 6pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.6mm 2mm;
+      border-radius: 3px;
+      background: #d1fae5;
+      color: #047857;
+      margin-bottom: 1mm;
+    }
+    .job__highlight {
+      font-size: 8pt;
+      color: #1e293b;
+      line-height: 1.45;
+    }
+    .job__details {
+      font-size: 7.5pt;
+      color: #64748b;
+      margin-top: 1.5mm;
+      line-height: 1.4;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5mm 4mm;
+      margin-bottom: 5mm;
+    }
+    .highlight {
+      padding: 2mm 2.5mm;
+      border-radius: 4px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      break-inside: avoid;
+    }
+    .highlight__title {
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+    .highlight__org {
+      font-size: 6.75pt;
+      color: #8b5cf6;
+      margin-top: 0.5mm;
+    }
+    .highlight__note {
+      font-size: 6.5pt;
+      color: #64748b;
+      margin-top: 0.5mm;
+    }
+
+    .footer-note {
+      margin-top: 4mm;
+      font-size: 6.5pt;
+      color: #94a3b8;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .page-break { break-before: page; }
+    .past-section { margin-top: 2mm; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="photo" src="data:image/jpeg;base64,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" alt="" />
+      <div>
+        <h1 class="name">Gabriel Stroligo</h1>
+        <p class="tagline">Software Engineer · Especialista front-end</p>
+        <p class="tagline" style="margin-top:1mm">Portugal · 18+ anos</p>
+      </div>
+
+      <section>
+        <h2 class="sidebar-kicker">Contacto</h2>
+        <div class="contact">
+          <a href="mailto:gabrielstroligo@gmail.com">gabrielstroligo@gmail.com</a>
+          <span>+34 647 520 879</span>
+          <a href="https://stroligo.dev">stroligo.dev</a>
+          <a href="https://www.linkedin.com/in/gabrielstroligo/">LinkedIn</a><a href="https://github.com/stroligo">GitHub</a><a href="https://www.behance.net/gabrielstroligo">Behance</a><a href="https://stroligo.dev">Portfólio</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sidebar-kicker">Stack</h2>
+        <div class="chip-list">
+          <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Vue</span><span class="chip">Nuxt</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">Material UI</span><span class="chip">Vite</span><span class="chip">Node.js</span><span class="chip">PHP</span><span class="chip">Joomla</span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sidebar-kicker">Idiomas</h2>
+        <ul class="sidebar-list">
+          <li><strong>Português</strong>Nativo</li><li><strong>Inglês</strong>Profissional completo</li><li><strong>Espanhol</strong>Profissional completo</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="sidebar-kicker">Formação</h2>
+        
+          <div class="edu-item">
+            <div class="edu-school">Universidade Federal do Tocantins</div>
+            <div class="edu-degree">Mestrado, Modelagem Computacional de Sistemas</div>
+            <div class="edu-period">2018 — 2020</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">FLAG</div>
+            <div class="edu-degree">Professional Full Stack Web Development</div>
+            <div class="edu-period">2024 — 2025</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">Universidade Estadual do Tocantins</div>
+            <div class="edu-degree">Sistemas de Informação</div>
+            <div class="edu-period">2016 — 2020</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">Universidade Federal do Tocantins</div>
+            <div class="edu-degree">Artes</div>
+            <div class="edu-period">2012 — 2017</div>
+          </div>
+      </section>
+
+      <section>
+        <h2 class="sidebar-kicker">Certificações</h2>
+        <ul class="sidebar-list">
+          <li>FLAG — Professional Full Stack Web Development (2024–2025)</li><li>Frontend Frameworks — React</li><li>Workshop: MongoDB + Node.js + Express</li><li>Workshop: SASS · JavaScript</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="summary">
+        <h2 class="section-title">Resumo</h2>
+        <p>Software Engineer e especialista em front-end com mais de 18 anos de experiência em soluções digitais para setores público e privado. Desenvolvo interfaces modernas, responsivas e acessíveis com React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS e Material UI — do layout ao deploy, em ambientes ágeis e equipes multiculturais.</p><p>Transformo UI/UX em arquiteturas escaláveis em portais governamentais de alto tráfego, plataformas de impacto social, visualização de dados e transparência (open data, civic tech). Experiência com OMS, MMA, institutos de pesquisa, ONGs e veículos de jornalismo investigativo no Brasil e na Europa.</p>
+      </section>
+
+      <section style="margin-top:5mm">
+        <h2 class="section-title">Projetos em destaque</h2>
+        <div class="highlights">
+          
+            <div class="highlight">
+              <div class="highlight__title">Panorama do Aborto no Brasil</div>
+              <div class="highlight__org">Café.art.br / Agência Pública</div>
+              <div class="highlight__note">Visualização de dados e narrativa jornalística</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__title">Futuro Exterminado</div>
+              <div class="highlight__org">Café.art.br</div>
+              <div class="highlight__note">Plataforma de impacto ambiental</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__title">Panorama da Oncologia Pediátrica</div>
+              <div class="highlight__org">Desiderata · Instituto</div>
+              <div class="highlight__note">Saúde pública e dados</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__title">Cidadania Digital</div>
+              <div class="highlight__org">SaferNet Brasil</div>
+              <div class="highlight__note">Educação e segurança online (LGPD)</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__title">Portal TJTO</div>
+              <div class="highlight__org">Tribunal de Justiça do Tocantins</div>
+              <div class="highlight__note">~8.900 visitas/dia · Joomla + front-end</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__title">EUIPO</div>
+              <div class="highlight__org">Vex Tech · União Europeia</div>
+              <div class="highlight__note">React, TypeScript, Material UI</div>
+            </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Experiência — atual</h2>
+        
+      <article class="job job--current">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Vex Tech</h3>
+            <p class="job__role">Software Engineer · Especialista front-end</p>
+          </div>
+          <div class="job__meta">
+            <span class="badge">Atual</span>
+            <span class="job__period">jul/2025 — presente</span>
+            <span class="job__location">Portugal</span>
+          </div>
+        </header>
+        <p class="job__highlight">Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Stack: React, TypeScript, Material UI e Context API. Equipes ágeis multiculturais.</p>
+        <p class="job__details">Desenvolvimento e evolução de interfaces para o EUIPO, com foco em consistência visual, escalabilidade e entrega em ciclos ágeis. Trabalho remoto a partir de Portugal, documentação técnica em inglês e colaboração com equipas distribuídas na Europa.</p>
+      </article>
+      <article class="job job--current">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Café.art.br</h3>
+            <p class="job__role">Software Engineer · Especialista front-end</p>
+          </div>
+          <div class="job__meta">
+            <span class="badge">Atual</span>
+            <span class="job__period">fev/2022 — presente</span>
+            <span class="job__location">Rio de Janeiro, BR · remoto</span>
+          </div>
+        </header>
+        <p class="job__highlight">Estúdio de design de informação e visualização de dados (ODS 2030). Ciclo completo de front-end: React, Vue, Nuxt, Tailwind, TypeScript, Next.js, Vite e PHP.</p>
+        <p class="job__details">Participação em projetos de transparência, saúde pública e meio ambiente — do protótipo ao deploy, com integração a APIs e CMS quando necessário. Inclui Panorama da Oncologia Pediátrica (Desiderata), Inova HC, Cidadania Digital (SaferNet), WePlan Forests e outras plataformas de impacto social.</p>
+      </article>
+      <article class="job job--current">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">TJTO — Tribunal de Justiça do Tocantins</h3>
+            <p class="job__role">Software Engineer · Front-end</p>
+          </div>
+          <div class="job__meta">
+            <span class="badge">Atual</span>
+            <span class="job__period">mai/2010 — presente</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Desde 2011: todos os sites institucionais. Joomla como CMS, templates customizados. Portal tjto.jus.br (~8.900 visitas/dia). Hotsites, performance e acessibilidade. Stack: Joomla, HTML, CSS, JS, TypeScript, React, Node, PHP, Tailwind, MySQL e Git.</p>
+        <p class="job__details">Responsável pelo front-end do ecossistema digital do tribunal: portal principal, hotsites temáticos, gestão de usuários e integrações. Evolução contínua da stack e foco em alto tráfego, acessibilidade e manutenção de longo prazo no setor público.</p>
+      </article>
+      </section>
+
+      <section class="past-section page-break">
+        <h2 class="section-title">Experiência — anterior</h2>
+        
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Web Success Ltd</h3>
+            <p class="job__role">Co-founder</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">set/2020 — fev/2022</span>
+            <span class="job__location">Dublin, Irlanda</span>
+          </div>
+        </header>
+        <p class="job__highlight">Consultoria, sites e sistemas customizados. Gestão técnica, recrutamento e entrega de projetos.</p>
+        <p class="job__details">Cofundação da Web Success na Irlanda: desenvolvimento de sites e aplicações sob medida, coordenação técnica, apoio comercial e formação de equipa para clientes europeus em regime remoto.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">42 Bar e Board Games</h3>
+            <p class="job__role">Co-founder · Creative lead</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">nov/2017 — mar/2020</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Gestão do bar, marca, marketing, eventos e identidade visual nas redes sociais.</p>
+        <p class="job__details">Empreendimento local em Palmas: operação do espaço, curadoria de jogos de tabuleiro, campanhas de marketing e produção de conteúdo visual para redes sociais.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">PRTE — Tecnologia e Soluções</h3>
+            <p class="job__role">Frontend Developer</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">jun/2014 — jun/2016</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Front-end, interfaces responsivas, HTML5, CSS e JavaScript.</p>
+        <p class="job__details">Desenvolvimento de interfaces para clientes locais, protótipos e integração com backends PHP. Período de consolidação em UI antes do retorno em tempo integral ao TJTO; atuação também ligada à prte.com.br (EAD).</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Microlins</h3>
+            <p class="job__role">Instrutor de informática</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">jul/2007 — jan/2010</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Cursos de Office, design, HTML/CSS e Flash/ActionScript; site microlinspalmas.com.br, newsletter e campanhas.</p>
+        <p class="job__details">Ministração de turmas presenciais e manutenção da presença digital da unidade, incluindo materiais promocionais e site institucional.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Cartório Moromizato</h3>
+            <p class="job__role">Suporte de TI</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">fev/2009 — dez/2009</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Suporte, rede local e site cartoriomoromizato.com.br.</p>
+        <p class="job__details">Suporte técnico presencial e manutenção da infraestrutura e site institucional do cartório, em paralelo à atuação na Microlins.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">Q.I. Informática</h3>
+            <p class="job__role">Instrutor de informática</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">jan/2007 — jun/2008</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">AutoCAD, design gráfico, web e Flash em turmas presenciais.</p>
+        <p class="job__details">Cursos técnicos com foco em ferramentas de desenho, web e animação Flash nos primeiros anos de atuação formal em informática em Palmas.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">To Online — Marketing de Resultados</h3>
+            <p class="job__role">Frontend Developer</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">jan/2007 — dez/2007</span>
+            <span class="job__location">Palmas, TO</span>
+          </div>
+        </header>
+        <p class="job__highlight">Mais de 30 projetos web entregues em um ano.</p>
+        <p class="job__details">Produção acelerada de sites e landing pages para campanhas de marketing digital, consolidando ritmo de entrega e domínio de HTML, CSS e JavaScript.</p>
+      </article>
+      <article class="job ">
+        <header class="job__head">
+          <div>
+            <h3 class="job__company">TEMA Informática</h3>
+            <p class="job__role">Instrutor · Assistente pedagógico</p>
+          </div>
+          <div class="job__meta">
+            
+            <span class="job__period">jul/2005 — dez/2006</span>
+            <span class="job__location">Niterói, RJ</span>
+          </div>
+        </header>
+        <p class="job__highlight">Padronização pedagógica em seis filiais e cursos de informática.</p>
+        <p class="job__details">Coordenação de materiais entre unidades e aulas introdutórias de informática — primeiro emprego na área, em rede de escolas no Rio de Janeiro.</p>
+      </article>
+      </section>
+
+      <p class="footer-note">stroligo.dev · currículo Maio 2026</p>
+    </main>
+  </div>
+</body>
+</html>

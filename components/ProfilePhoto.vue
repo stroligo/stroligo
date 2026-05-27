@@ -40,11 +40,10 @@ const imageClass = computed(() =>
 <template>
   <figure :class="frameClass">
     <div
-      class="stro-profile-photo relative overflow-hidden rounded-[var(--stro-radius-xl)] shadow-[var(--stro-shadow-glow-brand)]"
+      class="stro-profile-photo relative overflow-hidden rounded-[var(--stro-radius-xl)]"
     >
       <div
-        class="absolute inset-0 rounded-[var(--stro-radius-xl)] p-[2px]"
-        style="background: var(--stro-gradient-brand)"
+        class="stro-profile-photo__ring absolute inset-0 rounded-[var(--stro-radius-xl)] p-[2px]"
         aria-hidden="true"
       />
       <div
