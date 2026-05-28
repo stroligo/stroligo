@@ -13,6 +13,7 @@ export type StroSeoJsonLdInput = {
 export function buildStroJsonLd(input: StroSeoJsonLdInput) {
   const inLanguage = input.locale === 'en' ? 'en-US' : 'pt-BR'
   const imageUrl = `${site.siteUrl}${site.profilePhotoUrl}`
+  const alternateUrl = input.locale === 'en' ? `${site.siteUrl}/pt` : `${site.siteUrl}/`
 
   return {
     '@context': 'https://schema.org',
@@ -38,6 +39,16 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
           name: input.location,
         },
         sameAs: input.sameAs,
+        knowsAbout: [
+          'Front-end development',
+          'Nuxt',
+          'Vue',
+          'React',
+          'TypeScript',
+          'Accessibility',
+          'Data visualization',
+          'Civic tech',
+        ],
       },
       {
         '@type': 'ProfilePage',
@@ -48,10 +59,60 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
         inLanguage,
         isPartOf: { '@id': `${site.siteUrl}/#website` },
         about: { '@id': `${site.siteUrl}/#person` },
+        mainEntity: { '@id': `${site.siteUrl}/#person` },
         primaryImageOfPage: {
+          '@id': `${input.pageUrl}#primary-image`,
           '@type': 'ImageObject',
           url: imageUrl,
+          width: 640,
+          height: 800,
+          caption: site.name,
         },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: input.pageUrl,
+            },
+          ],
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${input.pageUrl}#primary`,
+        url: input.pageUrl,
+        name: input.title,
+        description: input.description,
+        inLanguage,
+        isPartOf: { '@id': `${site.siteUrl}/#website` },
+        about: { '@id': `${site.siteUrl}/#person` },
+        primaryImageOfPage: { '@id': `${input.pageUrl}#primary-image` },
+        hasPart: [
+          {
+            '@type': 'WebPageElement',
+            name: 'About',
+            cssSelector: '#sobre',
+          },
+          {
+            '@type': 'WebPageElement',
+            name: 'Projects',
+            cssSelector: '#projetos',
+          },
+          {
+            '@type': 'WebPageElement',
+            name: 'Work',
+            cssSelector: '#atuacao',
+          },
+          {
+            '@type': 'WebPageElement',
+            name: 'Contact',
+            cssSelector: '#contato',
+          },
+        ],
+        isBasedOn: alternateUrl,
       },
     ],
   }

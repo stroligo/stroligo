@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const copy = usePortfolioCopy()
 const { htmlLang } = usePortfolio()
@@ -27,9 +27,20 @@ useSeoMeta({
   robots: 'noindex, follow',
 })
 
+const canonicalUrl = computed(() =>
+  locale.value === 'pt'
+    ? 'https://stroligo.dev/pt/uikit'
+    : 'https://stroligo.dev/uikit',
+)
+
 useHead(() => ({
   htmlAttrs: { lang: htmlLang.value },
-  link: [{ rel: 'canonical', href: 'https://stroligo.dev/uikit' }],
+  link: [
+    { rel: 'canonical', href: canonicalUrl.value },
+    { rel: 'alternate', hreflang: 'en', href: 'https://stroligo.dev/uikit' },
+    { rel: 'alternate', hreflang: 'pt-BR', href: 'https://stroligo.dev/pt/uikit' },
+    { rel: 'alternate', hreflang: 'x-default', href: 'https://stroligo.dev/uikit' },
+  ],
 }))
 </script>
 

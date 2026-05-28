@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /_studio
 Disallow: /uikit
+Disallow: /pt/uikit
 
+Host: stroligo.dev
 Sitemap: https://stroligo.dev/sitemap.xml

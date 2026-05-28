@@ -59,6 +59,7 @@ export function useStroSeo() {
     description: () => labels.value.seoDescription,
     robots: 'index, follow, max-image-preview:large',
     author: site.name,
+    language: () => htmlLang.value,
     ogTitle: () => labels.value.seoTitle,
     ogDescription: () => labels.value.ogDescription,
     ogUrl: () => pageUrl.value,
@@ -71,6 +72,7 @@ export function useStroSeo() {
     twitterTitle: () => labels.value.seoTitle,
     twitterDescription: () => labels.value.ogDescription,
     twitterImage: () => ogImageUrl.value,
+    twitterImageAlt: () => photoAlt.value,
   })
 
   useHead(() => ({
@@ -83,6 +85,10 @@ export function useStroSeo() {
     ],
     meta: [
       { property: 'og:locale:alternate', content: ogLocaleAlternate.value },
+      { property: 'og:image:secure_url', content: ogImageUrl.value },
+      { property: 'og:image:type', content: 'image/png' },
+      { property: 'og:image:width', content: '640' },
+      { property: 'og:image:height', content: '800' },
     ],
     script: [
       {

@@ -43,6 +43,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'stroligo.dev',
+      titleTemplate: '%s',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
@@ -57,6 +58,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Gabriel Stroligo' },
         { name: 'theme-color', content: '#0B1020' },
         { name: 'format-detection', content: 'telephone=no' },
+        { name: 'apple-mobile-web-app-title', content: 'stroligo.dev' },
       ],
     },
   },
