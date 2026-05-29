@@ -1,3 +1,4 @@
+import type { Project } from '~/types/portfolio'
 import { site } from '~/data/site'
 
 export type StroSeoJsonLdInput = {
@@ -8,12 +9,19 @@ export type StroSeoJsonLdInput = {
   tagline: string
   location: string
   sameAs: string[]
+  projects: Project[]
+}
+
+function projectUrl(project: Project) {
+  return project.siteUrl ?? project.behanceUrl
 }
 
 export function buildStroJsonLd(input: StroSeoJsonLdInput) {
   const inLanguage = input.locale === 'en' ? 'en-US' : 'pt-BR'
   const imageUrl = `${site.siteUrl}${site.profilePhotoUrl}`
-  const alternateUrl = input.locale === 'en' ? `${site.siteUrl}/pt` : `${site.siteUrl}/`
+  const featuredProjects = input.projects
+    .filter((project) => project.siteUrl || project.behanceUrl)
+    .slice(0, 12)
 
   return {
     '@context': 'https://schema.org',
@@ -112,7 +120,25 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
             cssSelector: '#contato',
           },
         ],
-        isBasedOn: alternateUrl,
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${input.pageUrl}#projects`,
+        name: input.locale === 'en' ? 'Featured projects' : 'Projetos em destaque',
+        itemListElement: featuredProjects.map((project, index) => {
+          const url = projectUrl(project)
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'CreativeWork',
+              name: project.title,
+              description: project.description,
+              ...(url ? { url } : {}),
+              creator: { '@id': `${site.siteUrl}/#person` },
+            },
+          }
+        }),
       },
     ],
   }

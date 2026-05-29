@@ -10,6 +10,7 @@
 #   PASS  → senha FTP (= senha SFTP no Hostinger)
 #
 # Variável opcional (Variables): DEPLOY_PORT → só se a tua conta usar outra porta
+# Secret opcional: GOOGLE_SITE_VERIFICATION → token da meta tag do Search Console
 
 on:
   push:
@@ -43,12 +44,16 @@ jobs:
         run: npm ci
 
       - name: Generate static site
+        env:
+          NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
         run: npm run generate
 
       - name: Prepare deploy bundle
         run: |
-          rm -rf .output/public/_studio-app .output/public/_studio
+          rm -rf .output/public/_studio-app .output/public/_studio .output/public/__nuxt_content
           test -f .output/public/index.html
+          test -f .output/public/sitemap.xml
+          test -f .output/public/robots.txt
           echo "Deploy size:" && du -sh .output/public
           echo "File count:" && find .output/public -type f | wc -l
 

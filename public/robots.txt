@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
+
 Disallow: /_studio
+Disallow: /__nuxt_content/
+Disallow: /_nuxt/
+Disallow: /_i18n/
+Disallow: /_payload.json
 Disallow: /uikit
 Disallow: /pt/uikit
 
-Host: stroligo.dev
 Sitemap: https://stroligo.dev/sitemap.xml

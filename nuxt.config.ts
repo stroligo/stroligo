@@ -1,6 +1,15 @@
 import tailwindcss from '@tailwindcss/vite'
 
+const googleSiteVerification = process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      googleSiteVerification: googleSiteVerification || '',
+      googleAnalyticsId:
+        process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-WX1TM6MRMQ',
+    },
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   experimental: {
@@ -47,6 +56,12 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
+        {
+          rel: 'sitemap',
+          type: 'application/xml',
+          title: 'Sitemap',
+          href: 'https://stroligo.dev/sitemap.xml',
+        },
       ],
       script: [
         {
@@ -59,6 +74,14 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0B1020' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'apple-mobile-web-app-title', content: 'stroligo.dev' },
+        ...(googleSiteVerification
+          ? [
+              {
+                name: 'google-site-verification',
+                content: googleSiteVerification,
+              },
+            ]
+          : []),
       ],
     },
   },
@@ -91,7 +114,13 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/pt'],
-      ignore: ['/_studio', '/_studio/**', '/uikit'],
+      ignore: [
+        '/_studio',
+        '/_studio/**',
+        '/uikit',
+        '/pt/uikit',
+        '/_i18n/**',
+      ],
     },
   },
 })

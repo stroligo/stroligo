@@ -1,0 +1,2 @@
+# Hostinger / Apache — Search Console friendly 404
+ErrorDocument 404 /404.html

@@ -15,8 +15,11 @@
     "sync:projects": "tsx scripts/sync-project-images.ts",
     "sync:screenshots": "tsx scripts/capture-project-screenshots.ts",
     "sync:content": "tsx scripts/sync-content-from-locales.ts",
-    "pregenerate": "npm run sync:assets && npm run sync:content",
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "pregenerate": "npm run sync:assets && npm run sync:content && npm run generate:sitemap",
+    "prebuild": "npm run generate:sitemap",
     "generate": "nuxt generate",
+    "postgenerate": "tsx scripts/patch-static-seo.ts",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

@@ -4,7 +4,7 @@ import { site } from '~/data/site'
 /** SEO da homepage (PT / EN) — meta, Open Graph, Twitter e JSON-LD */
 export function useStroSeo() {
   const { locale } = useI18n()
-  const { profile, labels, htmlLang, socialLinks } = usePortfolio()
+  const { profile, labels, htmlLang, socialLinks, projects } = usePortfolio()
 
   const pageUrl = computed(() =>
     locale.value === 'pt'
@@ -51,6 +51,7 @@ export function useStroSeo() {
       tagline: profile.value.tagline,
       location: profile.value.location,
       sameAs: sameAs.value,
+      projects: projects.value,
     }),
   )
 
@@ -81,6 +82,12 @@ export function useStroSeo() {
     },
     link: [
       { rel: 'canonical', href: pageUrl.value },
+      {
+        rel: 'sitemap',
+        type: 'application/xml',
+        title: 'Sitemap',
+        href: `${site.siteUrl}/sitemap.xml`,
+      },
       ...hreflangLinks.value,
     ],
     meta: [

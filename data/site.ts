@@ -1,6 +1,7 @@
 export const site = {
   name: 'Gabriel Stroligo',
   siteUrl: 'https://stroligo.dev',
+  googleAnalyticsId: 'G-WX1TM6MRMQ',
   email: 'gabrielstroligo@gmail.com',
   profilePhotoUrl: '/profile/photo.png',
   resumeUrls: {
