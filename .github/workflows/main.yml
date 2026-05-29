@@ -24,7 +24,6 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   NUXT_STUDIO: '0'
 
 jobs:
@@ -33,9 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: npm
@@ -57,29 +56,50 @@ jobs:
           echo "Deploy size:" && du -sh .output/public
           echo "File count:" && find .output/public -type f | wc -l
 
-      - name: Test Hostinger ports (diagnostic)
-        continue-on-error: true
+      - name: Test Hostinger SFTP (diagnostic)
         env:
           HOST: ${{ secrets.HOST }}
+          PORT: ${{ vars.DEPLOY_PORT || '65002' }}
         run: |
-          set +e
-          echo "Host: $HOST"
-          for port in 65002 21; do
-            if timeout 8 bash -c "echo >/dev/tcp/${HOST}/${port}" 2>/dev/null; then
-              echo "  port $port: reachable from GitHub"
-            else
-              echo "  port $port: not reachable"
+          set -euo pipefail
+          echo "Host: ${HOST:-<missing HOST secret>}"
+          echo "Port: $PORT"
+          if [ -z "${HOST:-}" ]; then
+            echo "::error::Secret HOST não configurado em GitHub → Settings → Secrets → Actions"
+            exit 1
+          fi
+          if bash -c "echo >/dev/tcp/${HOST}/${PORT}" 2>/dev/null; then
+            echo "SFTP port $PORT is reachable from GitHub runners"
+          else
+            echo "::warning::Port $PORT not reachable from this runner (Hostinger may block GitHub IPs). Deploy will still be attempted."
+          fi
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Sync to Hostinger (SFTP)
+        env:
+          HOST: ${{ secrets.HOST }}
+          USER: ${{ secrets.USER }}
+          PASS: ${{ secrets.PASS }}
+          PORT: ${{ vars.DEPLOY_PORT || '65002' }}
+        run: |
+          set -euo pipefail
+          for var in HOST USER PASS; do
+            if [ -z "${!var:-}" ]; then
+              echo "::error::Secret $var não configurado em GitHub → Settings → Secrets → Actions"
+              exit 1
             fi
           done
 
-      - name: Sync to Hostinger (SFTP)
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASS }}
-          port: ${{ vars.DEPLOY_PORT || '65002' }}
-          local_path: '.output/public/*'
-          remote_path: './public_html/'
-          sftp_only: true
-          sftpArgs: '-o ConnectTimeout=60 -o ServerAliveInterval=30 -o StrictHostKeyChecking=no'
+          echo "Uploading $(find .output/public -type f | wc -l) files to public_html/ …"
+
+          lftp -u "$USER","$PASS" "sftp://$HOST:$PORT" <<'LFTP'
+          set sftp:auto-confirm yes
+          set cmd:fail-exit yes
+          set net:timeout 30
+          set net:max-retries 3
+          set net:reconnect-interval-base 5
+          mirror -R --verbose --parallel=4 .output/public/ public_html/
+          bye
+          LFTP
