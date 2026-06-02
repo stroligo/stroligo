@@ -32,6 +32,7 @@ export function useStroSeo() {
 
   const hreflangLinks = computed(() => [
     { rel: 'alternate', hreflang: 'en', href: `${site.siteUrl}/` },
+    { rel: 'alternate', hreflang: 'pt', href: `${site.siteUrl}/pt` },
     { rel: 'alternate', hreflang: 'pt-BR', href: `${site.siteUrl}/pt` },
     { rel: 'alternate', hreflang: 'x-default', href: `${site.siteUrl}/` },
   ])

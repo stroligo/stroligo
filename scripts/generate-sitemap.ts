@@ -10,6 +10,7 @@ const pages = [
 
 const hreflangBlock = `
     <xhtml:link rel="alternate" hreflang="en" href="${site.siteUrl}/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="${site.siteUrl}/pt"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="${site.siteUrl}/pt"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${site.siteUrl}/"/>`
 

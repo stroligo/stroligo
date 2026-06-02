@@ -1,8 +1,16 @@
 <script setup lang="ts">
 const copy = usePortfolioCopy()
 const { profile, socialLinks } = usePortfolio()
+const { locale } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const year = new Date().getFullYear()
+
+const alternateLocale = computed(() =>
+  locale.value === 'pt'
+    ? { href: switchLocalePath('en'), label: 'English version' }
+    : { href: switchLocalePath('pt'), label: 'Versão em português' },
+)
 </script>
 
 <template>
@@ -29,6 +37,12 @@ const year = new Date().getFullYear()
             :class="link.primary ? 'font-medium text-stro-blue hover:text-stro-cyan' : ''"
           >
             {{ link.label }}
+          </a>
+          <a
+            :href="alternateLocale.href"
+            class="text-stro-muted transition hover:text-stro-cyan"
+          >
+            {{ alternateLocale.label }}
           </a>
         </nav>
       </div>
