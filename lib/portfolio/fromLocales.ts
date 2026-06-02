@@ -44,7 +44,6 @@ export function buildPortfolioFromLocales(
     navContact: resolveI18nString(m.nav.contact),
     navResume: resolveI18nString(m.nav.resume),
     navLinkedin: resolveI18nString(m.nav.linkedin),
-    navUikit: resolveI18nString(m.nav.uikit),
     navHome: resolveI18nString(m.nav.home),
     heroLinkedinCta: resolveI18nString(m.hero.linkedinCta),
     heroExploreProjects: resolveI18nString(m.hero.exploreProjects),

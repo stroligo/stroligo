@@ -17,7 +17,7 @@ Ficheiros em `content/portfolio/` (PT e EN):
 
 Metadados técnicos (URLs, destaque, categorias fixas) continuam em `data/projects.meta.ts`.
 
-Textos de **UI Kit** e **acessibilidade** ficam em `locales/pt.ts` e `locales/en.ts`.
+Textos de **acessibilidade** ficam em `locales/pt.ts` e `locales/en.ts`.
 
 ## Desenvolvimento local
 

@@ -11,7 +11,6 @@ const homeLabelsSchema = z.object({
   navContact: z.string(),
   navResume: z.string(),
   navLinkedin: z.string(),
-  navUikit: z.string(),
   navHome: z.string(),
   heroLinkedinCta: z.string(),
   heroExploreProjects: z.string(),

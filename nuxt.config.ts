@@ -117,8 +117,6 @@ export default defineNuxtConfig({
       ignore: [
         '/_studio',
         '/_studio/**',
-        '/uikit',
-        '/pt/uikit',
         '/_i18n/**',
       ],
     },

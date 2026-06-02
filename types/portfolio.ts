@@ -85,7 +85,6 @@ export type PortfolioLabels = {
   navContact: string
   navResume: string
   navLinkedin: string
-  navUikit: string
   navHome: string
   heroLinkedinCta: string
   heroExploreProjects: string

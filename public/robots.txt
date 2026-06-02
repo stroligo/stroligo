@@ -6,7 +6,5 @@ Disallow: /__nuxt_content/
 Disallow: /_nuxt/
 Disallow: /_i18n/
 Disallow: /_payload.json
-Disallow: /uikit
-Disallow: /pt/uikit
 
 Sitemap: https://stroligo.dev/sitemap.xml

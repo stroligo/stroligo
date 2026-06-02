@@ -21,7 +21,6 @@ export function usePortfolioCopy() {
       contact: L(labels.value.navContact),
       resume: L(labels.value.navResume),
       linkedin: L(labels.value.navLinkedin),
-      uikit: L(labels.value.navUikit),
       home: L(labels.value.navHome),
     },
     hero: {

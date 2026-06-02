@@ -8,7 +8,4 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^ https://stroligo.dev%{REQUEST_URI} [R=301,L]
-
-  # UI Kit — rota de dev, não faz parte do build estático público
-  RewriteRule ^(pt/)?uikit/?$ - [R=404,L]
 </IfModule>

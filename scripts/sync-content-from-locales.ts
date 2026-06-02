@@ -34,7 +34,6 @@ function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
     navContact: m.nav.contact,
     navResume: m.nav.resume,
     navLinkedin: m.nav.linkedin,
-    navUikit: m.nav.uikit,
     navHome: m.nav.home,
     heroLinkedinCta: m.hero.linkedinCta,
     heroExploreProjects: m.hero.exploreProjects,
