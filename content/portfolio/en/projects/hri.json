@@ -6,5 +6,10 @@
   "tags": [
     "Public health",
     "Human rights"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "PHP"
+  ],
+  "body": "I developed the website for Harm Reduction International (HRI), a global organization dedicated to promoting evidence-based strategies to minimize the negative impacts of drug use and drug policies. Their work focuses on advancing public health, human rights, and social justice. One flagship initiative is the Global State of Harm Reduction, a comprehensive report monitoring harm reduction policies and services worldwide."
 }

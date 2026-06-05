@@ -4,8 +4,11 @@
   "organization": "Ministério do Meio Ambiente (MMA)",
   "description": "Portal sobre a interseção entre qualidade ambiental e saúde pública no Brasil — ar, químicos e determinantes ambientais.",
   "tags": [
-    "Nuxt",
-    "Tailwind",
     "Governo"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Atuei no portal Saúde Ambiental, iniciativa do Ministério do Meio Ambiente sobre a interseção entre qualidade ambiental e saúde pública. A plataforma centraliza conteúdo, dados e estratégias sobre qualidade do ar, segurança química e determinantes ambientais da saúde — apoiando gestores, pesquisadores e sociedade com informação acessível para decisão e conscientização.\n\nFoi gratificante contribuir para um projeto que mostra como ambiente saudável é essencial para sociedade saudável — conectando dados, política e impacto em área crítica."
 }

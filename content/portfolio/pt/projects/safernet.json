@@ -6,5 +6,10 @@
   "tags": [
     "Educação",
     "LGPD"
-  ]
+  ],
+  "stack": [
+    "Vue",
+    "Tailwind CSS"
+  ],
+  "body": "Contribuí para o site da Disciplina de Cidadania Digital, iniciativa da SaferNet Brasil. O programa oferece a educadores ferramentas para ensinar cidadania digital — segurança online, empatia nas interações digitais e uso responsável da tecnologia. O currículo alinha-se à BNCC e à LGPD, garantindo experiência de aprendizagem abrangente e impactante."
 }

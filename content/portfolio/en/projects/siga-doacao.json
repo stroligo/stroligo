@@ -4,8 +4,11 @@
   "organization": "MOL Central de Impacto",
   "description": "Platform making donations more transparent, connecting donors to organizations and tracking impact.",
   "tags": [
-    "Nuxt",
-    "Tailwind",
     "Social impact"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "I worked on Siga Sua Doação, a platform designed to make donating easier and more transparent. Part of MOL Central de Impacto, the project connects donors with organizations in need and helps track the impact of contributions — strengthening a culture of giving and social responsibility in Brazil.\n\nThrough Siga Sua Doação, donors can track the impact of their contributions and support causes that truly make a difference."
 }

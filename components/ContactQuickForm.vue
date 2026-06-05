@@ -1,45 +1,46 @@
 <script setup lang="ts">
 const props = defineProps<{
-  toEmail: string
-}>()
+  toEmail: string;
+}>();
 
-const { t, locale } = useI18n()
+const { t, locale } = useI18n();
 
-const name = ref('')
-const fromEmail = ref('')
-const message = ref('')
+const name = ref('');
+const fromEmail = ref('');
+const message = ref('');
 
 const canSubmit = computed(
-  () =>
-    name.value.trim().length > 0 && message.value.trim().length > 0,
-)
+  () => name.value.trim().length > 0 && message.value.trim().length > 0,
+);
 
 function submit() {
-  if (!canSubmit.value) return
+  if (!canSubmit.value) return;
 
   const subject =
     locale.value === 'en'
       ? `stroligo.dev — message from ${name.value.trim()}`
-      : `stroligo.dev — mensagem de ${name.value.trim()}`
+      : `stroligo.dev — mensagem de ${name.value.trim()}`;
 
   const lines = [
-    locale.value === 'en' ? `Name: ${name.value.trim()}` : `Nome: ${name.value.trim()}`,
-  ]
+    locale.value === 'en'
+      ? `Name: ${name.value.trim()}`
+      : `Nome: ${name.value.trim()}`,
+  ];
   if (fromEmail.value.trim()) {
     lines.push(
       locale.value === 'en'
         ? `Reply-to: ${fromEmail.value.trim()}`
         : `Responder para: ${fromEmail.value.trim()}`,
-    )
+    );
   }
-  lines.push('', message.value.trim())
+  lines.push('', message.value.trim());
 
   const params = new URLSearchParams({
     subject,
     body: lines.join('\n'),
-  })
+  });
 
-  window.location.href = `mailto:${props.toEmail}?${params.toString()}`
+  window.location.href = `mailto:${props.toEmail}?${params.toString()}`;
 }
 </script>
 
@@ -47,20 +48,18 @@ function submit() {
   <StroCard
     variant="glass"
     padding="lg"
+    class="flex w-full max-w-2xl flex-col"
   >
     <h4 class="stro-kicker mb-5 !text-stro-purple">
       {{ t('contact.formTitle') }}
     </h4>
 
     <form
-      class="space-y-4"
+      class="flex w-full flex-col gap-4"
       @submit.prevent="submit"
     >
-      <div>
-        <label
-          for="contact-name"
-          class="mb-2 block text-sm text-stro-muted"
-        >
+      <div class="flex w-full flex-col gap-2">
+        <label for="contact-name" class="block text-sm text-stro-muted">
           {{ t('contact.formNameLabel') }}
         </label>
         <StroInput
@@ -68,16 +67,14 @@ function submit() {
           v-model="name"
           name="name"
           autocomplete="name"
+          class="block w-full"
           :placeholder="t('contact.formNamePlaceholder')"
           required
         />
       </div>
 
-      <div>
-        <label
-          for="contact-email"
-          class="mb-2 block text-sm text-stro-muted"
-        >
+      <div class="flex w-full flex-col gap-2">
+        <label for="contact-email" class="block text-sm text-stro-muted">
           {{ t('contact.formEmailLabel') }}
         </label>
         <StroInput
@@ -86,21 +83,20 @@ function submit() {
           name="email"
           type="email"
           autocomplete="email"
+          class="block w-full"
           :placeholder="t('contact.formEmailPlaceholder')"
         />
       </div>
 
-      <div>
-        <label
-          for="contact-message"
-          class="mb-2 block text-sm text-stro-muted"
-        >
+      <div class="flex w-full flex-col gap-2">
+        <label for="contact-message" class="block text-sm text-stro-muted">
           {{ t('contact.formMessageLabel') }}
         </label>
         <StroTextarea
           id="contact-message"
           v-model="message"
           name="message"
+          class="block w-full"
           :rows="4"
           :placeholder="t('contact.formMessagePlaceholder')"
           required
@@ -110,7 +106,7 @@ function submit() {
       <StroButton
         type="submit"
         variant="primary"
-        class="w-full sm:w-auto"
+        class="w-full"
         :disabled="!canSubmit"
       >
         {{ t('contact.formSubmit') }}

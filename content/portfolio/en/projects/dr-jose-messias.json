@@ -4,9 +4,13 @@
   "organization": "Dr. José Messias",
   "description": "Modern, responsive medical website for bariatric surgery and obesity treatment in Brasília — clean design, intuitive navigation, accessibility, and performance aligned with a professional, patient-centered identity.",
   "tags": [
-    "Nuxt",
-    "Tailwind CSS",
     "Healthcare",
     "Landing Page"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "body": "Developed a modern and responsive medical website for Dr. José Messias, focused on presenting bariatric surgery and obesity treatment services in a professional, accessible, and trustworthy way.\n\nThe project was designed to strengthen the doctor's digital presence by combining clean visual design, intuitive navigation, and performance-oriented frontend development. The website highlights medical specialties, patient information, consultation options, and contact channels while ensuring a seamless experience across desktop and mobile devices.\n\nThroughout the development process, I focused on responsiveness, accessibility, user experience, visual consistency, and optimized performance to deliver a fast and reliable web experience aligned with the client's professional identity and patient-centered approach."
 }

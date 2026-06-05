@@ -1,5 +1,8 @@
 import { projectsMetaById } from '~/data/projects.meta'
+import { projectBodiesById } from '~/data/projectBodies'
+import { projectStacksById } from '~/data/projectStacks'
 import { enrichAndSortProjects } from '~/lib/portfolio/enrichProjects'
+import { experienceBodiesById } from '~/data/experienceBodies'
 import { experiencesForLocale } from '~/data/experiences'
 import {
   resumeUrlForLocale,
@@ -149,7 +152,11 @@ export async function buildPortfolioFromContent(
           title: item.title,
           organization: item.organization,
           description: item.description,
+          body: item.body ?? projectBodiesById[id]?.[locale],
           tags: item.tags,
+          stack: item.stack?.length
+            ? item.stack
+            : projectStacksById[id],
           ...meta,
         }
       })
@@ -171,6 +178,8 @@ export async function buildPortfolioFromContent(
           location: item.location,
           highlight: item.highlight,
           details: item.details,
+          body: item.body ?? experienceBodiesById[item.id]?.[locale],
+          stack: item.stack?.length ? item.stack : undefined,
           yearStart: item.yearStart,
           yearEnd: item.yearEnd ?? null,
           url: item.url || undefined,

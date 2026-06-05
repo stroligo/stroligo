@@ -25,7 +25,10 @@ export type ProjectContent = {
   title: string
   organization: string
   description: string
+  /** Texto completo (ex.: publicação LinkedIn) */
+  body?: string
   tags: string[]
+  stack?: string[]
 }
 
 export type Project = ProjectContent & ProjectMeta
@@ -38,6 +41,8 @@ export type Experience = {
   location: string
   highlight: string
   details: string
+  body?: string
+  stack?: string[]
   yearStart: number
   yearEnd?: number | null
   url?: string

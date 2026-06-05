@@ -6,5 +6,10 @@
   "tags": [
     "Mobility",
     "Design"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Visual communication project on mobility modernization in the Belo Horizonte metropolitan region. The work translates complex infrastructure and urban mobility themes into clear narratives and visual systems for public engagement — supporting CCR's communication around modernization across the RMBH."
 }

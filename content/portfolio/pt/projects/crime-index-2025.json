@@ -7,5 +7,10 @@
     "Open Data",
     "Pesquisa",
     "Data Viz"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Participei do desenvolvimento do Global Organized Crime Index 2025 – Crime at a Crossroads, plataforma global que analisa tendências do crime organizado, resiliência estatal e dinâmicas que moldam segurança e integridade pública no mundo.\n\nO projeto reúne dados, pesquisa e visualizações interativas para tornar informação complexa acessível e útil a jornalistas, pesquisadores, formuladores de políticas e sociedade — reforçando transparência, dados abertos e civic tech diante de desafios globais."
 }

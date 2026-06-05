@@ -6,5 +6,10 @@
   "tags": [
     "Global health",
     "UHC"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "CSS"
+  ],
+  "body": "I contributed to the Health Financing Progress Matrix (HFPM) website, an essential tool by the World Health Organization (WHO). HFPM assesses a country's health financing system, providing insights to drive progress toward Universal Health Coverage (UHC). By evaluating how well countries align health financing policies with UHC goals, the matrix helps identify key gaps and opportunities for reform — improving financial protection and access to quality healthcare."
 }

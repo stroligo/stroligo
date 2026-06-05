@@ -6,5 +6,10 @@
   "tags": [
     "Saúde pública",
     "Direitos humanos"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "PHP"
+  ],
+  "body": "Desenvolvi o site da Harm Reduction International (HRI), organização global dedicada a estratégias baseadas em evidência para minimizar impactos negativos do uso de drogas e das políticas sobre drogas. O trabalho avança saúde pública, direitos humanos e justiça social. Uma iniciativa central é o Global State of Harm Reduction, relatório que monitora políticas e serviços de redução de danos no mundo."
 }

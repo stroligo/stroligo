@@ -6,5 +6,11 @@
   "tags": [
     "Maps",
     "Environment"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "PHP",
+    "JavaScript"
+  ],
+  "body": "I contributed to Amazon Underworld, an interactive map created in partnership with InfoAmazonia. This project sheds light on complex networks of organized crime in the Amazon — from illegal mining to trafficking and logging activities. The map provides crucial data on criminal activities impacting the rainforest, with a focus on environmental consequences and indigenous communities.\n\nBy integrating data from multiple sources and using advanced mapping tools like Mapbox and QGIS, we visualized the extent of these networks in an accessible and engaging format — underscoring the role of investigative journalism and technology in addressing pressing social and environmental issues."
 }

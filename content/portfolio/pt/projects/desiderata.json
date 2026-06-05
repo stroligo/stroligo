@@ -6,5 +6,10 @@
   "tags": [
     "Saúde",
     "ONG"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Contribuí para o novo site do Instituto Desiderata, organização focada em melhorar a saúde pública de crianças e adolescentes no Brasil. O instituto atua no diagnóstico precoce e tratamento do câncer infantil e em outras questões crônicas de saúde infantil — incluindo o Panorama da Oncologia Pediátrica e experiências de dados em saúde."
 }

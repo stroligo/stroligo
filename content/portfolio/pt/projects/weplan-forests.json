@@ -6,5 +6,10 @@
   "tags": [
     "Clima",
     "Restauração"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Participei do WePlan-Forests, ferramenta inovadora de apoio à restauração de ecossistemas florestais tropicais e subtropicais. A plataforma oferece soluções espaciais baseadas em evidência para otimizar esforços de restauração — equilibrando sequestro de carbono, biodiversidade e custo-efetividade.\n\nWePlan-Forests empodera gestores a analisar cenários e planear iniciativas de restauração, contribuindo para mitigação climática e desenvolvimento sustentável. Desenvolvida com parceiros como o IIS e a Forest Ecosystem Restoration Initiative."
 }

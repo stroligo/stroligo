@@ -6,5 +6,10 @@
   "tags": [
     "Open Data",
     "Cities"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "PHP"
+  ],
+  "body": "I contributed to the new website for Open Knowledge Brasil (OKBR), an organization committed to fostering open data and transparency in Brazil. One of their key projects, the Open Data Index for Cities, evaluates and promotes the quality of open data across Brazilian capitals — empowering public administrators and civil society to make data-driven decisions that enhance governance and combat misinformation."
 }

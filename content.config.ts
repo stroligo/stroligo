@@ -50,7 +50,9 @@ const projectSchema = z.object({
   title: z.string(),
   organization: z.string(),
   description: z.string(),
+  body: z.string().optional(),
   tags: z.array(z.string()),
+  stack: z.array(z.string()).optional(),
 })
 
 const experienceItemSchema = z.object({
@@ -61,10 +63,12 @@ const experienceItemSchema = z.object({
   location: z.string(),
   highlight: z.string(),
   details: z.string(),
+  body: z.string().optional(),
   yearStart: z.number(),
   yearEnd: z.number().nullable().optional(),
   url: z.string().optional(),
   current: z.boolean().optional(),
+  stack: z.array(z.string()).optional(),
 })
 
 const socialItemSchema = z.object({

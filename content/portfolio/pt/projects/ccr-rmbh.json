@@ -6,5 +6,10 @@
   "tags": [
     "Mobilidade",
     "Design"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Projeto de comunicação visual sobre modernização da mobilidade na região metropolitana de Belo Horizonte. O trabalho traduz temas complexos de infraestrutura e mobilidade urbana em narrativas e sistemas visuais claros para engajamento público — apoiando a comunicação da CCR sobre modernização na RMBH."
 }

@@ -6,5 +6,10 @@
   "tags": [
     "Racial equity",
     "Data"
-  ]
+  ],
+  "stack": [
+    "WordPress",
+    "Tailwind CSS"
+  ],
+  "body": "I contributed to the website for CEDRA (Centro de Estudos e Dados sobre Desigualdades Raciais). The organization is a pivotal resource in the fight for racial equity in Brazil, offering comprehensive data and insights into racial inequalities across education, employment, housing, and beyond. Through CEDRA's platform, activists, policymakers, and researchers gain access to reliable information that supports transformative action toward a more equitable society."
 }

@@ -2,10 +2,14 @@
   "id": "eles-tao-viajando",
   "title": "Eles tão viajando",
   "organization": "Projeto final FLAG",
-  "description": "Aplicação full stack para compartilhar viagens — mapas, galeria, blog e painel admin. React, Node, MongoDB.",
+  "description": "Aplicação full stack para compartilhar viagens — mapas, galeria, blog e painel admin.",
   "tags": [
-    "React",
-    "Node",
     "MongoDB"
-  ]
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "Tailwind CSS"
+  ],
+  "body": "Eles Tão Viajando é aplicação full stack desenvolvida como projeto final do curso Professional Full Stack Web Development na FLAG. A plataforma permite compartilhar experiências de viagem com mapas interativos, galerias, blog e área admin para gestão de conteúdo.\n\nFoi oportunidade de trabalhar stack moderna, integrações com APIs externas, práticas de segurança e um sistema completo e organizado — unindo entrega front-end e back-end em projeto pronto para produção."
 }

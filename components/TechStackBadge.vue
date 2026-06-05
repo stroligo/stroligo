@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { getStackTechIcon } from '~/data/stackTechIcons'
 
-const props = defineProps<{
-  label: string
-}>()
+const props = withDefaults(
+  defineProps<{
+    label: string
+    size?: 'default' | 'sm'
+  }>(),
+  { size: 'default' },
+)
 
 const { isDark } = useStroTheme()
 
@@ -16,15 +20,35 @@ const iconColor = computed(() => {
   }
   return icon.value.color
 })
+
+const badgeClass = computed(() =>
+  props.size === 'sm'
+    ? 'gap-1.5 px-2.5 py-1 text-xs sm:px-3 sm:py-1.5'
+    : 'gap-2.5 px-3.5 py-2 text-sm sm:px-4 sm:py-2.5 sm:text-base',
+)
+
+const iconClass = computed(() =>
+  props.size === 'sm'
+    ? 'h-4 w-4'
+    : 'h-5 w-5 sm:h-6 sm:w-6',
+)
+
+const fallbackClass = computed(() =>
+  props.size === 'sm'
+    ? 'h-4 w-4 text-[8px] sm:text-[9px]'
+    : 'h-5 w-5 sm:h-6 sm:w-6 sm:text-[10px] text-[9px]',
+)
 </script>
 
 <template>
   <span
-    class="inline-flex items-center gap-2.5 rounded-[var(--stro-radius-full)] border border-stro-border bg-stro-surface/90 px-3.5 py-2 text-sm font-medium text-stro-foreground shadow-[var(--stro-shadow-soft)] transition hover:border-stro-purple/35 hover:bg-stro-purple/5 sm:px-4 sm:py-2.5 sm:text-base"
+    class="inline-flex items-center rounded-[var(--stro-radius-full)] border border-stro-border bg-stro-surface/90 font-medium text-stro-foreground shadow-[var(--stro-shadow-soft)] transition hover:border-stro-purple/35 hover:bg-stro-purple/5"
+    :class="badgeClass"
   >
     <svg
       v-if="icon"
-      class="h-5 w-5 shrink-0 sm:h-6 sm:w-6"
+      class="shrink-0"
+      :class="iconClass"
       viewBox="0 0 24 24"
       fill="currentColor"
       role="img"
@@ -35,7 +59,8 @@ const iconColor = computed(() => {
     </svg>
     <span
       v-else
-      class="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-stro-purple/15 stro-font-mono text-[9px] font-bold text-stro-purple sm:h-6 sm:w-6 sm:text-[10px]"
+      class="flex shrink-0 items-center justify-center rounded-md bg-stro-purple/15 stro-font-mono font-bold text-stro-purple"
+      :class="fallbackClass"
       aria-hidden="true"
     >
       {{ label.charAt(0) }}

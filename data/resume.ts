@@ -1,6 +1,10 @@
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import { site } from '~/data/site'
 import { experiencesForLocale } from '~/data/experiences'
+import {
+  resumeEuipoCopy,
+  resumeProjectCopy,
+} from '~/lib/resume/mapPortfolio'
 import en from '~/locales/en'
 import pt from '~/locales/pt'
 
@@ -139,6 +143,16 @@ const contributions: Record<ResumeLocale, Record<string, string>> = {
   },
 }
 
+function skillsForLocale(locale: ResumeLocale): string {
+  const messages = locale === 'en' ? en : pt
+  const core = messages.profile.stack.join(', ')
+  const extras =
+    locale === 'en'
+      ? 'JavaScript, HTML5, CSS3, Node.js, PHP, Joomla, MySQL, Git, Agile, Scrum, REST APIs, Responsive Web Design, Web Accessibility, WCAG, Data Visualization, UI/UX Implementation, Front-end Architecture, CI/CD'
+      : 'JavaScript, HTML5, CSS3, Node.js, PHP, Joomla, MySQL, Git, Agile, Scrum, APIs REST, Design Responsivo, Acessibilidade Web, WCAG, Visualização de Dados, Implementação UI/UX, Arquitetura Front-end, CI/CD'
+  return `${core}, ${extras}`
+}
+
 function projectsFromLocale(
   locale: ResumeLocale,
   messages: typeof pt | typeof en,
@@ -151,17 +165,22 @@ function projectsFromLocale(
     .map((id) => {
       const item = items.find((p) => p.id === id)
       if (!item) return null
+      const copy = resumeProjectCopy(id, locale, {
+        description: item.description,
+        contribution: contrib[id] ?? '',
+      })
       return {
         title: item.title,
         organization: item.organization,
         year: years[id],
-        description: item.description,
-        stack: item.tags.join(', '),
-        contribution: contrib[id] ?? '',
+        description: copy.description,
+        stack: copy.stack || item.tags.join(', '),
+        contribution: copy.contribution,
       }
     })
     .filter((p): p is ResumeProject => p !== null)
 
+  const euipoCopy = resumeEuipoCopy(locale)
   const euipo: ResumeProject = {
     title: locale === 'en' ? 'EUIPO Digital Platform' : 'Plataforma Digital EUIPO',
     organization:
@@ -169,12 +188,9 @@ function projectsFromLocale(
         ? 'Vex Tech · European Union Intellectual Property Office'
         : 'Vex Tech · European Union Intellectual Property Office (EUIPO)',
     year: years.euipo,
-    description:
-      locale === 'en'
-        ? 'Large-scale front-end for the European Union Intellectual Property Office — interfaces used by businesses, legal professionals, and public institutions across the EU.'
-        : 'Front-end em larga escala para o European Union Intellectual Property Office — interfaces usadas por empresas, profissionais jurídicos e instituições públicas na União Europeia.',
-    stack: 'React, TypeScript, Material UI, Context API, Agile',
-    contribution: contrib.euipo ?? '',
+    description: euipoCopy.description,
+    stack: euipoCopy.stack,
+    contribution: euipoCopy.contribution || contrib.euipo || '',
   }
 
   return [...fromSite.slice(0, 3), euipo, ...fromSite.slice(3)]
@@ -206,12 +222,8 @@ const contentByLocale: Record<ResumeLocale, Omit<ResumeContent, 'locale' | 'file
       contribution: 'Front-end role',
       footer: 'Curriculum Vitae',
     },
-    summary: [
-      'Software Engineer and Front-end Specialist with 18+ years delivering accessible, responsive web applications for public and private sectors. Expert in React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS, and Material UI — from UI implementation to production deployment in Agile, multicultural teams.',
-      'Experience in high-traffic government portals, civic tech, open data, data visualization, and social impact platforms (WHO, NGOs, investigative journalism). Strong focus on performance, WCAG accessibility, sustainable code, Git, REST APIs, and CMS integration.',
-    ],
-    skills:
-      'React, Next.js, Vue.js, Nuxt.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Material UI, Vite, Node.js, PHP, Joomla, MySQL, Git, Agile, Scrum, REST APIs, Responsive Web Design, Web Accessibility, WCAG, Data Visualization, UI/UX Implementation, Front-end Architecture, CI/CD',
+    summary: en.about.paragraphs,
+    skills: skillsForLocale('en'),
     projects: projectsFromLocale('en', en),
     education: [
       {
@@ -272,12 +284,8 @@ const contentByLocale: Record<ResumeLocale, Omit<ResumeContent, 'locale' | 'file
       contribution: 'Papel front-end',
       footer: 'Currículo',
     },
-    summary: [
-      'Software Engineer e especialista em front-end com mais de 18 anos de experiência em soluções digitais para setores público e privado. Desenvolvo interfaces modernas, responsivas e acessíveis com React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS e Material UI — do layout ao deploy, em ambientes ágeis e equipes multiculturais.',
-      'Atuação em portais governamentais de alto tráfego, civic tech, dados abertos, visualização de dados e plataformas de impacto social (OMS, ONGs, jornalismo investigativo). Foco em performance, acessibilidade (WCAG), código sustentável, Git, APIs REST e integração com CMS.',
-    ],
-    skills:
-      'React, Next.js, Vue.js, Nuxt.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Material UI, Vite, Node.js, PHP, Joomla, MySQL, Git, Agile, Scrum, APIs REST, Design Responsivo, Acessibilidade Web, WCAG, Visualização de Dados, Implementação UI/UX, Arquitetura Front-end, CI/CD',
+    summary: pt.about.paragraphs,
+    skills: skillsForLocale('pt'),
     projects: projectsFromLocale('pt', pt),
     education: [
       {
@@ -337,7 +345,9 @@ export function experienceDateRange(
   yearStart: number,
   yearEnd: number | null,
   current?: boolean,
+  locale: ResumeLocale = 'en',
 ) {
-  if (current || yearEnd === null) return `${yearStart} - Present`
+  const present = locale === 'pt' ? 'Presente' : 'Present'
+  if (current || yearEnd === null) return `${yearStart} - ${present}`
   return `${yearStart} - ${yearEnd}`
 }

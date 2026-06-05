@@ -6,5 +6,11 @@
   "tags": [
     "Direitos humanos",
     "Saúde"
-  ]
+  ],
+  "stack": [
+    "HTML",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Contribuí para a criação do novo site do Instituto AzMina, organização dedicada a direitos reprodutivos e saúde sexual no Brasil. Uma das iniciativas centrais, o Mapa do Aborto Legal, mapeia a disponibilidade e o acesso a serviços legais de aborto em todo o país — recurso crítico diante dos desafios persistentes do sistema público de saúde."
 }

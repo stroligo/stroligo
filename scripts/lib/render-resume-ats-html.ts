@@ -1,4 +1,5 @@
 import type { Experience } from '~/types/portfolio'
+import { experienceBulletsForResume } from '~/data/experienceBodies'
 import type { ResumeContent } from '../../data/resume'
 import { experienceDateRange, resumeExperiences } from '../../data/resume'
 
@@ -10,19 +11,21 @@ function escapeHtml(text: string) {
     .replaceAll('"', '&quot;')
 }
 
-function splitBullets(text: string) {
-  return text
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter((s) => s.length > 20)
-}
-
-function experienceBlock(job: Experience) {
-  const dates = experienceDateRange(job.yearStart, job.yearEnd, job.current)
-  const bullets = [
-    ...splitBullets(job.highlight),
-    ...(job.details ? splitBullets(job.details) : []),
-  ].slice(0, 4)
+function experienceBlock(
+  job: Experience,
+  labels: ResumeContent['labels'],
+  locale: ResumeContent['locale'],
+) {
+  const dates = experienceDateRange(
+    job.yearStart,
+    job.yearEnd,
+    job.current,
+    locale,
+  )
+  const bullets = experienceBulletsForResume(job, job.current ? 5 : 4)
+  const stackLine = job.stack?.length
+    ? `<p class="job-stack"><strong>${escapeHtml(labels.stack)}:</strong> ${escapeHtml(job.stack.join(', '))}</p>`
+    : ''
 
   return `
     <article class="job">
@@ -32,6 +35,7 @@ function experienceBlock(job: Experience) {
       <ul class="job-bullets">
         ${bullets.map((b) => `<li>${escapeHtml(b)}</li>`).join('')}
       </ul>
+      ${stackLine}
     </article>`
 }
 
@@ -40,13 +44,17 @@ function projectBlock(
   labels: ResumeContent['labels'],
 ) {
   const meta = [p.organization, p.year].filter(Boolean).join(' | ')
+  const contribution = p.contribution
+    ? `<p class="project-role"><strong>${escapeHtml(labels.contribution)}:</strong> ${escapeHtml(p.contribution)}</p>`
+    : ''
+
   return `
     <article class="project">
       <h3 class="project-title">${escapeHtml(p.title)}</h3>
       <p class="project-meta">${escapeHtml(meta)}</p>
       <p class="project-desc">${escapeHtml(p.description)}</p>
-      <p class="project-stack"><strong>${escapeHtml(labels.stack)}:</strong> ${escapeHtml(p.stack)}</p>
-      <p class="project-role"><strong>${escapeHtml(labels.contribution)}:</strong> ${escapeHtml(p.contribution)}</p>
+      ${p.stack ? `<p class="project-stack"><strong>${escapeHtml(labels.stack)}:</strong> ${escapeHtml(p.stack)}</p>` : ''}
+      ${contribution}
     </article>`
 }
 
@@ -114,10 +122,14 @@ export function renderResumeAtsHtml(content: ResumeContent) {
       color: #4b5563;
       margin-bottom: 4pt;
     }
-    .job-bullets { margin-left: 14pt; }
+    .job-bullets { margin-left: 14pt; margin-bottom: 4pt; }
     .job-bullets li { margin-bottom: 3pt; font-size: 10pt; }
+    .job-stack, .project-stack, .project-role {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 3pt;
+    }
     .project-desc { font-size: 10pt; margin-bottom: 4pt; line-height: 1.45; }
-    .project-stack, .project-role { font-size: 9.5pt; color: #374151; margin-bottom: 3pt; }
     .list-plain { margin-left: 14pt; }
     .list-plain li { margin-bottom: 4pt; }
     .edu-item { margin-bottom: 6pt; }
@@ -153,7 +165,7 @@ export function renderResumeAtsHtml(content: ResumeContent) {
 
   <section>
     <h2>${escapeHtml(sections.experience)}</h2>
-    ${experiences.map(experienceBlock).join('')}
+    ${experiences.map((job) => experienceBlock(job, content.labels, content.locale)).join('')}
   </section>
 
   <section class="projects-section">

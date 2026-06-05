@@ -6,5 +6,10 @@
   "tags": [
     "Saúde global",
     "UHC"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "CSS"
+  ],
+  "body": "Contribuí para o site da Health Financing Progress Matrix (HFPM), ferramenta essencial da Organização Mundial da Saúde (OMS). A HFPM avalia sistemas de financiamento em saúde e orienta progresso rumo à Cobertura Universal de Saúde (UHC). Ao avaliar o alinhamento de políticas com metas de UHC, a matriz identifica lacunas e oportunidades de reforma — fortalecendo proteção financeira e acesso à saúde de qualidade."
 }

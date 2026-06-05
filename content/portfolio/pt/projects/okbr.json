@@ -6,5 +6,10 @@
   "tags": [
     "Open Data",
     "Cidades"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "PHP"
+  ],
+  "body": "Contribuí para o novo site da Open Knowledge Brasil (OKBR), organização comprometida com dados abertos e transparência no Brasil. Um projeto-chave, o Índice de Dados Abertos das Cidades, avalia e promove a qualidade de dados abertos nas capitais — empoderando gestores e sociedade civil a decidir com dados e fortalecer a governança."
 }

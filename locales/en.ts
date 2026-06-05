@@ -18,6 +18,7 @@ export default {
     mainNav: 'Main',
     filterProjects: 'Filter projects by category',
     projectTags: 'Technologies and topics',
+    projectModal: 'Project details',
     socialNav: 'Social links',
     openProfile: 'Open profile',
     switchLanguage: 'Language',
@@ -68,6 +69,9 @@ export default {
     linkedinAll: 'View all on LinkedIn →',
     viewSite: 'View project →',
     behanceCta: 'Behance →',
+    openDetails: 'Open project details: {title}',
+    closeModal: 'Close',
+    moreBadges: 'Show more skills and tags',
     countOne: 'project',
     countMany: 'projects',
     categories: {
@@ -84,23 +88,23 @@ export default {
         organization: 'Dr. José Messias',
         description:
           'Modern, responsive medical website for bariatric surgery and obesity treatment in Brasília — clean design, intuitive navigation, accessibility, and performance aligned with a professional, patient-centered identity.',
-        tags: ['Nuxt', 'Tailwind CSS', 'Healthcare', 'Landing Page'],
+        tags: ['Healthcare', 'Landing Page'],
       },
       {
         id: 'layane-moura',
         title: 'Layane Moura',
         organization: 'Layane Moura — Illustrator & Map Maker',
         description:
-          'Bilingual (EN/PT) portfolio for an illustrator and map designer — visual-first gallery, lightbox project modals, email contact form, and a Nuxt content layer for client updates. SEO, sitemap, and structured data.',
-        tags: ['Nuxt', 'Vue', 'Portfolio', 'i18n'],
+          'Bilingual (EN/PT) portfolio for an illustrator and map designer — visual-first gallery, lightbox project modals, email contact form, and an editable content layer for client updates. SEO, sitemap, and structured data.',
+        tags: ['Portfolio', 'i18n'],
       },
       {
         id: 'olliv-pericias',
         title: 'Olliv Perícias',
         organization: 'Olliv Perícias',
         description:
-          'Institutional landing page for medical-legal expert services — clear service presentation, credibility, and contact paths with responsive layout, UX, and performance (Nuxt, Tailwind).',
-        tags: ['Nuxt', 'Tailwind CSS', 'Landing Page', 'Institutional'],
+          'Institutional landing page for medical-legal expert services — clear service presentation, credibility, and contact paths with responsive layout, UX, and performance.',
+        tags: ['Landing Page', 'Institutional'],
       },
       {
         id: 'futuro-exterminado',
@@ -188,7 +192,7 @@ export default {
         organization: 'Ministry of Environment (Brazil)',
         description:
           'Portal on the intersection of environmental quality and public health in Brazil — air, chemicals, and environmental determinants.',
-        tags: ['Nuxt', 'Tailwind', 'Government'],
+        tags: ['Government'],
       },
       {
         id: 'desiderata',
@@ -228,7 +232,7 @@ export default {
         organization: 'MOL Central de Impacto',
         description:
           'Platform making donations more transparent, connecting donors to organizations and tracking impact.',
-        tags: ['Nuxt', 'Tailwind', 'Social impact'],
+        tags: ['Social impact'],
       },
       {
         id: 'weplan-forests',
@@ -267,16 +271,16 @@ export default {
         title: 'TJTO Portal',
         organization: 'Court of Justice of Tocantins',
         description:
-          'Joomla ecosystem for the state judiciary since 2011 — main portal, microsites, user management, and ~8,900 daily visits.',
-        tags: ['Joomla', 'Government', 'High traffic'],
+          'Digital ecosystem for the state judiciary since 2011 — main portal, microsites, user management, and ~8,900 daily visits.',
+        tags: ['Government', 'High traffic'],
       },
       {
         id: 'eles-tao-viajando',
         title: 'Eles tão viajando',
         organization: 'FLAG capstone project',
         description:
-          'Full-stack app to share travel experiences — maps, gallery, blog, and admin panel. React, Node, MongoDB.',
-        tags: ['React', 'Node', 'MongoDB'],
+          'Full-stack app to share travel experiences — maps, gallery, blog, and admin panel.',
+        tags: ['MongoDB'],
       },
     ],
   },

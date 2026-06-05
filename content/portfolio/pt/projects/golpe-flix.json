@@ -6,5 +6,10 @@
   "tags": [
     "Democracia",
     "Desinformação"
-  ]
+  ],
+  "stack": [
+    "React",
+    "Tailwind CSS"
+  ],
+  "body": "Colaborei no Golpe Flix, iniciativa da Aos Fatos. O projeto funciona como memorial digital que documenta campanhas de desinformação antes dos ataques de 8 de janeiro à democracia brasileira. Em formato streaming, curadoria e analisa mais de 600 peças de mídia para revelar como propaganda extremista ganhou tração em plataformas digitais — reforçando a urgência de combater essas narrativas e proteger valores democráticos."
 }

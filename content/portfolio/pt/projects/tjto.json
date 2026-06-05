@@ -2,10 +2,19 @@
   "id": "tjto",
   "title": "Portal TJTO",
   "organization": "Tribunal de Justiça do Tocantins",
-  "description": "Ecossistema Joomla do judiciário estadual desde 2011 — portal principal, hotsites, gestão de usuários e ~8.900 visitas diárias.",
+  "description": "Ecossistema digital do judiciário estadual desde 2011 — portal principal, hotsites, gestão de usuários e ~8.900 visitas diárias.",
   "tags": [
-    "Joomla",
     "Governo",
     "Alto tráfego"
-  ]
+  ],
+  "stack": [
+    "Joomla",
+    "Tailwind CSS",
+    "PHP",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git"
+  ],
+  "body": "Desde 2011 atuo como desenvolvedor web no Judiciário, responsável pela criação e manutenção de todos os sites institucionais. Utilizamos Joomla como CMS, com templates desenvolvidos internamente.\n\nO portal principal do TJTO (tjto.jus.br) é plataforma robusta com média de 8,9 mil visitas diárias. Ao longo dos anos criei hotsites dedicados, melhorei a gestão de usuários e evoluí continuamente o front-end — garantindo performance, acessibilidade e confiabilidade mesmo com alto tráfego.\n\nTrabalho de forma contínua em novas versões e melhorias, contribuindo significativamente para a evolução e o sucesso desses projetos."
 }

@@ -35,7 +35,9 @@ function normalizeProject(project: Project): Project {
     title: resolveI18nString(project.title),
     organization: resolveI18nString(project.organization),
     description: resolveI18nString(project.description),
+    body: project.body ? resolveI18nString(project.body) : undefined,
     tags: resolveI18nList(project.tags),
+    stack: project.stack ? resolveI18nList(project.stack) : undefined,
     year: project.year ? resolveI18nString(project.year) : undefined,
   }
 }

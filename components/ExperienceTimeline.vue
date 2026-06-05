@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Experience } from '~/types/portfolio'
+import { experienceBodyParagraphs } from '~/data/experienceBodies'
 import { buildExperienceTimelineGroups } from '~/lib/experiences/groupByYear'
 
 const props = defineProps<{
@@ -19,6 +20,12 @@ const glowColors = [
 
 function glowForIndex(index: number) {
   return glowColors[index % glowColors.length]
+}
+
+function paragraphsFor(job: Experience) {
+  const fromBody = experienceBodyParagraphs(job.body)
+  if (fromBody.length) return fromBody
+  return [job.highlight, job.details].filter(Boolean)
 }
 </script>
 
@@ -154,15 +161,34 @@ function glowForIndex(index: number) {
               <div
                 class="experience-collapse__panel border-t border-stro-border px-5 pb-5 pt-4 sm:px-6 sm:pb-6"
               >
-                <p class="stro-body text-sm leading-relaxed sm:text-base">
-                  {{ job.highlight }}
-                </p>
-                <p
-                  v-if="job.details"
-                  class="stro-body mt-3 text-sm leading-relaxed text-stro-muted sm:text-base"
+                <div class="space-y-4">
+                  <p
+                    v-for="(paragraph, pIndex) in paragraphsFor(job)"
+                    :key="`${job.id}-p-${pIndex}`"
+                    class="stro-body text-sm leading-relaxed sm:text-base"
+                  >
+                    {{ paragraph }}
+                  </p>
+                </div>
+                <div
+                  v-if="job.stack?.length"
+                  class="mt-4"
                 >
-                  {{ job.details }}
-                </p>
+                  <h5 class="stro-kicker mb-2.5 !text-stro-purple sm:mb-3">
+                    {{ copy.about.stackTitle }}
+                  </h5>
+                  <ul class="flex flex-wrap gap-2 sm:gap-2.5">
+                    <li
+                      v-for="tech in job.stack"
+                      :key="tech"
+                    >
+                      <TechStackBadge
+                        :label="tech"
+                        size="sm"
+                      />
+                    </li>
+                  </ul>
+                </div>
                 <p
                   v-if="job.url"
                   class="mt-4"

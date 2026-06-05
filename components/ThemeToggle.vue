@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const { t } = useI18n()
-const { isDark, setDarkMode } = useStroTheme()
+const { t } = useI18n();
+const { isDark, setDarkMode } = useStroTheme();
 
 const label = computed(() =>
   isDark.value ? t('theme.disableDark') : t('theme.enableDark'),
-)
+);
 </script>
 
 <template>
   <label
-    class="group flex cursor-pointer items-center gap-2 rounded-[var(--stro-radius-md)] border border-stro-border bg-stro-surface/80 px-2 py-1.5 text-stro-muted transition hover:border-stro-purple/35 hover:text-stro-foreground sm:gap-2.5 sm:px-2.5"
+    class="group md:flex hidden cursor-pointer items-center gap-2 rounded-[var(--stro-radius-md)] border border-stro-border bg-stro-surface/80 px-2 py-1.5 text-stro-muted transition hover:border-stro-purple/35 hover:text-stro-foreground sm:gap-2.5 sm:px-2.5"
     :title="label"
   >
     <span class="sr-only">{{ label }}</span>
@@ -46,11 +46,7 @@ const label = computed(() =>
       stroke-width="1.75"
       aria-hidden="true"
     >
-      <circle
-        cx="12"
-        cy="12"
-        r="4"
-      />
+      <circle cx="12" cy="12" r="4" />
       <path
         stroke-linecap="round"
         d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
@@ -61,6 +57,6 @@ const label = computed(() =>
       class="sr-only"
       :checked="isDark"
       @change="setDarkMode(($event.target as HTMLInputElement).checked)"
-    >
+    />
   </label>
 </template>

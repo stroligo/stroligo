@@ -6,5 +6,10 @@
   "tags": [
     "Climate",
     "Restoration"
-  ]
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "I was part of the development of WePlan-Forests, an innovative tool supporting tropical and subtropical forest ecosystem restoration. The platform provides evidence-based, spatially explicit solutions to help countries optimize restoration efforts — balancing carbon sequestration, biodiversity conservation, and cost-effectiveness.\n\nWePlan-Forests empowers decision-makers to analyze scenarios and plan restoration initiatives effectively, contributing to global efforts in climate change mitigation and sustainable development. Developed with partners including the International Institute for Sustainability and the Forest Ecosystem Restoration Initiative."
 }

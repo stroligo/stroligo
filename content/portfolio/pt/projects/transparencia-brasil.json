@@ -6,5 +6,12 @@
   "tags": [
     "Civic Tech",
     "Integridade"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "Vue",
+    "PHP"
+  ],
+  "body": "Participei do desenvolvimento de uma plataforma dedicada à transparência e ao impacto cívico no Brasil — reunindo conteúdo, dados e estratégias para fortalecer a integridade pública, apoiar jornalistas, pesquisadores e gestores, e empoderar a sociedade com informação acessível e confiável.\n\nFoi gratificante contribuir para uma iniciativa que conecta evidência, política e impacto real, reforçando como dados abertos elevam o debate público e a responsabilização."
 }

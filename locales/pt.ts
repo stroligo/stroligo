@@ -18,6 +18,7 @@ export default {
     mainNav: 'Principal',
     filterProjects: 'Filtrar projetos por categoria',
     projectTags: 'Tecnologias e temas',
+    projectModal: 'Detalhes do projeto',
     socialNav: 'Redes sociais',
     openProfile: 'Abrir perfil',
     switchLanguage: 'Idioma',
@@ -68,6 +69,9 @@ export default {
     linkedinAll: 'Todos no LinkedIn →',
     viewSite: 'Ver projeto →',
     behanceCta: 'Behance →',
+    openDetails: 'Abrir detalhes do projeto: {title}',
+    closeModal: 'Fechar',
+    moreBadges: 'Ver mais skills e tags',
     countOne: 'projeto',
     countMany: 'projetos',
     categories: {
@@ -84,23 +88,23 @@ export default {
         organization: 'Dr. José Messias',
         description:
           'Site médico moderno e responsivo para cirurgia bariátrica e tratamento da obesidade em Brasília — design limpo, navegação intuitiva, acessibilidade e performance alinhados à identidade profissional e ao cuidado com o paciente.',
-        tags: ['Nuxt', 'Tailwind CSS', 'Saúde', 'Landing Page'],
+        tags: ['Saúde', 'Landing Page'],
       },
       {
         id: 'layane-moura',
         title: 'Layane Moura',
         organization: 'Layane Moura — Illustrator & Map Maker',
         description:
-          'Portfólio bilíngue (PT/EN) para ilustradora e designer de mapas — galeria visual, projetos em modal lightbox, formulário de contacto por e-mail e conteúdo editável em Nuxt. SEO, sitemap e dados estruturados.',
-        tags: ['Nuxt', 'Vue', 'Portfólio', 'i18n'],
+          'Portfólio bilíngue (PT/EN) para ilustradora e designer de mapas — galeria visual, projetos em modal lightbox, formulário de contacto por e-mail e camada de conteúdo editável pelo cliente. SEO, sitemap e dados estruturados.',
+        tags: ['Portfólio', 'i18n'],
       },
       {
         id: 'olliv-pericias',
         title: 'Olliv Perícias',
         organization: 'Olliv Perícias',
         description:
-          'Landing page institucional para perícia médico-legal — apresentação de serviços, credibilidade e canais de contacto com foco em responsividade, UX visual e performance (Nuxt, Tailwind).',
-        tags: ['Nuxt', 'Tailwind CSS', 'Landing Page', 'Institucional'],
+          'Landing page institucional para perícia médico-legal — apresentação de serviços, credibilidade e canais de contacto com foco em responsividade, UX visual e performance.',
+        tags: ['Landing Page', 'Institucional'],
       },
       {
         id: 'futuro-exterminado',
@@ -188,7 +192,7 @@ export default {
         organization: 'Ministério do Meio Ambiente (MMA)',
         description:
           'Portal sobre a interseção entre qualidade ambiental e saúde pública no Brasil — ar, químicos e determinantes ambientais.',
-        tags: ['Nuxt', 'Tailwind', 'Governo'],
+        tags: ['Governo'],
       },
       {
         id: 'desiderata',
@@ -228,7 +232,7 @@ export default {
         organization: 'MOL Central de Impacto',
         description:
           'Plataforma que torna doações mais transparentes, conectando doadores a organizações e rastreando impacto.',
-        tags: ['Nuxt', 'Tailwind', 'Impacto social'],
+        tags: ['Impacto social'],
       },
       {
         id: 'weplan-forests',
@@ -267,16 +271,16 @@ export default {
         title: 'Portal TJTO',
         organization: 'Tribunal de Justiça do Tocantins',
         description:
-          'Ecossistema Joomla do judiciário estadual desde 2011 — portal principal, hotsites, gestão de usuários e ~8.900 visitas diárias.',
-        tags: ['Joomla', 'Governo', 'Alto tráfego'],
+          'Ecossistema digital do judiciário estadual desde 2011 — portal principal, hotsites, gestão de usuários e ~8.900 visitas diárias.',
+        tags: ['Governo', 'Alto tráfego'],
       },
       {
         id: 'eles-tao-viajando',
         title: 'Eles tão viajando',
         organization: 'Projeto final FLAG',
         description:
-          'Aplicação full stack para compartilhar viagens — mapas, galeria, blog e painel admin. React, Node, MongoDB.',
-        tags: ['React', 'Node', 'MongoDB'],
+          'Aplicação full stack para compartilhar viagens — mapas, galeria, blog e painel admin.',
+        tags: ['MongoDB'],
       },
     ],
   },

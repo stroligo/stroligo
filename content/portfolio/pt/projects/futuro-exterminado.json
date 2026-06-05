@@ -7,5 +7,11 @@
     "Open Data",
     "Civic Tech",
     "Mapas"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "Vue"
+  ],
+  "body": "Contribuí para o Futuro Exterminado, plataforma orientada a dados do Instituto Fogo Cruzado que mapeia e documenta o impacto da violência armada sobre crianças e adolescentes na região metropolitana do Rio de Janeiro.\n\nA plataforma reúne dados verificados, mapas interativos e indicadores visuais para tornar visível como a violência armada afeta vidas jovens — transformando estatísticas em memória, evidência e debate público. Ao organizar informações sobre tiroteios, vítimas e padrões geográficos, o projeto apoia jornalistas, pesquisadores, sociedade civil e gestores públicos.\n\nProjetos assim reforçam o papel de dados abertos, transparência e civic tech como ferramentas essenciais de responsabilização social, especialmente em contextos de violência estrutural e desigualdade."
 }

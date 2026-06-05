@@ -1,4 +1,6 @@
 import { projectsMetaById } from '~/data/projects.meta'
+import { projectBodyForLocale } from '~/data/projectBodies'
+import { projectStacksById } from '~/data/projectStacks'
 import { enrichAndSortProjects } from '~/lib/portfolio/enrichProjects'
 import { experiencesForLocale } from '~/data/experiences'
 import {
@@ -94,7 +96,9 @@ export function buildPortfolioFromLocales(
           title: resolveI18nString(item.title),
           organization: resolveI18nString(item.organization),
           description: resolveI18nString(item.description),
+          body: projectBodyForLocale(id, locale),
           tags: item.tags.map((tag) => resolveI18nString(tag)),
+          stack: item.stack ?? projectStacksById[id],
           ...meta,
         }
       })

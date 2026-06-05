@@ -6,5 +6,10 @@
   "tags": [
     "Democracy",
     "Disinformation"
-  ]
+  ],
+  "stack": [
+    "React",
+    "Tailwind CSS"
+  ],
+  "body": "I collaborated on Golpe Flix, a significant initiative by Aos Fatos. This project serves as a digital memorial documenting widespread disinformation campaigns leading up to Brazil's January 8 attacks on democracy. Presented in a streaming format, Golpe Flix curates and analyzes over 600 pieces of media to reveal how extremist propaganda gained traction on digital platforms — emphasizing the urgent need to counter such narratives and protect democratic values."
 }

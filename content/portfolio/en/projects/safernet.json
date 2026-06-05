@@ -6,5 +6,10 @@
   "tags": [
     "Education",
     "LGPD"
-  ]
+  ],
+  "stack": [
+    "Vue",
+    "Tailwind CSS"
+  ],
+  "body": "I contributed to the website for Disciplina de Cidadania Digital, a vital initiative by SaferNet Brasil. The program equips educators with tools and resources to teach digital citizenship — online safety, empathy in digital interactions, and responsible use of technology. The curriculum aligns with Brazil's educational and legal frameworks, including the BNCC and LGPD, ensuring a comprehensive and impactful learning experience."
 }

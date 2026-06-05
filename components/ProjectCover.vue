@@ -3,12 +3,15 @@ import type { Project, ProjectCategory } from '~/types/portfolio'
 
 const props = defineProps<{
   project: Project
-  aspect?: 'video' | 'wide'
+  aspect?: 'video' | 'wide' | 'fill'
+  layout?: 'card' | 'modal'
 }>()
 
 const copy = usePortfolioCopy()
 
 const imageFailed = ref(false)
+
+const isModal = computed(() => props.layout === 'modal')
 
 const categoryGradients: Record<
   Exclude<ProjectCategory, 'todos'>,
@@ -28,9 +31,31 @@ const gradient = computed(
   () => categoryGradients[props.project.category] ?? categoryGradients.impacto,
 )
 
-const aspectClass = computed(() =>
-  props.aspect === 'wide' ? 'aspect-[21/9]' : 'aspect-video',
-)
+const aspectClass = computed(() => {
+  if (props.aspect === 'fill') return 'h-full min-h-[11rem]'
+  return props.aspect === 'wide' ? 'aspect-[21/9]' : 'aspect-video'
+})
+
+const shellClass = computed(() => {
+  if (isModal.value) {
+    return [
+      'relative flex h-full w-full min-h-[14rem] items-center justify-center overflow-hidden',
+      'bg-[linear-gradient(165deg,color-mix(in_srgb,var(--stro-purple)_8%,var(--stro-surface))_0%,var(--stro-surface)_45%,color-mix(in_srgb,var(--stro-cyan)_6%,var(--stro-surface))_100%)]',
+      'p-4 sm:p-5 md:min-h-0',
+    ]
+  }
+  return [
+    'relative w-full max-w-full overflow-hidden bg-stro-surface',
+    aspectClass.value,
+  ]
+})
+
+const imageClass = computed(() => {
+  if (isModal.value) {
+    return 'max-h-[min(72vh,36rem)] w-full max-w-full object-contain object-center drop-shadow-[0_12px_32px_rgb(0_0_0_/_0.28)] transition duration-500'
+  }
+  return 'h-full w-full max-w-full object-cover transition duration-500 motion-safe:md:group-hover:scale-[1.03]'
+})
 
 watch(
   () => props.project.imageUrl,
@@ -41,15 +66,12 @@ watch(
 </script>
 
 <template>
-  <div
-    class="relative overflow-hidden rounded-[var(--stro-radius-md)] border border-stro-border bg-stro-surface"
-    :class="aspectClass"
-  >
+  <div :class="shellClass">
     <img
       v-if="project.imageUrl && !imageFailed"
       :src="project.imageUrl"
       :alt="project.imageAlt || project.title"
-      class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+      :class="imageClass"
       loading="lazy"
       decoding="async"
       @error="imageFailed = true"
@@ -77,6 +99,7 @@ watch(
       {{ copy.projects.featuredBadge }}
     </StroBadge>
     <div
+      v-if="!isModal"
       class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stro-bg/80 via-transparent to-transparent"
       aria-hidden="true"
     />

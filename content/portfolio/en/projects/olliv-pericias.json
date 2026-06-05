@@ -2,11 +2,15 @@
   "id": "olliv-pericias",
   "title": "Olliv Perícias",
   "organization": "Olliv Perícias",
-  "description": "Institutional landing page for medical-legal expert services — clear service presentation, credibility, and contact paths with responsive layout, UX, and performance (Nuxt, Tailwind).",
+  "description": "Institutional landing page for medical-legal expert services — clear service presentation, credibility, and contact paths with responsive layout, UX, and performance.",
   "tags": [
-    "Nuxt",
-    "Tailwind CSS",
     "Landing Page",
     "Institutional"
-  ]
+  ],
+  "stack": [
+    "JavaScript",
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Developed a modern and responsive landing page for Olliv Perícias, focused on presenting the company's services in a clear, professional, and accessible way.\n\nThe project was designed to strengthen the company's digital presence by combining clean visual design, intuitive navigation, and performance-focused frontend development. The landing page highlights the company's expertise, service offerings, and contact channels while ensuring a seamless experience across desktop and mobile devices.\n\nThroughout the development process, I focused on responsiveness, user experience, visual consistency, and optimized performance to deliver a fast and reliable web experience aligned with the client's brand identity."
 }

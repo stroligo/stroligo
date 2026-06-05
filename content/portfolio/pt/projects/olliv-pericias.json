@@ -2,11 +2,15 @@
   "id": "olliv-pericias",
   "title": "Olliv Perícias",
   "organization": "Olliv Perícias",
-  "description": "Landing page institucional para perícia médico-legal — apresentação de serviços, credibilidade e canais de contacto com foco em responsividade, UX visual e performance (Nuxt, Tailwind).",
+  "description": "Landing page institucional para perícia médico-legal — apresentação de serviços, credibilidade e canais de contacto com foco em responsividade, UX visual e performance.",
   "tags": [
-    "Nuxt",
-    "Tailwind CSS",
     "Landing Page",
     "Institucional"
-  ]
+  ],
+  "stack": [
+    "JavaScript",
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Desenvolvi uma landing page moderna e responsiva para a Olliv Perícias, focada em apresentar os serviços da empresa de forma clara, profissional e acessível.\n\nO projeto fortalece a presença digital da empresa com design limpo, navegação intuitiva e front-end orientado a performance. A página destaca expertise, ofertas de serviço e canais de contacto, com experiência fluida em desktop e mobile.\n\nPriorizei responsividade, experiência do usuário, consistência visual e performance — entregando uma experiência rápida e alinhada à identidade da marca."
 }

@@ -1,5 +1,9 @@
 import type { SimpleIcon } from 'simple-icons'
 import {
+  siCss,
+  siGit,
+  siHtml5,
+  siJavascript,
   siJoomla,
   siMui,
   siNextdotjs,
@@ -11,6 +15,7 @@ import {
   siTypescript,
   siVite,
   siVuedotjs,
+  siWordpress,
 } from 'simple-icons'
 
 export type StackTechIcon = {
@@ -40,6 +45,11 @@ export const stackTechIcons: Record<string, StackTechIcon> = {
   'Node.js': fromSimpleIcon(siNodedotjs),
   PHP: fromSimpleIcon(siPhp),
   Joomla: fromSimpleIcon(siJoomla),
+  HTML: fromSimpleIcon(siHtml5),
+  CSS: fromSimpleIcon(siCss),
+  JavaScript: fromSimpleIcon(siJavascript),
+  Git: fromSimpleIcon(siGit),
+  WordPress: fromSimpleIcon(siWordpress),
 }
 
 export function getStackTechIcon(label: string): StackTechIcon | null {

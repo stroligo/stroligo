@@ -6,7 +6,10 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { experienceBodiesById } from '../data/experienceBodies'
 import { experiencesForLocale } from '../data/experiences'
+import { projectBodiesById } from '../data/projectBodies'
+import { projectStacksById } from '../data/projectStacks'
 import en from '../locales/en'
 import pt from '../locales/pt'
 
@@ -71,12 +74,24 @@ function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
   })
   writeJson(join(base, 'categories.json'), m.projects.categories)
   writeJson(join(base, 'experiences.json'), {
-    items: experiencesForLocale(code),
+    items: experiencesForLocale(code).map((item) => {
+      const body = item.body ?? experienceBodiesById[item.id]?.[code]
+      return {
+        ...item,
+        body: body || undefined,
+      }
+    }),
   })
   writeJson(join(base, 'social.json'), m.social)
 
   for (const item of m.projects.items) {
-    writeJson(join(base, 'projects', `${item.id}.json`), item)
+    const stack = item.stack ?? projectStacksById[item.id]
+    const body = item.body ?? projectBodiesById[item.id]?.[code]
+    writeJson(join(base, 'projects', `${item.id}.json`), {
+      ...item,
+      stack: stack?.length ? stack : undefined,
+      body: body || undefined,
+    })
   }
 }
 

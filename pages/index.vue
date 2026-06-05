@@ -40,7 +40,7 @@ const terminalLines = computed(() => [
   'export default dev',
 ]);
 
-useStroSeo()
+useStroSeo();
 </script>
 
 <template>
@@ -195,7 +195,7 @@ useStroSeo()
         <Transition name="projects-fade" mode="out-in">
           <div
             :key="activeCategory"
-            class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
+            class="grid min-w-0 gap-6 sm:grid-cols-2 xl:grid-cols-3"
             role="tabpanel"
           >
             <ScrollReveal
@@ -203,12 +203,14 @@ useStroSeo()
               :key="project.id"
               variant="fade-up"
               :delay="Math.min(index * 70, 420)"
-              class="h-full"
+              class="h-full min-w-0"
             >
               <ProjectCard :project="project" />
             </ScrollReveal>
           </div>
         </Transition>
+
+        <ProjectModal />
       </StroSection>
 
       <!-- Atuação -->
@@ -232,22 +234,18 @@ useStroSeo()
         bordered
         tinted
       >
-        <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
-          <ScrollReveal variant="fade-right" :delay="80">
+        <div class="flex flex-col gap-12 lg:gap-10 md:flex-row">
+          <div class="md:w-1/2">
             <ContactQuickForm :to-email="profile.email" />
-          </ScrollReveal>
-
-          <div class="flex flex-col gap-10">
-            <ScrollReveal variant="fade-left" :delay="140">
+          </div>
+          <div class="md:w-1/2">
+            <div class="flex flex-col gap-12">
               <div>
                 <h3 class="stro-kicker mb-6 !text-stro-cyan">
                   {{ copy.contact.hobbiesTitle }}
                 </h3>
                 <CuriositiesList :items="hobbies" />
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="fade-left" :delay="220">
               <div>
                 <h3 class="stro-kicker mb-6 !text-stro-purple">
                   {{ copy.contact.socialTitle }}
@@ -263,7 +261,7 @@ useStroSeo()
                   />
                 </div>
               </div>
-            </ScrollReveal>
+            </div>
           </div>
         </div>
       </StroSection>

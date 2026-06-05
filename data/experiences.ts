@@ -1,7 +1,58 @@
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import type { Experience } from '~/types/portfolio'
+import { experienceBodyForLocale } from '~/data/experienceBodies'
 
-const experiencesPt: Experience[] = [
+const stacksById: Partial<Record<string, string[]>> = {
+  'vex-tech': ['React', 'TypeScript', 'Material UI', 'React Context API'],
+  'cafe-art': [
+    'React',
+    'TypeScript',
+    'Next.js',
+    'Vite',
+    'Vue.js',
+    'Nuxt',
+    'Tailwind CSS',
+    'JavaScript',
+    'HTML',
+    'PHP',
+  ],
+  tjto: [
+    'Joomla',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Node.js',
+    'PHP',
+    'Tailwind CSS',
+    'MySQL',
+    'Git',
+  ],
+  'web-success': ['React', 'Node.js', 'PHP'],
+  prte: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+  microlins: ['HTML', 'CSS'],
+  'to-online': ['HTML', 'CSS', 'JavaScript'],
+}
+
+function withStacks(items: Experience[]): Experience[] {
+  return items.map((item) => ({
+    ...item,
+    stack: stacksById[item.id],
+  }))
+}
+
+function withBodies(
+  items: Experience[],
+  locale: ContentLocale,
+): Experience[] {
+  return items.map((item) => ({
+    ...item,
+    body: experienceBodyForLocale(item.id, locale),
+  }))
+}
+
+const experiencesPt: Experience[] = withStacks([
   {
     id: 'vex-tech',
     company: 'Vex Tech',
@@ -11,7 +62,7 @@ const experiencesPt: Experience[] = [
     yearEnd: null,
     location: 'Portugal',
     highlight:
-      'Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Stack: React, TypeScript, Material UI e Context API. Equipes ágeis multiculturais.',
+      'Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Equipes ágeis multiculturais.',
     details:
       'Desenvolvimento e evolução de interfaces para o EUIPO, com foco em consistência visual, escalabilidade e entrega em ciclos ágeis. Trabalho remoto a partir de Portugal, documentação técnica em inglês e colaboração com equipas distribuídas na Europa.',
     url: 'https://www.linkedin.com/company/vextech-it',
@@ -26,7 +77,7 @@ const experiencesPt: Experience[] = [
     yearEnd: null,
     location: 'Rio de Janeiro, BR · remoto',
     highlight:
-      'Estúdio de design de informação e visualização de dados (ODS 2030). Ciclo completo de front-end: React, Vue, Nuxt, Tailwind, TypeScript, Next.js, Vite e PHP.',
+      'Estúdio de design de informação e visualização de dados (ODS 2030). Ciclo completo de front-end, do protótipo ao deploy.',
     details:
       'Participação em projetos de transparência, saúde pública e meio ambiente — do protótipo ao deploy, com integração a APIs e CMS quando necessário. Inclui Panorama da Oncologia Pediátrica (Desiderata), Inova HC, Cidadania Digital (SaferNet), WePlan Forests e outras plataformas de impacto social.',
     url: 'https://www.linkedin.com/company/cafe-art-br',
@@ -41,9 +92,9 @@ const experiencesPt: Experience[] = [
     yearEnd: null,
     location: 'Palmas, TO',
     highlight:
-      'Desde 2011: todos os sites institucionais. Joomla como CMS, templates customizados. Portal tjto.jus.br (~8.900 visitas/dia). Hotsites, performance e acessibilidade. Stack: Joomla, HTML, CSS, JS, TypeScript, React, Node, PHP, Tailwind, MySQL e Git.',
+      'Desde 2011: todos os sites institucionais. CMS institucional com templates customizados. Portal tjto.jus.br (~8.900 visitas/dia). Hotsites, performance e acessibilidade.',
     details:
-      'Responsável pelo front-end do ecossistema digital do tribunal: portal principal, hotsites temáticos, gestão de usuários e integrações. Evolução contínua da stack e foco em alto tráfego, acessibilidade e manutenção de longo prazo no setor público.',
+      'Responsável pelo front-end do ecossistema digital do tribunal: portal principal, hotsites temáticos, gestão de usuários e integrações. Evolução contínua das plataformas com foco em alto tráfego, acessibilidade e manutenção de longo prazo no setor público.',
     url: 'https://www.linkedin.com/company/tjto',
     current: true,
   },
@@ -84,9 +135,9 @@ const experiencesPt: Experience[] = [
     yearEnd: 2016,
     location: 'Palmas, TO',
     highlight:
-      'Front-end, interfaces responsivas, HTML5, CSS e JavaScript.',
+      'Front-end e interfaces responsivas para clientes locais.',
     details:
-      'Desenvolvimento de interfaces para clientes locais, protótipos e integração com backends PHP. Período de consolidação em UI antes do retorno em tempo integral ao TJTO; atuação também ligada à prte.com.br (EAD).',
+      'Desenvolvimento de interfaces para clientes locais, protótipos e integração com backends. Período de consolidação em UI antes do retorno em tempo integral ao TJTO; atuação também ligada à prte.com.br (EAD).',
     current: false,
   },
   {
@@ -98,7 +149,7 @@ const experiencesPt: Experience[] = [
     yearEnd: 2010,
     location: 'Palmas, TO',
     highlight:
-      'Cursos de Office, design, HTML/CSS e Flash/ActionScript; site microlinspalmas.com.br, newsletter e campanhas.',
+      'Cursos de Office, design e web; site microlinspalmas.com.br, newsletter e campanhas.',
     details:
       'Ministração de turmas presenciais e manutenção da presença digital da unidade, incluindo materiais promocionais e site institucional.',
     current: false,
@@ -140,7 +191,7 @@ const experiencesPt: Experience[] = [
     location: 'Palmas, TO',
     highlight: 'Mais de 30 projetos web entregues em um ano.',
     details:
-      'Produção acelerada de sites e landing pages para campanhas de marketing digital, consolidando ritmo de entrega e domínio de HTML, CSS e JavaScript.',
+      'Produção acelerada de sites e landing pages para campanhas de marketing digital, consolidando ritmo de entrega e fluência em desenvolvimento front-end.',
     current: false,
   },
   {
@@ -157,9 +208,9 @@ const experiencesPt: Experience[] = [
       'Coordenação de materiais entre unidades e aulas introdutórias de informática — primeiro emprego na área, em rede de escolas no Rio de Janeiro.',
     current: false,
   },
-]
+])
 
-const experiencesEn: Experience[] = [
+const experiencesEn: Experience[] = withStacks([
   {
     id: 'vex-tech',
     company: 'Vex Tech',
@@ -169,7 +220,7 @@ const experiencesEn: Experience[] = [
     yearEnd: null,
     location: 'Portugal',
     highlight:
-      'Allocated to the EUIPO (European Union Intellectual Property Office) project. Large-scale front-end systems across the EU. Stack: React, TypeScript, Material UI, and Context API. Multicultural agile teams.',
+      'Allocated to the EUIPO (European Union Intellectual Property Office) project. Large-scale front-end systems across the EU. Multicultural agile teams.',
     details:
       'Building and evolving EUIPO interfaces with emphasis on visual consistency, scalability, and agile delivery. Remote from Portugal, technical documentation in English, and collaboration with distributed European teams.',
     url: 'https://www.linkedin.com/company/vextech-it',
@@ -184,7 +235,7 @@ const experiencesEn: Experience[] = [
     yearEnd: null,
     location: 'Rio de Janeiro, BR · remote',
     highlight:
-      'Information design and data visualization studio (UN SDGs 2030). Full front-end cycle: React, Vue, Nuxt, Tailwind, TypeScript, Next.js, Vite, and PHP.',
+      'Information design and data visualization studio (UN SDGs 2030). Full front-end cycle from prototype to production deploy.',
     details:
       'Transparency, public health, and environmental platforms—from prototype to deploy, with API and CMS integration when needed. Includes Pediatric Oncology Panorama (Desiderata), Inova HC, Digital Citizenship (SaferNet), WePlan Forests, and other social impact work.',
     url: 'https://www.linkedin.com/company/cafe-art-br',
@@ -199,9 +250,9 @@ const experiencesEn: Experience[] = [
     yearEnd: null,
     location: 'Palmas, TO',
     highlight:
-      'Since 2011: all institutional websites. Joomla CMS with custom templates. tjto.jus.br portal (~8,900 visits/day). Microsites, performance, and accessibility. Stack: Joomla, HTML, CSS, JS, TypeScript, React, Node, PHP, Tailwind, MySQL, and Git.',
+      'Since 2011: all institutional websites. Institutional CMS with custom templates. tjto.jus.br portal (~8,900 visits/day). Microsites, performance, and accessibility.',
     details:
-      'Owns front-end for the court’s digital ecosystem: main portal, thematic microsites, user management, and integrations. Ongoing stack evolution with focus on high traffic, accessibility, and long-term public-sector maintenance.',
+      'Owns front-end for the court’s digital ecosystem: main portal, thematic microsites, user management, and integrations. Ongoing evolution of the platforms with focus on high traffic, accessibility, and long-term public-sector maintenance.',
     url: 'https://www.linkedin.com/company/tjto',
     current: true,
   },
@@ -241,9 +292,9 @@ const experiencesEn: Experience[] = [
     yearStart: 2014,
     yearEnd: 2016,
     location: 'Palmas, TO',
-    highlight: 'Front-end, responsive interfaces, HTML5, CSS, and JavaScript.',
+    highlight: 'Front-end and responsive interfaces for local clients.',
     details:
-      'Interfaces for local clients, prototypes, and PHP backend integration. UI consolidation period before returning full-time to TJTO; work also tied to prte.com.br (distance learning).',
+      'Interfaces for local clients, prototypes, and backend integration. UI consolidation period before returning full-time to TJTO; work also tied to prte.com.br (distance learning).',
     current: false,
   },
   {
@@ -255,7 +306,7 @@ const experiencesEn: Experience[] = [
     yearEnd: 2010,
     location: 'Palmas, TO',
     highlight:
-      'Office, design, HTML/CSS, and Flash/ActionScript courses; microlinspalmas.com.br, newsletter, and campaigns.',
+      'Office, design, and web courses; microlinspalmas.com.br, newsletter, and campaigns.',
     details:
       'Classroom instruction and maintenance of the branch’s digital presence, including promotional materials and institutional website.',
     current: false,
@@ -296,7 +347,7 @@ const experiencesEn: Experience[] = [
     location: 'Palmas, TO',
     highlight: '30+ web projects delivered within a year.',
     details:
-      'Fast-paced websites and landing pages for digital marketing campaigns, building strong HTML, CSS, and JavaScript fluency.',
+      'Fast-paced websites and landing pages for digital marketing campaigns, building strong front-end delivery rhythm and fluency.',
     current: false,
   },
   {
@@ -312,8 +363,13 @@ const experiencesEn: Experience[] = [
       'Learning materials coordination and introductory computing classes—first role in the field within a multi-branch school network in Rio de Janeiro.',
     current: false,
   },
-]
+])
 
 export function experiencesForLocale(locale: ContentLocale): Experience[] {
-  return locale === 'en' ? experiencesEn : experiencesPt
+  const items = locale === 'en' ? experiencesEn : experiencesPt
+  return withBodies(withStacks(items), locale)
+}
+
+export function experienceStackForId(id: string): string[] | undefined {
+  return stacksById[id]
 }

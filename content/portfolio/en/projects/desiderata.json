@@ -6,5 +6,10 @@
   "tags": [
     "Health",
     "NGO"
-  ]
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "I contributed to the new website for Instituto Desiderata, an organization focused on improving public healthcare for children and adolescents in Brazil. The institute is dedicated to enhancing early diagnosis and treatment for childhood cancer, as well as addressing other chronic health issues such as childhood obesity — including work on the Pediatric Oncology Panorama and related health data experiences."
 }

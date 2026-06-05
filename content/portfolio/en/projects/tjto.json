@@ -2,10 +2,19 @@
   "id": "tjto",
   "title": "TJTO Portal",
   "organization": "Court of Justice of Tocantins",
-  "description": "Joomla ecosystem for the state judiciary since 2011 — main portal, microsites, user management, and ~8,900 daily visits.",
+  "description": "Digital ecosystem for the state judiciary since 2011 — main portal, microsites, user management, and ~8,900 daily visits.",
   "tags": [
-    "Joomla",
     "Government",
     "High traffic"
-  ]
+  ],
+  "stack": [
+    "Joomla",
+    "Tailwind CSS",
+    "PHP",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git"
+  ],
+  "body": "Since 2011, I have worked as a web developer in the Judiciary, responsible for creating and maintaining all institutional websites. We use Joomla as the CMS for our projects, and the entire template is developed by our team.\n\nThe main portal of TJTO (tjto.jus.br) is a robust and stable platform, with an average of 8.9 thousand daily visits. Over the years I have created dedicated microsites, improved the user management system, and continuously evolved the front-end — ensuring high performance, accessibility, and reliability even under heavy traffic.\n\nAdditionally, I have continuously worked on developing new versions and improvements to these projects, significantly contributing to their evolution and success."
 }
