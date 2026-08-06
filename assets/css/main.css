@@ -315,8 +315,14 @@
     @apply h-auto min-h-28 resize-y py-4 leading-normal;
   }
 
-  /* —— Scroll reveal —— */
+  /* —— Scroll reveal ——
+     Visible by default so filter re-renders / no-JS never blank the page.
+     Only hide when JS marks --pending for off-screen entrance animation. */
   .stro-reveal {
+    @apply translate-none opacity-100;
+  }
+
+  .stro-reveal--pending:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply opacity-0 will-change-[opacity,transform];
     transition:
       opacity var(--stro-reveal-duration, 700ms) var(--stro-ease-out),
@@ -324,32 +330,32 @@
     transition-delay: var(--stro-reveal-delay, 0ms);
   }
 
-  .stro-reveal--fade-up {
+  .stro-reveal--pending.stro-reveal--fade-up:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply translate-y-7;
   }
 
-  .stro-reveal--fade-down {
+  .stro-reveal--pending.stro-reveal--fade-down:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply -translate-y-5;
   }
 
-  .stro-reveal--fade-left {
+  .stro-reveal--pending.stro-reveal--fade-left:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply translate-x-6;
   }
 
-  .stro-reveal--fade-right {
+  .stro-reveal--pending.stro-reveal--fade-right:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply -translate-x-6;
   }
 
-  .stro-reveal--scale-up {
+  .stro-reveal--pending.stro-reveal--scale-up:not(.stro-reveal--visible):not(.stro-reveal--static) {
     @apply translate-y-4 scale-[0.97];
-  }
-
-  .stro-reveal--fade-in {
-    @apply translate-none;
   }
 
   .stro-reveal--visible {
     @apply translate-none opacity-100;
+    transition:
+      opacity var(--stro-reveal-duration, 700ms) var(--stro-ease-out),
+      transform var(--stro-reveal-duration, 700ms) var(--stro-ease-out);
+    transition-delay: var(--stro-reveal-delay, 0ms);
   }
 
   .stro-reveal--static {
