@@ -71,6 +71,8 @@ watch(
       v-if="project.imageUrl && !imageFailed"
       :src="project.imageUrl"
       :alt="project.imageAlt || project.title"
+      width="960"
+      height="540"
       :class="imageClass"
       loading="lazy"
       decoding="async"

@@ -1,12 +1,31 @@
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
+import mono400 from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url'
+import mono600 from '@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2?url'
+
+/** Self-hosted fonts + preload das faces críticas (LCP / UI). */
 export function useStroFonts() {
   useHead({
     link: [
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
       {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: '',
+        href: interLatin,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: '',
+        href: mono600,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: '',
+        href: mono400,
       },
     ],
   })

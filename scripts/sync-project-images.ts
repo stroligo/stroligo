@@ -2,7 +2,7 @@
  * Baixa capas dos projetos para public/projects/{id}.webp
  * Uso: npm run sync:projects [-- --force]
  */
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -62,7 +62,18 @@ async function downloadImage(
   if (!res.ok) throw new Error(`image HTTP ${res.status}`)
   const buf = Buffer.from(await res.arrayBuffer())
   if (buf.length < 400) throw new Error('image too small')
-  await writeFile(dest, buf)
+
+  const sharp = (await import('sharp')).default
+  await sharp(buf, { failOn: 'none' })
+    .rotate()
+    .resize({
+      width: 960,
+      height: 540,
+      fit: 'inside',
+      withoutEnlargement: true,
+    })
+    .webp({ quality: 75, effort: 6 })
+    .toFile(dest)
 }
 
 async function resolveFromUrls(

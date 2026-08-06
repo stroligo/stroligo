@@ -161,7 +161,7 @@
 :root {
   /* —— Tipografia —— */
   --stro-font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --stro-font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --stro-font-sans: 'Inter Variable', Inter, ui-sans-serif, system-ui, sans-serif;
 
   --stro-text-caption: 0.75rem;
   --stro-text-small: 0.875rem;

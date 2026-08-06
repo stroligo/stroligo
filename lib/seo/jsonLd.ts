@@ -16,9 +16,33 @@ function projectUrl(project: Project) {
   return project.siteUrl ?? project.behanceUrl
 }
 
+const knowsAboutByLocale = {
+  en: [
+    'Front-end development',
+    'Nuxt',
+    'Vue',
+    'React',
+    'TypeScript',
+    'Accessibility',
+    'Data visualization',
+    'Civic tech',
+  ],
+  pt: [
+    'Desenvolvimento front-end',
+    'Nuxt',
+    'Vue',
+    'React',
+    'TypeScript',
+    'Acessibilidade',
+    'Visualização de dados',
+    'Tecnologia cívica',
+  ],
+} as const
+
 export function buildStroJsonLd(input: StroSeoJsonLdInput) {
   const inLanguage = input.locale === 'en' ? 'en-US' : 'pt-BR'
-  const imageUrl = `${site.siteUrl}${site.profilePhotoUrl}`
+  const imageUrl = `${site.siteUrl}${site.ogImageUrl}`
+  const photoUrl = `${site.siteUrl}${site.profilePhotoUrl}`
   const featuredProjects = input.projects
     .filter((project) => project.siteUrl || project.behanceUrl)
     .slice(0, 12)
@@ -40,23 +64,14 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
         '@id': `${site.siteUrl}/#person`,
         name: site.name,
         url: site.siteUrl,
-        image: imageUrl,
+        image: photoUrl,
         jobTitle: input.tagline,
         homeLocation: {
           '@type': 'Place',
           name: input.location,
         },
         sameAs: input.sameAs,
-        knowsAbout: [
-          'Front-end development',
-          'Nuxt',
-          'Vue',
-          'React',
-          'TypeScript',
-          'Accessibility',
-          'Data visualization',
-          'Civic tech',
-        ],
+        knowsAbout: [...knowsAboutByLocale[input.locale]],
       },
       {
         '@type': 'ProfilePage',
@@ -72,32 +87,10 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
           '@id': `${input.pageUrl}#primary-image`,
           '@type': 'ImageObject',
           url: imageUrl,
-          width: 640,
-          height: 800,
+          width: site.ogImageWidth,
+          height: site.ogImageHeight,
           caption: site.name,
         },
-        breadcrumb: {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Home',
-              item: input.pageUrl,
-            },
-          ],
-        },
-      },
-      {
-        '@type': 'WebPage',
-        '@id': `${input.pageUrl}#primary`,
-        url: input.pageUrl,
-        name: input.title,
-        description: input.description,
-        inLanguage,
-        isPartOf: { '@id': `${site.siteUrl}/#website` },
-        about: { '@id': `${site.siteUrl}/#person` },
-        primaryImageOfPage: { '@id': `${input.pageUrl}#primary-image` },
         hasPart: [
           {
             '@type': 'WebPageElement',
@@ -120,6 +113,17 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
             cssSelector: '#contato',
           },
         ],
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: input.pageUrl,
+            },
+          ],
+        },
       },
       {
         '@type': 'ItemList',

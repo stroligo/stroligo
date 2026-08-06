@@ -55,8 +55,9 @@ const nav = computed(() => [
           size="sm"
           external
         >
+          <span class="sr-only">{{ copy.nav.linkedin }}</span>
           <span aria-hidden="true" class="stro-font-mono text-base leading-none">in</span>
-          <span class="hidden sm:inline">{{ copy.nav.linkedin }}</span>
+          <span aria-hidden="true" class="hidden sm:inline">{{ copy.nav.linkedin }}</span>
         </StroButton>
       </div>
     </div>

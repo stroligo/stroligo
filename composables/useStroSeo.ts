@@ -12,9 +12,7 @@ export function useStroSeo() {
       : `${site.siteUrl}/`,
   )
 
-  const ogImageUrl = computed(
-    () => `${site.siteUrl}${site.profilePhotoUrl}`,
-  )
+  const ogImageUrl = computed(() => `${site.siteUrl}${site.ogImageUrl}`)
 
   const ogLocale = computed(() =>
     locale.value === 'en' ? 'en_US' : 'pt_BR',
@@ -24,10 +22,10 @@ export function useStroSeo() {
     locale.value === 'en' ? 'pt_BR' : 'en_US',
   )
 
-  const photoAlt = computed(() =>
+  const ogImageAlt = computed(() =>
     locale.value === 'en'
-      ? `Portrait of ${profile.value.name}`
-      : `Retrato de ${profile.value.name}`,
+      ? `${profile.value.name} — front-end portfolio at stroligo.dev`
+      : `${profile.value.name} — portfólio front-end em stroligo.dev`,
   )
 
   const hreflangLinks = computed(() => [
@@ -66,7 +64,7 @@ export function useStroSeo() {
     ogDescription: () => labels.value.ogDescription,
     ogUrl: () => pageUrl.value,
     ogImage: () => ogImageUrl.value,
-    ogImageAlt: () => photoAlt.value,
+    ogImageAlt: () => ogImageAlt.value,
     ogType: 'website',
     ogSiteName: 'stroligo.dev',
     ogLocale: () => ogLocale.value,
@@ -74,7 +72,7 @@ export function useStroSeo() {
     twitterTitle: () => labels.value.seoTitle,
     twitterDescription: () => labels.value.ogDescription,
     twitterImage: () => ogImageUrl.value,
-    twitterImageAlt: () => photoAlt.value,
+    twitterImageAlt: () => ogImageAlt.value,
   })
 
   useHead(() => ({
@@ -94,9 +92,9 @@ export function useStroSeo() {
     meta: [
       { property: 'og:locale:alternate', content: ogLocaleAlternate.value },
       { property: 'og:image:secure_url', content: ogImageUrl.value },
-      { property: 'og:image:type', content: 'image/png' },
-      { property: 'og:image:width', content: '640' },
-      { property: 'og:image:height', content: '800' },
+      { property: 'og:image:type', content: site.ogImageType },
+      { property: 'og:image:width', content: String(site.ogImageWidth) },
+      { property: 'og:image:height', content: String(site.ogImageHeight) },
     ],
     script: [
       {

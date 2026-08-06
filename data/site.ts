@@ -3,7 +3,12 @@ export const site = {
   siteUrl: 'https://stroligo.dev',
   googleAnalyticsId: 'G-WX1TM6MRMQ',
   email: 'gabrielstroligo@gmail.com',
-  profilePhotoUrl: '/profile/photo.png',
+  profilePhotoUrl: '/profile/photo.webp',
+  /** Open Graph / Twitter — 1200×630 */
+  ogImageUrl: '/og.jpg',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/jpeg',
   resumeUrls: {
     en: '/profile/gabriel-stroligo-cv-en.pdf',
     pt: '/profile/gabriel-stroligo-cv-pt.pdf',

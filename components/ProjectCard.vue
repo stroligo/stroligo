@@ -30,7 +30,7 @@ function onKeydown(event: KeyboardEvent) {
 
 <template>
   <StroCard
-    as="article"
+    as="div"
     variant="solid"
     hover
     padding="none"

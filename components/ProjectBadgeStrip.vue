@@ -100,18 +100,18 @@ watch(
 
     <div
       v-if="hasOverflow && canScrollRight"
-      class="project-badge-strip__fade pointer-events-none absolute inset-y-0 right-0 flex w-14 items-center justify-end bg-gradient-to-l from-stro-surface from-35% to-transparent pl-3"
+      class="project-badge-strip__fade pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-stro-surface from-35% to-transparent"
       aria-hidden="true"
+    />
+    <button
+      v-if="hasOverflow && canScrollRight"
+      type="button"
+      class="absolute inset-y-0 right-0 z-10 my-auto mr-1 flex h-7 min-w-[1.75rem] shrink-0 items-center justify-center rounded-full border border-stro-border bg-stro-surface/95 px-2 text-sm font-medium leading-none text-stro-muted shadow-[var(--stro-shadow-soft)] transition hover:border-stro-purple/40 hover:text-stro-cyan"
+      :aria-label="t('projects.moreBadges')"
+      @click.stop="scrollReveal"
     >
-      <button
-        type="button"
-        class="pointer-events-auto flex h-7 min-w-[1.75rem] shrink-0 items-center justify-center rounded-full border border-stro-border bg-stro-surface/95 px-2 text-sm font-medium leading-none text-stro-muted shadow-[var(--stro-shadow-soft)] transition hover:border-stro-purple/40 hover:text-stro-cyan"
-        :aria-label="t('projects.moreBadges')"
-        @click.stop="scrollReveal"
-      >
-        …
-      </button>
-    </div>
+      …
+    </button>
   </div>
 </template>
 

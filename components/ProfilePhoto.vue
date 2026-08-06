@@ -58,6 +58,7 @@ const imageClass = computed(() =>
             :class="['stro-profile-photo__img', imageClass]"
             :loading="size === 'lg' || size === 'hero' ? 'eager' : 'lazy'"
             :fetchpriority="size === 'lg' || size === 'hero' ? 'high' : 'auto'"
+            decoding="async"
           />
           <div
             class="stro-profile-photo__overlay"

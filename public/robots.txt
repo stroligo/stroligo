@@ -3,7 +3,6 @@ Allow: /
 
 Disallow: /_studio
 Disallow: /__nuxt_content/
-Disallow: /_nuxt/
 Disallow: /_i18n/
 Disallow: /_payload.json
 

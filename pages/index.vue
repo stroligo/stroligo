@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import type { ProjectCategory } from '~/types/portfolio';
+import type { Project, ProjectCategory } from '~/types/portfolio';
 import { hobbiesForLocale } from '~/data/hobbies';
+
+type ProjectSort = 'featured' | 'recent';
 
 const { t, locale } = useI18n();
 const copy = usePortfolioCopy();
@@ -20,17 +22,54 @@ const hobbies = computed(() =>
 );
 
 const activeCategory = ref<ProjectCategory>('todos');
+const activeSort = ref<ProjectSort>('recent');
+
+const sortOptions = computed(() => [
+  {
+    id: 'featured' as const,
+    label: t('projects.sortFeatured'),
+  },
+  {
+    id: 'recent' as const,
+    label: t('projects.sortRecent'),
+  },
+]);
+
+function projectYear(project: Project) {
+  const year = Number.parseInt(project.year ?? '', 10);
+  return Number.isFinite(year) ? year : 0;
+}
+
+function sortProjects(list: Project[], mode: ProjectSort) {
+  return [...list].sort((a, b) => {
+    if (mode === 'recent') {
+      const yearDiff = projectYear(b) - projectYear(a);
+      if (yearDiff !== 0) return yearDiff;
+      return (a.order ?? 999) - (b.order ?? 999);
+    }
+
+    const featuredDiff = Number(b.featured) - Number(a.featured);
+    if (featuredDiff !== 0) return featuredDiff;
+    const orderDiff = (a.order ?? 999) - (b.order ?? 999);
+    if (orderDiff !== 0) return orderDiff;
+    return a.title.localeCompare(b.title);
+  });
+}
 
 const filteredProjects = computed(() => {
   const list =
     activeCategory.value === 'todos'
       ? projects.value
       : projects.value.filter((p) => p.category === activeCategory.value);
-  return list;
+  return sortProjects(list, activeSort.value);
 });
 
 const filteredCountLabel = computed(() =>
   projectCountLabel(filteredProjects.value.length),
+);
+
+const projectsGridKey = computed(
+  () => `${activeCategory.value}-${activeSort.value}`,
 );
 
 const terminalLines = computed(() => [
@@ -107,9 +146,9 @@ useStroSeo();
 
                 <ScrollReveal variant="fade-up" :delay="200">
                   <div class="mt-8">
-                    <h3 class="stro-kicker mb-4 !text-stro-purple sm:mb-5">
+                    <h2 class="stro-kicker mb-4 !text-stro-purple sm:mb-5">
                       {{ copy.about.stackTitle }}
-                    </h3>
+                    </h2>
                     <ul class="flex flex-wrap gap-2.5 sm:gap-3">
                       <li v-for="tech in profile.stack" :key="tech">
                         <TechStackBadge :label="tech" />
@@ -177,26 +216,51 @@ useStroSeo();
           </div>
 
           <div
-            class="mb-8 flex flex-wrap gap-2"
-            role="tablist"
-            :aria-label="copy.a11y.filterProjects"
+            class="mb-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between"
           >
-            <StroChip
-              v-for="category in projectCategories"
-              :key="category.id"
-              :active="activeCategory === category.id"
-              @click="activeCategory = category.id"
+            <div
+              class="flex min-w-0 flex-wrap gap-2"
+              role="group"
+              :aria-label="copy.a11y.filterProjects"
             >
-              {{ category.label }}
-            </StroChip>
+              <StroChip
+                v-for="category in projectCategories"
+                :key="category.id"
+                :active="activeCategory === category.id"
+                @click="activeCategory = category.id"
+              >
+                {{ category.label }}
+              </StroChip>
+            </div>
+
+            <div
+              class="stro-font-mono flex w-fit shrink-0 items-center rounded-[var(--stro-radius-full)] border border-stro-border bg-stro-surface/80 p-0.5 text-xs font-semibold"
+              role="group"
+              :aria-label="t('a11y.sortProjects')"
+            >
+              <button
+                v-for="option in sortOptions"
+                :key="option.id"
+                type="button"
+                class="rounded-[var(--stro-radius-full)] px-3.5 py-2 transition"
+                :class="
+                  activeSort === option.id
+                    ? 'bg-[image:var(--stro-gradient-brand)] text-stro-bg shadow-[var(--stro-shadow-glow-purple)]'
+                    : 'text-stro-muted hover:text-stro-foreground'
+                "
+                :aria-pressed="activeSort === option.id"
+                @click="activeSort = option.id"
+              >
+                {{ option.label }}
+              </button>
+            </div>
           </div>
         </ScrollReveal>
 
         <Transition name="projects-fade" mode="out-in">
           <div
-            :key="activeCategory"
+            :key="projectsGridKey"
             class="grid min-w-0 gap-6 sm:grid-cols-2 xl:grid-cols-3"
-            role="tabpanel"
           >
             <ScrollReveal
               v-for="(project, index) in filteredProjects"

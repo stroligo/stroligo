@@ -18,13 +18,16 @@ export default defineNuxtPlugin(() => {
       {
         src: `https://www.googletagmanager.com/gtag/js?id=${id}`,
         async: true,
+        defer: true,
+        tagPosition: 'bodyClose',
       },
       {
+        tagPosition: 'bodyClose',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${id}');
+          gtag('config', '${id}', { anonymize_ip: true });
         `,
       },
     ],

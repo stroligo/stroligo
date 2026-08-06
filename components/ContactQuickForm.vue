@@ -50,9 +50,9 @@ function submit() {
     padding="lg"
     class="flex w-full max-w-2xl flex-col"
   >
-    <h4 class="stro-kicker mb-5 !text-stro-purple">
+    <h3 class="stro-kicker mb-5 !text-stro-purple">
       {{ t('contact.formTitle') }}
-    </h4>
+    </h3>
 
     <form
       class="flex w-full flex-col gap-4"

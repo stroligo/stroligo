@@ -10,6 +10,7 @@ const props = withDefaults(
     external?: boolean
     type?: 'button' | 'submit'
     disabled?: boolean
+    ariaLabel?: string
   }>(),
   {
     variant: 'primary',
@@ -57,6 +58,7 @@ const classes = computed(() => {
     :disabled="href ? undefined : disabled"
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
+    :aria-label="ariaLabel"
     :class="classes"
   >
     <slot />

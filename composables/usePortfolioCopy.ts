@@ -63,6 +63,7 @@ export function usePortfolioCopy() {
       skipToContent: L(t('a11y.skipToContent')),
       mainNav: L(t('a11y.mainNav')),
       filterProjects: L(t('a11y.filterProjects')),
+      sortProjects: L(t('a11y.sortProjects')),
       socialNav: L(t('a11y.socialNav')),
     },
   }))
