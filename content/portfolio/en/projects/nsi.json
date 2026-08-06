@@ -9,7 +9,7 @@
   ],
   "stack": [
     "Tailwind CSS",
-    "PHP"
+    "JavaScript"
   ],
-  "body": "I contributed to the new website for the New South Institute (NSI), devoted to addressing complex challenges in fragile democracies through evidence-based research and policy advocacy. NSI's initiatives include programs on state capture, public service reform, migration governance, and South-South Dialogues — fostering effective, accountable institutions across the Global South."
+  "body": "Developed the frontend for the New South Institute (NSI), a think tank dedicated to advancing evidence-based public policy, democratic governance, and institutional development across the Global South.\n\nThe platform was designed to organize a broad ecosystem of research, publications, policy initiatives, and institutional programs into a clear and accessible digital experience. My focus was on building intuitive navigation, responsive layouts, and reusable frontend components that make complex content easy to discover and consume.\n\nWorking with Tailwind CSS and modern frontend practices, I optimized performance, accessibility, and maintainability to deliver a scalable platform that supports policymakers, researchers, journalists, and civil society organizations worldwide."
 }

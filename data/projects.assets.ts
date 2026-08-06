@@ -15,110 +15,118 @@ export type ProjectAsset = {
 }
 
 export const projectAssetsById: Record<string, ProjectAsset> = {
+  'trampos-do-futuro': {
+    siteUrl: 'https://www.fundacaoitau.org.br/trampos-do-futuro-2026/',
+    order: 0,
+  },
   'dr-jose-messias': {
     siteUrl: 'https://drmessias.com.br/',
-    order: 0,
+    order: 1,
   },
   'layane-moura': {
     siteUrl: 'https://layanemoura.com/',
-    order: 1,
+    order: 2,
   },
   'olliv-pericias': {
     siteUrl: 'https://www.ollivpericias.com.br/',
-    order: 2,
+    order: 3,
   },
   'futuro-exterminado': {
     siteUrl: 'https://futuroexterminado.com.br/',
-    order: 3,
+    order: 4,
   },
   'crime-index-2025': {
     siteUrl: 'https://ocindex.net/',
-    order: 4,
+    order: 5,
   },
   'transparencia-brasil': {
     siteUrl: 'https://www.transparencia.org.br/',
-    order: 5,
-  },
-  'custo-brasil': {
-    siteUrl: 'https://www.custobrasil.org.br/',
     order: 6,
-  },
-  'aborto-brasil': {
-    siteUrl: 'https://mapa.abortoazmina.org/',
-    order: 7,
-  },
-  'amazon-underworld': {
-    siteUrl: 'https://amazonunderworld.org/',
-    order: 8,
-    behanceUrl: 'https://www.behance.net/gabrielstroligo',
-  },
-  'golpe-flix': {
-    siteUrl: 'https://www.aosfatos.org/golpeflix/',
-    order: 9,
-    behanceUrl: 'https://www.behance.net/gabrielstroligo',
-  },
-  cedra: {
-    siteUrl: 'https://cedra.org.br/',
-    order: 10,
-    behanceUrl: 'https://www.behance.net/gabrielstroligo',
-  },
-  hri: {
-    siteUrl: 'https://hri.global/',
-    order: 11,
-    behanceUrl: 'https://www.behance.net/gabrielstroligo',
-  },
-  okbr: {
-    siteUrl: 'https://ok.org.br/',
-    order: 12,
   },
   'saude-ambiental': {
     siteUrl:
       'https://www.gov.br/mma/pt-br/assuntos/saude-e-qualidade-de-vida/saude-ambiental',
-    order: 13,
+    order: 7,
+  },
+  euipo: {
+    siteUrl: 'https://www.euipo.europa.eu/',
+    order: 8,
+  },
+  'eles-tao-viajando': {
+    siteUrl: 'https://github.com/stroligo/elestaoviajando',
+    order: 9,
+  },
+  'siga-doacao': {
+    siteUrl: 'https://sigasuadoacao.com.br/',
+    order: 10,
   },
   desiderata: {
     siteUrl: 'https://panoramadaoncologia.desiderata.org.br/',
-    order: 14,
+    order: 11,
+  },
+  'custo-brasil': {
+    siteUrl: 'https://www.custobrasil.org.br/',
+    order: 12,
   },
   'hfpm-who': {
     siteUrl:
       'https://www.who.int/teams/health-financing-and-economics/health-financing/diagnostics/health-financing-progress-matrix',
-    order: 15,
+    order: 13,
   },
   inovahc: {
     siteUrl: 'https://inovahc.com.br/',
-    order: 16,
+    order: 14,
   },
   safernet: {
     siteUrl: 'https://cidadaniadigital.org.br/',
-    order: 17,
+    order: 15,
   },
-  'siga-doacao': {
-    siteUrl: 'https://sigasuadoacao.com.br/',
+  'aborto-brasil': {
+    siteUrl: 'https://mapa.abortoazmina.org/',
+    order: 16,
+  },
+  'amazon-underworld': {
+    siteUrl: 'https://amazonunderworld.org/',
+    order: 17,
+    behanceUrl: 'https://www.behance.net/gabrielstroligo',
+  },
+  cedra: {
+    siteUrl: 'https://cedra.org.br/',
     order: 18,
+    behanceUrl: 'https://www.behance.net/gabrielstroligo',
+  },
+  'golpe-flix': {
+    siteUrl: 'https://www.aosfatos.org/golpeflix/',
+    order: 19,
+    behanceUrl: 'https://www.behance.net/gabrielstroligo',
+  },
+  hri: {
+    siteUrl: 'https://hri.global/',
+    order: 20,
+    behanceUrl: 'https://www.behance.net/gabrielstroligo',
+  },
+  okbr: {
+    siteUrl: 'https://ok.org.br/',
+    order: 21,
   },
   'weplan-forests': {
     siteUrl: 'https://www.weplan-forests.org/methodology',
-    order: 19,
+    order: 22,
   },
   'narrativas-ancestrais': {
     siteUrl: 'http://www.amoreira.info/narrativasancestrais/',
-    order: 20,
+    order: 23,
   },
   nsi: {
     siteUrl: 'https://newsouthinstitute.com/',
-    order: 21,
+    order: 24,
   },
   'ccr-rmbh': {
-    order: 22,
+    order: 25,
   },
   tjto: {
     siteUrl: 'https://www.tjto.jus.br/',
-    order: 23,
-  },
-  'eles-tao-viajando': {
-    siteUrl: 'https://github.com/stroligo/elestaoviajando',
-    order: 24,
+    order: 26,
   },
 }
 

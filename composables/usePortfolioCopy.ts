@@ -51,6 +51,9 @@ export function usePortfolioCopy() {
       linkedinAll: L(labels.value.projectsLinkedinAll),
       viewSite: L(labels.value.projectsViewSite),
       behanceCta: L(labels.value.projectsBehanceCta),
+      sortLabel: L(t('projects.sortLabel')),
+      sortFeatured: L(t('projects.sortFeatured')),
+      sortRecent: L(t('projects.sortRecent')),
     },
     contact: {
       title: L(labels.value.contactTitle),
@@ -63,6 +66,7 @@ export function usePortfolioCopy() {
       skipToContent: L(t('a11y.skipToContent')),
       mainNav: L(t('a11y.mainNav')),
       filterProjects: L(t('a11y.filterProjects')),
+      sortProjects: L(t('a11y.sortProjects')),
       socialNav: L(t('a11y.socialNav')),
     },
   }))

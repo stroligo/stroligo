@@ -10,8 +10,7 @@
   "stack": [
     "Nuxt",
     "Tailwind CSS",
-    "Vue",
-    "PHP"
+    "JavaScript"
   ],
-  "body": "I was part of the development of a platform dedicated to transparency in Brazil and civic impact — bringing together content, data, and strategies to strengthen public integrity, support journalists, researchers, and public managers, and empower society with accessible and reliable information.\n\nIt was truly rewarding to contribute to an initiative that connects evidence, policy, and real-world impact, reinforcing how open and reliable data can elevate public debate and accountability."
+  "body": "Developed the frontend for Transparência Brasil, using Nuxt and Tailwind CSS to build a modern, responsive, and accessible platform that promotes transparency, accountability, and civic engagement in Brazil.\n\nThe platform brings together research, public policy content, and data-driven resources through an intuitive and high-performance user experience. I focused on building a scalable frontend architecture that makes complex information easy to navigate while ensuring accessibility and responsiveness across devices.\n\nThroughout the project, I prioritized performance, maintainability, accessibility, and clean component architecture to deliver a reliable digital experience that supports journalists, researchers, public managers, and citizens seeking trustworthy information."
 }

@@ -9,7 +9,8 @@
   ],
   "stack": [
     "Nuxt",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "JavaScript"
   ],
-  "body": "I contributed to the new website for Instituto Desiderata, an organization focused on improving public healthcare for children and adolescents in Brazil. The institute is dedicated to enhancing early diagnosis and treatment for childhood cancer, as well as addressing other chronic health issues such as childhood obesity — including work on the Pediatric Oncology Panorama and related health data experiences."
+  "body": "Developed the frontend for the Panorama Oncologia platform, an initiative by Instituto Desiderata focused on improving childhood cancer awareness, early diagnosis, and pediatric healthcare in Brazil.\n\nUsing Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience designed to present healthcare content, research, and educational resources through a clear and intuitive interface.\n\nThe platform helps healthcare professionals, researchers, policymakers, and the public access reliable information that supports early diagnosis and better health outcomes. Throughout the development, I focused on accessibility, performance, maintainable code, and scalable frontend architecture to ensure a seamless experience across devices."
 }

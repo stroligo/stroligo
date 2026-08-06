@@ -9,7 +9,8 @@
   ],
   "stack": [
     "React",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "JavaScript"
   ],
-  "body": "I collaborated on Golpe Flix, a significant initiative by Aos Fatos. This project serves as a digital memorial documenting widespread disinformation campaigns leading up to Brazil's January 8 attacks on democracy. Presented in a streaming format, Golpe Flix curates and analyzes over 600 pieces of media to reveal how extremist propaganda gained traction on digital platforms — emphasizing the urgent need to counter such narratives and protect democratic values."
+  "body": "Developed the frontend for Golpe Flix, an interactive digital experience created by Aos Fatos that documents and contextualizes the misinformation ecosystem surrounding Brazil's January 8 attacks on democracy.\n\nRather than a traditional institutional website, the project recreates the familiar experience of a streaming platform, allowing visitors to explore hundreds of curated videos and investigative content through an intuitive, immersive interface. The challenge was translating a large volume of complex information into a seamless browsing experience that encourages discovery and engagement.\n\nBuilt with React and Tailwind CSS, I focused on crafting responsive user interfaces, reusable components, smooth interactions, and performance optimizations to ensure the platform remained fast, accessible, and enjoyable across different devices."
 }

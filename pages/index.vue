@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import type { ProjectCategory } from '~/types/portfolio';
+import type { Project, ProjectCategory } from '~/types/portfolio';
 import { hobbiesForLocale } from '~/data/hobbies';
+
+type ProjectSort = 'featured' | 'recent';
 
 const { t, locale } = useI18n();
 const copy = usePortfolioCopy();
@@ -20,14 +22,45 @@ const hobbies = computed(() =>
 );
 
 const activeCategory = ref<ProjectCategory>('todos');
+const activeSort = ref<ProjectSort>('featured');
+
+const sortOptions = computed(() => [
+  { id: 'featured' as const, label: copy.value.projects.sortFeatured },
+  { id: 'recent' as const, label: copy.value.projects.sortRecent },
+]);
+
+function projectYearValue(project: Project) {
+  const year = Number.parseInt(project.year ?? '', 10);
+  return Number.isFinite(year) ? year : 0;
+}
+
+function sortProjects(list: Project[], mode: ProjectSort) {
+  return [...list].sort((a, b) => {
+    if (mode === 'recent') {
+      const yearDiff = projectYearValue(b) - projectYearValue(a);
+      if (yearDiff !== 0) return yearDiff;
+      return (a.order ?? 999) - (b.order ?? 999);
+    }
+
+    const featuredDiff = Number(b.featured) - Number(a.featured);
+    if (featuredDiff !== 0) return featuredDiff;
+    const orderDiff = (a.order ?? 999) - (b.order ?? 999);
+    if (orderDiff !== 0) return orderDiff;
+    return a.title.localeCompare(b.title);
+  });
+}
 
 const filteredProjects = computed(() => {
   const list =
     activeCategory.value === 'todos'
       ? projects.value
       : projects.value.filter((p) => p.category === activeCategory.value);
-  return list;
+  return sortProjects(list, activeSort.value);
 });
+
+const projectsPanelKey = computed(
+  () => `${activeCategory.value}-${activeSort.value}`,
+);
 
 const filteredCountLabel = computed(() =>
   projectCountLabel(filteredProjects.value.length),
@@ -177,24 +210,55 @@ useStroSeo();
           </div>
 
           <div
-            class="mb-8 flex flex-wrap gap-2"
-            role="tablist"
-            :aria-label="copy.a11y.filterProjects"
+            class="mb-8 flex flex-wrap items-center gap-x-3 gap-y-3"
           >
-            <StroChip
-              v-for="category in projectCategories"
-              :key="category.id"
-              :active="activeCategory === category.id"
-              @click="activeCategory = category.id"
+            <div
+              class="flex min-w-0 flex-1 flex-wrap gap-2"
+              role="tablist"
+              :aria-label="copy.a11y.filterProjects"
             >
-              {{ category.label }}
-            </StroChip>
+              <StroChip
+                v-for="category in projectCategories"
+                :key="category.id"
+                :active="activeCategory === category.id"
+                @click="activeCategory = category.id"
+              >
+                {{ category.label }}
+              </StroChip>
+            </div>
+
+            <div
+              class="hidden h-5 w-px shrink-0 bg-stro-border sm:block"
+              aria-hidden="true"
+            />
+
+            <div
+              class="inline-flex shrink-0 items-center rounded-[var(--stro-radius-full)] border border-stro-border bg-stro-surface/60 p-0.5"
+              role="group"
+              :aria-label="copy.a11y.sortProjects"
+            >
+              <button
+                v-for="option in sortOptions"
+                :key="option.id"
+                type="button"
+                class="rounded-[var(--stro-radius-full)] px-3.5 py-1.5 text-xs font-medium transition sm:text-sm"
+                :class="
+                  activeSort === option.id
+                    ? 'bg-[image:var(--stro-gradient-brand)] text-stro-bg shadow-[var(--stro-shadow-glow-purple)]'
+                    : 'text-stro-muted hover:text-stro-foreground'
+                "
+                :aria-pressed="activeSort === option.id"
+                @click="activeSort = option.id"
+              >
+                {{ option.label }}
+              </button>
+            </div>
           </div>
         </ScrollReveal>
 
         <Transition name="projects-fade" mode="out-in">
           <div
-            :key="activeCategory"
+            :key="projectsPanelKey"
             class="grid min-w-0 gap-6 sm:grid-cols-2 xl:grid-cols-3"
             role="tabpanel"
           >

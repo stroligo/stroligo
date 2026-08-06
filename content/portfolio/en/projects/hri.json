@@ -8,8 +8,9 @@
     "Human rights"
   ],
   "stack": [
+    "PHP",
     "Tailwind CSS",
-    "PHP"
+    "JavaScript"
   ],
-  "body": "I developed the website for Harm Reduction International (HRI), a global organization dedicated to promoting evidence-based strategies to minimize the negative impacts of drug use and drug policies. Their work focuses on advancing public health, human rights, and social justice. One flagship initiative is the Global State of Harm Reduction, a comprehensive report monitoring harm reduction policies and services worldwide."
+  "body": "Developed the frontend for Harm Reduction International (HRI), a global organization that promotes evidence-based public health policies and advocates for harm reduction initiatives in more than 100 countries.\n\nThe platform was built to present extensive research, reports, publications, and policy resources through a clean and intuitive interface, making complex information accessible to healthcare professionals, researchers, policymakers, and the public. Balancing readability, navigation, and performance was essential to support users exploring large volumes of content.\n\nWorking with PHP and Tailwind CSS, I focused on responsive layouts, component-based frontend development, accessibility, and performance optimization to deliver a fast, scalable, and maintainable web experience across all devices."
 }
