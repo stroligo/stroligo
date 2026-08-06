@@ -9,9 +9,7 @@
   ],
   "stack": [
     "WordPress",
-    "HTML",
-    "CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Desenvolvi o frontend do Observatório do Custo Brasil, plataforma dedicada a analisar os fatores estruturais que impactam a competitividade económica e o ambiente de negócios no Brasil.\n\nCom WordPress, foquei numa interface responsiva, acessível e amigável que torna fácil explorar investigação, relatórios e indicadores económicos em desktop e mobile.\n\nA plataforma oferece a gestores, empresas, investigadores e cidadãos informação fiável através de arquitetura de informação clara e navegação intuitiva. Priorizei usabilidade, performance, acessibilidade e manutenção."
+  "body": "Contribuí para o Observatório do Custo Brasil, plataforma dedicada a analisar e monitorar os desafios econômicos do país. A iniciativa oferece insights sobre como ineficiências estruturais — altos impostos, burocracia e barreiras logísticas — impactam empresas e sociedade.\n\nO observatório é recurso crítico para gestores, empresas e cidadãos compreenderem e enfrentarem os fatores que elevam o custo de fazer negócios no Brasil."
 }

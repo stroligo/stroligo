@@ -20,9 +20,8 @@ on:
 name: Deploy website on push
 
 concurrency:
-  # Não cancelar deploy a meio — deixa o Hostinger com HTML novo e /_nuxt incompleto (404).
   group: deploy-production
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
   NUXT_STUDIO: '0'
@@ -54,10 +53,8 @@ jobs:
           test -f .output/public/index.html
           test -f .output/public/sitemap.xml
           test -f .output/public/robots.txt
-          test -d .output/public/_nuxt
           echo "Deploy size:" && du -sh .output/public
           echo "File count:" && find .output/public -type f | wc -l
-          echo "Nuxt chunks:" && find .output/public/_nuxt -type f | wc -l
 
       - name: Test Hostinger SFTP (diagnostic)
         env:
@@ -96,20 +93,13 @@ jobs:
           done
 
           echo "Uploading $(find .output/public -type f | wc -l) files to public_html/ …"
-          echo "1) /_nuxt first (JS/CSS), then 2) HTML and the rest — avoids 404 after partial sync."
 
-          # Ordem importa: chunks hashed antes do index.html que os referencia.
-          # parallel baixo: Hostinger/SFTP costuma falhar com muitas ligações.
           lftp -u "$USER","$PASS" "sftp://$HOST:$PORT" <<'LFTP'
           set sftp:auto-confirm yes
           set cmd:fail-exit yes
-          set net:timeout 60
-          set net:max-retries 5
+          set net:timeout 30
+          set net:max-retries 3
           set net:reconnect-interval-base 5
-          set net:reconnect-interval-multiplier 2
-          mirror -R --verbose --parallel=2 .output/public/_nuxt/ public_html/_nuxt/
-          mirror -R --verbose --parallel=2 --exclude-glob '_nuxt/**' .output/public/ public_html/
+          mirror -R --verbose --parallel=4 .output/public/ public_html/
           bye
           LFTP
-
-          echo "Deploy sync finished."

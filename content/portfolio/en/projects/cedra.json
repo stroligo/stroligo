@@ -9,8 +9,7 @@
   ],
   "stack": [
     "WordPress",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Developed the frontend for CEDRA (Center for Studies and Data on Racial Inequalities), a platform that provides data, research, and interactive content to support discussions on racial equity and public policy in Brazil.\n\nBuilt with WordPress, Tailwind CSS, and modern frontend practices, the platform was designed to deliver a responsive, accessible, and high-performance experience while making complex information easy to explore across desktop and mobile devices.\n\nThroughout the project, I focused on frontend development, responsive design, accessibility, and performance optimization to create a scalable and maintainable digital platform that helps researchers, policymakers, journalists, and civil society organizations access reliable data and insights."
+  "body": "I contributed to the website for CEDRA (Centro de Estudos e Dados sobre Desigualdades Raciais). The organization is a pivotal resource in the fight for racial equity in Brazil, offering comprehensive data and insights into racial inequalities across education, employment, housing, and beyond. Through CEDRA's platform, activists, policymakers, and researchers gain access to reliable information that supports transformative action toward a more equitable society."
 }

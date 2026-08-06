@@ -9,8 +9,7 @@
   ],
   "stack": [
     "React",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Desenvolvi o frontend do Golpe Flix, experiência digital interativa da Aos Fatos que documenta e contextualiza o ecossistema de desinformação em torno dos ataques de 8 de janeiro à democracia brasileira.\n\nEm vez de um site institucional tradicional, o projeto recria a experiência familiar de uma plataforma de streaming, permitindo explorar centenas de vídeos e conteúdos investigativos numa interface intuitiva e imersiva. O desafio foi traduzir um grande volume de informação complexa numa navegação fluida que incentiva descoberta e engajamento.\n\nCom React e Tailwind CSS, foquei em interfaces responsivas, componentes reutilizáveis, interações suaves e otimizações de performance — uma plataforma rápida, acessível e agradável em diferentes dispositivos."
+  "body": "Colaborei no Golpe Flix, iniciativa da Aos Fatos. O projeto funciona como memorial digital que documenta campanhas de desinformação antes dos ataques de 8 de janeiro à democracia brasileira. Em formato streaming, curadoria e analisa mais de 600 peças de mídia para revelar como propaganda extremista ganhou tração em plataformas digitais — reforçando a urgência de combater essas narrativas e proteger valores democráticos."
 }

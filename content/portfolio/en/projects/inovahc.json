@@ -9,8 +9,7 @@
   ],
   "stack": [
     "WordPress",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Developed the frontend for the InovaHC website, the Innovation Hub of Hospital das Clínicas, University of São Paulo (USP), creating a modern digital experience that supports healthcare innovation, digital transformation, and research initiatives.\n\nUsing WordPress and Tailwind CSS, I built a responsive, accessible, and high-performance interface designed to showcase innovation programs, research projects, partnerships, and educational initiatives through clear information architecture and intuitive navigation.\n\nThe platform helps researchers, healthcare professionals, startups, and institutional partners access reliable information about InovaHC's initiatives. Throughout the project, I focused on usability, accessibility, performance, and maintainable frontend solutions to ensure a consistent experience across devices."
+  "body": "I contributed to the new website for InovaHC, the innovation hub at Hospital das Clínicas, University of São Paulo. InovaHC advances healthcare innovation through digital health, telemedicine, and training healthcare professionals — with strong social impact, connecting people and resources to transform healthcare, especially in underserved regions of Brazil."
 }

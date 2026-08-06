@@ -1,0 +1,26 @@
+{
+  "cv": {
+    "label": "Resume",
+    "description": "ATS-optimized PDF — May 2026"
+  },
+  "linkedin": {
+    "label": "LinkedIn",
+    "description": "Full profile, experience, and all projects"
+  },
+  "github": {
+    "label": "GitHub",
+    "description": "Open source and experiments"
+  },
+  "behance": {
+    "label": "Behance",
+    "description": "Visual project galleries"
+  },
+  "email": {
+    "label": "Email",
+    "description": "Send a professional message"
+  },
+  "whatsapp": {
+    "label": "WhatsApp",
+    "description": "Direct message with a suggested intro"
+  }
+}

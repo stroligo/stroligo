@@ -1,0 +1,16 @@
+{
+  "id": "hfpm-who",
+  "title": "Health Financing Progress Matrix",
+  "organization": "Organização Mundial da Saúde (OMS)",
+  "description": "Ferramenta da OMS para avaliar sistemas de financiamento em saúde e progresso rumo à Cobertura Universal (UHC).",
+  "tags": [
+    "Saúde global",
+    "UHC"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desenvolvi o frontend da Health Financing Progress Matrix (HFPM), plataforma da Organização Mundial da Saúde (OMS) que apoia países a avaliar e fortalecer sistemas de financiamento em saúde rumo à Cobertura Universal de Saúde (UHC).\n\nCom Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar frameworks, avaliações e recursos de política numa interface clara e intuitiva.\n\nA plataforma permite a gestores, investigadores e organizações de saúde aceder a informação estruturada que apoia decisões baseadas em evidência e reformas do sistema de saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável."
+}

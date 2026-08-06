@@ -8,9 +8,9 @@
     "Institutional"
   ],
   "stack": [
+    "JavaScript",
     "Nuxt",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Developed the frontend for the Olliv Perícias website, using Nuxt and Tailwind CSS to create a modern, responsive, and accessible landing page that strengthens the company's digital presence.\n\nThe platform was designed to clearly present the company's medical-legal consulting services through an intuitive interface, fast navigation, and a user-centered experience. I focused on building a scalable frontend architecture that delivers consistent performance across desktop and mobile devices.\n\nThroughout the project, I prioritized accessibility, performance, SEO, and maintainable code, ensuring a reliable digital experience aligned with the client's professional identity and long-term growth."
+  "body": "Developed a modern and responsive landing page for Olliv Perícias, focused on presenting the company's services in a clear, professional, and accessible way.\n\nThe project was designed to strengthen the company's digital presence by combining clean visual design, intuitive navigation, and performance-focused frontend development. The landing page highlights the company's expertise, service offerings, and contact channels while ensuring a seamless experience across desktop and mobile devices.\n\nThroughout the development process, I focused on responsiveness, user experience, visual consistency, and optimized performance to deliver a fast and reliable web experience aligned with the client's brand identity."
 }

@@ -10,8 +10,7 @@
   ],
   "stack": [
     "Nuxt",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Desenvolvi o frontend do Global Organized Crime Index 2025 – Crime at a Crossroads, plataforma global que analisa tendências do crime organizado, mercados criminais e resiliência estatal em mais de 190 países.\n\nCom Nuxt e Tailwind CSS, entreguei uma experiência responsiva, acessível e de alta performance capaz de apresentar investigação complexa através de visualizações interativas e navegação intuitiva.\n\nA plataforma transforma conjuntos de dados em larga escala em insights claros e acionáveis, apoiando investigadores, jornalistas, gestores e organizações internacionais a compreender o cenário do crime organizado no mundo. Priorizei performance, acessibilidade, código sustentável e arquitetura frontend escalável."
+  "body": "Participei do desenvolvimento do Global Organized Crime Index 2025 – Crime at a Crossroads, plataforma global que analisa tendências do crime organizado, resiliência estatal e dinâmicas que moldam segurança e integridade pública no mundo.\n\nO projeto reúne dados, pesquisa e visualizações interativas para tornar informação complexa acessível e útil a jornalistas, pesquisadores, formuladores de políticas e sociedade — reforçando transparência, dados abertos e civic tech diante de desafios globais."
 }

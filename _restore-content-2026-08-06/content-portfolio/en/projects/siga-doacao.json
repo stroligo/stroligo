@@ -1,0 +1,15 @@
+{
+  "id": "siga-doacao",
+  "title": "Track your donation",
+  "organization": "MOL Central de Impacto",
+  "description": "Platform making donations more transparent, connecting donors to organizations and tracking impact.",
+  "tags": [
+    "Social impact"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Developed the frontend for Siga Sua Doação, a platform by MOL Central de Impacto that enables donors to transparently track the impact of their contributions and strengthens trust between donors and nonprofit organizations.\n\nUsing Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience focused on making donation tracking simple, intuitive, and reliable across desktop and mobile devices.\n\nThe platform helps users monitor donations, access impact information, and better understand how contributions support social initiatives. Throughout the development, I prioritized accessibility, performance, maintainable code, and a scalable frontend architecture to deliver a seamless digital experience."
+}

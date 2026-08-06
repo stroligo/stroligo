@@ -1,0 +1,20 @@
+{
+  "id": "tjto",
+  "title": "TJTO Portal",
+  "organization": "Court of Justice of Tocantins",
+  "description": "Digital ecosystem for the state judiciary since 2011 — main portal, microsites, user management, and ~8,900 daily visits.",
+  "tags": [
+    "Government",
+    "High traffic"
+  ],
+  "stack": [
+    "Joomla",
+    "PHP",
+    "JavaScript",
+    "Tailwind CSS",
+    "HTML",
+    "CSS",
+    "MySQL"
+  ],
+  "body": "Since 2011, I have been part of the digital transformation of the Court of Justice of the State of Tocantins (TJTO), contributing to the development, maintenance, and continuous evolution of one of the state's largest public web ecosystems.\n\nWorking with a custom Joomla architecture, I have been responsible for building institutional portals, campaign websites, internal solutions, and new digital services that support both citizens and court employees. Beyond developing new features, I have modernized legacy systems, improved content management workflows, optimized performance, and helped maintain a reliable platform that serves thousands of users every day.\n\nOver more than a decade, I have participated in projects ranging from accessibility improvements and responsive redesigns to the implementation of new modules, integrations, and user management enhancements. This long-term experience has allowed me to combine technical expertise with a deep understanding of public sector requirements, including security, scalability, usability, and long-term maintainability.\n\nThroughout this journey, I have collaborated with multidisciplinary teams to deliver digital solutions that improve public access to judicial information and strengthen the institution's online presence."
+}

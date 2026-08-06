@@ -8,8 +8,7 @@
   ],
   "stack": [
     "Nuxt",
-    "Tailwind CSS",
-    "JavaScript"
+    "Tailwind CSS"
   ],
-  "body": "Desenvolvi o frontend da plataforma Saúde Ambiental, iniciativa do Ministério do Meio Ambiente e Mudança do Clima (MMA) que disponibiliza indicadores e dados de saúde ambiental para apoiar políticas públicas e decisões informadas.\n\nCom Nuxt e Tailwind CSS, criei uma experiência responsiva, acessível e de alta performance capaz de apresentar dados ambientais e de saúde pública complexos através de interface intuitiva e visualizações interativas.\n\nA plataforma reúne indicadores, investigação e informação oficial para ajudar investigadores, gestores, profissionais de saúde e cidadãos a compreender a relação entre ambiente e saúde pública. Priorizei acessibilidade, performance, código sustentável e arquitetura frontend escalável."
+  "body": "Atuei no portal Saúde Ambiental, iniciativa do Ministério do Meio Ambiente sobre a interseção entre qualidade ambiental e saúde pública. A plataforma centraliza conteúdo, dados e estratégias sobre qualidade do ar, segurança química e determinantes ambientais da saúde — apoiando gestores, pesquisadores e sociedade com informação acessível para decisão e conscientização.\n\nFoi gratificante contribuir para um projeto que mostra como ambiente saudável é essencial para sociedade saudável — conectando dados, política e impacto em área crítica."
 }

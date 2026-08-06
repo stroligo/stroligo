@@ -9,8 +9,7 @@
   "stack": [
     "React",
     "Node.js",
-    "MongoDB",
     "Tailwind CSS"
   ],
-  "body": "Built the fullstack application Eles Tão Viajando as the final project for the Full Stack Web Developer course at FLAG. The platform allows users to share travel experiences with interactive maps, image galleries, a blog, and an admin area for content management.\n\nOn the frontend I used React, Vite, Tailwind CSS, Wouter, React Leaflet and React Splide. On the backend I implemented Node.js, Express, MongoDB (Mongoose), JWT, Bcrypt, Multer and Cloudinary — integrating authentication, file uploads and external APIs in a modular, production-ready architecture.\n\nThe project strengthened my backend skills while consolidating a modern full-stack workflow, from public experiences to content administration."
+  "body": "Eles Tão Viajando is a full-stack application developed as the final project for the Full Stack Web Developer course at FLAG. The platform allows users to share travel experiences with interactive maps, image galleries, a blog, and an admin area for content management.\n\nIt was a great opportunity to work with a modern stack, external API integrations, security practices, and a complete, well-organized system — combining front-end and back-end delivery in a production-ready project."
 }

@@ -1,0 +1,8 @@
+.data/content/contents.sqlite
+.github/workflows/main.yml
+assets/css/main.css
+components/ScrollReveal.vue
+composables/usePortfolioCopy.ts
+pages/index.vue
+public/.htaccess
+public/sitemap.xml

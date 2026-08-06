@@ -8,9 +8,8 @@
     "LGPD"
   ],
   "stack": [
-    "Vue.js",
-    "Tailwind CSS",
-    "JavaScript"
+    "Vue",
+    "Tailwind CSS"
   ],
-  "body": "Desenvolvi o frontend da plataforma de Cidadania Digital, iniciativa da SaferNet Brasil que oferece recursos educativos para escolas promoverem cidadania digital, segurança online e uso responsável da tecnologia.\n\nCom Vue.js e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance, tornando o conteúdo educativo fácil de navegar para professores, estudantes e escolas em diferentes dispositivos.\n\nA plataforma apoia educadores com materiais alinhados às diretrizes educativas brasileiras, incentivando comportamento online mais seguro, literacia digital e pensamento crítico. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável."
+  "body": "Contribuí para o site da Disciplina de Cidadania Digital, iniciativa da SaferNet Brasil. O programa oferece a educadores ferramentas para ensinar cidadania digital — segurança online, empatia nas interações digitais e uso responsável da tecnologia. O currículo alinha-se à BNCC e à LGPD, garantindo experiência de aprendizagem abrangente e impactante."
 }

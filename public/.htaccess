@@ -1,13 +1,6 @@
 # Hostinger / Apache — canonical host + SEO
 ErrorDocument 404 /404.html
 
-# Nuxt Content SQLite (and other assets) — correct MIME types
-<IfModule mod_mime.c>
-  AddType application/wasm .wasm
-  AddType application/javascript .mjs
-  AddType application/json .json
-</IfModule>
-
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

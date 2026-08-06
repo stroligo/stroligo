@@ -9,12 +9,12 @@
   ],
   "stack": [
     "Joomla",
-    "PHP",
-    "JavaScript",
     "Tailwind CSS",
+    "PHP",
     "HTML",
     "CSS",
-    "MySQL"
+    "JavaScript",
+    "Git"
   ],
-  "body": "Since 2011, I have been part of the digital transformation of the Court of Justice of the State of Tocantins (TJTO), contributing to the development, maintenance, and continuous evolution of one of the state's largest public web ecosystems.\n\nWorking with a custom Joomla architecture, I have been responsible for building institutional portals, campaign websites, internal solutions, and new digital services that support both citizens and court employees. Beyond developing new features, I have modernized legacy systems, improved content management workflows, optimized performance, and helped maintain a reliable platform that serves thousands of users every day.\n\nOver more than a decade, I have participated in projects ranging from accessibility improvements and responsive redesigns to the implementation of new modules, integrations, and user management enhancements. This long-term experience has allowed me to combine technical expertise with a deep understanding of public sector requirements, including security, scalability, usability, and long-term maintainability.\n\nThroughout this journey, I have collaborated with multidisciplinary teams to deliver digital solutions that improve public access to judicial information and strengthen the institution's online presence."
+  "body": "Since 2011, I have worked as a web developer in the Judiciary, responsible for creating and maintaining all institutional websites. We use Joomla as the CMS for our projects, and the entire template is developed by our team.\n\nThe main portal of TJTO (tjto.jus.br) is a robust and stable platform, with an average of 8.9 thousand daily visits. Over the years I have created dedicated microsites, improved the user management system, and continuously evolved the front-end — ensuring high performance, accessibility, and reliability even under heavy traffic.\n\nAdditionally, I have continuously worked on developing new versions and improvements to these projects, significantly contributing to their evolution and success."
 }

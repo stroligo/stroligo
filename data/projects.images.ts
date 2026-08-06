@@ -10,9 +10,6 @@ export type ProjectImageSource = {
 }
 
 export const projectImageSources: Record<string, ProjectImageSource> = {
-  'trampos-do-futuro': {
-    fetchUrls: ['https://www.fundacaoitau.org.br/trampos-do-futuro-2026/'],
-  },
   'dr-jose-messias': {
     fetchUrls: ['https://drmessias.com.br/', 'https://drjosemessias.com.br/'],
   },
@@ -65,9 +62,6 @@ export const projectImageSources: Record<string, ProjectImageSource> = {
     ],
     image:
       'https://www.gov.br/mma/pt-br/pagina-inicial/@@images/74e3e13f-1382-4ad3-a7cb-3867c786b322.jpeg',
-  },
-  euipo: {
-    fetchUrls: ['https://www.euipo.europa.eu/'],
   },
   desiderata: {
     fetchUrls: ['https://panoramadaoncologia.desiderata.org.br/'],

@@ -1,0 +1,17 @@
+{
+  "id": "custo-brasil",
+  "title": "Observatório do Custo Brasil",
+  "organization": "Observatório do Custo Brasil",
+  "description": "Monitoring structural inefficiencies in Brazil’s economy — taxes, bureaucracy, and logistics barriers for businesses and society.",
+  "tags": [
+    "Public policy",
+    "Economy"
+  ],
+  "stack": [
+    "WordPress",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "body": "Developed the frontend for Observatório do Custo Brasil, a platform dedicated to analyzing the structural factors that impact Brazil's economic competitiveness and business environment.\n\nUsing WordPress, I focused on building a responsive, accessible, and user-friendly interface that makes research, reports, and economic indicators easy to explore across desktop and mobile devices.\n\nThe platform provides policymakers, businesses, researchers, and the public with access to reliable information through a clear information architecture and intuitive navigation. Throughout the project, I prioritized usability, performance, accessibility, and maintainability to deliver a consistent digital experience."
+}

@@ -55,7 +55,6 @@ export type ResumeContent = {
 }
 
 const resumeProjectIds = [
-  'trampos-do-futuro',
   'aborto-brasil',
   'futuro-exterminado',
   'desiderata',
@@ -69,12 +68,9 @@ const resumeProjectIds = [
 
 const projectYears: Record<
   ResumeLocale,
-  Partial<
-    Record<(typeof resumeProjectIds)[number] | 'euipo' | 'trampos-do-futuro', string>
-  >
+  Partial<Record<(typeof resumeProjectIds)[number] | 'euipo', string>>
 > = {
   en: {
-    'trampos-do-futuro': '2026',
     'aborto-brasil': '2023',
     'futuro-exterminado': '2024',
     desiderata: '2024',
@@ -87,7 +83,6 @@ const projectYears: Record<
     euipo: '2025 - Present',
   },
   pt: {
-    'trampos-do-futuro': '2026',
     'aborto-brasil': '2023',
     'futuro-exterminado': '2024',
     desiderata: '2024',
@@ -103,8 +98,6 @@ const projectYears: Record<
 
 const contributions: Record<ResumeLocale, Record<string, string>> = {
   en: {
-    'trampos-do-futuro':
-      'Front-end for Fundação Itaú’s Trampos do Futuro 2026 — Nuxt, Tailwind CSS, accessibility and scalable UX for thousands of students and educators.',
     'aborto-brasil':
       'Front-end architecture, interactive maps, and data visualization for investigative journalism on reproductive rights.',
     'futuro-exterminado':
@@ -127,8 +120,6 @@ const contributions: Record<ResumeLocale, Record<string, string>> = {
       'EUIPO Spanish platform UI — React, TypeScript, Material UI, Agile delivery for European public sector.',
   },
   pt: {
-    'trampos-do-futuro':
-      'Front-end do Trampos do Futuro 2026 (Fundação Itaú) — Nuxt, Tailwind CSS, acessibilidade e UX escalável para milhares de estudantes e educadores.',
     'aborto-brasil':
       'Arquitetura front-end, mapas interativos e visualização de dados para jornalismo investigativo sobre direitos reprodutivos.',
     'futuro-exterminado':
@@ -184,7 +175,7 @@ function projectsFromLocale(
         year: years[id],
         description: copy.description,
         stack: copy.stack || item.tags.join(', '),
-        contribution: copy.contribution || contrib[id] || '',
+        contribution: copy.contribution,
       }
     })
     .filter((p): p is ResumeProject => p !== null)
@@ -202,9 +193,7 @@ function projectsFromLocale(
     contribution: euipoCopy.contribution || contrib.euipo || '',
   }
 
-  // Destaques no topo: Fundação Itaú + EUIPO, depois os demais
-  const [trampos, ...rest] = fromSite
-  return trampos ? [trampos, euipo, ...rest] : [euipo, ...fromSite]
+  return [...fromSite.slice(0, 3), euipo, ...fromSite.slice(3)]
 }
 
 const contentByLocale: Record<ResumeLocale, Omit<ResumeContent, 'locale' | 'filename' | 'htmlLang'>> = {

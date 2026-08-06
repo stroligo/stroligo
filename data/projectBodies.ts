@@ -5,23 +5,8 @@ type ProjectBodyCopy = {
   pt: string
 }
 
-/**
- * Texto completo dos projetos — alinhado às reescritas LinkedIn (ChatGPT share).
- * @see https://chatgpt.com/share/6a73eeb7-e2bc-83e9-8575-401ec44adcd6
- */
+/** Texto completo dos projetos — alinhado às publicações do LinkedIn. */
 export const projectBodiesById: Record<string, ProjectBodyCopy> = {
-  'trampos-do-futuro': {
-    en: `Developed the frontend for Trampos do Futuro 2026, an initiative by Fundação Itaú that helps young people explore the careers and opportunities shaping the future of work.
-
-Built with Nuxt and Tailwind CSS, I focused on creating a modern, responsive, and accessible experience that presents event information, activities, and educational content in an engaging way.
-
-Throughout the development, I prioritized performance, accessibility, usability, and maintainability to deliver a scalable digital experience for thousands of students and educators.`,
-    pt: `Desenvolvi o frontend do Trampos do Futuro 2026, iniciativa da Fundação Itaú que aproxima jovens das carreiras e oportunidades que moldam o futuro do trabalho.
-
-Com Nuxt e Tailwind CSS, foquei numa experiência moderna, responsiva e acessível que apresenta informações do evento, atividades e conteúdos educativos de forma envolvente.
-
-Priorizei performance, acessibilidade, usabilidade e manutenção a longo prazo — uma experiência escalável para milhares de estudantes e educadores.`,
-  },
   'dr-jose-messias': {
     en: `Developed a modern and responsive medical website for Dr. José Messias, focused on presenting bariatric surgery and obesity treatment services in a professional, accessible, and trustworthy way.
 
@@ -35,304 +20,168 @@ O projeto foi pensado para fortalecer a presença digital do médico com design 
 Durante o desenvolvimento, priorizei responsividade, acessibilidade, experiência do usuário, consistência visual e performance — entregando uma experiência rápida e alinhada à identidade profissional e ao cuidado centrado no paciente.`,
   },
   'layane-moura': {
-    en: `Built the frontend for Layane Moura's portfolio using Nuxt and Tailwind CSS, creating a bilingual, responsive, and performance-focused website that showcases her work through a clean and intuitive interface.
+    en: `Developed a modern, responsive portfolio website for Layane Moura, an illustrator and map designer, focused on letting her work speak for itself while keeping navigation simple and professional.
 
-The site combines a visual-first gallery, bilingual support (English/Portuguese), and project pages that open in a lightbox-style modal so visitors can explore each piece without leaving the flow. A dedicated contact page includes a form that sends inquiries directly by email, and a content layer allows the client to update projects over time without depending on a developer for every change.
+Built with Nuxt and Vue, the site combines a visual-first gallery, bilingual support (English/Portuguese), and project pages that open in a lightbox-style modal so visitors can explore each piece without leaving the flow. A dedicated contact page includes a form that sends inquiries directly by email, and a content layer allows the client to update projects over time without depending on a developer for every change.
 
 Throughout the project, I balanced performance, responsive layout, brand consistency, and long-term maintainability — from mobile-friendly grids to SEO basics (metadata, sitemap, structured data) and a production setup ready for real-world hosting.`,
-    pt: `Construí o frontend do portfólio da Layane Moura com Nuxt e Tailwind CSS — um site bilíngue, responsivo e focado em performance que apresenta o trabalho dela numa interface limpa e intuitiva.
+    pt: `Desenvolvi um portfólio moderno e responsivo para Layane Moura, ilustradora e designer de mapas, com foco em deixar o trabalho falar por si e manter a navegação simples e profissional.
 
 O site combina galeria visual, suporte bilíngue (PT/EN) e páginas de projeto em modal lightbox para explorar cada peça sem quebrar o fluxo. Uma página de contacto inclui formulário por e-mail, e uma camada de conteúdo permite atualizar projetos ao longo do tempo sem depender de desenvolvedor a cada mudança.
 
 Equilibrei performance, layout responsivo, consistência de marca e manutenção de longo prazo — de grids mobile-friendly a bases de SEO (metadados, sitemap, dados estruturados) e setup pronto para produção.`,
   },
   'olliv-pericias': {
-    en: `Developed the frontend for the Olliv Perícias website, using Nuxt and Tailwind CSS to create a modern, responsive, and accessible landing page that strengthens the company's digital presence.
+    en: `Developed a modern and responsive landing page for Olliv Perícias, focused on presenting the company's services in a clear, professional, and accessible way.
 
-The platform was designed to clearly present the company's medical-legal consulting services through an intuitive interface, fast navigation, and a user-centered experience. I focused on building a scalable frontend architecture that delivers consistent performance across desktop and mobile devices.
+The project was designed to strengthen the company's digital presence by combining clean visual design, intuitive navigation, and performance-focused frontend development. The landing page highlights the company's expertise, service offerings, and contact channels while ensuring a seamless experience across desktop and mobile devices.
 
-Throughout the project, I prioritized accessibility, performance, SEO, and maintainable code, ensuring a reliable digital experience aligned with the client's professional identity and long-term growth.`,
-    pt: `Desenvolvi o frontend do site da Olliv Perícias com Nuxt e Tailwind CSS — landing page moderna, responsiva e acessível que fortalece a presença digital da empresa.
+Throughout the development process, I focused on responsiveness, user experience, visual consistency, and optimized performance to deliver a fast and reliable web experience aligned with the client's brand identity.`,
+    pt: `Desenvolvi uma landing page moderna e responsiva para a Olliv Perícias, focada em apresentar os serviços da empresa de forma clara, profissional e acessível.
 
-A plataforma apresenta com clareza os serviços de consultoria médico-legal, com interface intuitiva, navegação rápida e experiência centrada no utilizador. Foquei numa arquitetura frontend escalável com performance consistente em desktop e mobile.
+O projeto fortalece a presença digital da empresa com design limpo, navegação intuitiva e front-end orientado a performance. A página destaca expertise, ofertas de serviço e canais de contacto, com experiência fluida em desktop e mobile.
 
-Priorizei acessibilidade, performance, SEO e código sustentável — uma experiência digital alinhada à identidade profissional do cliente e ao crescimento a longo prazo.`,
+Priorizei responsividade, experiência do usuário, consistência visual e performance — entregando uma experiência rápida e alinhada à identidade da marca.`,
   },
   'futuro-exterminado': {
-    en: `Developed the frontend for Futuro Exterminado, a data-driven platform by Instituto Fogo Cruzado that documents and visualizes the impact of armed violence on children and adolescents in the metropolitan region of Rio de Janeiro.
+    en: `I contributed to Futuro Exterminado, a data-driven platform by Instituto Fogo Cruzado that maps and documents the impact of armed violence on children and adolescents in the Rio de Janeiro metropolitan region.
 
-Built with Nuxt and Tailwind CSS, I focused on creating a responsive, accessible, and high-performance user experience capable of presenting complex datasets through intuitive navigation, interactive maps, and meaningful data visualizations.
+The platform brings together verified data, interactive maps, and visual indicators to reveal how gun violence affects young lives — transforming statistics into visibility, memory, and evidence. By organizing information on shootings, victims, and geographic patterns, the project supports journalists, researchers, civil society, and policymakers in understanding the scale and dynamics of this human rights issue.
 
-The platform transforms verified information into a clear and engaging digital experience, helping journalists, researchers, civil society organizations, and policymakers better understand patterns of violence and support evidence-based discussions around public safety and human rights.
+Contributing to a project like this reinforces the role of open data, transparency, and civic technology as essential tools for social accountability and public debate, especially in contexts marked by structural violence and inequality.`,
+    pt: `Contribuí para o Futuro Exterminado, plataforma orientada a dados do Instituto Fogo Cruzado que mapeia e documenta o impacto da violência armada sobre crianças e adolescentes na região metropolitana do Rio de Janeiro.
 
-Projects like this demonstrate how frontend engineering can make complex information more accessible, enabling technology to support transparency, public awareness, and social impact.`,
-    pt: `Desenvolvi o frontend do Futuro Exterminado, plataforma orientada a dados do Instituto Fogo Cruzado que documenta e visualiza o impacto da violência armada sobre crianças e adolescentes na região metropolitana do Rio de Janeiro.
+A plataforma reúne dados verificados, mapas interativos e indicadores visuais para tornar visível como a violência armada afeta vidas jovens — transformando estatísticas em memória, evidência e debate público. Ao organizar informações sobre tiroteios, vítimas e padrões geográficos, o projeto apoia jornalistas, pesquisadores, sociedade civil e gestores públicos.
 
-Com Nuxt e Tailwind CSS, foquei numa experiência responsiva, acessível e de alta performance capaz de apresentar conjuntos de dados complexos com navegação intuitiva, mapas interativos e visualizações significativas.
-
-A plataforma transforma informação verificada numa experiência digital clara e envolvente, ajudando jornalistas, investigadores, organizações da sociedade civil e gestores a compreender padrões de violência e a apoiar debates baseados em evidência sobre segurança pública e direitos humanos.
-
-Projetos assim mostram como a engenharia frontend torna informação complexa mais acessível — tecnologia a serviço da transparência, da consciencialização e do impacto social.`,
+Projetos assim reforçam o papel de dados abertos, transparência e civic tech como ferramentas essenciais de responsabilização social, especialmente em contextos de violência estrutural e desigualdade.`,
   },
   'crime-index-2025': {
-    en: `Developed the frontend for the Global Organized Crime Index 2025 – Crime at a Crossroads, a global platform that analyzes organized crime trends, criminal markets, and state resilience across more than 190 countries.
+    en: `I was part of the development of the Global Organized Crime Index 2025 – Crime at a Crossroads, a global platform that analyzes organized crime trends, state resilience, and the dynamics shaping security and public integrity worldwide.
 
-Built with Nuxt and Tailwind CSS, I focused on delivering a responsive, accessible, and high-performance user experience capable of presenting complex research through interactive visualizations and intuitive navigation.
+The project brings together data, research, and interactive visualizations to make complex information accessible and actionable for journalists, researchers, policymakers, and the public. It's truly rewarding to contribute to an initiative that reinforces the power of transparency, open data, and civic technology in addressing global challenges.`,
+    pt: `Participei do desenvolvimento do Global Organized Crime Index 2025 – Crime at a Crossroads, plataforma global que analisa tendências do crime organizado, resiliência estatal e dinâmicas que moldam segurança e integridade pública no mundo.
 
-The platform transforms large-scale datasets into clear and actionable insights, supporting researchers, journalists, policymakers, and international organizations in understanding the evolving landscape of organized crime worldwide. Throughout the project, I prioritized performance, accessibility, maintainable code, and a scalable frontend architecture to ensure a reliable experience across devices.`,
-    pt: `Desenvolvi o frontend do Global Organized Crime Index 2025 – Crime at a Crossroads, plataforma global que analisa tendências do crime organizado, mercados criminais e resiliência estatal em mais de 190 países.
-
-Com Nuxt e Tailwind CSS, entreguei uma experiência responsiva, acessível e de alta performance capaz de apresentar investigação complexa através de visualizações interativas e navegação intuitiva.
-
-A plataforma transforma conjuntos de dados em larga escala em insights claros e acionáveis, apoiando investigadores, jornalistas, gestores e organizações internacionais a compreender o cenário do crime organizado no mundo. Priorizei performance, acessibilidade, código sustentável e arquitetura frontend escalável.`,
+O projeto reúne dados, pesquisa e visualizações interativas para tornar informação complexa acessível e útil a jornalistas, pesquisadores, formuladores de políticas e sociedade — reforçando transparência, dados abertos e civic tech diante de desafios globais.`,
   },
   'transparencia-brasil': {
-    en: `Developed the frontend for Transparência Brasil, using Nuxt and Tailwind CSS to build a modern, responsive, and accessible platform that promotes transparency, accountability, and civic engagement in Brazil.
+    en: `I was part of the development of a platform dedicated to transparency in Brazil and civic impact — bringing together content, data, and strategies to strengthen public integrity, support journalists, researchers, and public managers, and empower society with accessible and reliable information.
 
-The platform brings together research, public policy content, and data-driven resources through an intuitive and high-performance user experience. I focused on building a scalable frontend architecture that makes complex information easy to navigate while ensuring accessibility and responsiveness across devices.
+It was truly rewarding to contribute to an initiative that connects evidence, policy, and real-world impact, reinforcing how open and reliable data can elevate public debate and accountability.`,
+    pt: `Participei do desenvolvimento de uma plataforma dedicada à transparência e ao impacto cívico no Brasil — reunindo conteúdo, dados e estratégias para fortalecer a integridade pública, apoiar jornalistas, pesquisadores e gestores, e empoderar a sociedade com informação acessível e confiável.
 
-Throughout the project, I prioritized performance, maintainability, accessibility, and clean component architecture to deliver a reliable digital experience that supports journalists, researchers, public managers, and citizens seeking trustworthy information.`,
-    pt: `Desenvolvi o frontend da Transparência Brasil com Nuxt e Tailwind CSS — plataforma moderna, responsiva e acessível que promove transparência, responsabilização e engajamento cívico no Brasil.
-
-A plataforma reúne investigação, conteúdo de políticas públicas e recursos baseados em dados numa experiência intuitiva e de alta performance. Foquei numa arquitetura frontend escalável que facilita a navegação de informação complexa, com acessibilidade e responsividade em todos os dispositivos.
-
-Priorizei performance, manutenção, acessibilidade e componentes limpos — uma experiência digital fiável para jornalistas, investigadores, gestores públicos e cidadãos que procuram informação de confiança.`,
-  },
-  'saude-ambiental': {
-    en: `Developed the frontend for the Saúde Ambiental platform, an initiative by Brazil's Ministry of the Environment and Climate Change (MMA) that provides environmental health indicators and data to support public policies and informed decision-making.
-
-Built with Nuxt and Tailwind CSS, I focused on creating a responsive, accessible, and high-performance user experience capable of presenting complex environmental and public health data through an intuitive interface and interactive visualizations.
-
-The platform brings together indicators, research, and official information to help researchers, public managers, healthcare professionals, and citizens better understand the relationship between environmental conditions and public health. Throughout the development, I prioritized accessibility, performance, maintainable code, and a scalable frontend architecture to ensure a reliable experience across devices.`,
-    pt: `Desenvolvi o frontend da plataforma Saúde Ambiental, iniciativa do Ministério do Meio Ambiente e Mudança do Clima (MMA) que disponibiliza indicadores e dados de saúde ambiental para apoiar políticas públicas e decisões informadas.
-
-Com Nuxt e Tailwind CSS, criei uma experiência responsiva, acessível e de alta performance capaz de apresentar dados ambientais e de saúde pública complexos através de interface intuitiva e visualizações interativas.
-
-A plataforma reúne indicadores, investigação e informação oficial para ajudar investigadores, gestores, profissionais de saúde e cidadãos a compreender a relação entre ambiente e saúde pública. Priorizei acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
-  },
-  euipo: {
-    en: `Contributed to the frontend development of digital platforms for the European Union Intellectual Property Office (EUIPO), using React, TypeScript, and Material UI to build secure, accessible, and scalable user interfaces that support intellectual property services across the European Union.
-
-As part of the development team, I focused on creating and maintaining responsive, high-performance interfaces while ensuring accessibility, usability, and consistency across complex enterprise applications. Working within a large-scale ecosystem required close collaboration, adherence to design systems, and the implementation of maintainable frontend solutions.
-
-Contributing to one of Europe's largest public digital platforms reinforced my experience in building enterprise-grade applications with a strong emphasis on performance, accessibility, scalability, and long-term maintainability.`,
-    pt: `Contribuí para o desenvolvimento frontend das plataformas digitais do European Union Intellectual Property Office (EUIPO), com React, TypeScript e Material UI — interfaces seguras, acessíveis e escaláveis que suportam serviços de propriedade intelectual na União Europeia.
-
-Na equipa de desenvolvimento, foquei em criar e manter interfaces responsivas e de alta performance, garantindo acessibilidade, usabilidade e consistência em aplicações empresariais complexas. Trabalhar num ecossistema de larga escala exigiu colaboração próxima, adesão a design systems e soluções frontend sustentáveis.
-
-Contribuir para uma das maiores plataformas digitais públicas da Europa reforçou a minha experiência em aplicações enterprise, com ênfase em performance, acessibilidade, escalabilidade e manutenção a longo prazo.`,
-  },
-  'eles-tao-viajando': {
-    en: `Built the fullstack application Eles Tão Viajando as the final project for the Full Stack Web Developer course at FLAG. The platform allows users to share travel experiences with interactive maps, image galleries, a blog, and an admin area for content management.
-
-On the frontend I used React, Vite, Tailwind CSS, Wouter, React Leaflet and React Splide. On the backend I implemented Node.js, Express, MongoDB (Mongoose), JWT, Bcrypt, Multer and Cloudinary — integrating authentication, file uploads and external APIs in a modular, production-ready architecture.
-
-The project strengthened my backend skills while consolidating a modern full-stack workflow, from public experiences to content administration.`,
-    pt: `Construí a aplicação fullstack Eles Tão Viajando como projeto final do curso Full Stack Web Developer na FLAG. A plataforma permite partilhar experiências de viagem com mapas interativos, galerias, blog e área admin para gestão de conteúdo.
-
-No frontend usei React, Vite, Tailwind CSS, Wouter, React Leaflet e React Splide. No backend implementei Node.js, Express, MongoDB (Mongoose), JWT, Bcrypt, Multer e Cloudinary — autenticação, uploads e APIs externas numa arquitetura modular pronta para produção.
-
-O projeto aprofundou o backend e consolidou um fluxo fullstack moderno, da experiência pública à administração de conteúdo.`,
-  },
-  'siga-doacao': {
-    en: `Developed the frontend for Siga Sua Doação, a platform by MOL Central de Impacto that enables donors to transparently track the impact of their contributions and strengthens trust between donors and nonprofit organizations.
-
-Using Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience focused on making donation tracking simple, intuitive, and reliable across desktop and mobile devices.
-
-The platform helps users monitor donations, access impact information, and better understand how contributions support social initiatives. Throughout the development, I prioritized accessibility, performance, maintainable code, and a scalable frontend architecture to deliver a seamless digital experience.`,
-    pt: `Desenvolvi o frontend do Siga Sua Doação, plataforma da MOL Central de Impacto que permite aos doadores acompanhar com transparência o impacto das contribuições e reforça a confiança entre doadores e organizações sem fins lucrativos.
-
-Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance, tornando o acompanhamento de doações simples, intuitivo e fiável em desktop e mobile.
-
-A plataforma ajuda utilizadores a monitorizar doações, aceder a informação de impacto e compreender como as contribuições apoiam iniciativas sociais. Priorizei acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
-  },
-  desiderata: {
-    en: `Developed the frontend for the Panorama Oncologia platform, an initiative by Instituto Desiderata focused on improving childhood cancer awareness, early diagnosis, and pediatric healthcare in Brazil.
-
-Using Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience designed to present healthcare content, research, and educational resources through a clear and intuitive interface.
-
-The platform helps healthcare professionals, researchers, policymakers, and the public access reliable information that supports early diagnosis and better health outcomes. Throughout the development, I focused on accessibility, performance, maintainable code, and scalable frontend architecture to ensure a seamless experience across devices.`,
-    pt: `Desenvolvi o frontend da plataforma Panorama Oncologia, iniciativa do Instituto Desiderata focada em consciencialização sobre cancro infantil, diagnóstico precoce e saúde pediátrica no Brasil.
-
-Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar conteúdo de saúde, investigação e recursos educativos numa interface clara e intuitiva.
-
-A plataforma ajuda profissionais de saúde, investigadores, gestores e o público a aceder a informação fiável que apoia o diagnóstico precoce e melhores resultados em saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
+Foi gratificante contribuir para uma iniciativa que conecta evidência, política e impacto real, reforçando como dados abertos elevam o debate público e a responsabilização.`,
   },
   'custo-brasil': {
-    en: `Developed the frontend for Observatório do Custo Brasil, a platform dedicated to analyzing the structural factors that impact Brazil's economic competitiveness and business environment.
+    en: `I contributed to the Observatório do Custo Brasil, a platform dedicated to analyzing and monitoring the economic challenges facing Brazil. This initiative provides valuable insights into how structural inefficiencies in the country's economy — such as high taxes, bureaucracy, and logistical barriers — impact businesses and society as a whole.
 
-Using WordPress, I focused on building a responsive, accessible, and user-friendly interface that makes research, reports, and economic indicators easy to explore across desktop and mobile devices.
+The observatory serves as a critical resource for policymakers, businesses, and citizens to understand and address the factors that contribute to Brazil's high cost of doing business.`,
+    pt: `Contribuí para o Observatório do Custo Brasil, plataforma dedicada a analisar e monitorar os desafios econômicos do país. A iniciativa oferece insights sobre como ineficiências estruturais — altos impostos, burocracia e barreiras logísticas — impactam empresas e sociedade.
 
-The platform provides policymakers, businesses, researchers, and the public with access to reliable information through a clear information architecture and intuitive navigation. Throughout the project, I prioritized usability, performance, accessibility, and maintainability to deliver a consistent digital experience.`,
-    pt: `Desenvolvi o frontend do Observatório do Custo Brasil, plataforma dedicada a analisar os fatores estruturais que impactam a competitividade económica e o ambiente de negócios no Brasil.
-
-Com WordPress, foquei numa interface responsiva, acessível e amigável que torna fácil explorar investigação, relatórios e indicadores económicos em desktop e mobile.
-
-A plataforma oferece a gestores, empresas, investigadores e cidadãos informação fiável através de arquitetura de informação clara e navegação intuitiva. Priorizei usabilidade, performance, acessibilidade e manutenção.`,
-  },
-  'hfpm-who': {
-    en: `Developed the frontend for the Health Financing Progress Matrix (HFPM), a platform developed for the World Health Organization (WHO) that supports countries in evaluating and strengthening their health financing systems to advance Universal Health Coverage (UHC).
-
-Using Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience designed to present health financing frameworks, assessments, and policy resources through a clear and intuitive interface.
-
-The platform enables policymakers, researchers, and healthcare organizations to access structured information that supports evidence-based decision-making and health system reforms. Throughout the development, I focused on accessibility, performance, maintainable code, and scalable frontend architecture to ensure a reliable experience across devices.`,
-    pt: `Desenvolvi o frontend da Health Financing Progress Matrix (HFPM), plataforma da Organização Mundial da Saúde (OMS) que apoia países a avaliar e fortalecer sistemas de financiamento em saúde rumo à Cobertura Universal de Saúde (UHC).
-
-Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar frameworks, avaliações e recursos de política numa interface clara e intuitiva.
-
-A plataforma permite a gestores, investigadores e organizações de saúde aceder a informação estruturada que apoia decisões baseadas em evidência e reformas do sistema de saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
-  },
-  inovahc: {
-    en: `Developed the frontend for the InovaHC website, the Innovation Hub of Hospital das Clínicas, University of São Paulo (USP), creating a modern digital experience that supports healthcare innovation, digital transformation, and research initiatives.
-
-Using WordPress and Tailwind CSS, I built a responsive, accessible, and high-performance interface designed to showcase innovation programs, research projects, partnerships, and educational initiatives through clear information architecture and intuitive navigation.
-
-The platform helps researchers, healthcare professionals, startups, and institutional partners access reliable information about InovaHC's initiatives. Throughout the project, I focused on usability, accessibility, performance, and maintainable frontend solutions to ensure a consistent experience across devices.`,
-    pt: `Desenvolvi o frontend do site do InovaHC, hub de inovação do Hospital das Clínicas da Universidade de São Paulo (USP) — uma experiência digital moderna que apoia inovação em saúde, transformação digital e iniciativas de investigação.
-
-Com WordPress e Tailwind CSS, construí uma interface responsiva, acessível e de alta performance para apresentar programas de inovação, projetos de investigação, parcerias e iniciativas educativas com arquitetura de informação clara e navegação intuitiva.
-
-A plataforma ajuda investigadores, profissionais de saúde, startups e parceiros institucionais a aceder a informação fiável sobre as iniciativas do InovaHC. Foquei em usabilidade, acessibilidade, performance e soluções frontend sustentáveis.`,
-  },
-  safernet: {
-    en: `Developed the frontend for the Digital Citizenship platform, an initiative by SaferNet Brasil that provides educational resources to help schools promote digital citizenship, online safety, and the responsible use of technology.
-
-Using Vue.js and Tailwind CSS, I built a responsive, accessible, and high-performance user experience focused on making educational content easy to navigate for teachers, students, and schools across different devices.
-
-The platform supports educators with structured learning materials aligned with Brazil's educational guidelines, encouraging safer online behavior, digital literacy, and critical thinking. Throughout the development, I focused on accessibility, performance, maintainable code, and a scalable frontend architecture to ensure a seamless learning experience.`,
-    pt: `Desenvolvi o frontend da plataforma de Cidadania Digital, iniciativa da SaferNet Brasil que oferece recursos educativos para escolas promoverem cidadania digital, segurança online e uso responsável da tecnologia.
-
-Com Vue.js e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance, tornando o conteúdo educativo fácil de navegar para professores, estudantes e escolas em diferentes dispositivos.
-
-A plataforma apoia educadores com materiais alinhados às diretrizes educativas brasileiras, incentivando comportamento online mais seguro, literacia digital e pensamento crítico. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
+O observatório é recurso crítico para gestores, empresas e cidadãos compreenderem e enfrentarem os fatores que elevam o custo de fazer negócios no Brasil.`,
   },
   'aborto-brasil': {
-    en: `Developed the frontend for the Aborto no Brasil platform, an initiative by Instituto AzMina that provides data, research, and educational resources about access to legal abortion services and reproductive healthcare in Brazil.
-
-Using HTML, Tailwind CSS, and JavaScript, I built a responsive, accessible, and user-friendly interface designed to present complex information through clear navigation and an intuitive user experience.
-
-The platform brings together research, interactive content, and public information to support journalists, researchers, healthcare professionals, and the public with reliable, data-driven resources. Throughout the development, I focused on accessibility, performance, maintainable code, and responsive design to ensure a seamless experience across devices.`,
-    pt: `Desenvolvi o frontend da plataforma Aborto no Brasil, iniciativa do Instituto AzMina que disponibiliza dados, investigação e recursos educativos sobre acesso a serviços legais de aborto e saúde reprodutiva no Brasil.
-
-Com HTML, Tailwind CSS e JavaScript, construí uma interface responsiva, acessível e amigável para apresentar informação complexa com navegação clara e experiência intuitiva.
-
-A plataforma reúne investigação, conteúdo interativo e informação pública para apoiar jornalistas, investigadores, profissionais de saúde e o público com recursos fiáveis baseados em dados. Foquei em acessibilidade, performance, código sustentável e design responsivo.`,
+    en: `I contributed to the creation of the new website for Instituto AzMina, an organization dedicated to advancing reproductive rights and sexual health in Brazil. One of their prominent initiatives, the Mapa do Aborto Legal, plays a vital role in mapping the availability and access to legal abortion services across the country — a critical resource given the ongoing challenges in Brazil's public health system.`,
+    pt: `Contribuí para a criação do novo site do Instituto AzMina, organização dedicada a direitos reprodutivos e saúde sexual no Brasil. Uma das iniciativas centrais, o Mapa do Aborto Legal, mapeia a disponibilidade e o acesso a serviços legais de aborto em todo o país — recurso crítico diante dos desafios persistentes do sistema público de saúde.`,
   },
   'amazon-underworld': {
-    en: `Developed the frontend for Amazon Underworld, an interactive platform created in partnership with InfoAmazonia that maps and visualizes organized crime networks operating across the Amazon region through data-driven storytelling and geospatial analysis.
+    en: `I contributed to Amazon Underworld, an interactive map created in partnership with InfoAmazonia. This project sheds light on complex networks of organized crime in the Amazon — from illegal mining to trafficking and logging activities. The map provides crucial data on criminal activities impacting the rainforest, with a focus on environmental consequences and indigenous communities.
 
-Using PHP, Tailwind CSS, Mapbox, and QGIS, I contributed to building a responsive, accessible, and high-performance experience that transforms complex datasets into intuitive interactive maps and visual narratives.
+By integrating data from multiple sources and using advanced mapping tools like Mapbox and QGIS, we visualized the extent of these networks in an accessible and engaging format — underscoring the role of investigative journalism and technology in addressing pressing social and environmental issues.`,
+    pt: `Contribuí para o Amazon Underworld, mapa interativo criado em parceria com a InfoAmazonia. O projeto ilumina redes complexas de crime organizado na Amazônia — de mineração ilegal a tráfico e desmatamento. O mapa oferece dados sobre atividades criminosas que impactam a floresta, com foco nas consequências ambientais e nas comunidades indígenas.
 
-The platform brings together investigative journalism, geospatial data, and interactive visualizations to help researchers, journalists, policymakers, and the public better understand the environmental and social impacts of organized crime in the Amazon. Throughout the development, I focused on usability, performance, accessibility, and maintainable frontend solutions to deliver a seamless experience across devices.`,
-    pt: `Desenvolvi o frontend do Amazon Underworld, plataforma interativa criada em parceria com a InfoAmazonia que mapeia e visualiza redes de crime organizado na Amazónia através de storytelling baseado em dados e análise geoespacial.
-
-Com PHP, Tailwind CSS, Mapbox e QGIS, contribuí para uma experiência responsiva, acessível e de alta performance que transforma conjuntos de dados complexos em mapas interativos e narrativas visuais intuitivas.
-
-A plataforma reúne jornalismo investigativo, dados geoespaciais e visualizações interativas para ajudar investigadores, jornalistas, gestores e o público a compreender os impactos ambientais e sociais do crime organizado na Amazónia. Foquei em usabilidade, performance, acessibilidade e soluções frontend sustentáveis.`,
-  },
-  cedra: {
-    en: `Developed the frontend for CEDRA (Center for Studies and Data on Racial Inequalities), a platform that provides data, research, and interactive content to support discussions on racial equity and public policy in Brazil.
-
-Built with WordPress, Tailwind CSS, and modern frontend practices, the platform was designed to deliver a responsive, accessible, and high-performance experience while making complex information easy to explore across desktop and mobile devices.
-
-Throughout the project, I focused on frontend development, responsive design, accessibility, and performance optimization to create a scalable and maintainable digital platform that helps researchers, policymakers, journalists, and civil society organizations access reliable data and insights.`,
-    pt: `Desenvolvi o frontend do CEDRA (Centro de Estudos e Dados sobre Desigualdades Raciais), plataforma que disponibiliza dados, investigação e conteúdo interativo para apoiar debates sobre equidade racial e políticas públicas no Brasil.
-
-Com WordPress, Tailwind CSS e práticas frontend modernas, a plataforma foi desenhada para uma experiência responsiva, acessível e de alta performance, tornando informação complexa fácil de explorar em desktop e mobile.
-
-Foquei em desenvolvimento frontend, design responsivo, acessibilidade e otimização de performance — uma plataforma digital escalável e sustentável que ajuda investigadores, gestores, jornalistas e organizações da sociedade civil a aceder a dados e insights fiáveis.`,
+Integrando múltiplas fontes e ferramentas como Mapbox e QGIS, visualizamos a extensão dessas redes de forma acessível — reforçando o papel do jornalismo investigativo e da tecnologia em questões sociais e ambientais urgentes.`,
   },
   'golpe-flix': {
-    en: `Developed the frontend for Golpe Flix, an interactive digital experience created by Aos Fatos that documents and contextualizes the misinformation ecosystem surrounding Brazil's January 8 attacks on democracy.
-
-Rather than a traditional institutional website, the project recreates the familiar experience of a streaming platform, allowing visitors to explore hundreds of curated videos and investigative content through an intuitive, immersive interface. The challenge was translating a large volume of complex information into a seamless browsing experience that encourages discovery and engagement.
-
-Built with React and Tailwind CSS, I focused on crafting responsive user interfaces, reusable components, smooth interactions, and performance optimizations to ensure the platform remained fast, accessible, and enjoyable across different devices.`,
-    pt: `Desenvolvi o frontend do Golpe Flix, experiência digital interativa da Aos Fatos que documenta e contextualiza o ecossistema de desinformação em torno dos ataques de 8 de janeiro à democracia brasileira.
-
-Em vez de um site institucional tradicional, o projeto recria a experiência familiar de uma plataforma de streaming, permitindo explorar centenas de vídeos e conteúdos investigativos numa interface intuitiva e imersiva. O desafio foi traduzir um grande volume de informação complexa numa navegação fluida que incentiva descoberta e engajamento.
-
-Com React e Tailwind CSS, foquei em interfaces responsivas, componentes reutilizáveis, interações suaves e otimizações de performance — uma plataforma rápida, acessível e agradável em diferentes dispositivos.`,
+    en: `I collaborated on Golpe Flix, a significant initiative by Aos Fatos. This project serves as a digital memorial documenting widespread disinformation campaigns leading up to Brazil's January 8 attacks on democracy. Presented in a streaming format, Golpe Flix curates and analyzes over 600 pieces of media to reveal how extremist propaganda gained traction on digital platforms — emphasizing the urgent need to counter such narratives and protect democratic values.`,
+    pt: `Colaborei no Golpe Flix, iniciativa da Aos Fatos. O projeto funciona como memorial digital que documenta campanhas de desinformação antes dos ataques de 8 de janeiro à democracia brasileira. Em formato streaming, curadoria e analisa mais de 600 peças de mídia para revelar como propaganda extremista ganhou tração em plataformas digitais — reforçando a urgência de combater essas narrativas e proteger valores democráticos.`,
+  },
+  cedra: {
+    en: `I contributed to the website for CEDRA (Centro de Estudos e Dados sobre Desigualdades Raciais). The organization is a pivotal resource in the fight for racial equity in Brazil, offering comprehensive data and insights into racial inequalities across education, employment, housing, and beyond. Through CEDRA's platform, activists, policymakers, and researchers gain access to reliable information that supports transformative action toward a more equitable society.`,
+    pt: `Contribuí para o site do CEDRA (Centro de Estudos e Dados sobre Desigualdades Raciais). A organização é referência na luta por equidade racial no Brasil, oferecendo dados e análises sobre desigualdades em educação, emprego, moradia e outros eixos. Pela plataforma do CEDRA, ativistas, gestores e pesquisadores acessam informação confiável para ação transformadora rumo a uma sociedade mais justa.`,
   },
   hri: {
-    en: `Developed the frontend for Harm Reduction International (HRI), a global organization that promotes evidence-based public health policies and advocates for harm reduction initiatives in more than 100 countries.
-
-The platform was built to present extensive research, reports, publications, and policy resources through a clean and intuitive interface, making complex information accessible to healthcare professionals, researchers, policymakers, and the public. Balancing readability, navigation, and performance was essential to support users exploring large volumes of content.
-
-Working with PHP and Tailwind CSS, I focused on responsive layouts, component-based frontend development, accessibility, and performance optimization to deliver a fast, scalable, and maintainable web experience across all devices.`,
-    pt: `Desenvolvi o frontend da Harm Reduction International (HRI), organização global que promove políticas de saúde pública baseadas em evidência e defende iniciativas de redução de danos em mais de 100 países.
-
-A plataforma apresenta investigação, relatórios, publicações e recursos de política numa interface limpa e intuitiva, tornando informação complexa acessível a profissionais de saúde, investigadores, gestores e ao público. Equilibrar legibilidade, navegação e performance foi essencial para quem explora grandes volumes de conteúdo.
-
-Com PHP e Tailwind CSS, foquei em layouts responsivos, componentes, acessibilidade e otimização de performance — uma experiência web rápida, escalável e sustentável em todos os dispositivos.`,
+    en: `I developed the website for Harm Reduction International (HRI), a global organization dedicated to promoting evidence-based strategies to minimize the negative impacts of drug use and drug policies. Their work focuses on advancing public health, human rights, and social justice. One flagship initiative is the Global State of Harm Reduction, a comprehensive report monitoring harm reduction policies and services worldwide.`,
+    pt: `Desenvolvi o site da Harm Reduction International (HRI), organização global dedicada a estratégias baseadas em evidência para minimizar impactos negativos do uso de drogas e das políticas sobre drogas. O trabalho avança saúde pública, direitos humanos e justiça social. Uma iniciativa central é o Global State of Harm Reduction, relatório que monitora políticas e serviços de redução de danos no mundo.`,
   },
   okbr: {
-    en: `Built the frontend for Open Knowledge Brasil (OKBR), a nonprofit organization that promotes open data, transparency, and civic technology to strengthen public accountability and evidence-based decision-making.
+    en: `I contributed to the new website for Open Knowledge Brasil (OKBR), an organization committed to fostering open data and transparency in Brazil. One of their key projects, the Open Data Index for Cities, evaluates and promotes the quality of open data across Brazilian capitals — empowering public administrators and civil society to make data-driven decisions that enhance governance and combat misinformation.`,
+    pt: `Contribuí para o novo site da Open Knowledge Brasil (OKBR), organização comprometida com dados abertos e transparência no Brasil. Um projeto-chave, o Índice de Dados Abertos das Cidades, avalia e promove a qualidade de dados abertos nas capitais — empoderando gestores e sociedade civil a decidir com dados e fortalecer a governança.`,
+  },
+  'saude-ambiental': {
+    en: `I worked on the Saúde Ambiental portal, an initiative by Brazil's Ministry of Environment focused on the intersection between environmental quality and public health. The platform centralizes content, data, and strategies related to air quality, chemical safety, and environmental determinants of health — supporting public managers, researchers, and society with accessible information for decision-making and awareness.
 
-The project centered on creating a fast and intuitive platform that makes research, datasets, and transparency initiatives easily accessible to a broad audience. From public administrators and journalists to researchers and developers, the interface was designed to simplify navigation through large volumes of content while maintaining clarity and usability.
+It was fulfilling to contribute to a project that highlights how a healthy environment is essential for a healthy society — bridging data, policy, and impact in such a critical area.`,
+    pt: `Atuei no portal Saúde Ambiental, iniciativa do Ministério do Meio Ambiente sobre a interseção entre qualidade ambiental e saúde pública. A plataforma centraliza conteúdo, dados e estratégias sobre qualidade do ar, segurança química e determinantes ambientais da saúde — apoiando gestores, pesquisadores e sociedade com informação acessível para decisão e conscientização.
 
-Using PHP and Tailwind CSS, I developed responsive layouts, reusable frontend components, and optimized page performance to deliver a scalable and accessible experience across desktop and mobile devices.`,
-    pt: `Construí o frontend da Open Knowledge Brasil (OKBR), organização sem fins lucrativos que promove dados abertos, transparência e civic tech para reforçar a responsabilização pública e decisões baseadas em evidência.
+Foi gratificante contribuir para um projeto que mostra como ambiente saudável é essencial para sociedade saudável — conectando dados, política e impacto em área crítica.`,
+  },
+  desiderata: {
+    en: `I contributed to the new website for Instituto Desiderata, an organization focused on improving public healthcare for children and adolescents in Brazil. The institute is dedicated to enhancing early diagnosis and treatment for childhood cancer, as well as addressing other chronic health issues such as childhood obesity — including work on the Pediatric Oncology Panorama and related health data experiences.`,
+    pt: `Contribuí para o novo site do Instituto Desiderata, organização focada em melhorar a saúde pública de crianças e adolescentes no Brasil. O instituto atua no diagnóstico precoce e tratamento do câncer infantil e em outras questões crônicas de saúde infantil — incluindo o Panorama da Oncologia Pediátrica e experiências de dados em saúde.`,
+  },
+  'hfpm-who': {
+    en: `I contributed to the Health Financing Progress Matrix (HFPM) website, an essential tool by the World Health Organization (WHO). HFPM assesses a country's health financing system, providing insights to drive progress toward Universal Health Coverage (UHC). By evaluating how well countries align health financing policies with UHC goals, the matrix helps identify key gaps and opportunities for reform — improving financial protection and access to quality healthcare.`,
+    pt: `Contribuí para o site da Health Financing Progress Matrix (HFPM), ferramenta essencial da Organização Mundial da Saúde (OMS). A HFPM avalia sistemas de financiamento em saúde e orienta progresso rumo à Cobertura Universal de Saúde (UHC). Ao avaliar o alinhamento de políticas com metas de UHC, a matriz identifica lacunas e oportunidades de reforma — fortalecendo proteção financeira e acesso à saúde de qualidade.`,
+  },
+  inovahc: {
+    en: `I contributed to the new website for InovaHC, the innovation hub at Hospital das Clínicas, University of São Paulo. InovaHC advances healthcare innovation through digital health, telemedicine, and training healthcare professionals — with strong social impact, connecting people and resources to transform healthcare, especially in underserved regions of Brazil.`,
+    pt: `Contribuí para o novo site do InovaHC, hub de inovação do Hospital das Clínicas da USP. O InovaHC avança inovação em saúde com saúde digital, telemedicina e formação de profissionais — com forte impacto social, conectando pessoas e recursos para transformar o cuidado, especialmente em regiões menos atendidas do Brasil.`,
+  },
+  safernet: {
+    en: `I contributed to the website for Disciplina de Cidadania Digital, a vital initiative by SaferNet Brasil. The program equips educators with tools and resources to teach digital citizenship — online safety, empathy in digital interactions, and responsible use of technology. The curriculum aligns with Brazil's educational and legal frameworks, including the BNCC and LGPD, ensuring a comprehensive and impactful learning experience.`,
+    pt: `Contribuí para o site da Disciplina de Cidadania Digital, iniciativa da SaferNet Brasil. O programa oferece a educadores ferramentas para ensinar cidadania digital — segurança online, empatia nas interações digitais e uso responsável da tecnologia. O currículo alinha-se à BNCC e à LGPD, garantindo experiência de aprendizagem abrangente e impactante.`,
+  },
+  'siga-doacao': {
+    en: `I worked on Siga Sua Doação, a platform designed to make donating easier and more transparent. Part of MOL Central de Impacto, the project connects donors with organizations in need and helps track the impact of contributions — strengthening a culture of giving and social responsibility in Brazil.
 
-O projeto centrou-se numa plataforma rápida e intuitiva que torna investigação, datasets e iniciativas de transparência facilmente acessíveis a um público amplo. De gestores públicos e jornalistas a investigadores e developers, a interface simplifica a navegação por grandes volumes de conteúdo sem perder clareza nem usabilidade.
+Through Siga Sua Doação, donors can track the impact of their contributions and support causes that truly make a difference.`,
+    pt: `Atuei no Siga Sua Doação, plataforma que torna a doação mais simples e transparente. Integrante da MOL Central de Impacto, conecta doadores a organizações e permite acompanhar o impacto das contribuições — fortalecendo a cultura de doação e responsabilidade social no Brasil.
 
-Com PHP e Tailwind CSS, desenvolvi layouts responsivos, componentes reutilizáveis e performance otimizada — uma experiência escalável e acessível em desktop e mobile.`,
+Pela plataforma, doadores acompanham o impacto das contribuições e apoiam causas que fazem diferença real.`,
   },
   'weplan-forests': {
-    en: `Contributed to the frontend development of WePlan Forests, a decision-support platform that helps governments, researchers, and environmental organizations plan large-scale forest restoration using spatial data and scientific modeling.
+    en: `I was part of the development of WePlan-Forests, an innovative tool supporting tropical and subtropical forest ecosystem restoration. The platform provides evidence-based, spatially explicit solutions to help countries optimize restoration efforts — balancing carbon sequestration, biodiversity conservation, and cost-effectiveness.
 
-The project transforms complex environmental datasets into intuitive, interactive interfaces, enabling users to evaluate restoration scenarios based on biodiversity, carbon sequestration, and cost-effectiveness. The challenge was delivering a user experience that simplifies data exploration while maintaining performance and usability.
+WePlan-Forests empowers decision-makers to analyze scenarios and plan restoration initiatives effectively, contributing to global efforts in climate change mitigation and sustainable development. Developed with partners including the International Institute for Sustainability and the Forest Ecosystem Restoration Initiative.`,
+    pt: `Participei do WePlan-Forests, ferramenta inovadora de apoio à restauração de ecossistemas florestais tropicais e subtropicais. A plataforma oferece soluções espaciais baseadas em evidência para otimizar esforços de restauração — equilibrando sequestro de carbono, biodiversidade e custo-efetividade.
 
-I focused on building responsive interfaces, optimizing frontend performance, and creating reusable components that ensure a consistent experience across devices while supporting a platform designed for real-world environmental decision-making.`,
-    pt: `Contribuí para o desenvolvimento frontend do WePlan Forests, plataforma de apoio à decisão que ajuda governos, investigadores e organizações ambientais a planear restauração florestal em larga escala com dados espaciais e modelação científica.
-
-O projeto transforma conjuntos de dados ambientais complexos em interfaces interativas e intuitivas, permitindo avaliar cenários de restauração com base em biodiversidade, sequestro de carbono e custo-efetividade. O desafio foi simplificar a exploração de dados sem comprometer performance nem usabilidade.
-
-Foquei em interfaces responsivas, otimização de performance frontend e componentes reutilizáveis — uma experiência consistente em todos os dispositivos, para decisões ambientais no mundo real.`,
+WePlan-Forests empodera gestores a analisar cenários e planear iniciativas de restauração, contribuindo para mitigação climática e desenvolvimento sustentável. Desenvolvida com parceiros como o IIS e a Forest Ecosystem Restoration Initiative.`,
   },
   'narrativas-ancestrais': {
-    en: `Developed the frontend for Narrativas Ancestrais, a digital platform created by Amoreira to preserve and share Indigenous and Afro-Brazilian knowledge through storytelling, photography, audiovisual content, and interactive experiences.
+    en: `I contributed to the Narrativas Ancestrais website for Amoreira, an initiative celebrating and preserving the cultural heritage of indigenous and Afro-Brazilian communities. The project highlights ancestral narratives through storytelling, digital media, and art — offering a space for important voices to be shared and honored.
 
-The project required translating a rich visual identity into a responsive and immersive web experience, where design supports the stories instead of competing with them. Every interaction was built to encourage exploration while maintaining accessibility, performance, and consistency across devices.
+It was an honor to work on this project, helping amplify the voices of those who have been custodians of invaluable cultural wisdom for generations.`,
+    pt: `Contribuí para o site Narrativas Ancestrais da Amoreira, iniciativa que celebra e preserva a herança cultural de comunidades indígenas e afro-brasileiras. O projeto destaca narrativas ancestrais por storytelling, mídia digital e arte — ampliando vozes importantes e a relevância da preservação cultural.
 
-Working with PHP and Tailwind CSS, I focused on responsive layouts, reusable frontend components, and performance optimization, ensuring the platform could deliver a seamless experience while honoring the project's artistic and cultural vision.`,
-    pt: `Desenvolvi o frontend de Narrativas Ancestrais, plataforma digital da Amoreira para preservar e partilhar saberes indígenas e afro-brasileiros através de storytelling, fotografia, audiovisual e experiências interativas.
-
-O projeto exigiu traduzir uma identidade visual rica numa experiência web responsiva e imersiva, em que o design apoia as histórias em vez de competir com elas. Cada interação foi pensada para incentivar a exploração, mantendo acessibilidade, performance e consistência entre dispositivos.
-
-Com PHP e Tailwind CSS, foquei em layouts responsivos, componentes reutilizáveis e otimização de performance — uma experiência fluida que honra a visão artística e cultural do projeto.`,
+Foi uma honra ajudar a amplificar vozes que guardam saberes culturais invaluáveis há gerações.`,
   },
   nsi: {
-    en: `Developed the frontend for the New South Institute (NSI), a think tank dedicated to advancing evidence-based public policy, democratic governance, and institutional development across the Global South.
-
-The platform was designed to organize a broad ecosystem of research, publications, policy initiatives, and institutional programs into a clear and accessible digital experience. My focus was on building intuitive navigation, responsive layouts, and reusable frontend components that make complex content easy to discover and consume.
-
-Working with Tailwind CSS and modern frontend practices, I optimized performance, accessibility, and maintainability to deliver a scalable platform that supports policymakers, researchers, journalists, and civil society organizations worldwide.`,
-    pt: `Desenvolvi o frontend do New South Institute (NSI), think tank dedicado a políticas públicas baseadas em evidência, governação democrática e desenvolvimento institucional no Sul Global.
-
-A plataforma organiza um ecossistema amplo de investigação, publicações, iniciativas de política e programas institucionais numa experiência digital clara e acessível. Foquei em navegação intuitiva, layouts responsivos e componentes reutilizáveis que tornam conteúdo complexo fácil de descobrir e consumir.
-
-Com Tailwind CSS e práticas frontend modernas, otimizei performance, acessibilidade e manutenção — uma plataforma escalável para gestores, investigadores, jornalistas e organizações da sociedade civil em todo o mundo.`,
+    en: `I contributed to the new website for the New South Institute (NSI), devoted to addressing complex challenges in fragile democracies through evidence-based research and policy advocacy. NSI's initiatives include programs on state capture, public service reform, migration governance, and South-South Dialogues — fostering effective, accountable institutions across the Global South.`,
+    pt: `Contribuí para o novo site do New South Institute (NSI), dedicado a desafios complexos em democracias frágeis por meio de pesquisa e advocacy baseados em evidência. As iniciativas incluem captura do Estado, reforma do serviço público, governança migratória e Diálogos Sul-Sul — fortalecendo instituições eficazes no Sul Global.`,
   },
   'ccr-rmbh': {
     en: `Visual communication project on mobility modernization in the Belo Horizonte metropolitan region. The work translates complex infrastructure and urban mobility themes into clear narratives and visual systems for public engagement — supporting CCR's communication around modernization across the RMBH.`,
     pt: `Projeto de comunicação visual sobre modernização da mobilidade na região metropolitana de Belo Horizonte. O trabalho traduz temas complexos de infraestrutura e mobilidade urbana em narrativas e sistemas visuais claros para engajamento público — apoiando a comunicação da CCR sobre modernização na RMBH.`,
   },
   tjto: {
-    en: `Since 2011, I have been part of the digital transformation of the Court of Justice of the State of Tocantins (TJTO), contributing to the development, maintenance, and continuous evolution of one of the state's largest public web ecosystems.
+    en: `Since 2011, I have worked as a web developer in the Judiciary, responsible for creating and maintaining all institutional websites. We use Joomla as the CMS for our projects, and the entire template is developed by our team.
 
-Working with a custom Joomla architecture, I have been responsible for building institutional portals, campaign websites, internal solutions, and new digital services that support both citizens and court employees. Beyond developing new features, I have modernized legacy systems, improved content management workflows, optimized performance, and helped maintain a reliable platform that serves thousands of users every day.
+The main portal of TJTO (tjto.jus.br) is a robust and stable platform, with an average of 8.9 thousand daily visits. Over the years I have created dedicated microsites, improved the user management system, and continuously evolved the front-end — ensuring high performance, accessibility, and reliability even under heavy traffic.
 
-Over more than a decade, I have participated in projects ranging from accessibility improvements and responsive redesigns to the implementation of new modules, integrations, and user management enhancements. This long-term experience has allowed me to combine technical expertise with a deep understanding of public sector requirements, including security, scalability, usability, and long-term maintainability.
+Additionally, I have continuously worked on developing new versions and improvements to these projects, significantly contributing to their evolution and success.`,
+    pt: `Desde 2011 atuo como desenvolvedor web no Judiciário, responsável pela criação e manutenção de todos os sites institucionais. Utilizamos Joomla como CMS, com templates desenvolvidos internamente.
 
-Throughout this journey, I have collaborated with multidisciplinary teams to deliver digital solutions that improve public access to judicial information and strengthen the institution's online presence.`,
-    pt: `Desde 2011 faço parte da transformação digital do Tribunal de Justiça do Estado do Tocantins (TJTO), contribuindo para o desenvolvimento, manutenção e evolução contínua de um dos maiores ecossistemas web públicos do estado.
+O portal principal do TJTO (tjto.jus.br) é plataforma robusta com média de 8,9 mil visitas diárias. Ao longo dos anos criei hotsites dedicados, melhorei a gestão de usuários e evoluí continuamente o front-end — garantindo performance, acessibilidade e confiabilidade mesmo com alto tráfego.
 
-Com arquitetura Joomla customizada, sou responsável por portais institucionais, hotsites de campanha, soluções internas e novos serviços digitais para cidadãos e servidores. Além de novas funcionalidades, modernizei sistemas legados, melhorei fluxos de gestão de conteúdo, otimizei performance e ajudei a manter uma plataforma fiável que serve milhares de utilizadores todos os dias.
+Trabalho de forma contínua em novas versões e melhorias, contribuindo significativamente para a evolução e o sucesso desses projetos.`,
+  },
+  'eles-tao-viajando': {
+    en: `Eles Tão Viajando is a full-stack application developed as the final project for the Full Stack Web Developer course at FLAG. The platform allows users to share travel experiences with interactive maps, image galleries, a blog, and an admin area for content management.
 
-Ao longo de mais de uma década, participei em projetos desde melhorias de acessibilidade e redesigns responsivos até novos módulos, integrações e gestão de utilizadores. Esta experiência de longo prazo permitiu unir competência técnica a um entendimento profundo dos requisitos do setor público — segurança, escalabilidade, usabilidade e manutenção a longo prazo.
+It was a great opportunity to work with a modern stack, external API integrations, security practices, and a complete, well-organized system — combining front-end and back-end delivery in a production-ready project.`,
+    pt: `Eles Tão Viajando é aplicação full stack desenvolvida como projeto final do curso Professional Full Stack Web Development na FLAG. A plataforma permite compartilhar experiências de viagem com mapas interativos, galerias, blog e área admin para gestão de conteúdo.
 
-Nesta jornada, colaborei com equipas multidisciplinares para entregar soluções digitais que melhoram o acesso público à informação judicial e reforçam a presença online da instituição.`,
+Foi oportunidade de trabalhar stack moderna, integrações com APIs externas, práticas de segurança e um sistema completo e organizado — unindo entrega front-end e back-end em projeto pronto para produção.`,
   },
 }
 

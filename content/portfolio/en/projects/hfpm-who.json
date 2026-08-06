@@ -8,9 +8,8 @@
     "UHC"
   ],
   "stack": [
-    "Nuxt",
     "Tailwind CSS",
-    "JavaScript"
+    "CSS"
   ],
-  "body": "Developed the frontend for the Health Financing Progress Matrix (HFPM), a platform developed for the World Health Organization (WHO) that supports countries in evaluating and strengthening their health financing systems to advance Universal Health Coverage (UHC).\n\nUsing Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience designed to present health financing frameworks, assessments, and policy resources through a clear and intuitive interface.\n\nThe platform enables policymakers, researchers, and healthcare organizations to access structured information that supports evidence-based decision-making and health system reforms. Throughout the development, I focused on accessibility, performance, maintainable code, and scalable frontend architecture to ensure a reliable experience across devices."
+  "body": "I contributed to the Health Financing Progress Matrix (HFPM) website, an essential tool by the World Health Organization (WHO). HFPM assesses a country's health financing system, providing insights to drive progress toward Universal Health Coverage (UHC). By evaluating how well countries align health financing policies with UHC goals, the matrix helps identify key gaps and opportunities for reform — improving financial protection and access to quality healthcare."
 }

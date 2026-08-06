@@ -1,0 +1,16 @@
+{
+  "id": "dr-jose-messias",
+  "title": "Dr. José Messias",
+  "organization": "Dr. José Messias",
+  "description": "Site médico moderno e responsivo para cirurgia bariátrica e tratamento da obesidade em Brasília — design limpo, navegação intuitiva, acessibilidade e performance alinhados à identidade profissional e ao cuidado com o paciente.",
+  "tags": [
+    "Saúde",
+    "Landing Page"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "body": "Desenvolvi um site médico moderno e responsivo para o Dr. José Messias, focado em apresentar cirurgia bariátrica e tratamento da obesidade de forma profissional, acessível e confiável.\n\nO projeto foi pensado para fortalecer a presença digital do médico com design limpo, navegação intuitiva e front-end orientado a performance. O site destaca especialidades, informações ao paciente, opções de consulta e canais de contacto, garantindo experiência fluida em desktop e mobile.\n\nDurante o desenvolvimento, priorizei responsividade, acessibilidade, experiência do usuário, consistência visual e performance — entregando uma experiência rápida e alinhada à identidade profissional e ao cuidado centrado no paciente."
+}

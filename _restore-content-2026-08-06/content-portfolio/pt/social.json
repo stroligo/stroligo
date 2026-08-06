@@ -1,0 +1,26 @@
+{
+  "cv": {
+    "label": "Currículo",
+    "description": "PDF otimizado para ATS — maio 2026"
+  },
+  "linkedin": {
+    "label": "LinkedIn",
+    "description": "Perfil completo, experiência e todos os projetos"
+  },
+  "github": {
+    "label": "GitHub",
+    "description": "Código aberto e experimentos"
+  },
+  "behance": {
+    "label": "Behance",
+    "description": "Galerias visuais dos projetos"
+  },
+  "email": {
+    "label": "E-mail",
+    "description": "Enviar mensagem profissional"
+  },
+  "whatsapp": {
+    "label": "WhatsApp",
+    "description": "Mensagem direta com texto sugerido"
+  }
+}
