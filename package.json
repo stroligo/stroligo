@@ -18,7 +18,6 @@
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "pregenerate": "npm run sync:assets && npm run sync:content && npm run generate:sitemap",
     "prebuild": "npm run generate:sitemap",
-    "postbuild": "node scripts/sync-hostinger-public.mjs",
     "generate": "nuxt generate",
     "postgenerate": "tsx scripts/patch-static-seo.ts",
     "preview": "nuxt preview",

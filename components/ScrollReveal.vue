@@ -26,7 +26,6 @@ const props = withDefaults(
 
 const root = ref<HTMLElement | null>(null)
 const visible = ref(false)
-const pending = ref(false)
 const staticMode = ref(false)
 
 let observer: IntersectionObserver | null = null
@@ -40,9 +39,6 @@ onMounted(() => {
 
   const node = root.value
   if (!node) return
-
-  // Only hide for animation after JS is alive — keeps SSR/no-JS content readable.
-  pending.value = true
 
   observer = new IntersectionObserver(
     ([entry]) => {
@@ -73,7 +69,6 @@ onUnmounted(() => {
     class="stro-reveal"
     :class="[
       `stro-reveal--${variant}`,
-      pending && 'stro-reveal--pending',
       visible && 'stro-reveal--visible',
       staticMode && 'stro-reveal--static',
     ]"
