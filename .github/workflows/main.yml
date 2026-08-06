@@ -12,12 +12,13 @@
 # Variável opcional (Variables): DEPLOY_PORT → só se a tua conta usar outra porta
 # Secret opcional: GOOGLE_SITE_VERIFICATION → token da meta tag do Search Console
 
+# Desativado no push: o site está na Hostinger como Web App Node.js.
+# Deploy automático por SFTP competia com a Hostinger e deixava /_nuxt em 404.
+# Para forçar sync SFTP manualmente: Actions → este workflow → Run workflow.
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
-name: Deploy website on push
+name: Deploy website on push (SFTP manual)
 
 concurrency:
   # Não cancelar deploy a meio — deixa o Hostinger com HTML novo e /_nuxt incompleto (404).
