@@ -12,12 +12,12 @@
 # Variável opcional (Variables): DEPLOY_PORT → só se a tua conta usar outra porta
 # Secret opcional: GOOGLE_SITE_VERIFICATION → token da meta tag do Search Console
 
+name: Deploy website on push
+
 on:
   push:
     branches:
       - main
-
-name: Deploy website on push
 
 concurrency:
   group: deploy-production
@@ -31,6 +31,7 @@ jobs:
     name: Deploy to Hostinger
     runs-on: ubuntu-latest
     timeout-minutes: 45
+
     steps:
       - uses: actions/checkout@v5
 
@@ -50,11 +51,16 @@ jobs:
       - name: Prepare deploy bundle
         run: |
           rm -rf .output/public/_studio-app .output/public/_studio .output/public/__nuxt_content
+
           test -f .output/public/index.html
           test -f .output/public/sitemap.xml
           test -f .output/public/robots.txt
-          echo "Deploy size:" && du -sh .output/public
-          echo "File count:" && find .output/public -type f | wc -l
+
+          echo "Deploy size:"
+          du -sh .output/public
+
+          echo "File count:"
+          find .output/public -type f | wc -l
 
       - name: Test Hostinger SFTP (diagnostic)
         env:
@@ -62,20 +68,25 @@ jobs:
           PORT: ${{ vars.DEPLOY_PORT || '65002' }}
         run: |
           set -euo pipefail
+
           echo "Host: ${HOST:-<missing HOST secret>}"
           echo "Port: $PORT"
+
           if [ -z "${HOST:-}" ]; then
-            echo "::error::Secret HOST não configurado em GitHub → Settings → Secrets → Actions"
+            echo "::error::Secret HOST não configurado"
             exit 1
           fi
+
           if bash -c "echo >/dev/tcp/${HOST}/${PORT}" 2>/dev/null; then
             echo "SFTP port $PORT is reachable from GitHub runners"
           else
-            echo "::warning::Port $PORT not reachable from this runner (Hostinger may block GitHub IPs). Deploy will still be attempted."
+            echo "::warning::Port $PORT not reachable from this runner."
           fi
 
       - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
 
       - name: Sync to Hostinger (SFTP)
         env:
@@ -85,6 +96,7 @@ jobs:
           PORT: ${{ vars.DEPLOY_PORT || '65002' }}
         run: |
           set -euo pipefail
+
           for var in HOST USER PASS; do
             if [ -z "${!var:-}" ]; then
               echo "::error::Secret $var não configurado em GitHub → Settings → Secrets → Actions"
@@ -92,14 +104,21 @@ jobs:
             fi
           done
 
-          echo "Uploading $(find .output/public -type f | wc -l) files to public_html/ …"
+          echo "Uploading $(find .output/public -type f | wc -l) files to public_html/..."
 
           lftp -u "$USER","$PASS" "sftp://$HOST:$PORT" <<'LFTP'
           set sftp:auto-confirm yes
           set cmd:fail-exit yes
-          set net:timeout 30
-          set net:max-retries 3
+
+          # Mais tolerância à conexão da Hostinger
+          set net:timeout 120
+          set net:max-retries 10
           set net:reconnect-interval-base 5
-          mirror -R --verbose --parallel=4 .output/public/ public_html/
+          set net:reconnect-interval-max 30
+          set xfer:clobber on
+
+          # Upload sem paralelismo
+          mirror -R --verbose --continue .output/public/ public_html/
+
           bye
           LFTP
