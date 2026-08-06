@@ -8,8 +8,9 @@
     "LGPD"
   ],
   "stack": [
-    "Vue",
-    "Tailwind CSS"
+    "Vue.js",
+    "Tailwind CSS",
+    "JavaScript"
   ],
-  "body": "I contributed to the website for Disciplina de Cidadania Digital, a vital initiative by SaferNet Brasil. The program equips educators with tools and resources to teach digital citizenship — online safety, empathy in digital interactions, and responsible use of technology. The curriculum aligns with Brazil's educational and legal frameworks, including the BNCC and LGPD, ensuring a comprehensive and impactful learning experience."
+  "body": "Developed the frontend for the Digital Citizenship platform, an initiative by SaferNet Brasil that provides educational resources to help schools promote digital citizenship, online safety, and the responsible use of technology.\n\nUsing Vue.js and Tailwind CSS, I built a responsive, accessible, and high-performance user experience focused on making educational content easy to navigate for teachers, students, and schools across different devices.\n\nThe platform supports educators with structured learning materials aligned with Brazil's educational guidelines, encouraging safer online behavior, digital literacy, and critical thinking. Throughout the development, I focused on accessibility, performance, maintainable code, and a scalable frontend architecture to ensure a seamless learning experience."
 }

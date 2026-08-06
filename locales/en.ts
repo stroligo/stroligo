@@ -17,6 +17,7 @@ export default {
     skipToContent: 'Skip to content',
     mainNav: 'Main',
     filterProjects: 'Filter projects by category',
+    sortProjects: 'Sort projects',
     projectTags: 'Technologies and topics',
     projectModal: 'Project details',
     socialNav: 'Social links',
@@ -48,7 +49,7 @@ export default {
     stackTitle: 'Core stack',
     paragraphs: [
       'Software Engineer and front-end specialist with 18+ years of experience delivering digital solutions for public and private sectors. I build modern, responsive, accessible interfaces with React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS, and Material UI — from layout to production, in agile and multicultural teams.',
-      'I turn UI/UX into scalable architectures for high-traffic government portals, social impact platforms, data visualization, and transparency initiatives (open data, civic tech). I have contributed to projects with the WHO, Brazil’s Ministry of Environment, research institutes, NGOs, and investigative journalism outlets in Brazil and Europe, with a focus on performance, accessibility, and maintainable code.',
+      'I turn UI/UX into scalable architectures for high-traffic government portals, social impact platforms, data visualization, and transparency initiatives (open data, civic tech). I have contributed to projects with Fundação Itaú, the WHO, EUIPO, Brazil’s Ministry of Environment, research institutes, NGOs, and investigative journalism outlets in Brazil and Europe, with a focus on performance, accessibility, and maintainable code.',
     ],
   },
   work: {
@@ -74,6 +75,9 @@ export default {
     moreBadges: 'Show more skills and tags',
     countOne: 'project',
     countMany: 'projects',
+    sortLabel: 'Sort',
+    sortFeatured: 'Featured',
+    sortRecent: 'Most recent',
     categories: {
       todos: 'All',
       impacto: 'Social impact',
@@ -82,6 +86,14 @@ export default {
       institucional: 'Institutional',
     },
     items: [
+      {
+        id: 'trampos-do-futuro',
+        title: 'Trampos do Futuro 2026',
+        organization: 'Fundação Itaú',
+        description:
+          'Frontend for Fundação Itaú’s Trampos do Futuro 2026 — modern, responsive and accessible experience for thousands of students and educators exploring careers and the future of work.',
+        tags: ['Education', 'Social Impact'],
+      },
       {
         id: 'dr-jose-messias',
         title: 'Dr. José Messias',
@@ -193,6 +205,14 @@ export default {
         description:
           'Portal on the intersection of environmental quality and public health in Brazil — air, chemicals, and environmental determinants.',
         tags: ['Government'],
+      },
+      {
+        id: 'euipo',
+        title: 'EUIPO',
+        organization: 'European Union Intellectual Property Office',
+        description:
+          'Frontend for EUIPO digital platforms — secure, accessible and scalable React/TypeScript/Material UI interfaces supporting intellectual property services across the EU.',
+        tags: ['Enterprise', 'Public sector'],
       },
       {
         id: 'desiderata',

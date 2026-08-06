@@ -8,7 +8,8 @@
   ],
   "stack": [
     "Nuxt",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "JavaScript"
   ],
-  "body": "I worked on the Saúde Ambiental portal, an initiative by Brazil's Ministry of Environment focused on the intersection between environmental quality and public health. The platform centralizes content, data, and strategies related to air quality, chemical safety, and environmental determinants of health — supporting public managers, researchers, and society with accessible information for decision-making and awareness.\n\nIt was fulfilling to contribute to a project that highlights how a healthy environment is essential for a healthy society — bridging data, policy, and impact in such a critical area."
+  "body": "Developed the frontend for the Saúde Ambiental platform, an initiative by Brazil's Ministry of the Environment and Climate Change (MMA) that provides environmental health indicators and data to support public policies and informed decision-making.\n\nBuilt with Nuxt and Tailwind CSS, I focused on creating a responsive, accessible, and high-performance user experience capable of presenting complex environmental and public health data through an intuitive interface and interactive visualizations.\n\nThe platform brings together indicators, research, and official information to help researchers, public managers, healthcare professionals, and citizens better understand the relationship between environmental conditions and public health. Throughout the development, I prioritized accessibility, performance, maintainable code, and a scalable frontend architecture to ensure a reliable experience across devices."
 }

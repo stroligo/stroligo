@@ -9,7 +9,9 @@
   ],
   "stack": [
     "WordPress",
-    "Tailwind CSS"
+    "HTML",
+    "CSS",
+    "JavaScript"
   ],
-  "body": "I contributed to the Observatório do Custo Brasil, a platform dedicated to analyzing and monitoring the economic challenges facing Brazil. This initiative provides valuable insights into how structural inefficiencies in the country's economy — such as high taxes, bureaucracy, and logistical barriers — impact businesses and society as a whole.\n\nThe observatory serves as a critical resource for policymakers, businesses, and citizens to understand and address the factors that contribute to Brazil's high cost of doing business."
+  "body": "Developed the frontend for Observatório do Custo Brasil, a platform dedicated to analyzing the structural factors that impact Brazil's economic competitiveness and business environment.\n\nUsing WordPress, I focused on building a responsive, accessible, and user-friendly interface that makes research, reports, and economic indicators easy to explore across desktop and mobile devices.\n\nThe platform provides policymakers, businesses, researchers, and the public with access to reliable information through a clear information architecture and intuitive navigation. Throughout the project, I prioritized usability, performance, accessibility, and maintainability to deliver a consistent digital experience."
 }
