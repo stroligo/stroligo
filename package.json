@@ -38,9 +38,25 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "playwright": "^1.52.0",
-    "sharp": "^0.34.1",
+    "sharp": "0.35.5",
     "tailwindcss": "^4.1.4",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "@nuxtjs/mdc": "0.22.2",
+    "@ai-sdk/provider-utils": "4.0.33",
+    "brace-expansion": "5.0.12",
+    "esbuild": "0.28.2",
+    "js-yaml": "4.3.2",
+    "sharp": "0.35.5",
+    "socket.io-parser": "4.2.7",
+    "svgo": "4.1.0",
+    "ws": "8.21.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true,
+    "fsevents@2.3.2": true
   }
 }

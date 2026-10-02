@@ -4,19 +4,19 @@
  */
 export type ProjectAsset = {
   /** Site ou app ao vivo */
-  siteUrl?: string
+  siteUrl?: string;
   /** Caminho local (/projects/…) ou URL absoluta */
-  imageUrl?: string
-  imageAlt?: string
+  imageUrl?: string;
+  imageAlt?: string;
   /** Ordem no perfil LinkedIn (menor = mais destaque) */
-  order: number
+  order: number;
   /** Galeria Behance quando não está em projects.meta */
-  behanceUrl?: string
-}
+  behanceUrl?: string;
+};
 
 export const projectAssetsById: Record<string, ProjectAsset> = {
   'fundo-vale': {
-    siteUrl: 'https://www.fundovale.org/',
+    siteUrl: 'https://www.fundovale.org/relatorio-de-impacto-2025/',
     imageAlt: 'Floresta Amazônica — impacto socioambiental Fundo Vale',
     order: 0,
   },
@@ -137,8 +137,8 @@ export const projectAssetsById: Record<string, ProjectAsset> = {
     siteUrl: 'https://www.tjto.jus.br/',
     order: 27,
   },
-}
+};
 
 export function projectImagePath(id: string): string {
-  return `/projects/${id}.webp`
+  return `/projects/${id}.webp`;
 }
