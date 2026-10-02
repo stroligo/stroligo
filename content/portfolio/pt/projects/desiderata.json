@@ -12,5 +12,5 @@
     "Tailwind CSS",
     "JavaScript"
   ],
-  "body": "Desenvolvi o frontend da plataforma Panorama Oncologia, iniciativa do Instituto Desiderata focada em consciencialização sobre cancro infantil, diagnóstico precoce e saúde pediátrica no Brasil.\n\nCom Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar conteúdo de saúde, investigação e recursos educativos numa interface clara e intuitiva.\n\nA plataforma ajuda profissionais de saúde, investigadores, gestores e o público a aceder a informação fiável que apoia o diagnóstico precoce e melhores resultados em saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável."
+  "body": "Desenvolvi o frontend do site do Instituto Desiderata, com Nuxt e Tailwind CSS, criando uma experiência digital moderna, acessível e responsiva que fortalece a presença da organização.\n\nO site comunica a missão, as iniciativas e os recursos educativos do instituto por meio de uma interface limpa, navegação intuitiva e uma experiência centrada no usuário.\n\nFoquei numa arquitetura frontend escalável, com performance consistente em desktop e mobile, acessibilidade e manutenibilidade, para que profissionais de saúde, gestores, parceiros e o público cheguem a informação confiável sobre a saúde de crianças e adolescentes no Brasil."
 }

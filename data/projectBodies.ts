@@ -1,4 +1,6 @@
 import type { ContentLocale } from '~/lib/portfolio/locale'
+import { localizedCopyForLocale } from '~/data/localizedCopy'
+import { projectBodiesEsById } from '~/data/projectBodiesEs'
 
 type ProjectBodyCopy = {
   en: string
@@ -10,17 +12,33 @@ type ProjectBodyCopy = {
  * @see https://chatgpt.com/share/6a73eeb7-e2bc-83e9-8575-401ec44adcd6
  */
 export const projectBodiesById: Record<string, ProjectBodyCopy> = {
+  'fundo-vale': {
+    en: `Developed the frontend for Fundo Vale’s 2025 Impact Report, a digital experience that presents the organization’s social and environmental impact, results, initiatives, and learnings from its work across the Amazon and other territories.
+
+Built with WordPress, Tailwind CSS, and JavaScript, the project turns a large volume of institutional content, impact data, and information into an engaging and intuitive experience. The interface combines structured content, visual storytelling, animations, and interactive elements so complex information is easier to explore.
+
+The platform presents Fundo Vale’s approach to impact, including its Theory of Change, supported initiatives, socio-environmental businesses, partnerships, and work related to the bioeconomy, forests, climate, innovation, and impact finance.
+
+The experience is responsive and accessible across devices, with a focus on usability, performance, visual consistency, and a clear information hierarchy. I was responsible for the complete frontend, including animations, responsive implementation, accessibility, and cross-device testing.`,
+    pt: `Desenvolvi o frontend do Relatório de Impacto 2025 do Fundo Vale, uma experiência digital que apresenta o impacto social e ambiental da organização, resultados, iniciativas e aprendizados do trabalho na Amazônia e em outros territórios.
+
+Com WordPress, Tailwind CSS e JavaScript, o projeto transforma um grande volume de conteúdo institucional, dados de impacto e informação numa experiência envolvente e intuitiva. A interface combina conteúdo estruturado, narrativa visual, animações e elementos interativos para tornar informação complexa mais fácil de explorar.
+
+A plataforma apresenta a abordagem de impacto do Fundo Vale, incluindo a Teoria da Mudança, iniciativas apoiadas, negócios socioambientais, parcerias e o trabalho ligado à bioeconomia, florestas, clima, inovação e finanças de impacto.
+
+A experiência é responsiva e acessível em diferentes dispositivos, com foco em usabilidade, performance, consistência visual e hierarquia clara de informação. Fui responsável pelo frontend completo, incluindo animações, implementação responsiva, acessibilidade e testes entre dispositivos.`,
+  },
   'trampos-do-futuro': {
-    en: `Developed the frontend for Trampos do Futuro 2026, an initiative by Fundação Itaú that helps young people explore the careers and opportunities shaping the future of work.
+    en: `Contributed to the launch of Trampos do Futuro 2026, an initiative by Fundação Itaú that helps young people explore the careers and opportunities shaping the future of work.
 
-Built with Nuxt and Tailwind CSS, I focused on creating a modern, responsive, and accessible experience that presents event information, activities, and educational content in an engaging way.
+I built the frontend with Nuxt and Tailwind CSS: a modern, responsive, and accessible experience that brings together event information, activities, speakers, and educational content.
 
-Throughout the development, I prioritized performance, accessibility, usability, and maintainability to deliver a scalable digital experience for thousands of students and educators.`,
-    pt: `Desenvolvi o frontend do Trampos do Futuro 2026, iniciativa da Fundação Itaú que aproxima jovens das carreiras e oportunidades que moldam o futuro do trabalho.
+The project was designed so thousands of students, educators, and visitors can reach that knowledge in a simple and intuitive way, combining performance, usability, and a visual experience aligned with the energy of the event.`,
+    pt: `Contribuí para o lançamento do Trampos do Futuro 2026, iniciativa da Fundação Itaú que aproxima jovens das carreiras e oportunidades que moldam o futuro do trabalho.
 
-Com Nuxt e Tailwind CSS, foquei numa experiência moderna, responsiva e acessível que apresenta informações do evento, atividades e conteúdos educativos de forma envolvente.
+Desenvolvi o frontend com Nuxt e Tailwind CSS: uma experiência moderna, responsiva e acessível que reúne informações do evento, atividades, palestrantes e conteúdo educativo.
 
-Priorizei performance, acessibilidade, usabilidade e manutenção a longo prazo — uma experiência escalável para milhares de estudantes e educadores.`,
+O projeto foi pensado para que milhares de estudantes, educadores e visitantes acessem esse conhecimento de forma simples e intuitiva, combinando performance, usabilidade e uma experiência visual alinhada à energia do evento.`,
   },
   'dr-jose-messias': {
     en: `Developed a modern and responsive medical website for Dr. José Messias, focused on presenting bariatric surgery and obesity treatment services in a professional, accessible, and trustworthy way.
@@ -146,17 +164,29 @@ Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de 
 
 A plataforma ajuda utilizadores a monitorizar doações, aceder a informação de impacto e compreender como as contribuições apoiam iniciativas sociais. Priorizei acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
   },
+  'panorama-oncologia': {
+    en: `Developed the frontend for the Pediatric Oncology Panorama, an initiative by Instituto Desiderata focused on childhood cancer awareness, early diagnosis, and pediatric healthcare in Brazil.
+
+Using Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance experience that presents indicators, research, and educational resources through a clear interface.
+
+The platform helps healthcare professionals, researchers, policymakers, and the public access reliable information that supports early diagnosis and better health outcomes. I focused on accessibility, performance, maintainable code, and a scalable frontend architecture.`,
+    pt: `Desenvolvi o frontend do Panorama da Oncologia Pediátrica, iniciativa do Instituto Desiderata focada em conscientização sobre câncer infantil, diagnóstico precoce e saúde pediátrica no Brasil.
+
+Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar indicadores, pesquisa e recursos educativos numa interface clara.
+
+A plataforma ajuda profissionais de saúde, pesquisadores, gestores e o público a acessar informação confiável que apoia o diagnóstico precoce e melhores resultados em saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
+  },
   desiderata: {
-    en: `Developed the frontend for the Panorama Oncologia platform, an initiative by Instituto Desiderata focused on improving childhood cancer awareness, early diagnosis, and pediatric healthcare in Brazil.
+    en: `Developed the frontend for the Instituto Desiderata website, using Nuxt and Tailwind CSS to create a modern, accessible, and responsive digital experience that strengthens the organization’s presence.
 
-Using Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance user experience designed to present healthcare content, research, and educational resources through a clear and intuitive interface.
+The site communicates the institute’s mission, initiatives, and educational resources through a clean interface, intuitive navigation, and a user-centered experience.
 
-The platform helps healthcare professionals, researchers, policymakers, and the public access reliable information that supports early diagnosis and better health outcomes. Throughout the development, I focused on accessibility, performance, maintainable code, and scalable frontend architecture to ensure a seamless experience across devices.`,
-    pt: `Desenvolvi o frontend da plataforma Panorama Oncologia, iniciativa do Instituto Desiderata focada em consciencialização sobre cancro infantil, diagnóstico precoce e saúde pediátrica no Brasil.
+I focused on a scalable frontend architecture with consistent performance on desktop and mobile, plus accessibility and maintainability, so healthcare professionals, policymakers, partners, and the public can reach reliable information about child and adolescent health in Brazil.`,
+    pt: `Desenvolvi o frontend do site do Instituto Desiderata, com Nuxt e Tailwind CSS, criando uma experiência digital moderna, acessível e responsiva que fortalece a presença da organização.
 
-Com Nuxt e Tailwind CSS, construí uma experiência responsiva, acessível e de alta performance para apresentar conteúdo de saúde, investigação e recursos educativos numa interface clara e intuitiva.
+O site comunica a missão, as iniciativas e os recursos educativos do instituto por meio de uma interface limpa, navegação intuitiva e uma experiência centrada no usuário.
 
-A plataforma ajuda profissionais de saúde, investigadores, gestores e o público a aceder a informação fiável que apoia o diagnóstico precoce e melhores resultados em saúde. Foquei em acessibilidade, performance, código sustentável e arquitetura frontend escalável.`,
+Foquei numa arquitetura frontend escalável, com performance consistente em desktop e mobile, acessibilidade e manutenibilidade, para que profissionais de saúde, gestores, parceiros e o público cheguem a informação confiável sobre a saúde de crianças e adolescentes no Brasil.`,
   },
   'custo-brasil': {
     en: `Developed the frontend for Observatório do Custo Brasil, a platform dedicated to analyzing the structural factors that impact Brazil's economic competitiveness and business environment.
@@ -342,5 +372,8 @@ export function projectBodyForLocale(
 ): string | undefined {
   const entry = projectBodiesById[id]
   if (!entry) return undefined
-  return locale === 'en' ? entry.en : entry.pt
+  if (locale === 'es') {
+    return projectBodiesEsById[id] ?? entry.en
+  }
+  return localizedCopyForLocale(entry, locale)
 }

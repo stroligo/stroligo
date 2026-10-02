@@ -24,6 +24,7 @@ const defaultIds = [
   'inovahc',
   'hfpm-who',
   'weplan-forests',
+  'panorama-oncologia',
   'desiderata',
   'golpe-flix',
 ] as const

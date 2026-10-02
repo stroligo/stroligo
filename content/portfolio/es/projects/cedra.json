@@ -1,0 +1,16 @@
+{
+  "id": "cedra",
+  "title": "CEDRA",
+  "organization": "Center for Studies and Data on Racial Inequalities",
+  "description": "Plataforma con datos sobre desigualdades raciales en Brasil — educación, empleo, vivienda y más, para investigación y advocacy.",
+  "tags": [
+    "Equidad racial",
+    "Datos"
+  ],
+  "stack": [
+    "WordPress",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de CEDRA (Center for Studies and Data on Racial Inequalities), una plataforma que proporciona datos, investigación y contenido interactivo para apoyar los debates sobre equidad racial y políticas públicas en Brasil.\n\nConstruida con WordPress, Tailwind CSS y prácticas front-end modernas, la plataforma se diseñó para ofrecer una experiencia responsive, accesible y de alto rendimiento, facilitando la exploración de información compleja en escritorio y móvil.\n\nA lo largo del proyecto me centré en desarrollo front-end, diseño responsive, accesibilidad y optimización del rendimiento para crear una plataforma digital escalable y mantenible que ayuda a investigadores, responsables políticos, periodistas y organizaciones de la sociedad civil a acceder a datos e insights fiables."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "narrativas-ancestrais",
+  "title": "Narrativas ancestrales",
+  "organization": "Amoreira",
+  "description": "Sitio web que preserva y amplifica narrativas de comunidades indígenas y afrobrasileñas mediante storytelling y medios digitales.",
+  "tags": [
+    "Cultura",
+    "Patrimonio"
+  ],
+  "stack": [
+    "PHP",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Narrativas Ancestrais, una plataforma digital creada por Amoreira para preservar y compartir conocimientos indígenas y afrobrasileños mediante narrativa, fotografía, contenido audiovisual y experiencias interactivas.\n\nEl proyecto requirió traducir una rica identidad visual en una experiencia web responsive e inmersiva, en la que el diseño apoya las historias en lugar de competir con ellas. Cada interacción se construyó para fomentar la exploración manteniendo accesibilidad, rendimiento y coherencia entre dispositivos.\n\nTrabajando con PHP y Tailwind CSS, me centré en diseños responsive, componentes front-end reutilizables y optimización del rendimiento, garantizando que la plataforma ofreciera una experiencia fluida honrando la visión artística y cultural del proyecto."
+}

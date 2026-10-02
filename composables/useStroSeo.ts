@@ -1,35 +1,45 @@
-import { buildStroJsonLd } from '~/lib/seo/jsonLd'
 import { site } from '~/data/site'
+import {
+  contentLocaleToOpenGraphLocale,
+  contentLocaleToSitePath,
+} from '~/lib/i18n/contentLocale'
+import type { ContentLocale } from '~/lib/portfolio/locale'
+import { buildStroJsonLd } from '~/lib/seo/jsonLd'
 
-/** SEO da homepage (PT / EN) — meta, Open Graph, Twitter e JSON-LD */
+const ogImageAltByLocale: Record<ContentLocale, string> = {
+  en: `${site.name} — front-end portfolio at stroligo.dev`,
+  pt: `${site.name} — portfólio front-end em stroligo.dev`,
+  es: `${site.name} — portafolio front-end en stroligo.dev`,
+}
+
+/** SEO da homepage (EN / ES / PT) — meta, Open Graph, Twitter e JSON-LD */
 export function useStroSeo() {
   const { locale } = useI18n()
-  const { profile, labels, htmlLang, socialLinks, projects } = usePortfolio()
+  const { profile, labels, htmlLang, socialLinks, projects, contentLocale } =
+    usePortfolio()
 
-  const pageUrl = computed(() =>
-    locale.value === 'pt'
-      ? `${site.siteUrl}/pt`
-      : `${site.siteUrl}/`,
+  const pageUrl = computed(
+    () => `${site.siteUrl}${contentLocaleToSitePath(contentLocale.value)}`,
   )
 
   const ogImageUrl = computed(() => `${site.siteUrl}${site.ogImageUrl}`)
 
   const ogLocale = computed(() =>
-    locale.value === 'en' ? 'en_US' : 'pt_BR',
+    contentLocaleToOpenGraphLocale(contentLocale.value),
   )
 
-  const ogLocaleAlternate = computed(() =>
-    locale.value === 'en' ? 'pt_BR' : 'en_US',
-  )
+  const ogLocaleAlternate = computed(() => {
+    const all: ContentLocale[] = ['en', 'es', 'pt']
+    return all
+      .filter((code) => code !== contentLocale.value)
+      .map((code) => contentLocaleToOpenGraphLocale(code))
+  })
 
-  const ogImageAlt = computed(() =>
-    locale.value === 'en'
-      ? `${profile.value.name} — front-end portfolio at stroligo.dev`
-      : `${profile.value.name} — portfólio front-end em stroligo.dev`,
-  )
+  const ogImageAlt = computed(() => ogImageAltByLocale[contentLocale.value])
 
   const hreflangLinks = computed(() => [
     { rel: 'alternate', hreflang: 'en', href: `${site.siteUrl}/` },
+    { rel: 'alternate', hreflang: 'es', href: `${site.siteUrl}/es` },
     { rel: 'alternate', hreflang: 'pt', href: `${site.siteUrl}/pt` },
     { rel: 'alternate', hreflang: 'pt-BR', href: `${site.siteUrl}/pt` },
     { rel: 'alternate', hreflang: 'x-default', href: `${site.siteUrl}/` },
@@ -43,7 +53,7 @@ export function useStroSeo() {
 
   const jsonLd = computed(() =>
     buildStroJsonLd({
-      locale: locale.value === 'en' ? 'en' : 'pt',
+      locale: contentLocale.value,
       pageUrl: pageUrl.value,
       title: labels.value.seoTitle,
       description: labels.value.seoDescription,
@@ -90,7 +100,10 @@ export function useStroSeo() {
       ...hreflangLinks.value,
     ],
     meta: [
-      { property: 'og:locale:alternate', content: ogLocaleAlternate.value },
+      ...ogLocaleAlternate.value.map((alt) => ({
+        property: 'og:locale:alternate',
+        content: alt,
+      })),
       { property: 'og:image:secure_url', content: ogImageUrl.value },
       { property: 'og:image:type', content: site.ogImageType },
       { property: 'og:image:width', content: String(site.ogImageWidth) },

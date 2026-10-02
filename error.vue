@@ -12,30 +12,41 @@ const { locale } = useI18n()
 
 const statusCode = computed(() => props.error.statusCode ?? 500)
 
-const copy = computed(() =>
-  locale.value === 'pt'
-    ? {
-        title:
-          statusCode.value === 404
-            ? 'Página não encontrada'
-            : 'Algo correu mal',
-        description:
-          statusCode.value === 404
-            ? 'O endereço pode estar errado ou a página foi movida.'
-            : 'Ocorreu um erro inesperado. Tenta novamente em instantes.',
-        home: 'Voltar ao início',
-        projects: 'Ver projetos',
-      }
-    : {
-        title: statusCode.value === 404 ? 'Page not found' : 'Something went wrong',
-        description:
-          statusCode.value === 404
-            ? 'The address may be wrong or the page may have moved.'
-            : 'An unexpected error occurred. Please try again shortly.',
-        home: 'Back to home',
-        projects: 'View projects',
-      },
-)
+const copyByLocale = {
+  pt: (code: number) => ({
+    title: code === 404 ? 'Página não encontrada' : 'Algo correu mal',
+    description:
+      code === 404
+        ? 'O endereço pode estar errado ou a página foi movida.'
+        : 'Ocorreu um erro inesperado. Tenta novamente em instantes.',
+    home: 'Voltar ao início',
+    projects: 'Ver projetos',
+  }),
+  es: (code: number) => ({
+    title: code === 404 ? 'Página no encontrada' : 'Algo salió mal',
+    description:
+      code === 404
+        ? 'La dirección puede ser incorrecta o la página se ha movido.'
+        : 'Ocurrió un error inesperado. Inténtalo de nuevo en un momento.',
+    home: 'Volver al inicio',
+    projects: 'Ver proyectos',
+  }),
+  en: (code: number) => ({
+    title: code === 404 ? 'Page not found' : 'Something went wrong',
+    description:
+      code === 404
+        ? 'The address may be wrong or the page may have moved.'
+        : 'An unexpected error occurred. Please try again shortly.',
+    home: 'Back to home',
+    projects: 'View projects',
+  }),
+} as const
+
+const copy = computed(() => {
+  const key =
+    locale.value === 'pt' ? 'pt' : locale.value === 'es' ? 'es' : 'en'
+  return copyByLocale[key](statusCode.value)
+})
 
 useSeoMeta({
   title: () => copy.value.title,

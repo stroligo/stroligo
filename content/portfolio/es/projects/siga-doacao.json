@@ -1,0 +1,15 @@
+{
+  "id": "siga-doacao",
+  "title": "Sigue tu donación",
+  "organization": "MOL Central de Impacto",
+  "description": "Plataforma que hace las donaciones más transparentes, conectando donantes con organizaciones y haciendo seguimiento del impacto.",
+  "tags": [
+    "Impacto social"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Siga Sua Doação, una plataforma de MOL Central de Impacto que permite a los donantes hacer un seguimiento transparente del impacto de sus contribuciones y refuerza la confianza entre donantes y organizaciones sin ánimo de lucro.\n\nCon Nuxt y Tailwind CSS, construí una experiencia de usuario responsive, accesible y de alto rendimiento centrada en hacer el seguimiento de donaciones sencillo, intuitivo y fiable en escritorio y móvil.\n\nLa plataforma ayuda a los usuarios a monitorizar donaciones, acceder a información de impacto y comprender mejor cómo las contribuciones apoyan iniciativas sociales. Durante el desarrollo prioricé accesibilidad, rendimiento, código mantenible y una arquitectura front-end escalable para ofrecer una experiencia digital fluida."
+}

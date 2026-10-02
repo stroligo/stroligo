@@ -1,0 +1,16 @@
+{
+  "id": "hri",
+  "title": "Harm Reduction International",
+  "organization": "HRI",
+  "description": "Sitio web global de la organización de reducción de daños, incluido el informe Global State of Harm Reduction.",
+  "tags": [
+    "Salud pública",
+    "Derechos humanos"
+  ],
+  "stack": [
+    "PHP",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Harm Reduction International (HRI), una organización global que promueve políticas de salud pública basadas en evidencia y aboga por iniciativas de reducción de daños en más de 100 países.\n\nLa plataforma se construyó para presentar investigación extensa, informes, publicaciones y recursos de política mediante una interfaz limpia e intuitiva, haciendo la información compleja accesible a profesionales sanitarios, investigadores, responsables políticos y el público. Equilibrar legibilidad, navegación y rendimiento fue esencial para apoyar a usuarios que exploran grandes volúmenes de contenido.\n\nTrabajando con PHP y Tailwind CSS, me centré en diseños responsive, desarrollo front-end basado en componentes, accesibilidad y optimización del rendimiento para ofrecer una experiencia web rápida, escalable y mantenible en todos los dispositivos."
+}

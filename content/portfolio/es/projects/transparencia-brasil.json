@@ -1,0 +1,16 @@
+{
+  "id": "transparencia-brasil",
+  "title": "Transparência Brasil",
+  "organization": "Transparência Brasil",
+  "description": "Sitio web que reúne contenido, datos y estrategias para fortalecer la integridad pública y apoyar a periodistas, investigadores y gestores públicos.",
+  "tags": [
+    "Civic Tech",
+    "Integridad"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Transparência Brasil, utilizando Nuxt y Tailwind CSS para construir una plataforma moderna, responsive y accesible que promueve la transparencia, la rendición de cuentas y el compromiso cívico en Brasil.\n\nLa plataforma reúne investigación, contenido de políticas públicas y recursos basados en datos mediante una experiencia de usuario intuitiva y de alto rendimiento. Me centré en construir una arquitectura front-end escalable que facilite la navegación por información compleja, garantizando accesibilidad y capacidad responsive en todos los dispositivos.\n\nA lo largo del proyecto prioricé rendimiento, mantenibilidad, accesibilidad y una arquitectura de componentes limpia para ofrecer una experiencia digital fiable que apoya a periodistas, investigadores, gestores públicos y ciudadanos que buscan información de confianza."
+}

@@ -12,7 +12,7 @@ const projectsDir = join(root, 'public/projects')
 const profileDir = join(root, 'public/profile')
 const publicDir = join(root, 'public')
 
-const SOURCE_PHOTO = join(root, 'PROJETO/foto.png')
+const SOURCE_PHOTO = join(root, 'new/foto.png')
 
 async function optimizeProfilePhoto() {
   const input = sharp(SOURCE_PHOTO, { failOn: 'none' }).rotate()

@@ -1,0 +1,15 @@
+{
+  "id": "saude-ambiental",
+  "title": "Salud ambiental",
+  "organization": "Ministerio del Medio Ambiente (Brasil)",
+  "description": "Portal sobre la intersección entre calidad ambiental y salud pública en Brasil — aire, productos químicos y determinantes ambientales.",
+  "tags": [
+    "Gobierno"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de la plataforma Saúde Ambiental, una iniciativa del Ministerio del Medio Ambiente y Cambio Climático de Brasil (MMA) que proporciona indicadores y datos de salud ambiental para apoyar políticas públicas y la toma de decisiones informada.\n\nConstruido con Nuxt y Tailwind CSS, me centré en crear una experiencia de usuario responsive, accesible y de alto rendimiento capaz de presentar datos ambientales y de salud pública complejos mediante una interfaz intuitiva y visualizaciones interactivas.\n\nLa plataforma reúne indicadores, investigación e información oficial para ayudar a investigadores, gestores públicos, profesionales sanitarios y ciudadanos a comprender mejor la relación entre las condiciones ambientales y la salud pública. Durante el desarrollo prioricé accesibilidad, rendimiento, código mantenible y una arquitectura front-end escalable para garantizar una experiencia fiable en todos los dispositivos."
+}

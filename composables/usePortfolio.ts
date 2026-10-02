@@ -1,3 +1,9 @@
+import {
+  contentLocaleToHtmlLang,
+  contentLocaleToOpenGraphLocale,
+  contentLocaleToSitePath,
+  i18nCodeToContentLocale,
+} from '~/lib/i18n/contentLocale'
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import { buildPortfolioFromContent } from '~/lib/portfolio/fromContent'
 import { buildPortfolioFromLocales } from '~/lib/portfolio/fromLocales'
@@ -6,7 +12,7 @@ export function usePortfolio() {
   const { locale } = useI18n()
 
   const contentLocale = computed<ContentLocale>(() =>
-    locale.value === 'en' ? 'en' : 'pt',
+    i18nCodeToContentLocale(locale.value),
   )
 
   const loadPortfolio = async (loc: ContentLocale) => {
@@ -36,17 +42,19 @@ export function usePortfolio() {
   const linkedInProjectsUrl = computed(() => content.value.linkedInProjectsUrl)
 
   const htmlLang = computed(() =>
-    locale.value === 'pt' ? 'pt-BR' : 'en',
+    contentLocaleToHtmlLang(contentLocale.value),
   )
 
   const heroExperienceLabel = computed(() => {
-    const fallback =
-      locale.value === 'en'
-        ? '{years} years of experience'
-        : '{years} anos de experiência'
+    const fallbacks: Record<ContentLocale, string> = {
+      en: '{years} years of experience',
+      pt: '{years} anos de experiência',
+      es: '{years} años de experiencia',
+    }
     const raw = labels.value.heroExperience
     const template =
-      (typeof raw === 'string' ? raw : '') || fallback
+      (typeof raw === 'string' ? raw : '') ||
+      fallbacks[contentLocale.value]
     return template.replace(
       /\{years\}/g,
       profile.value.experienceYears,
@@ -70,5 +78,7 @@ export function usePortfolio() {
     heroExperienceLabel,
     projectCountLabel,
     content,
+    contentLocale,
+    sitePath: computed(() => contentLocaleToSitePath(contentLocale.value)),
   }
 }

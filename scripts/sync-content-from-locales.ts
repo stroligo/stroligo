@@ -6,11 +6,12 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { experienceBodiesById } from '../data/experienceBodies'
+import { experienceBodyForLocale } from '../data/experienceBodies'
 import { experiencesForLocale } from '../data/experiences'
-import { projectBodiesById } from '../data/projectBodies'
+import { projectBodyForLocale } from '../data/projectBodies'
 import { projectStacksById } from '../data/projectStacks'
 import en from '../locales/en'
+import es from '../locales/es'
 import pt from '../locales/pt'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -23,7 +24,7 @@ function writeJson(path: string, data: unknown) {
   writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`, 'utf8')
 }
 
-function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
+function exportLocale(code: 'pt' | 'en' | 'es', m: LocaleBundle) {
   const base = join(contentRoot, code)
 
   const home = {
@@ -75,7 +76,7 @@ function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
   writeJson(join(base, 'categories.json'), m.projects.categories)
   writeJson(join(base, 'experiences.json'), {
     items: experiencesForLocale(code).map((item) => {
-      const body = item.body ?? experienceBodiesById[item.id]?.[code]
+      const body = item.body ?? experienceBodyForLocale(item.id, code)
       return {
         ...item,
         body: body || undefined,
@@ -86,7 +87,7 @@ function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
 
   for (const item of m.projects.items) {
     const stack = item.stack ?? projectStacksById[item.id]
-    const body = item.body ?? projectBodiesById[item.id]?.[code]
+      const body = item.body ?? projectBodyForLocale(item.id, code)
     writeJson(join(base, 'projects', `${item.id}.json`), {
       ...item,
       stack: stack?.length ? stack : undefined,
@@ -97,5 +98,6 @@ function exportLocale(code: 'pt' | 'en', m: LocaleBundle) {
 
 exportLocale('pt', pt)
 exportLocale('en', en)
+exportLocale('es', es)
 
-console.log('Conteúdo exportado para content/portfolio/{pt,en}/')
+console.log('Conteúdo exportado para content/portfolio/{pt,en,es}/')

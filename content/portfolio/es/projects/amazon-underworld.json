@@ -1,0 +1,18 @@
+{
+  "id": "amazon-underworld",
+  "title": "Amazon Underworld",
+  "organization": "InfoAmazonia",
+  "description": "Mapa interactivo de redes de crimen organizado en la Amazonía — minería ilegal, tráfico y deforestación, con Mapbox y QGIS.",
+  "tags": [
+    "Mapas",
+    "Medio ambiente"
+  ],
+  "stack": [
+    "PHP",
+    "Tailwind CSS",
+    "JavaScript",
+    "Mapbox",
+    "QGIS"
+  ],
+  "body": "Desarrollé el frontend de Amazon Underworld, una plataforma interactiva creada en colaboración con InfoAmazonia que mapea y visualiza redes de crimen organizado que operan en la región amazónica mediante narrativa basada en datos y análisis geoespacial.\n\nCon PHP, Tailwind CSS, Mapbox y QGIS, contribuí a construir una experiencia responsive, accesible y de alto rendimiento que transforma conjuntos de datos complejos en mapas interactivos intuitivos y narrativas visuales.\n\nLa plataforma reúne periodismo de investigación, datos geoespaciales y visualizaciones interactivas para ayudar a investigadores, periodistas, responsables políticos y el público a comprender mejor los impactos ambientales y sociales del crimen organizado en la Amazonía. Durante el desarrollo me centré en usabilidad, rendimiento, accesibilidad y soluciones front-end mantenibles para ofrecer una experiencia fluida en todos los dispositivos."
+}

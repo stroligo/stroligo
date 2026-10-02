@@ -1,8 +1,10 @@
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import type { Experience } from '~/types/portfolio'
 import { experienceBodyForLocale } from '~/data/experienceBodies'
+import { experiencesEs } from '~/data/experiencesEs'
 
 const stacksById: Partial<Record<string, string[]>> = {
+  axians: ['React', 'TypeScript', 'Material UI', 'React Context API'],
   'vex-tech': ['React', 'TypeScript', 'Material UI', 'React Context API'],
   'cafe-art': [
     'React',
@@ -54,19 +56,34 @@ function withBodies(
 
 const experiencesPt: Experience[] = withStacks([
   {
+    id: 'axians',
+    company: 'Axians',
+    role: 'Senior Software Engineer · Especialista front-end',
+    period: 'set/2026 — presente',
+    yearStart: 2026,
+    yearEnd: null,
+    location: 'Espanha · remoto',
+    highlight:
+      'Contrato independente no projeto EUIPO (European Union Intellectual Property Office). Interfaces Front Office em larga escala para serviços de propriedade intelectual na Europa.',
+    details:
+      'Software Engineer e especialista front-end na Axians, alocado ao projeto EUIPO. Evolução de aplicações web de larga escala, com foco em acessibilidade, performance, escalabilidade e qualidade de código, em equipes Agile multiculturais.',
+    url: 'https://www.linkedin.com/company/axians',
+    current: true,
+  },
+  {
     id: 'vex-tech',
     company: 'Vex Tech',
     role: 'Software Engineer · Especialista front-end',
-    period: 'jul/2025 — presente',
+    period: 'jul/2025 — set/2026',
     yearStart: 2025,
-    yearEnd: null,
-    location: 'Portugal',
+    yearEnd: 2026,
+    location: 'Portugal · remoto',
     highlight:
-      'Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Equipes ágeis multiculturais.',
+      'Projeto EUIPO (European Union Intellectual Property Office). Manutenção e evolução de aplicações web de larga escala para serviços de propriedade intelectual na Europa.',
     details:
-      'Desenvolvimento e evolução de interfaces para o EUIPO, com foco em consistência visual, escalabilidade e entrega em ciclos ágeis. Trabalho remoto a partir de Portugal, documentação técnica em inglês e colaboração com equipas distribuídas na Europa.',
+      'Implementação e manutenção de interfaces Front Office, com foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código. Colaboração em equipes Agile multiculturais, code reviews e melhoria contínua.',
     url: 'https://www.linkedin.com/company/vextech-it',
-    current: true,
+    current: false,
   },
   {
     id: 'cafe-art',
@@ -212,19 +229,34 @@ const experiencesPt: Experience[] = withStacks([
 
 const experiencesEn: Experience[] = withStacks([
   {
+    id: 'axians',
+    company: 'Axians',
+    role: 'Senior Software Engineer · Front-end Specialist',
+    period: 'Sep 2026 — present',
+    yearStart: 2026,
+    yearEnd: null,
+    location: 'Spain · remote',
+    highlight:
+      'Independent contract on the EUIPO (European Union Intellectual Property Office) project. Large-scale Front Office interfaces for intellectual property services across Europe.',
+    details:
+      'Software Engineer and front-end specialist at Axians, assigned to the EUIPO project. Evolving large-scale web applications, with a focus on accessibility, performance, scalability, and code quality, inside multicultural Agile teams.',
+    url: 'https://www.linkedin.com/company/axians',
+    current: true,
+  },
+  {
     id: 'vex-tech',
     company: 'Vex Tech',
     role: 'Software Engineer · Front-end Specialist',
-    period: 'Jul 2025 — present',
+    period: 'Jul 2025 — Sep 2026',
     yearStart: 2025,
-    yearEnd: null,
-    location: 'Portugal',
+    yearEnd: 2026,
+    location: 'Portugal · remote',
     highlight:
-      'Allocated to the EUIPO (European Union Intellectual Property Office) project. Large-scale front-end systems across the EU. Multicultural agile teams.',
+      'EUIPO (European Union Intellectual Property Office) project. Maintenance and evolution of large-scale web applications for European intellectual property services.',
     details:
-      'Building and evolving EUIPO interfaces with emphasis on visual consistency, scalability, and agile delivery. Remote from Portugal, technical documentation in English, and collaboration with distributed European teams.',
+      'Implemented and maintained Front Office interfaces, focusing on accessibility, performance, scalability, usability, and code quality. Collaborated with multicultural Agile teams on code reviews and continuous improvement.',
     url: 'https://www.linkedin.com/company/vextech-it',
-    current: true,
+    current: false,
   },
   {
     id: 'cafe-art',
@@ -366,7 +398,12 @@ const experiencesEn: Experience[] = withStacks([
 ])
 
 export function experiencesForLocale(locale: ContentLocale): Experience[] {
-  const items = locale === 'en' ? experiencesEn : experiencesPt
+  const items =
+    locale === 'pt'
+      ? experiencesPt
+      : locale === 'es'
+        ? experiencesEs
+        : experiencesEn
   return withBodies(withStacks(items), locale)
 }
 

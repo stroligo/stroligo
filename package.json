@@ -10,7 +10,7 @@
     "prepare:nuxt": "nuxt prepare",
     "generate:resume": "playwright install chromium && tsx scripts/generate-resume.ts",
     "sync:assets": "npm run sync:resume && npm run optimize:assets",
-    "sync:resume": "mkdir -p public/profile && cp -f profile/gabriel-stroligo-cv-en.pdf public/profile/gabriel-stroligo-cv-en.pdf && cp -f profile/gabriel-stroligo-cv-pt.pdf public/profile/gabriel-stroligo-cv-pt.pdf",
+    "sync:resume": "mkdir -p public/profile && cp -f profile/gabriel-stroligo-cv-en.pdf public/profile/gabriel-stroligo-cv-en.pdf && cp -f profile/gabriel-stroligo-cv-pt.pdf public/profile/gabriel-stroligo-cv-pt.pdf && cp -f profile/gabriel-stroligo-cv-es.pdf public/profile/gabriel-stroligo-cv-es.pdf",
     "sync:photo": "npm run optimize:assets",
     "optimize:assets": "tsx scripts/optimize-assets.ts",
     "sync:projects": "tsx scripts/sync-project-images.ts",

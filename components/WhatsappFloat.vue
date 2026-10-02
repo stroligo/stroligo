@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { site, whatsappContactUrl } from '~/data/site'
+import { i18nCodeToContentLocale } from '~/lib/i18n/contentLocale'
 
 const { t, locale } = useI18n()
 
 const href = computed(() =>
-  whatsappContactUrl(locale.value === 'en' ? 'en' : 'pt'),
+  whatsappContactUrl(i18nCodeToContentLocale(locale.value)),
 )
 
 const whatsappIconPath =

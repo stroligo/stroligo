@@ -44,6 +44,27 @@ const hobbiesEn: HobbyCuriosity[] = [
   },
 ]
 
+const hobbiesEs: HobbyCuriosity[] = [
+  {
+    id: 'lotr',
+    text: 'Adicto a El Señor de los Anillos',
+  },
+  {
+    id: 'countries',
+    text: 'Más de 40 países visitados',
+  },
+  {
+    id: 'nomad',
+    text: 'Vida nómada por Europa',
+  },
+  {
+    id: 'hiking',
+    text: 'Senderismo y rutas cuando el paisaje lo pide',
+  },
+]
+
 export function hobbiesForLocale(locale: ContentLocale): HobbyCuriosity[] {
-  return locale === 'en' ? hobbiesEn : hobbiesPt
+  if (locale === 'pt') return hobbiesPt
+  if (locale === 'es') return hobbiesEs
+  return hobbiesEn
 }

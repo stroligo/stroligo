@@ -1,5 +1,5 @@
 /**
- * Gera PDFs do currículo (ATS) em PT e EN.
+ * Gera PDFs do currículo (ATS) em PT, EN e ES.
  * Uso: npm run generate:resume
  */
 import { mkdir, writeFile } from 'node:fs/promises'
@@ -14,7 +14,7 @@ import { renderResumeAtsHtml } from './lib/render-resume-ats-html'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const profileDir = join(root, 'profile')
 const publicDir = join(root, 'public/profile')
-const locales: ResumeLocale[] = ['en', 'pt']
+const locales: ResumeLocale[] = ['en', 'pt', 'es']
 
 async function main() {
   await mkdir(profileDir, { recursive: true })
@@ -47,7 +47,9 @@ async function main() {
   }
 
   await browser.close()
-  console.log('  Downloads: /profile/gabriel-stroligo-cv-en.pdf | -pt.pdf')
+  console.log(
+    '  Downloads: /profile/gabriel-stroligo-cv-en.pdf | -pt.pdf | -es.pdf',
+  )
 }
 
 main().catch((err) => {

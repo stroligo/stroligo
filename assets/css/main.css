@@ -93,35 +93,11 @@
   }
 
   .hero-aside__scene {
-    @apply relative mx-auto w-full max-w-[22rem] pr-2 sm:max-w-[26rem] sm:pr-5 lg:mx-0 lg:max-w-none lg:pr-8;
+    @apply relative mx-auto w-full max-w-[22rem] pb-6 sm:max-w-[26rem] sm:pb-8 lg:mx-0 lg:max-w-none lg:pb-10;
   }
 
   .hero-photo-wrap {
     @apply relative z-1 mx-auto w-full max-w-[19rem] sm:max-w-[23rem] lg:mx-0 lg:max-w-[30rem];
-  }
-
-  .hero-terminal-overlap {
-    @apply absolute z-15 m-0 min-w-[16.5rem] sm:min-w-[18.5rem] lg:min-w-[20rem];
-    top: 56%;
-    left: 52%;
-    width: min(18.5rem, calc(100vw - 2.5rem));
-    filter: drop-shadow(0 16px 36px var(--stro-terminal-shadow));
-  }
-
-  @media (min-width: 640px) {
-    .hero-terminal-overlap {
-      top: 58%;
-      left: 58%;
-      width: 20.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .hero-terminal-overlap {
-      top: 60%;
-      left: 64%;
-      width: 22rem;
-    }
   }
 
   @keyframes stro-profile-glow-pulse {
@@ -227,10 +203,14 @@
   }
 
   .stro-glass {
-    @apply rounded-stro-xl border backdrop-blur-[var(--stro-glass-blur)] md:flex hidden;
+    @apply rounded-stro-xl border backdrop-blur-[var(--stro-glass-blur)];
     background: var(--stro-glass-bg);
     border-color: var(--stro-glass-border);
     -webkit-backdrop-filter: blur(var(--stro-glass-blur));
+  }
+
+  .stro-terminal.stro-glass {
+    @apply flex w-full min-w-0 flex-col;
   }
 
   .stro-gradient-text {
@@ -252,10 +232,13 @@
   }
 
   .stro-heading-accent {
-    @apply inline-block bg-no-repeat pb-2;
-    background: var(--stro-gradient-brand);
-    background-size: 100% 2px;
-    background-position: 0 100%;
+    @apply inline-block pb-2.5;
+    color: var(--stro-foreground);
+    background-color: transparent;
+    background-image: var(--stro-gradient-brand);
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: left bottom;
   }
 
   .stro-kicker {

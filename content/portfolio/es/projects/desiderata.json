@@ -1,0 +1,16 @@
+{
+  "id": "desiderata",
+  "title": "Instituto Desiderata",
+  "organization": "Instituto Desiderata",
+  "description": "Sitio web institucional centrado en el diagnóstico precoz y el tratamiento del cáncer infantil y otras cuestiones de salud pública infantil.",
+  "tags": [
+    "Salud",
+    "ONG"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend del sitio web del Instituto Desiderata, utilizando Nuxt y Tailwind CSS para crear una experiencia digital moderna, accesible y responsive que refuerza la presencia de la organización.\n\nEl sitio comunica la misión, las iniciativas y los recursos educativos del instituto mediante una interfaz limpia, navegación intuitiva y una experiencia centrada en el usuario.\n\nMe centré en una arquitectura front-end escalable con rendimiento consistente en escritorio y móvil, además de accesibilidad y mantenibilidad, para que profesionales sanitarios, responsables políticos, socios y el público accedan a información fiable sobre la salud infantil y adolescente en Brasil."
+}

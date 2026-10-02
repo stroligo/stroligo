@@ -30,8 +30,8 @@ withDefaults(
           <p v-if="kicker" class="stro-kicker mb-3">
             {{ kicker }}
           </p>
-          <h2 class="stro-heading stro-heading-accent text-3xl sm:text-4xl">
-            {{ title }}
+          <h2 class="stro-heading text-3xl sm:text-4xl">
+            <span class="stro-gradient-text">{{ title }}</span>
           </h2>
           <p v-if="subtitle" class="mt-4 text-stro-muted sm:text-base">
             {{ subtitle }}
@@ -43,8 +43,8 @@ withDefaults(
         <p v-if="kicker" class="stro-kicker mb-3">
           {{ kicker }}
         </p>
-        <h2 class="stro-heading stro-heading-accent text-3xl sm:text-4xl">
-          {{ title }}
+        <h2 class="stro-heading text-3xl sm:text-4xl">
+          <span class="stro-gradient-text">{{ title }}</span>
         </h2>
         <p v-if="subtitle" class="mt-4 text-stro-muted sm:text-base">
           {{ subtitle }}

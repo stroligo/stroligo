@@ -6,10 +6,19 @@ const switchLocalePath = useSwitchLocalePath()
 
 const year = new Date().getFullYear()
 
-const alternateLocale = computed(() =>
-  locale.value === 'pt'
-    ? { href: switchLocalePath('en'), label: 'English version' }
-    : { href: switchLocalePath('pt'), label: 'Versão em português' },
+const localeLabels = {
+  en: 'English',
+  es: 'Español',
+  pt: 'Português',
+} as const
+
+const alternateLocales = computed(() =>
+  (['en', 'es', 'pt'] as const)
+    .filter((code) => code !== locale.value)
+    .map((code) => ({
+      href: switchLocalePath(code),
+      label: localeLabels[code],
+    })),
 )
 </script>
 
@@ -39,10 +48,12 @@ const alternateLocale = computed(() =>
             {{ link.label }}
           </a>
           <a
-            :href="alternateLocale.href"
+            v-for="alt in alternateLocales"
+            :key="alt.href"
+            :href="alt.href"
             class="text-stro-muted transition hover:text-stro-cyan"
           >
-            {{ alternateLocale.label }}
+            {{ alt.label }}
           </a>
         </nav>
       </div>

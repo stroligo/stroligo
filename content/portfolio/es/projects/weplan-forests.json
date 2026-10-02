@@ -1,0 +1,15 @@
+{
+  "id": "weplan-forests",
+  "title": "WePlan Forests",
+  "organization": "IIS · FERI",
+  "description": "Herramienta espacial para la restauración de bosques tropicales — carbono, biodiversidad y escenarios para la toma de decisiones.",
+  "tags": [
+    "Clima",
+    "Restauración"
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Contribuí al desarrollo front-end de WePlan Forests, una plataforma de apoyo a la decisión que ayuda a gobiernos, investigadores y organizaciones ambientales a planificar la restauración forestal a gran escala utilizando datos espaciales y modelización científica.\n\nEl proyecto transforma conjuntos de datos ambientales complejos en interfaces interactivas e intuitivas, permitiendo a los usuarios evaluar escenarios de restauración basados en biodiversidad, secuestro de carbono y coste-efectividad. El reto fue ofrecer una experiencia de usuario que simplifique la exploración de datos manteniendo rendimiento y usabilidad.\n\nMe centré en construir interfaces responsive, optimizar el rendimiento front-end y crear componentes reutilizables que garanticen una experiencia consistente en todos los dispositivos, apoyando una plataforma diseñada para la toma de decisiones ambientales en el mundo real."
+}

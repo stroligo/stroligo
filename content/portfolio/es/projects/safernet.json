@@ -1,0 +1,16 @@
+{
+  "id": "safernet",
+  "title": "Currículo de ciudadanía digital",
+  "organization": "SaferNet Brazil",
+  "description": "Recursos para educadores sobre ciudadanía digital, seguridad online y LGPD, alineados con el currículo nacional de Brasil.",
+  "tags": [
+    "Educación",
+    "LGPD"
+  ],
+  "stack": [
+    "Vue.js",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de la plataforma de Ciudadanía Digital, una iniciativa de SaferNet Brasil que ofrece recursos educativos para ayudar a las escuelas a promover la ciudadanía digital, la seguridad online y el uso responsable de la tecnología.\n\nCon Vue.js y Tailwind CSS, construí una experiencia de usuario responsive, accesible y de alto rendimiento centrada en facilitar la navegación por contenido educativo para docentes, estudiantes y centros educativos en distintos dispositivos.\n\nLa plataforma apoya a los educadores con materiales de aprendizaje estructurados alineados con las directrices educativas de Brasil, fomentando un comportamiento online más seguro, la alfabetización digital y el pensamiento crítico. Durante el desarrollo me centré en accesibilidad, rendimiento, código mantenible y una arquitectura front-end escalable para garantizar una experiencia de aprendizaje fluida."
+}

@@ -11,6 +11,7 @@ import {
   whatsappContactUrl,
 } from '~/data/site'
 import en from '~/locales/en'
+import es from '~/locales/es'
 import pt from '~/locales/pt'
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import { normalizePortfolioContent } from '~/lib/portfolio/normalizeContent'
@@ -27,7 +28,9 @@ import { resolveI18nString } from '~/utils/resolveI18nMessage'
 type LocaleMessages = typeof pt
 
 function messages(locale: ContentLocale): LocaleMessages {
-  return locale === 'en' ? en : pt
+  if (locale === 'pt') return pt
+  if (locale === 'es') return es
+  return en
 }
 
 export function buildPortfolioFromLocales(

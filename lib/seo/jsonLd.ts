@@ -1,8 +1,9 @@
 import type { Project } from '~/types/portfolio'
+import type { ContentLocale } from '~/lib/portfolio/locale'
 import { site } from '~/data/site'
 
 export type StroSeoJsonLdInput = {
-  locale: 'pt' | 'en'
+  locale: ContentLocale
   pageUrl: string
   title: string
   description: string
@@ -16,7 +17,7 @@ function projectUrl(project: Project) {
   return project.siteUrl ?? project.behanceUrl
 }
 
-const knowsAboutByLocale = {
+const knowsAboutByLocale: Record<ContentLocale, readonly string[]> = {
   en: [
     'Front-end development',
     'Nuxt',
@@ -26,6 +27,16 @@ const knowsAboutByLocale = {
     'Accessibility',
     'Data visualization',
     'Civic tech',
+  ],
+  es: [
+    'Desarrollo front-end',
+    'Nuxt',
+    'Vue',
+    'React',
+    'TypeScript',
+    'Accesibilidad',
+    'Visualización de datos',
+    'Tecnología cívica',
   ],
   pt: [
     'Desenvolvimento front-end',
@@ -37,10 +48,21 @@ const knowsAboutByLocale = {
     'Visualização de dados',
     'Tecnologia cívica',
   ],
-} as const
+}
+
+const featuredProjectsTitle: Record<ContentLocale, string> = {
+  en: 'Featured projects',
+  es: 'Proyectos destacados',
+  pt: 'Projetos em destaque',
+}
 
 export function buildStroJsonLd(input: StroSeoJsonLdInput) {
-  const inLanguage = input.locale === 'en' ? 'en-US' : 'pt-BR'
+  const inLanguage =
+    input.locale === 'en'
+      ? 'en-US'
+      : input.locale === 'es'
+        ? 'es'
+        : 'pt-BR'
   const imageUrl = `${site.siteUrl}${site.ogImageUrl}`
   const photoUrl = `${site.siteUrl}${site.profilePhotoUrl}`
   const featuredProjects = input.projects
@@ -128,7 +150,7 @@ export function buildStroJsonLd(input: StroSeoJsonLdInput) {
       {
         '@type': 'ItemList',
         '@id': `${input.pageUrl}#projects`,
-        name: input.locale === 'en' ? 'Featured projects' : 'Projetos em destaque',
+        name: featuredProjectsTitle[input.locale],
         itemListElement: featuredProjects.map((project, index) => {
           const url = projectUrl(project)
           return {

@@ -2,6 +2,7 @@
 import type { SocialLink } from '~/types/portfolio'
 import { resumePdfFilename } from '~/data/resume'
 import { getSocialIcon } from '~/data/socialIcons'
+import { i18nCodeToContentLocale } from '~/lib/i18n/contentLocale'
 
 const props = defineProps<{
   link: SocialLink
@@ -10,7 +11,7 @@ const props = defineProps<{
 const { locale } = useI18n()
 
 const cvDownloadName = computed(() =>
-  resumePdfFilename(locale.value === 'pt' ? 'pt' : 'en'),
+  resumePdfFilename(i18nCodeToContentLocale(locale.value)),
 )
 
 const ariaLabel = computed(() => {

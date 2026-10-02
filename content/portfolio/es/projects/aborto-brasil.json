@@ -1,0 +1,16 @@
+{
+  "id": "aborto-brasil",
+  "title": "Panorama del aborto en Brasil",
+  "organization": "Instituto AzMina",
+  "description": "Mapa y contenido sobre el acceso a servicios legales de aborto en Brasil, en el marco de los derechos reproductivos y la salud pública.",
+  "tags": [
+    "Derechos humanos",
+    "Salud"
+  ],
+  "stack": [
+    "HTML",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de la plataforma Aborto no Brasil, una iniciativa del Instituto AzMina que proporciona datos, investigación y recursos educativos sobre el acceso a servicios legales de aborto y atención sanitaria reproductiva en Brasil.\n\nCon HTML, Tailwind CSS y JavaScript, construí una interfaz responsive, accesible y fácil de usar diseñada para presentar información compleja mediante navegación clara y una experiencia de usuario intuitiva.\n\nLa plataforma reúne investigación, contenido interactivo e información pública para apoyar a periodistas, investigadores, profesionales sanitarios y el público con recursos fiables basados en datos. Durante el desarrollo me centré en accesibilidad, rendimiento, código mantenible y diseño responsive para garantizar una experiencia fluida en todos los dispositivos."
+}

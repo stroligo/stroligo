@@ -1,16 +1,16 @@
 {
   "items": [
     {
-      "id": "vex-tech",
-      "company": "Vex Tech",
-      "role": "Software Engineer · Especialista front-end",
-      "period": "jul/2025 — presente",
-      "yearStart": 2025,
+      "id": "axians",
+      "company": "Axians",
+      "role": "Senior Software Engineer · Especialista front-end",
+      "period": "set/2026 — presente",
+      "yearStart": 2026,
       "yearEnd": null,
-      "location": "Portugal",
-      "highlight": "Alocado ao projeto EUIPO (European Union Intellectual Property Office). Evolução de sistemas front-end em larga escala na União Europeia. Equipes ágeis multiculturais.",
-      "details": "Desenvolvimento e evolução de interfaces para o EUIPO, com foco em consistência visual, escalabilidade e entrega em ciclos ágeis. Trabalho remoto a partir de Portugal, documentação técnica em inglês e colaboração com equipas distribuídas na Europa.",
-      "url": "https://www.linkedin.com/company/vextech-it",
+      "location": "Espanha · remoto",
+      "highlight": "Contrato independente no projeto EUIPO (European Union Intellectual Property Office). Interfaces Front Office em larga escala para serviços de propriedade intelectual na Europa.",
+      "details": "Software Engineer e especialista front-end na Axians, alocado ao projeto EUIPO. Evolução de aplicações web de larga escala, com foco em acessibilidade, performance, escalabilidade e qualidade de código, em equipes Agile multiculturais.",
+      "url": "https://www.linkedin.com/company/axians",
       "current": true,
       "stack": [
         "React",
@@ -18,7 +18,27 @@
         "Material UI",
         "React Context API"
       ],
-      "body": "Alocado ao projeto da European Union Intellectual Property Office (EUIPO) através da Axians, contribuindo para o desenvolvimento e evolução de aplicações front-end em larga escala usadas por empresas, profissionais jurídicos e instituições públicas em toda a União Europeia.\n\nResponsável por implementar, evoluir e manter interfaces críticas da versão espanhola da plataforma EUIPO, garantindo acessibilidade, performance, escalabilidade e aderência a elevados padrões de qualidade de código.\n\nAtuação em equipas Agile multiculturais, com participação ativa em discussões técnicas, decisões de arquitetura e iniciativas de melhoria contínua.\n\nEste projeto reforçou minha experiência na construção de serviços digitais robustos no setor público, apoiando a proteção da propriedade intelectual e a inovação em toda a Europa."
+      "body": "Atuo como Software Engineer e especialista front-end independente na Axians, alocado ao projeto do European Union Intellectual Property Office (EUIPO).\n\nContribuo para o desenvolvimento e a evolução de aplicações web de larga escala que apoiam serviços de propriedade intelectual em escritórios nacionais e regionais da Europa.\n\nResponsável por implementar, evoluir e manter interfaces críticas de Front Office, com forte foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código.\n\nColaboro em equipes Agile multiculturais, participando de discussões técnicas, decisões de arquitetura, code reviews e iniciativas de melhoria contínua."
+    },
+    {
+      "id": "vex-tech",
+      "company": "Vex Tech",
+      "role": "Software Engineer · Especialista front-end",
+      "period": "jul/2025 — set/2026",
+      "yearStart": 2025,
+      "yearEnd": 2026,
+      "location": "Portugal · remoto",
+      "highlight": "Projeto EUIPO (European Union Intellectual Property Office). Manutenção e evolução de aplicações web de larga escala para serviços de propriedade intelectual na Europa.",
+      "details": "Implementação e manutenção de interfaces Front Office, com foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código. Colaboração em equipes Agile multiculturais, code reviews e melhoria contínua.",
+      "url": "https://www.linkedin.com/company/vextech-it",
+      "current": false,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Material UI",
+        "React Context API"
+      ],
+      "body": "Atuei como Software Engineer e especialista front-end no projeto do European Union Intellectual Property Office (EUIPO), contribuindo para o desenvolvimento e a manutenção de aplicações web de larga escala para serviços europeus de propriedade intelectual.\n\nResponsável por implementar e manter interfaces de Front Office, com foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código.\n\nColaborei com equipes Agile multiculturais em discussões técnicas, code reviews, resolução de problemas e iniciativas de melhoria contínua."
     },
     {
       "id": "cafe-art",

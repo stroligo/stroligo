@@ -1,8 +1,9 @@
-export type ContentLocale = 'pt' | 'en'
+export type ContentLocale = 'en' | 'pt' | 'es'
 
 export type LocaleValue = {
-  pt?: string | null
   en?: string | null
+  pt?: string | null
+  es?: string | null
 }
 
 import { resolveI18nString } from '~/utils/resolveI18nMessage'
@@ -12,8 +13,14 @@ export function pickLocale(
   locale: ContentLocale,
 ): string {
   if (!value) return ''
-  const primary = locale === 'en' ? value.en : value.pt
-  const fallback = locale === 'en' ? value.pt : value.en
+  const primary =
+    locale === 'en' ? value.en : locale === 'es' ? value.es : value.pt
+  const fallback =
+    locale === 'en'
+      ? value.pt ?? value.es
+      : locale === 'es'
+        ? value.en ?? value.pt
+        : value.en ?? value.es
   return resolveI18nString(primary || fallback).trim()
 }
 

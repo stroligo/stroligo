@@ -3,6 +3,7 @@
  * @see https://www.linkedin.com/in/gabrielstroligo/details/projects/
  */
 export const projectStacksById: Record<string, string[]> = {
+  'fundo-vale': ['WordPress', 'Tailwind CSS', 'JavaScript', 'PHP'],
   'trampos-do-futuro': ['Nuxt', 'Tailwind CSS'],
   'dr-jose-messias': ['Nuxt', 'Tailwind CSS', 'TypeScript'],
   'layane-moura': ['Nuxt', 'Vue', 'Tailwind CSS', 'TypeScript'],
@@ -14,6 +15,7 @@ export const projectStacksById: Record<string, string[]> = {
   euipo: ['React', 'TypeScript', 'Material UI'],
   'eles-tao-viajando': ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
   'siga-doacao': ['Nuxt', 'Tailwind CSS', 'JavaScript'],
+  'panorama-oncologia': ['Nuxt', 'Tailwind CSS', 'JavaScript'],
   desiderata: ['Nuxt', 'Tailwind CSS', 'JavaScript'],
   'custo-brasil': ['WordPress', 'HTML', 'CSS', 'JavaScript'],
   'hfpm-who': ['Nuxt', 'Tailwind CSS', 'JavaScript'],

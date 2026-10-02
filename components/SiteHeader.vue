@@ -39,7 +39,6 @@ const nav = computed(() => [
       </nav>
 
       <div class="flex shrink-0 items-center gap-2 sm:gap-3">
-        <ThemeToggle />
         <LocaleSwitcher />
         <StroButton
           :href="profile.resumeUrl"

@@ -1,0 +1,16 @@
+{
+  "id": "panorama-oncologia",
+  "title": "Pediatric Oncology Panorama",
+  "organization": "Instituto Desiderata",
+  "description": "Data platform on childhood cancer in Brazil — indicators, research, and educational resources for early diagnosis and pediatric care.",
+  "tags": [
+    "Health",
+    "Data"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Developed the frontend for the Pediatric Oncology Panorama, an initiative by Instituto Desiderata focused on childhood cancer awareness, early diagnosis, and pediatric healthcare in Brazil.\n\nUsing Nuxt and Tailwind CSS, I built a responsive, accessible, and high-performance experience that presents indicators, research, and educational resources through a clear interface.\n\nThe platform helps healthcare professionals, researchers, policymakers, and the public access reliable information that supports early diagnosis and better health outcomes. I focused on accessibility, performance, maintainable code, and a scalable frontend architecture."
+}

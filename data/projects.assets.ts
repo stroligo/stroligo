@@ -15,9 +15,14 @@ export type ProjectAsset = {
 }
 
 export const projectAssetsById: Record<string, ProjectAsset> = {
+  'fundo-vale': {
+    siteUrl: 'https://www.fundovale.org/',
+    imageAlt: 'Floresta Amazônica — impacto socioambiental Fundo Vale',
+    order: 0,
+  },
   'trampos-do-futuro': {
     siteUrl: 'https://www.fundacaoitau.org.br/trampos-do-futuro-2026/',
-    order: 0,
+    order: 1,
   },
   'dr-jose-messias': {
     siteUrl: 'https://drmessias.com.br/',
@@ -60,73 +65,77 @@ export const projectAssetsById: Record<string, ProjectAsset> = {
     siteUrl: 'https://sigasuadoacao.com.br/',
     order: 10,
   },
-  desiderata: {
+  'panorama-oncologia': {
     siteUrl: 'https://panoramadaoncologia.desiderata.org.br/',
     order: 11,
   },
+  desiderata: {
+    siteUrl: 'https://desiderata.org.br/',
+    order: 12,
+  },
   'custo-brasil': {
     siteUrl: 'https://www.custobrasil.org.br/',
-    order: 12,
+    order: 13,
   },
   'hfpm-who': {
     siteUrl:
       'https://www.who.int/teams/health-financing-and-economics/health-financing/diagnostics/health-financing-progress-matrix',
-    order: 13,
+    order: 14,
   },
   inovahc: {
     siteUrl: 'https://inovahc.com.br/',
-    order: 14,
+    order: 15,
   },
   safernet: {
     siteUrl: 'https://cidadaniadigital.org.br/',
-    order: 15,
+    order: 16,
   },
   'aborto-brasil': {
     siteUrl: 'https://mapa.abortoazmina.org/',
-    order: 16,
+    order: 17,
   },
   'amazon-underworld': {
     siteUrl: 'https://amazonunderworld.org/',
-    order: 17,
+    order: 18,
     behanceUrl: 'https://www.behance.net/gabrielstroligo',
   },
   cedra: {
     siteUrl: 'https://cedra.org.br/',
-    order: 18,
+    order: 19,
     behanceUrl: 'https://www.behance.net/gabrielstroligo',
   },
   'golpe-flix': {
     siteUrl: 'https://www.aosfatos.org/golpeflix/',
-    order: 19,
+    order: 20,
     behanceUrl: 'https://www.behance.net/gabrielstroligo',
   },
   hri: {
     siteUrl: 'https://hri.global/',
-    order: 20,
+    order: 21,
     behanceUrl: 'https://www.behance.net/gabrielstroligo',
   },
   okbr: {
     siteUrl: 'https://ok.org.br/',
-    order: 21,
+    order: 22,
   },
   'weplan-forests': {
     siteUrl: 'https://www.weplan-forests.org/methodology',
-    order: 22,
+    order: 23,
   },
   'narrativas-ancestrais': {
     siteUrl: 'http://www.amoreira.info/narrativasancestrais/',
-    order: 23,
+    order: 24,
   },
   nsi: {
     siteUrl: 'https://newsouthinstitute.com/',
-    order: 24,
+    order: 25,
   },
   'ccr-rmbh': {
-    order: 25,
+    order: 26,
   },
   tjto: {
     siteUrl: 'https://www.tjto.jus.br/',
-    order: 26,
+    order: 27,
   },
 }
 

@@ -1,0 +1,15 @@
+{
+  "id": "nsi",
+  "title": "New South Institute",
+  "organization": "NSI",
+  "description": "Sitio web de un instituto de investigación y advocacy sobre democracias frágiles, reforma del servicio público y diálogos Sur-Sur.",
+  "tags": [
+    "Política",
+    "Investigación"
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend del New South Institute (NSI), un think tank dedicado a impulsar políticas públicas basadas en evidencia, gobernanza democrática y desarrollo institucional en el Sur Global.\n\nLa plataforma se diseñó para organizar un amplio ecosistema de investigación, publicaciones, iniciativas de política y programas institucionales en una experiencia digital clara y accesible. Mi enfoque estuvo en construir navegación intuitiva, diseños responsive y componentes front-end reutilizables que faciliten descubrir y consumir contenido complejo.\n\nTrabajando con Tailwind CSS y prácticas front-end modernas, optimicé rendimiento, accesibilidad y mantenibilidad para ofrecer una plataforma escalable que apoya a responsables políticos, investigadores, periodistas y organizaciones de la sociedad civil en todo el mundo."
+}

@@ -1,8 +1,8 @@
 import { projectsMetaById } from '~/data/projects.meta'
-import { projectBodiesById } from '~/data/projectBodies'
+import { projectBodyForLocale } from '~/data/projectBodies'
 import { projectStacksById } from '~/data/projectStacks'
 import { enrichAndSortProjects } from '~/lib/portfolio/enrichProjects'
-import { experienceBodiesById } from '~/data/experienceBodies'
+import { experienceBodyForLocale } from '~/data/experienceBodies'
 import { experiencesForLocale } from '~/data/experiences'
 import {
   resumeUrlForLocale,
@@ -35,6 +35,7 @@ function localeFromDoc(doc: ContentDoc): ContentLocale | null {
   const stem = doc.stem ?? ''
   if (stem.startsWith('portfolio/en/')) return 'en'
   if (stem.startsWith('portfolio/pt/')) return 'pt'
+  if (stem.startsWith('portfolio/es/')) return 'es'
   return null
 }
 
@@ -152,7 +153,7 @@ export async function buildPortfolioFromContent(
           title: item.title,
           organization: item.organization,
           description: item.description,
-          body: item.body ?? projectBodiesById[id]?.[locale],
+          body: item.body ?? projectBodyForLocale(id, locale),
           tags: item.tags,
           stack: item.stack?.length
             ? item.stack
@@ -178,7 +179,7 @@ export async function buildPortfolioFromContent(
           location: item.location,
           highlight: item.highlight,
           details: item.details,
-          body: item.body ?? experienceBodiesById[item.id]?.[locale],
+          body: item.body ?? experienceBodyForLocale(item.id, locale),
           stack: item.stack?.length ? item.stack : undefined,
           yearStart: item.yearStart,
           yearEnd: item.yearEnd ?? null,

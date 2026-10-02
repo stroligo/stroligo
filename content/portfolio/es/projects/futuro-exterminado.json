@@ -1,0 +1,17 @@
+{
+  "id": "futuro-exterminado",
+  "title": "Futuro Exterminado",
+  "organization": "Instituto Fogo Cruzado",
+  "description": "Plataforma basada en datos que mapea el impacto de la violencia armada sobre niños y adolescentes en Río de Janeiro — mapas, indicadores y datos verificados para periodismo, investigación y políticas públicas.",
+  "tags": [
+    "Datos abiertos",
+    "Civic Tech",
+    "Mapas"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Futuro Exterminado, una plataforma basada en datos del Instituto Fogo Cruzado que documenta y visualiza el impacto de la violencia armada sobre niños y adolescentes en la región metropolitana de Río de Janeiro.\n\nConstruido con Nuxt y Tailwind CSS, me centré en crear una experiencia de usuario responsive, accesible y de alto rendimiento capaz de presentar conjuntos de datos complejos mediante navegación intuitiva, mapas interactivos y visualizaciones de datos significativas.\n\nLa plataforma transforma información verificada en una experiencia digital clara y atractiva, ayudando a periodistas, investigadores, organizaciones de la sociedad civil y responsables políticos a comprender mejor los patrones de violencia y a apoyar debates basados en evidencia sobre seguridad pública y derechos humanos.\n\nProyectos como este demuestran cómo la ingeniería front-end puede hacer la información compleja más accesible, permitiendo que la tecnología apoye la transparencia, la concienciación pública y el impacto social."
+}

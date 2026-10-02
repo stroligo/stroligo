@@ -1,0 +1,16 @@
+{
+  "id": "okbr",
+  "title": "Open Knowledge Brasil",
+  "organization": "OKBR",
+  "description": "Nuevo sitio web de OKBR centrado en datos abiertos, transparencia municipal y lucha contra la desinformación.",
+  "tags": [
+    "Datos abiertos",
+    "Ciudades"
+  ],
+  "stack": [
+    "PHP",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Construí el frontend de Open Knowledge Brasil (OKBR), una organización sin ánimo de lucro que promueve datos abiertos, transparencia y tecnología cívica para fortalecer la rendición de cuentas pública y la toma de decisiones basada en evidencia.\n\nEl proyecto se centró en crear una plataforma rápida e intuitiva que hace la investigación, los conjuntos de datos y las iniciativas de transparencia fácilmente accesibles para un público amplio. Desde administradores públicos y periodistas hasta investigadores y desarrolladores, la interfaz se diseñó para simplificar la navegación por grandes volúmenes de contenido manteniendo claridad y usabilidad.\n\nCon PHP y Tailwind CSS, desarrollé diseños responsive, componentes front-end reutilizables y rendimiento de página optimizado para ofrecer una experiencia escalable y accesible en escritorio y móvil."
+}

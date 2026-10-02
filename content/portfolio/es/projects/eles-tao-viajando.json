@@ -1,0 +1,16 @@
+{
+  "id": "eles-tao-viajando",
+  "title": "Eles tão viajando",
+  "organization": "Proyecto final FLAG",
+  "description": "Aplicación full-stack para compartir experiencias de viaje — mapas, galería, blog y panel de administración.",
+  "tags": [
+    "MongoDB"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Tailwind CSS"
+  ],
+  "body": "Construí la aplicación fullstack Eles Tão Viajando como proyecto final del curso Full Stack Web Developer en FLAG. La plataforma permite a los usuarios compartir experiencias de viaje con mapas interactivos, galerías de imágenes, un blog y un área de administración para la gestión de contenidos.\n\nEn el front-end utilicé React, Vite, Tailwind CSS, Wouter, React Leaflet y React Splide. En el back-end implementé Node.js, Express, MongoDB (Mongoose), JWT, Bcrypt, Multer y Cloudinary — integrando autenticación, subida de archivos y APIs externas en una arquitectura modular lista para producción.\n\nEl proyecto fortaleció mis competencias en back-end mientras consolidaba un flujo de trabajo full-stack moderno, desde las experiencias públicas hasta la administración de contenidos."
+}

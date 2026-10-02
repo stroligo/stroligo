@@ -1,0 +1,17 @@
+{
+  "id": "crime-index-2025",
+  "title": "Global Organized Crime Index 2025",
+  "organization": "Crime at a Crossroads",
+  "description": "Plataforma global con visualizaciones interactivas sobre crimen organizado, resiliencia estatal y dinámicas de seguridad en todo el mundo.",
+  "tags": [
+    "Datos abiertos",
+    "Investigación",
+    "Data Viz"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend del Global Organized Crime Index 2025 – Crime at a Crossroads, una plataforma global que analiza tendencias del crimen organizado, mercados delictivos y resiliencia estatal en más de 190 países.\n\nConstruido con Nuxt y Tailwind CSS, me centré en ofrecer una experiencia de usuario responsive, accesible y de alto rendimiento capaz de presentar investigación compleja mediante visualizaciones interactivas y navegación intuitiva.\n\nLa plataforma transforma conjuntos de datos a gran escala en insights claros y accionables, apoyando a investigadores, periodistas, responsables políticos y organizaciones internacionales a comprender el panorama evolutivo del crimen organizado en todo el mundo. A lo largo del proyecto prioricé rendimiento, accesibilidad, código mantenible y una arquitectura front-end escalable para garantizar una experiencia fiable en todos los dispositivos."
+}

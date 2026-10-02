@@ -1,3 +1,5 @@
+import { localizedCopyForLocale } from '~/data/localizedCopy'
+import { experienceBodiesEsById } from '~/data/experienceBodiesEs'
 import type { ContentLocale } from '~/lib/portfolio/locale'
 import type { Experience } from '~/types/portfolio'
 
@@ -8,21 +10,33 @@ type ExperienceBodyCopy = {
 
 /** Texto completo das experiências — alinhado ao perfil do LinkedIn. */
 export const experienceBodiesById: Record<string, ExperienceBodyCopy> = {
+  axians: {
+    en: `Working as an independent Software Engineer and Front-end Specialist at Axians, assigned to the European Union Intellectual Property Office (EUIPO) project.
+
+Contributing to the development and evolution of large-scale web applications supporting intellectual property services across European national and regional offices.
+
+Responsible for implementing, enhancing, and maintaining critical Front Office interfaces, with a strong focus on accessibility, performance, scalability, usability, and code quality.
+
+Collaborating within multicultural Agile teams, participating in technical discussions, architectural decisions, code reviews, and continuous improvement initiatives.`,
+    pt: `Atuo como Software Engineer e especialista front-end independente na Axians, alocado ao projeto do European Union Intellectual Property Office (EUIPO).
+
+Contribuo para o desenvolvimento e a evolução de aplicações web de larga escala que apoiam serviços de propriedade intelectual em escritórios nacionais e regionais da Europa.
+
+Responsável por implementar, evoluir e manter interfaces críticas de Front Office, com forte foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código.
+
+Colaboro em equipes Agile multiculturais, participando de discussões técnicas, decisões de arquitetura, code reviews e iniciativas de melhoria contínua.`,
+  },
   'vex-tech': {
-    en: `Allocated to the European Union Intellectual Property Office project through Axians, contributing to the development and evolution of large-scale frontend applications used by businesses, legal professionals, and public institutions across the European Union.
+    en: `Worked as a Software Engineer and Front-end Specialist on the European Union Intellectual Property Office (EUIPO) project, contributing to the development and maintenance of large-scale web applications for European intellectual property services.
 
-Responsible for implementing, enhancing, and maintaining critical user interfaces for the Spanish version of the EUIPO platform, ensuring accessibility, performance, scalability, and adherence to high code quality standards.
+Responsible for implementing and maintaining Front Office interfaces, focusing on accessibility, performance, scalability, usability, and code quality.
 
-Collaborating within multicultural Agile teams, actively participating in technical discussions, architectural decisions, and continuous improvement initiatives.
+Collaborated with multicultural Agile teams, contributing to technical discussions, code reviews, problem solving, and continuous improvement initiatives.`,
+    pt: `Atuei como Software Engineer e especialista front-end no projeto do European Union Intellectual Property Office (EUIPO), contribuindo para o desenvolvimento e a manutenção de aplicações web de larga escala para serviços europeus de propriedade intelectual.
 
-Working on this project has strengthened my experience in building robust public-sector digital services that support intellectual property protection and innovation throughout Europe.`,
-    pt: `Alocado ao projeto da European Union Intellectual Property Office (EUIPO) através da Axians, contribuindo para o desenvolvimento e evolução de aplicações front-end em larga escala usadas por empresas, profissionais jurídicos e instituições públicas em toda a União Europeia.
+Responsável por implementar e manter interfaces de Front Office, com foco em acessibilidade, performance, escalabilidade, usabilidade e qualidade de código.
 
-Responsável por implementar, evoluir e manter interfaces críticas da versão espanhola da plataforma EUIPO, garantindo acessibilidade, performance, escalabilidade e aderência a elevados padrões de qualidade de código.
-
-Atuação em equipas Agile multiculturais, com participação ativa em discussões técnicas, decisões de arquitetura e iniciativas de melhoria contínua.
-
-Este projeto reforçou minha experiência na construção de serviços digitais robustos no setor público, apoiando a proteção da propriedade intelectual e a inovação em toda a Europa.`,
+Colaborei com equipes Agile multiculturais em discussões técnicas, code reviews, resolução de problemas e iniciativas de melhoria contínua.`,
   },
   'cafe-art': {
     en: `At Café com Marketing, I was responsible for transforming creative concepts and design prototypes into modern, scalable, and high-performance web applications.
@@ -148,7 +162,10 @@ export function experienceBodyForLocale(
 ): string | undefined {
   const entry = experienceBodiesById[id]
   if (!entry) return undefined
-  return locale === 'en' ? entry.en : entry.pt
+  if (locale === 'es') {
+    return experienceBodiesEsById[id] ?? entry.en
+  }
+  return localizedCopyForLocale(entry, locale)
 }
 
 export function experienceBodyParagraphs(body: string | undefined): string[] {

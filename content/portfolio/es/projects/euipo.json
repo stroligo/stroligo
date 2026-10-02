@@ -1,0 +1,16 @@
+{
+  "id": "euipo",
+  "title": "EUIPO",
+  "organization": "European Union Intellectual Property Office",
+  "description": "Frontend de las plataformas digitales de EUIPO — interfaces React/TypeScript/Material UI seguras, accesibles y escalables que dan soporte a los servicios de propiedad intelectual en la UE.",
+  "tags": [
+    "Enterprise",
+    "Sector público"
+  ],
+  "stack": [
+    "React",
+    "TypeScript",
+    "Material UI"
+  ],
+  "body": "Contribuí al desarrollo front-end de plataformas digitales del European Union Intellectual Property Office (EUIPO), utilizando React, TypeScript y Material UI para construir interfaces de usuario seguras, accesibles y escalables que dan soporte a los servicios de propiedad intelectual en la Unión Europea.\n\nComo parte del equipo de desarrollo, me centré en crear y mantener interfaces responsive y de alto rendimiento, garantizando accesibilidad, usabilidad y coherencia en aplicaciones empresariales complejas. Trabajar en un ecosistema a gran escala requirió colaboración estrecha, adherencia a design systems e implementación de soluciones front-end mantenibles.\n\nContribuir a una de las mayores plataformas digitales públicas de Europa reforzó mi experiencia en la construcción de aplicaciones de nivel empresarial con un fuerte énfasis en rendimiento, accesibilidad, escalabilidad y mantenibilidad a largo plazo."
+}

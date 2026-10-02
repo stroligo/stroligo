@@ -48,8 +48,12 @@ export default {
     title: 'Sobre a atuação',
     stackTitle: 'Stack principal',
     paragraphs: [
-      'Software Engineer e especialista em front-end com mais de 18 anos de experiência em soluções digitais para setores público e privado. Desenvolvo interfaces modernas, responsivas e acessíveis com React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS e Material UI — do layout ao deploy, em ambientes ágeis e equipes multiculturais.',
-      'Transformo UI/UX em arquiteturas escaláveis em portais governamentais de alto tráfego, plataformas de impacto social, visualização de dados e transparência (open data, civic tech). Já contribuí para projetos com Fundação Itaú, OMS, EUIPO, MMA, institutos de pesquisa, ONGs e veículos de jornalismo investigativo no Brasil e na Europa, com foco em performance, acessibilidade e código sustentável.',
+      'Software Engineer e especialista em front-end, com mais de 18 anos de experiência na construção de aplicações web e produtos digitais escaláveis, acessíveis e de alta performance.',
+      'Ao longo da carreira, trabalhei em projetos digitais complexos para instituições públicas, organizações internacionais, ONGs e o setor privado, incluindo o European Union Intellectual Property Office (EUIPO) e o Poder Judiciário do Tocantins (TJTO).',
+      'O trabalho foi reconhecido em prêmios nacionais e internacionais de design, incluindo iF Design Award Gold, Anthem Award Silver, Brasil Design Awards, Bienal Iberoamericana de Diseño e Design for a Better World Awards. Esses reconhecimentos abrangem produtos digitais, UX/UI, acessibilidade, visualização de dados, inclusão e impacto social.',
+      'Especializo-me em transformar requisitos complexos em experiências digitais intuitivas, sustentáveis e de alta performance com React, Vue, Nuxt, TypeScript, Tailwind CSS, Material UI e arquiteturas frontend modernas. A experiência inclui aplicações enterprise, plataformas governamentais, serviços públicos, design systems, interfaces responsivas, integrações de API, acessibilidade (WCAG), otimização de performance e arquiteturas baseadas em componentes pensadas para escalar.',
+      'Gosto de resolver desafios técnicos complexos mantendo experiência do usuário, acessibilidade, qualidade de código e manutenção de longo prazo no centro de cada projeto.',
+      'Além de escrever código, valorizo colaboração, ownership e melhoria contínua. Gosto de trabalhar com designers, product managers e equipes multidisciplinares para construir produtos digitais que geram valor mensurável para organizações e impacto significativo para a sociedade.',
     ],
   },
   work: {
@@ -86,6 +90,14 @@ export default {
       institucional: 'Institucional',
     },
     items: [
+      {
+        id: 'fundo-vale',
+        title: 'Fundo Vale — Relatório de Impacto 2025',
+        organization: 'Fundo Vale',
+        description:
+          'Frontend do Relatório de Impacto 2025 do Fundo Vale — resultados sociais e ambientais, iniciativas e aprendizados na Amazônia e em outros territórios.',
+        tags: ['Impacto', 'Meio ambiente'],
+      },
       {
         id: 'trampos-do-futuro',
         title: 'Trampos do Futuro 2026',
@@ -215,6 +227,14 @@ export default {
         tags: ['Enterprise', 'Setor público'],
       },
       {
+        id: 'panorama-oncologia',
+        title: 'Panorama da Oncologia Pediátrica',
+        organization: 'Instituto Desiderata',
+        description:
+          'Plataforma de dados sobre câncer infantojuvenil no Brasil — indicadores, pesquisa e recursos educativos para diagnóstico precoce e cuidado pediátrico.',
+        tags: ['Saúde', 'Dados'],
+      },
+      {
         id: 'desiderata',
         title: 'Instituto Desiderata',
         organization: 'Instituto Desiderata',
@@ -325,7 +345,7 @@ export default {
   profile: {
     photoAlt: 'Retrato de {name}',
     tagline: 'Software Engineer · Front-end Specialist',
-    location: 'Portugal',
+    location: 'Portugal / Espanha',
     experienceYears: '18+',
     resumeLabel: 'Currículo (PDF)',
     stack: [

@@ -48,8 +48,12 @@ export default {
     title: 'About my work',
     stackTitle: 'Core stack',
     paragraphs: [
-      'Software Engineer and front-end specialist with 18+ years of experience delivering digital solutions for public and private sectors. I build modern, responsive, accessible interfaces with React, Next.js, Vue, Nuxt, TypeScript, Tailwind CSS, and Material UI — from layout to production, in agile and multicultural teams.',
-      'I turn UI/UX into scalable architectures for high-traffic government portals, social impact platforms, data visualization, and transparency initiatives (open data, civic tech). I have contributed to projects with Fundação Itaú, the WHO, EUIPO, Brazil’s Ministry of Environment, research institutes, NGOs, and investigative journalism outlets in Brazil and Europe, with a focus on performance, accessibility, and maintainable code.',
+      'Software Engineer and front-end specialist with 18+ years of experience building scalable, accessible, and high-performance web applications and digital products.',
+      'Throughout my career, I have worked on complex digital projects for government institutions, international organizations, NGOs, and the private sector, including the European Union Intellectual Property Office (EUIPO) and the Brazilian Judiciary (TJTO).',
+      'My work has been recognized through national and international design awards, including an iF Design Award Gold, Anthem Award Silver, Brasil Design Awards, Bienal Iberoamericana de Diseño, and Design for a Better World Awards. These recognitions span digital products, UX/UI, accessibility, data visualization, inclusion, and social impact.',
+      'I specialize in turning complex requirements into intuitive, maintainable, and high-performance digital experiences with React, Vue, Nuxt, TypeScript, Tailwind CSS, Material UI, and modern frontend architectures. That includes enterprise applications, government platforms, public services, design systems, responsive interfaces, API integrations, accessibility (WCAG), performance optimization, and component-based architectures built to scale.',
+      'I enjoy solving complex technical challenges while keeping user experience, accessibility, code quality, and long-term maintainability at the center of every project.',
+      'Beyond writing code, I value collaboration, ownership, and continuous improvement. I enjoy working with designers, product managers, and multidisciplinary teams to build digital products that create measurable value for organizations and meaningful impact for society.',
     ],
   },
   work: {
@@ -86,6 +90,14 @@ export default {
       institucional: 'Institutional',
     },
     items: [
+      {
+        id: 'fundo-vale',
+        title: 'Fundo Vale — 2025 Impact Report',
+        organization: 'Fundo Vale',
+        description:
+          'Frontend for Fundo Vale’s 2025 Impact Report — social and environmental results, initiatives, and learnings across the Amazon and other territories.',
+        tags: ['Impact', 'Environment'],
+      },
       {
         id: 'trampos-do-futuro',
         title: 'Trampos do Futuro 2026',
@@ -215,6 +227,14 @@ export default {
         tags: ['Enterprise', 'Public sector'],
       },
       {
+        id: 'panorama-oncologia',
+        title: 'Pediatric Oncology Panorama',
+        organization: 'Instituto Desiderata',
+        description:
+          'Data platform on childhood cancer in Brazil — indicators, research, and educational resources for early diagnosis and pediatric care.',
+        tags: ['Health', 'Data'],
+      },
+      {
         id: 'desiderata',
         title: 'Instituto Desiderata',
         organization: 'Instituto Desiderata',
@@ -325,7 +345,7 @@ export default {
   profile: {
     photoAlt: 'Portrait of {name}',
     tagline: 'Software Engineer · Front-end Specialist',
-    location: 'Portugal',
+    location: 'Portugal / Spain',
     experienceYears: '18+',
     resumeLabel: 'Resume (PDF)',
     stack: [

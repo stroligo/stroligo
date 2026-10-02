@@ -1,0 +1,27 @@
+{
+  "tagline": "Software Engineer · Especialista en front-end",
+  "location": "Portugal / España",
+  "experienceYears": "18+",
+  "resumeLabel": "Currículum (PDF)",
+  "about": [
+    "Software Engineer y especialista en front-end con más de 18 años de experiencia en la construcción de aplicaciones web y productos digitales escalables, accesibles y de alto rendimiento.",
+    "A lo largo de mi carrera he trabajado en proyectos digitales complejos para instituciones públicas, organizaciones internacionales, ONG y el sector privado, incluidos el European Union Intellectual Property Office (EUIPO) y el Poder Judicial brasileño (TJTO).",
+    "Mi trabajo ha sido reconocido con premios nacionales e internacionales de diseño, entre ellos iF Design Award Gold, Anthem Award Silver, Brasil Design Awards, Bienal Iberoamericana de Diseño y Design for a Better World Awards. Estos reconocimientos abarcan productos digitales, UX/UI, accesibilidad, visualización de datos, inclusión e impacto social.",
+    "Me especializo en transformar requisitos complejos en experiencias digitales intuitivas, mantenibles y de alto rendimiento con React, Vue, Nuxt, TypeScript, Tailwind CSS, Material UI y arquitecturas front-end modernas. Eso incluye aplicaciones empresariales, plataformas gubernamentales, servicios públicos, design systems, interfaces responsive, integraciones de API, accesibilidad (WCAG), optimización del rendimiento y arquitecturas basadas en componentes pensadas para escalar.",
+    "Disfruto resolviendo retos técnicos complejos manteniendo la experiencia de usuario, la accesibilidad, la calidad del código y la mantenibilidad a largo plazo en el centro de cada proyecto.",
+    "Más allá de escribir código, valoro la colaboración, la responsabilidad y la mejora continua. Me gusta trabajar con diseñadores, product managers y equipos multidisciplinares para construir productos digitales que generen valor medible para las organizaciones e impacto significativo para la sociedad."
+  ],
+  "stack": [
+    "React",
+    "Next.js",
+    "Vue",
+    "Nuxt",
+    "TypeScript",
+    "Tailwind CSS",
+    "Material UI",
+    "Vite",
+    "Node.js",
+    "PHP",
+    "Joomla"
+  ]
+}

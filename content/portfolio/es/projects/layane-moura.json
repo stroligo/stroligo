@@ -1,0 +1,17 @@
+{
+  "id": "layane-moura",
+  "title": "Layane Moura",
+  "organization": "Layane Moura — Ilustradora y cartógrafa",
+  "description": "Portfolio bilingüe (EN/PT) para ilustradora y diseñadora de mapas — galería visual, modales de proyecto en lightbox, formulario de contacto por correo y capa de contenido editable para actualizaciones. SEO, sitemap y datos estructurados.",
+  "tags": [
+    "Portfolio",
+    "i18n"
+  ],
+  "stack": [
+    "Nuxt",
+    "Vue",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "body": "Construí el frontend del portfolio de Layane Moura con Nuxt y Tailwind CSS, creando un sitio web bilingüe, responsive y orientado al rendimiento que muestra su trabajo a través de una interfaz limpia e intuitiva.\n\nEl sitio combina una galería visual, soporte bilingüe (inglés/portugués) y páginas de proyecto que se abren en un modal tipo lightbox para que los visitantes exploren cada pieza sin salir del flujo. Una página de contacto dedicada incluye un formulario que envía consultas directamente por correo electrónico, y una capa de contenido permite a la clienta actualizar proyectos con el tiempo sin depender de un desarrollador en cada cambio.\n\nA lo largo del proyecto equilibré rendimiento, diseño responsive, coherencia de marca y mantenibilidad a largo plazo — desde grids adaptados a móvil hasta bases de SEO (metadatos, sitemap, datos estructurados) y un despliegue listo para producción."
+}

@@ -1,15 +1,18 @@
-import { projectsMetaById } from '~/data/projects.meta'
+import { projectsMetaById } from '~/data/projects.meta';
 
 /**
  * Fontes de capa por projeto (og:image, Behance, CDN).
  * Ficheiro local: public/projects/{id}.webp — gerar com npm run sync:projects
  */
 export type ProjectImageSource = {
-  fetchUrls?: string[]
-  image?: string
-}
+  fetchUrls?: string[];
+  image?: string;
+};
 
 export const projectImageSources: Record<string, ProjectImageSource> = {
+  'fundo-vale': {
+    fetchUrls: ['https://www.fundovale.org/relatorio-de-impacto-2025/'],
+  },
   'trampos-do-futuro': {
     fetchUrls: ['https://www.fundacaoitau.org.br/trampos-do-futuro-2026/'],
   },
@@ -69,8 +72,11 @@ export const projectImageSources: Record<string, ProjectImageSource> = {
   euipo: {
     fetchUrls: ['https://www.euipo.europa.eu/'],
   },
-  desiderata: {
+  'panorama-oncologia': {
     fetchUrls: ['https://panoramadaoncologia.desiderata.org.br/'],
+  },
+  desiderata: {
+    fetchUrls: ['https://desiderata.org.br/'],
   },
   'hfpm-who': {
     fetchUrls: [
@@ -119,9 +125,9 @@ export const projectImageSources: Record<string, ProjectImageSource> = {
     image:
       'https://opengraph.githubassets.com/ea3d76b6a7d9aea67c2dc1124f21640f4367e2a4685fe829886efc2e0bcfb7c3/stroligo/elestaoviajando',
   },
-}
+};
 
 /** Behance das galerias em projects.meta */
 export function behanceFetchUrl(projectId: string): string | undefined {
-  return projectsMetaById[projectId]?.behanceUrl
+  return projectsMetaById[projectId]?.behanceUrl;
 }

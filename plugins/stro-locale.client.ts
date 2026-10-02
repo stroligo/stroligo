@@ -1,11 +1,8 @@
-/** Limpa cookie de locale antigo (detecção automática PT) — default passa a EN. */
+/** Remove cookie legado `stroligo_locale` (antes da detecção via @nuxtjs/i18n). */
 export default defineNuxtPlugin(() => {
-  const MIGRATION = 'stroligo_locale_en_default'
+  const MIGRATION = 'stroligo_locale_legacy_cleared'
   if (localStorage.getItem(MIGRATION)) return
 
-  document.cookie =
-    'stroligo_locale=; Max-Age=0; path=/; SameSite=Lax'
-  document.cookie =
-    'i18n_redirected=; Max-Age=0; path=/; SameSite=Lax'
+  document.cookie = 'stroligo_locale=; Max-Age=0; path=/; SameSite=Lax'
   localStorage.setItem(MIGRATION, '1')
 })

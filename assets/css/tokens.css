@@ -1,9 +1,8 @@
 /**
  * stroligo.dev — Design tokens v1
- * Tema: data-theme="dark" (padrão) | data-theme="light"
+ * Tema: claro (padrão) | data-theme="dark" (legado, não exposto na UI)
  */
 
-:root,
 [data-theme='dark'] {
   color-scheme: dark;
 
@@ -81,6 +80,7 @@
   --stro-theme-color: #0b1020;
 }
 
+:root,
 [data-theme='light'] {
   color-scheme: light;
 

@@ -1,0 +1,17 @@
+{
+  "id": "fundo-vale",
+  "title": "Fundo Vale — 2025 Impact Report",
+  "organization": "Fundo Vale",
+  "description": "Frontend for Fundo Vale’s 2025 Impact Report — social and environmental results, initiatives, and learnings across the Amazon and other territories.",
+  "tags": [
+    "Impact",
+    "Environment"
+  ],
+  "stack": [
+    "WordPress",
+    "Tailwind CSS",
+    "JavaScript",
+    "PHP"
+  ],
+  "body": "Developed the frontend for Fundo Vale’s 2025 Impact Report, a digital experience that presents the organization’s social and environmental impact, results, initiatives, and learnings from its work across the Amazon and other territories.\n\nBuilt with WordPress, Tailwind CSS, and JavaScript, the project turns a large volume of institutional content, impact data, and information into an engaging and intuitive experience. The interface combines structured content, visual storytelling, animations, and interactive elements so complex information is easier to explore.\n\nThe platform presents Fundo Vale’s approach to impact, including its Theory of Change, supported initiatives, socio-environmental businesses, partnerships, and work related to the bioeconomy, forests, climate, innovation, and impact finance.\n\nThe experience is responsive and accessible across devices, with a focus on usability, performance, visual consistency, and a clear information hierarchy. I was responsible for the complete frontend, including animations, responsive implementation, accessibility, and cross-device testing."
+}

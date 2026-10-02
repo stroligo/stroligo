@@ -2,6 +2,12 @@ import type { ProjectMeta } from '~/types/portfolio'
 
 export const projectsMeta: ProjectMeta[] = [
   {
+    id: 'fundo-vale',
+    category: 'impacto',
+    year: '2026',
+    featured: true,
+  },
+  {
     id: 'trampos-do-futuro',
     category: 'impacto',
     year: '2026',
@@ -38,6 +44,7 @@ export const projectsMeta: ProjectMeta[] = [
   },
   { id: 'eles-tao-viajando', category: 'institucional', year: '2025' },
   { id: 'siga-doacao', category: 'saude', year: '2024' },
+  { id: 'panorama-oncologia', category: 'saude', year: '2025' },
   { id: 'desiderata', category: 'saude', year: '2024' },
   { id: 'custo-brasil', category: 'impacto', year: '2024' },
   { id: 'hfpm-who', category: 'saude', year: '2024' },

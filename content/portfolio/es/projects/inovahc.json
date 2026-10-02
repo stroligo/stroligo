@@ -1,0 +1,16 @@
+{
+  "id": "inovahc",
+  "title": "InovaHC",
+  "organization": "Hospital das Clínicas — USP",
+  "description": "Sitio web de un hub de innovación en salud digital, telemedicina y formación de profesionales con impacto social.",
+  "tags": [
+    "HealthTech",
+    "Innovación"
+  ],
+  "stack": [
+    "WordPress",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend del sitio web de InovaHC, el hub de innovación del Hospital das Clínicas de la Universidad de São Paulo (USP), creando una experiencia digital moderna que apoya la innovación en salud, la transformación digital y las iniciativas de investigación.\n\nCon WordPress y Tailwind CSS, construí una interfaz responsive, accesible y de alto rendimiento diseñada para mostrar programas de innovación, proyectos de investigación, alianzas e iniciativas educativas mediante una arquitectura de información clara y navegación intuitiva.\n\nLa plataforma ayuda a investigadores, profesionales sanitarios, startups y socios institucionales a acceder a información fiable sobre las iniciativas de InovaHC. A lo largo del proyecto me centré en usabilidad, accesibilidad, rendimiento y soluciones front-end mantenibles para garantizar una experiencia consistente en todos los dispositivos."
+}

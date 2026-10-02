@@ -1,0 +1,15 @@
+{
+  "id": "trampos-do-futuro",
+  "title": "Trampos do Futuro 2026",
+  "organization": "Fundação Itaú",
+  "description": "Frontend de Trampos do Futuro 2026 de Fundação Itaú — experiencia moderna, responsive y accesible para miles de estudiantes y educadores que exploran carreras y el futuro del trabajo.",
+  "tags": [
+    "Educación",
+    "Impacto social"
+  ],
+  "stack": [
+    "Nuxt",
+    "Tailwind CSS"
+  ],
+  "body": "Contribuí al lanzamiento de Trampos do Futuro 2026, una iniciativa de Fundação Itaú que ayuda a los jóvenes a explorar las carreras y oportunidades que configuran el futuro del trabajo.\n\nDesarrollé el frontend con Nuxt y Tailwind CSS: una experiencia moderna, responsive y accesible que reúne información del evento, actividades, ponentes y contenido educativo.\n\nEl proyecto se diseñó para que miles de estudiantes, educadores y visitantes accedan a ese conocimiento de forma sencilla e intuitiva, combinando rendimiento, usabilidad y una experiencia visual alineada con la energía del evento."
+}

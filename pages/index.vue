@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Project, ProjectCategory } from '~/types/portfolio';
 import { hobbiesForLocale } from '~/data/hobbies';
+import { i18nCodeToContentLocale } from '~/lib/i18n/contentLocale';
 
 type ProjectSort = 'featured' | 'recent';
 
@@ -18,7 +19,7 @@ const {
 } = usePortfolio();
 
 const hobbies = computed(() =>
-  hobbiesForLocale(locale.value === 'en' ? 'en' : 'pt'),
+  hobbiesForLocale(i18nCodeToContentLocale(locale.value)),
 );
 
 const activeCategory = ref<ProjectCategory>('todos');
@@ -72,13 +73,6 @@ const projectsGridKey = computed(
   () => `${activeCategory.value}-${activeSort.value}`,
 );
 
-const terminalLines = computed(() => [
-  `const dev = "${profile.value.name}"`,
-  'const stack = ["React", "Nuxt", "TypeScript"]',
-  `const focus = "${locale.value === 'pt' ? 'impacto + craft' : 'impact + craft'}"`,
-  'export default dev',
-]);
-
 useStroSeo();
 </script>
 
@@ -111,13 +105,15 @@ useStroSeo();
         </div>
 
         <div class="relative stro-container py-16">
-          <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="grid items-start gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16"
+          >
             <div class="min-w-0">
               <ScrollReveal variant="fade-up">
                 <HeroTypewriterName :text="profile.name" />
               </ScrollReveal>
               <ScrollReveal variant="fade-up" :delay="80">
-                <p class="mt-5 max-w-xl text-lg text-stro-muted sm:text-xl">
+                <p class="mt-5 max-w-2xl text-lg text-stro-muted sm:text-xl">
                   {{ profile.tagline }}
                 </p>
                 <p class="mt-3 text-sm text-stro-muted">
@@ -137,7 +133,7 @@ useStroSeo();
                     <p
                       v-for="(paragraph, index) in profile.about"
                       :key="index"
-                      class="stro-body max-w-xl"
+                      class="stro-body max-w-2xl"
                     >
                       {{ paragraph }}
                     </p>
@@ -164,13 +160,12 @@ useStroSeo();
               :delay="160"
               class="hero-aside lg:sticky lg:z-10 lg:ml-auto lg:w-full lg:max-w-[38rem] lg:self-start"
             >
-              <aside aria-label="Retrato e terminal">
+              <aside
+                :aria-label="t('profile.photoAlt', { name: profile.name })"
+              >
                 <div class="hero-aside__scene">
                   <div class="hero-photo-wrap">
                     <ProfilePhoto size="hero" />
-                  </div>
-                  <div class="hero-terminal-overlap">
-                    <StroTerminal title="portfolio.ts" :lines="terminalLines" />
                   </div>
                 </div>
                 <p

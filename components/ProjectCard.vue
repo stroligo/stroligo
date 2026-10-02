@@ -45,7 +45,7 @@ function onKeydown(event: KeyboardEvent) {
       <ProjectCover :project="project" />
     </div>
 
-    <div class="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
+    <div class="flex min-h-0 min-w-0 flex-1 flex-col p-5 sm:p-6">
       <div class="mb-3 flex flex-wrap items-start justify-between gap-2">
         <div class="min-w-0 flex-1">
           <p class="stro-kicker !text-[10px] !tracking-widest text-stro-purple">
@@ -60,9 +60,11 @@ function onKeydown(event: KeyboardEvent) {
         </StroBadge>
       </div>
 
-      <p class="stro-body mb-5 flex-1 line-clamp-3 text-sm">
+      <p class="stro-body mb-5 line-clamp-3 text-sm leading-snug">
         {{ project.description }}
       </p>
+
+      <div class="min-h-0 flex-1" aria-hidden="true" />
 
       <ProjectBadgeStrip
         class="mb-4"

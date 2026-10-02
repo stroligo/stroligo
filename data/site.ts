@@ -12,6 +12,7 @@ export const site = {
   resumeUrls: {
     en: '/profile/gabriel-stroligo-cv-en.pdf',
     pt: '/profile/gabriel-stroligo-cv-pt.pdf',
+    es: '/profile/gabriel-stroligo-cv-es.pdf',
   } as const,
   linkedInProjectsUrl:
     'https://www.linkedin.com/in/gabrielstroligo/details/projects/',
@@ -24,13 +25,14 @@ export const whatsappUrl = `https://wa.me/${site.whatsappE164}` as const
 const whatsappIntro = {
   pt: 'Olá Gabriel, vi seu portfólio em stroligo.dev e gostaria de conversar.',
   en: 'Hi Gabriel, I saw your portfolio at stroligo.dev and would like to get in touch.',
+  es: 'Hola Gabriel, vi tu portafolio en stroligo.dev y me gustaría contactar contigo.',
 } as const
 
-export function whatsappContactUrl(locale: 'pt' | 'en' = 'en') {
+export function whatsappContactUrl(locale: 'pt' | 'en' | 'es' = 'en') {
   return `${whatsappUrl}?text=${encodeURIComponent(whatsappIntro[locale])}`
 }
 
-export function resumeUrlForLocale(locale: 'en' | 'pt') {
+export function resumeUrlForLocale(locale: 'en' | 'pt' | 'es') {
   return site.resumeUrls[locale]
 }
 

@@ -1,0 +1,15 @@
+{
+  "id": "ccr-rmbh",
+  "title": "CCR — Movilidad en la Gran BH",
+  "organization": "CCR",
+  "description": "Proyecto de comunicación visual sobre la modernización de la movilidad en la región metropolitana de Belo Horizonte.",
+  "tags": [
+    "Movilidad",
+    "Diseño"
+  ],
+  "stack": [
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Proyecto de comunicación visual sobre la modernización de la movilidad en la región metropolitana de Belo Horizonte. El trabajo traduce temas complejos de infraestructura y movilidad urbana en narrativas claras y sistemas visuales para el compromiso público — apoyando la comunicación de CCR en torno a la modernización en la RMBH."
+}

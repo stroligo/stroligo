@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: 'en',
-        'data-theme': 'dark',
+        'data-theme': 'light',
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
@@ -66,12 +66,12 @@ export default defineNuxtConfig({
       script: [
         {
           tagPosition: 'head',
-          innerHTML: `(function(){try{var k='stroligo_theme',m='stroligo_theme_dark_default_v3';if(!localStorage.getItem(m)){localStorage.removeItem(k);localStorage.removeItem('stroligo_theme_light_default');localStorage.setItem(m,'1');}var t=localStorage.getItem(k);document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
+          innerHTML: `(function(){try{document.documentElement.setAttribute('data-theme','light');}catch(e){}})();`,
         },
       ],
       meta: [
         { name: 'author', content: 'Gabriel Stroligo' },
-        { name: 'theme-color', content: '#0B1020' },
+        { name: 'theme-color', content: '#F4F6FB' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'apple-mobile-web-app-title', content: 'stroligo.dev' },
         ...(googleSiteVerification
@@ -90,13 +90,20 @@ export default defineNuxtConfig({
     restructureDir: false,
     locales: [
       { code: 'en', language: 'en-US', file: 'en.ts', name: 'English' },
+      { code: 'es', language: 'es-ES', file: 'es.ts', name: 'Español' },
       { code: 'pt', language: 'pt-BR', file: 'pt.ts', name: 'Português' },
     ],
     defaultLocale: 'en',
     lazy: true,
     langDir: 'locales',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: false,
+      fallbackLocale: 'en',
+    },
   },
   vite: {
     plugins: [tailwindcss()],
@@ -113,7 +120,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/pt'],
+      routes: ['/', '/es', '/pt'],
       ignore: [
         '/_studio',
         '/_studio/**',

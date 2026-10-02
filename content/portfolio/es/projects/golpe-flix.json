@@ -1,0 +1,16 @@
+{
+  "id": "golpe-flix",
+  "title": "Golpe Flix",
+  "organization": "Aos Fatos",
+  "description": "Memorial digital al estilo streaming que documenta campañas de desinformación antes de los ataques del 8 de enero en Brasil — más de 600 piezas multimedia.",
+  "tags": [
+    "Democracia",
+    "Desinformación"
+  ],
+  "stack": [
+    "React",
+    "Tailwind CSS",
+    "JavaScript"
+  ],
+  "body": "Desarrollé el frontend de Golpe Flix, una experiencia digital interactiva creada por Aos Fatos que documenta y contextualiza el ecosistema de desinformación en torno a los ataques del 8 de enero contra la democracia en Brasil.\n\nEn lugar de un sitio web institucional tradicional, el proyecto recrea la experiencia familiar de una plataforma de streaming, permitiendo a los visitantes explorar cientos de vídeos y contenidos de investigación mediante una interfaz intuitiva e inmersiva. El reto fue traducir un gran volumen de información compleja en una experiencia de navegación fluida que fomente el descubrimiento y la participación.\n\nConstruido con React y Tailwind CSS, me centré en diseñar interfaces de usuario responsive, componentes reutilizables, interacciones fluidas y optimizaciones de rendimiento para que la plataforma siguiera siendo rápida, accesible y agradable en distintos dispositivos."
+}

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { i18nCodeToContentLocale } from '~/lib/i18n/contentLocale';
+
 const props = defineProps<{
   toEmail: string;
 }>();
@@ -16,27 +18,35 @@ const canSubmit = computed(
 function submit() {
   if (!canSubmit.value) return;
 
-  const subject =
-    locale.value === 'en'
-      ? `stroligo.dev — message from ${name.value.trim()}`
-      : `stroligo.dev — mensagem de ${name.value.trim()}`;
+  const loc = i18nCodeToContentLocale(locale.value);
+  const trimmedName = name.value.trim();
 
-  const lines = [
-    locale.value === 'en'
-      ? `Name: ${name.value.trim()}`
-      : `Nome: ${name.value.trim()}`,
-  ];
+  const subjectByLocale = {
+    en: `stroligo.dev — message from ${trimmedName}`,
+    es: `stroligo.dev — mensaje de ${trimmedName}`,
+    pt: `stroligo.dev — mensagem de ${trimmedName}`,
+  } as const
+
+  const nameLineByLocale = {
+    en: `Name: ${trimmedName}`,
+    es: `Nombre: ${trimmedName}`,
+    pt: `Nome: ${trimmedName}`,
+  } as const
+
+  const replyLineByLocale = {
+    en: `Reply-to: ${fromEmail.value.trim()}`,
+    es: `Responder a: ${fromEmail.value.trim()}`,
+    pt: `Responder para: ${fromEmail.value.trim()}`,
+  } as const
+
+  const lines: string[] = [nameLineByLocale[loc]];
   if (fromEmail.value.trim()) {
-    lines.push(
-      locale.value === 'en'
-        ? `Reply-to: ${fromEmail.value.trim()}`
-        : `Responder para: ${fromEmail.value.trim()}`,
-    );
+    lines.push(replyLineByLocale[loc]);
   }
   lines.push('', message.value.trim());
 
   const params = new URLSearchParams({
-    subject,
+    subject: subjectByLocale[loc],
     body: lines.join('\n'),
   });
 

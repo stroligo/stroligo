@@ -5,11 +5,13 @@ const lastmod = new Date().toISOString().slice(0, 10)
 
 const pages = [
   { loc: `${site.siteUrl}/`, priority: '1.0' },
+  { loc: `${site.siteUrl}/es`, priority: '0.9' },
   { loc: `${site.siteUrl}/pt`, priority: '0.9' },
 ] as const
 
 const hreflangBlock = `
     <xhtml:link rel="alternate" hreflang="en" href="${site.siteUrl}/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="${site.siteUrl}/es"/>
     <xhtml:link rel="alternate" hreflang="pt" href="${site.siteUrl}/pt"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="${site.siteUrl}/pt"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${site.siteUrl}/"/>`
