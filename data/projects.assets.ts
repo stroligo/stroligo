@@ -17,7 +17,7 @@ export type ProjectAsset = {
 export const projectAssetsById: Record<string, ProjectAsset> = {
   'fundo-vale': {
     siteUrl: 'https://www.fundovale.org/relatorio-de-impacto-2025/',
-    imageAlt: 'Floresta Amazônica — impacto socioambiental Fundo Vale',
+    imageAlt: 'Fundo Vale — Relatório de Impacto 2025',
     order: 0,
   },
   'trampos-do-futuro': {

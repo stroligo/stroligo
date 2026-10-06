@@ -50,6 +50,9 @@
     "esbuild": "0.28.2",
     "js-yaml": "4.3.2",
     "sharp": "0.35.5",
+    "simple-git": "4.0.2",
+    "@simple-git/argv-parser": "2.0.1",
+    "source-map-js": "1.2.2",
     "socket.io-parser": "4.2.7",
     "svgo": "4.1.0",
     "ws": "8.21.0"

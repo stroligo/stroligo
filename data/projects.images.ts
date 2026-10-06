@@ -12,6 +12,8 @@ export type ProjectImageSource = {
 export const projectImageSources: Record<string, ProjectImageSource> = {
   'fundo-vale': {
     fetchUrls: ['https://www.fundovale.org/relatorio-de-impacto-2025/'],
+    image:
+      'https://www.fundovale.org/wp-content/uploads/2026/09/20260831_FV_RI_Banner-Site-v1-banner.jpg-1.jpg',
   },
   'trampos-do-futuro': {
     fetchUrls: ['https://www.fundacaoitau.org.br/trampos-do-futuro-2026/'],
