@@ -1,14 +1,46 @@
-### Hello! 👋 My name is Stroligo... **Gabriel Stroligo**
+# Hello! 👋 I'm Gabriel Stroligo
 
-I specialise in web development with over 15 years of experience, building high-impact digital solutions. My expertise spans JavaScript, Vue.js, React, Next.js, Nuxt.js, Tailwind, CSS, PHP, Laravel, SQL, and WordPress, enabling me to develop agile, responsive, and visually engaging interfaces. I'm committed to continuous learning and staying up to date with industry best practices and trends.
+### Software Engineer · Front-end Specialist
 
-I'm passionate about working on projects that drive positive social impact, applying clean, efficient, and scalable code to deliver real value to users.
+I'm a Software Engineer and Front-end Specialist with **18+ years of experience** building scalable, accessible, and high-performance web applications and digital products.
 
-My academic background includes Web Development courses from Ironhack and Full-Stack Development from FLAG.PT in Portugal, as well as a Bachelor’s Degree in Arts and a Master’s Degree in Computational Modelling from the Federal University of Tocantins.
+Throughout my career, I've worked on complex projects for **government institutions, international organizations, NGOs, and the private sector**, including the **European Union Intellectual Property Office (EUIPO)** and the **Brazilian Judiciary (TJTO)**.
 
-Please feel free to check out my Portfolio.
+My main focus is modern front-end development, working with technologies such as:
 
-If you need any clarification, have any interesting projects or just want to get in touch, feel free to contact me at *gabrielstroligo@gmail.com*
+**React · Vue · Nuxt · TypeScript · JavaScript · Tailwind CSS · Material UI · HTML · CSS**
+
+I have experience building **enterprise applications, government platforms, public services, design systems, responsive interfaces, API integrations, accessible applications (WCAG), and component-based architectures** designed to remain maintainable and scale over time.
+
+## 🏆 Recognition
+
+My work has been recognized through national and international design awards, including:
+
+- iF Design Award Gold
+- Anthem Award Silver
+- Brasil Design Awards
+- Bienal Iberoamericana de Diseño
+- Design for a Better World Awards
+
+These recognitions span digital products, UX/UI, accessibility, data visualization, inclusion, and social impact.
+
+## 💡 What I care about
+
+I enjoy solving complex technical challenges while keeping **user experience, accessibility, code quality, performance, and long-term maintainability** at the center of every project.
+
+I'm particularly interested in projects where technology can simplify complex problems and create meaningful impact for organizations and society.
+
+## 🎓 Background
+
+My academic background includes a **Master's Degree in Computational Modelling**, as well as professional training in Web and Full-Stack Development through **Ironhack** and **FLAG.PT**.
+
+## 🌎 Let's connect
+
+Feel free to explore my repositories and portfolio.
+
+If you'd like to discuss a project, collaboration, or just exchange ideas about software development, feel free to get in touch:
+
+📩 **gabrielstroligo@gmail.com**
 
 ### Frontend & Backend skills
 
