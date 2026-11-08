@@ -4,6 +4,7 @@ export type ProjectCategory =
   | 'saude'
   | 'ambiente'
   | 'institucional'
+  | 'produto'
 
 export type ProjectMeta = {
   id: string

@@ -1,0 +1,26 @@
+{
+  "id": "juntatudo",
+  "title": "JuntaTudo",
+  "organization": "JuntaTudo — own product (SaaS)",
+  "description": "Personal finance and wealth management SaaS I built from scratch — brings accounts, cards, investments, assets, debts, and goals together in one place, with Open Finance, statement import, multi-currency support, and a Financial Agent over MCP for Claude and ChatGPT.",
+  "tags": [
+    "SaaS",
+    "Own product",
+    "Fintech"
+  ],
+  "stack": [
+    "Nuxt",
+    "Vue",
+    "TypeScript",
+    "Tailwind CSS",
+    "Nuxt UI",
+    "Pinia",
+    "Supabase",
+    "PostgreSQL",
+    "Stripe",
+    "MCP",
+    "PWA",
+    "Vitest"
+  ],
+  "body": "JuntaTudo (juntatudo.app) is my own product: a personal finance and wealth management SaaS for people whose money is spread across several banks, cards, investments, properties, debts, and even more than one currency. It answers, in a few screens, what you own, what you owe, what comes in and goes out, and whether the month closes — without spreadsheets.\n\nI'm building it end to end, from concept to production: product decisions, UX/UI, architecture, frontend, backend, and infrastructure. The app is built with Nuxt, Vue, TypeScript, Tailwind CSS, and Nuxt UI, with Supabase (PostgreSQL with row-level security) for data, Stripe for subscriptions, and a PWA that installs on mobile. It is available in Portuguese, English, and Spanish.\n\nKey features include read-only bank connections via Open Finance, a statement importer that reads PDF, CSV, OFX, Excel, and TXT from any bank without AI and without duplicating entries, monthly cash flow with multiple currencies side by side, net worth tracking across assets and debts, market data with price alerts, financial goals and scenario simulators, and a Financial Agent: JuntaTudo works as an MCP server so Claude and ChatGPT can answer questions about the user's own numbers.\n\nThroughout the project I apply the same standards I bring to client work — accessibility (axe-core checks), performance (Lighthouse), automated tests with Vitest, type safety, and a maintainable architecture designed to keep evolving."
+}

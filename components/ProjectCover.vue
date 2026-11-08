@@ -25,6 +25,8 @@ const categoryGradients: Record<
     'linear-gradient(135deg, rgb(34 197 94 / 0.4), rgb(139 92 246 / 0.3))',
   institucional:
     'linear-gradient(135deg, rgb(59 130 246 / 0.4), rgb(107 114 128 / 0.35))',
+  produto:
+    'linear-gradient(135deg, rgb(6 182 212 / 0.4), rgb(139 92 246 / 0.4))',
 }
 
 const gradient = computed(
@@ -39,7 +41,7 @@ const aspectClass = computed(() => {
 const shellClass = computed(() => {
   if (isModal.value) {
     return [
-      'relative flex h-full w-full min-h-[14rem] items-center justify-center overflow-hidden',
+      'relative flex h-full w-full items-center justify-center overflow-hidden md:min-h-[14rem]',
       'bg-[linear-gradient(165deg,color-mix(in_srgb,var(--stro-purple)_8%,var(--stro-surface))_0%,var(--stro-surface)_45%,color-mix(in_srgb,var(--stro-cyan)_6%,var(--stro-surface))_100%)]',
       'p-4 sm:p-5 md:min-h-0',
     ]
@@ -52,7 +54,7 @@ const shellClass = computed(() => {
 
 const imageClass = computed(() => {
   if (isModal.value) {
-    return 'max-h-[min(72vh,36rem)] w-full max-w-full object-contain object-center drop-shadow-[0_12px_32px_rgb(0_0_0_/_0.28)] transition duration-500'
+    return 'h-full max-h-full w-full max-w-full md:h-auto md:max-h-[min(72vh,36rem)] object-contain object-center drop-shadow-[0_12px_32px_rgb(0_0_0_/_0.28)] transition duration-500'
   }
   return 'h-full w-full max-w-full object-cover transition duration-500 motion-safe:md:group-hover:scale-[1.03]'
 })

@@ -3,6 +3,7 @@
  * @see https://www.linkedin.com/in/gabrielstroligo/details/projects/
  */
 export const projectStacksById: Record<string, string[]> = {
+  juntatudo: ['Nuxt', 'Vue', 'TypeScript', 'Tailwind CSS', 'Nuxt UI', 'Pinia', 'Supabase', 'PostgreSQL', 'Stripe', 'MCP', 'PWA', 'Vitest'],
   'fundo-vale': ['WordPress', 'Tailwind CSS', 'JavaScript', 'PHP'],
   'trampos-do-futuro': ['Nuxt', 'Tailwind CSS'],
   'dr-jose-messias': ['Nuxt', 'Tailwind CSS', 'TypeScript'],

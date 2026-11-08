@@ -15,6 +15,11 @@ export type ProjectAsset = {
 };
 
 export const projectAssetsById: Record<string, ProjectAsset> = {
+  juntatudo: {
+    siteUrl: 'https://juntatudo.app/',
+    imageAlt: 'JuntaTudo — painel de patrimônio no notebook e no celular',
+    order: -1,
+  },
   'fundo-vale': {
     siteUrl: 'https://www.fundovale.org/relatorio-de-impacto-2025/',
     imageAlt: 'Fundo Vale — Relatório de Impacto 2025',

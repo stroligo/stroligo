@@ -43,6 +43,7 @@ const categoriesSchema = z.object({
   saude: z.string(),
   ambiente: z.string(),
   institucional: z.string(),
+  produto: z.string(),
 })
 
 const projectSchema = z.object({

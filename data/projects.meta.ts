@@ -2,6 +2,12 @@ import type { ProjectMeta } from '~/types/portfolio'
 
 export const projectsMeta: ProjectMeta[] = [
   {
+    id: 'juntatudo',
+    category: 'produto',
+    year: '2026',
+    featured: true,
+  },
+  {
     id: 'fundo-vale',
     category: 'impacto',
     year: '2026',

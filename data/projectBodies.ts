@@ -12,6 +12,22 @@ type ProjectBodyCopy = {
  * @see https://chatgpt.com/share/6a73eeb7-e2bc-83e9-8575-401ec44adcd6
  */
 export const projectBodiesById: Record<string, ProjectBodyCopy> = {
+  juntatudo: {
+    en: `JuntaTudo (juntatudo.app) is my own product: a personal finance and wealth management SaaS for people whose money is spread across several banks, cards, investments, properties, debts, and even more than one currency. It answers, in a few screens, what you own, what you owe, what comes in and goes out, and whether the month closes — without spreadsheets.
+
+I'm building it end to end, from concept to production: product decisions, UX/UI, architecture, frontend, backend, and infrastructure. The app is built with Nuxt, Vue, TypeScript, Tailwind CSS, and Nuxt UI, with Supabase (PostgreSQL with row-level security) for data, Stripe for subscriptions, and a PWA that installs on mobile. It is available in Portuguese, English, and Spanish.
+
+Key features include read-only bank connections via Open Finance, a statement importer that reads PDF, CSV, OFX, Excel, and TXT from any bank without AI and without duplicating entries, monthly cash flow with multiple currencies side by side, net worth tracking across assets and debts, market data with price alerts, financial goals and scenario simulators, and a Financial Agent: JuntaTudo works as an MCP server so Claude and ChatGPT can answer questions about the user's own numbers.
+
+Throughout the project I apply the same standards I bring to client work — accessibility (axe-core checks), performance (Lighthouse), automated tests with Vitest, type safety, and a maintainable architecture designed to keep evolving.`,
+    pt: `O JuntaTudo (juntatudo.app) é o meu produto próprio: um SaaS de finanças pessoais e gestão de patrimônio para quem tem dinheiro espalhado em vários bancos, cartões, investimentos, imóveis, dívidas e até mais de uma moeda. Em poucas telas, responde o que tenho, o que devo, o que entra e sai e se o mês fecha — sem planilha.
+
+Construo o produto de ponta a ponta, da ideia à produção: decisões de produto, UX/UI, arquitetura, frontend, backend e infraestrutura. A aplicação usa Nuxt, Vue, TypeScript, Tailwind CSS e Nuxt UI, com Supabase (PostgreSQL com RLS) para os dados, Stripe para assinaturas e PWA instalável no celular. Está disponível em português, inglês e espanhol.
+
+Entre as funcionalidades: conexão com bancos via Open Finance (só leitura), importador de extratos de qualquer banco em PDF, CSV, OFX, Excel e TXT — sem IA e sem duplicar lançamentos —, caixa do mês com várias moedas lado a lado, evolução do patrimônio líquido entre ativos e dívidas, mercado com alertas de preço, metas e simuladores de cenários, e o Agente Financeiro: o JuntaTudo funciona como servidor MCP para que Claude e ChatGPT respondam perguntas sobre os números do próprio utilizador.
+
+Aplico ao projeto os mesmos padrões que levo ao trabalho com clientes — acessibilidade (verificações com axe-core), performance (Lighthouse), testes automatizados com Vitest, tipagem forte e uma arquitetura sustentável, pensada para continuar evoluindo.`,
+  },
   'fundo-vale': {
     en: `Developed the frontend for Fundo Vale’s 2025 Impact Report, a digital experience that presents the organization’s social and environmental impact, results, initiatives, and learnings from its work across the Amazon and other territories.
 

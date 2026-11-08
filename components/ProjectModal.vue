@@ -50,7 +50,7 @@ onUnmounted(() => {
     <Transition name="project-modal">
       <div
         v-if="activeProject"
-        class="project-modal fixed inset-0 z-[120] flex items-end justify-center p-0 sm:items-center sm:p-4"
+        class="project-modal fixed inset-0 z-[120] flex items-center justify-center px-4 py-[max(1rem,env(safe-area-inset-top))] sm:p-6"
         role="presentation"
       >
         <button
@@ -64,7 +64,7 @@ onUnmounted(() => {
           role="dialog"
           aria-modal="true"
           :aria-labelledby="titleId"
-          class="project-modal__panel relative z-10 grid max-h-[92vh] w-full max-w-4xl grid-cols-1 overflow-hidden rounded-t-[var(--stro-radius-xl)] border border-stro-border bg-stro-surface shadow-[var(--stro-shadow-glow-brand)] sm:max-h-[88vh] sm:rounded-[var(--stro-radius-xl)] md:grid-cols-[minmax(11rem,16rem)_minmax(0,1fr)] lg:grid-cols-[minmax(12rem,18rem)_minmax(0,1fr)]"
+          class="project-modal__panel relative z-10 flex max-h-[calc(100dvh-2rem)] w-full max-w-4xl flex-col overflow-hidden md:grid rounded-[var(--stro-radius-xl)] border border-stro-border bg-stro-surface shadow-[var(--stro-shadow-glow-brand)] sm:max-h-[88dvh] md:grid-cols-[minmax(11rem,16rem)_minmax(0,1fr)] lg:grid-cols-[minmax(12rem,18rem)_minmax(0,1fr)]"
         >
           <button
             type="button"
@@ -89,12 +89,12 @@ onUnmounted(() => {
           </button>
 
           <aside
-            class="relative min-h-[14rem] border-b border-stro-border md:sticky md:top-0 md:flex md:max-h-[88vh] md:min-h-0 md:self-start md:border-b-0 md:border-r h-full"
+            class="relative h-[clamp(9rem,28dvh,14rem)] shrink-0 border-b border-stro-border md:sticky md:top-0 md:flex md:h-full md:max-h-[88vh] md:min-h-0 md:self-start md:border-b-0 md:border-r"
           >
             <ProjectCover :project="activeProject" layout="modal" />
           </aside>
 
-          <div class="flex min-h-0 flex-col">
+          <div class="flex min-h-0 flex-1 flex-col md:max-h-[calc(88dvh-2px)]">
             <div
               class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5 sm:px-6 sm:py-6"
             >

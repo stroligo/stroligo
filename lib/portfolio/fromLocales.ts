@@ -114,6 +114,7 @@ export function buildPortfolioFromLocales(
     'saude',
     'ambiente',
     'institucional',
+    'produto',
   ] as const
 
   const projectCategories = categoryIds.map((id) => ({

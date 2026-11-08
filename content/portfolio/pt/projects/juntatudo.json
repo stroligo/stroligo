@@ -1,0 +1,26 @@
+{
+  "id": "juntatudo",
+  "title": "JuntaTudo",
+  "organization": "JuntaTudo — produto próprio (SaaS)",
+  "description": "SaaS de finanças pessoais e gestão de patrimônio que criei do zero — reúne contas, cartões, investimentos, bens, dívidas e metas num só lugar, com Open Finance, importação de extratos, multimoeda e um Agente Financeiro via MCP para Claude e ChatGPT.",
+  "tags": [
+    "SaaS",
+    "Produto próprio",
+    "Finanças"
+  ],
+  "stack": [
+    "Nuxt",
+    "Vue",
+    "TypeScript",
+    "Tailwind CSS",
+    "Nuxt UI",
+    "Pinia",
+    "Supabase",
+    "PostgreSQL",
+    "Stripe",
+    "MCP",
+    "PWA",
+    "Vitest"
+  ],
+  "body": "O JuntaTudo (juntatudo.app) é o meu produto próprio: um SaaS de finanças pessoais e gestão de patrimônio para quem tem dinheiro espalhado em vários bancos, cartões, investimentos, imóveis, dívidas e até mais de uma moeda. Em poucas telas, responde o que tenho, o que devo, o que entra e sai e se o mês fecha — sem planilha.\n\nConstruo o produto de ponta a ponta, da ideia à produção: decisões de produto, UX/UI, arquitetura, frontend, backend e infraestrutura. A aplicação usa Nuxt, Vue, TypeScript, Tailwind CSS e Nuxt UI, com Supabase (PostgreSQL com RLS) para os dados, Stripe para assinaturas e PWA instalável no celular. Está disponível em português, inglês e espanhol.\n\nEntre as funcionalidades: conexão com bancos via Open Finance (só leitura), importador de extratos de qualquer banco em PDF, CSV, OFX, Excel e TXT — sem IA e sem duplicar lançamentos —, caixa do mês com várias moedas lado a lado, evolução do patrimônio líquido entre ativos e dívidas, mercado com alertas de preço, metas e simuladores de cenários, e o Agente Financeiro: o JuntaTudo funciona como servidor MCP para que Claude e ChatGPT respondam perguntas sobre os números do próprio utilizador.\n\nAplico ao projeto os mesmos padrões que levo ao trabalho com clientes — acessibilidade (verificações com axe-core), performance (Lighthouse), testes automatizados com Vitest, tipagem forte e uma arquitetura sustentável, pensada para continuar evoluindo."
+}

@@ -1,5 +1,12 @@
 /** Texto completo de los proyectos en español (es-ES). */
 export const projectBodiesEsById: Record<string, string> = {
+  juntatudo: `JuntaTudo (juntatudo.app) es mi producto propio: un SaaS de finanzas personales y gestión de patrimonio para quienes tienen su dinero repartido entre varios bancos, tarjetas, inversiones, inmuebles, deudas e incluso más de una moneda. En pocas pantallas responde qué tengo, qué debo, qué entra y qué sale y si el mes cuadra — sin hojas de cálculo.
+
+Lo construyo de principio a fin, de la idea a producción: decisiones de producto, UX/UI, arquitectura, frontend, backend e infraestructura. La aplicación usa Nuxt, Vue, TypeScript, Tailwind CSS y Nuxt UI, con Supabase (PostgreSQL con RLS) para los datos, Stripe para las suscripciones y una PWA instalable en el móvil. Está disponible en portugués, inglés y español.
+
+Entre sus funcionalidades: conexión con bancos vía Open Finance (solo lectura), importador de extractos de cualquier banco en PDF, CSV, OFX, Excel y TXT — sin IA y sin duplicar movimientos —, caja del mes con varias monedas lado a lado, evolución del patrimonio neto entre activos y deudas, mercado con alertas de precio, metas y simuladores de escenarios, y el Agente Financiero: JuntaTudo funciona como servidor MCP para que Claude y ChatGPT respondan preguntas sobre los números del propio usuario.
+
+Aplico al proyecto los mismos estándares que llevo al trabajo con clientes — accesibilidad (verificaciones con axe-core), rendimiento (Lighthouse), tests automatizados con Vitest, tipado fuerte y una arquitectura mantenible, pensada para seguir evolucionando.`,
   'fundo-vale': `Desarrollé el frontend del Informe de Impacto 2025 del Fundo Vale, una experiencia digital que presenta el impacto social y ambiental de la organización, sus resultados, iniciativas y aprendizajes de su trabajo en la Amazonía y otros territorios.
 
 Construido con WordPress, Tailwind CSS y JavaScript, el proyecto convierte un gran volumen de contenido institucional, datos de impacto e información en una experiencia atractiva e intuitiva. La interfaz combina contenido estructurado, narrativa visual, animaciones y elementos interactivos para que la información compleja sea más fácil de explorar.

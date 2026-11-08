@@ -135,6 +135,7 @@ export async function buildPortfolioFromContent(
     'saude',
     'ambiente',
     'institucional',
+    'produto',
   ] as const
 
   const projectCategories = categoryIds.map((id) => ({
